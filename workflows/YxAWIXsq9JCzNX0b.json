@@ -1,0 +1,244 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Website Features",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Website Outline",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Website Code",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Website Features",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Features": {
+      "main": [
+        [
+          {
+            "node": "Website Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Outline": {
+      "main": [
+        [
+          {
+            "node": "Website Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Code": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T07:00:15.799Z",
+  "id": "YxAWIXsq9JCzNX0b",
+  "meta": null,
+  "name": "webpage chain",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        220,
+        280
+      ],
+      "id": "5565b3fa-f399-4661-a9ed-4156814298ec",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4b793f-101f-46c9-a220-86984350df79",
+              "name": "websiteTopic",
+              "value": "={{ $('Edit Fields1').item.json.websiteTopic }}",
+              "type": "string"
+            },
+            {
+              "id": "2d131f39-94bc-436e-a0d3-a619e3925cf0",
+              "name": "websiteCode",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1580,
+        120
+      ],
+      "id": "0f3c8795-92b2-42e0-9ad7-ad58c1b914b0",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bc8f269e-d7e1-4066-a6b5-c0ab455a930b",
+              "name": "websiteTopic",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -20,
+        120
+      ],
+      "id": "96b5cd50-a753-438f-97dc-b90bbe4d924f",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We will be creating a website about: \n{{ $json.websiteTopic }}  \n\nCome up with 5 key features that would be suitable for this website. Each feature should be innovative and utilize modern web technologies. List the 5 features only and nothing else.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are an experienced web developer specializing in modern web technologies."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        180,
+        120
+      ],
+      "id": "f129aa50-a4f6-417a-9200-03c26e3dabbf",
+      "name": "Website Features"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a detailed outline for a website on the following topic: \n{{ $('Edit Fields1').item.json.websiteTopic }}\n\nIncorporate all of the following features into your outline, ensuring a logical flow and user-friendly interface. Include sections for HTML structure, CSS styling, and JavaScript functionality. Output the outline in JSON format and nothing else. \n\nUse the following JSON format:  \n{ \n\"WebsiteTitle\": \"title\", \n\"Outline\": {}, \n}  \n\nHere are the features to include: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You're an experienced web developer and UI/UX designer."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        500,
+        120
+      ],
+      "id": "f4600fdc-bbb1-49f4-b01d-e0d5e525ce08",
+      "name": "Website Outline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Using the outline provided, write a detailed HTML, CSS, and JavaScript code for a website on the following topic: \n{{ $('Edit Fields1').item.json.websiteTopic }}\n\nYour task is to write comprehensive, functional code for a modern website. Follow these guidelines:\n\n1. Start with the HTML structure, including proper meta tags and viewport settings.\n2. Implement each section from the outline in the HTML.\n3. Use semantic HTML5 elements where appropriate (e.g., <header>, <nav>, <main>, <footer>).\n4. Write CSS to style the website, using modern CSS techniques (e.g., flexbox, grid, custom properties).\n5. Implement responsive design to ensure the website looks good on all device sizes.\n6. Write JavaScript to add interactivity and implement the required functionality.\n7. Use ES6+ features in your JavaScript code.\n8. Implement any necessary form validation or data processing.\n9. Add comments to explain complex parts of the code.\n10. Ensure the code follows web accessibility guidelines (WCAG).\n\nEnsure the code is well-structured, efficient, and follows best practices for web development. Write the entire website code (HTML, CSS, and JavaScript) in a single code block, ready to be saved as an HTML file and run in a browser.\n\nHere's the website outline:\n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a senior web developer specializing in modern web technologies."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1220,
+        120
+      ],
+      "id": "ff728e01-4328-4146-9543-a7832375af11",
+      "name": "Website Code"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -240,
+        120
+      ],
+      "id": "f1d1bfd1-13a1-49ce-b2e8-49ee9483963d",
+      "name": "When chat message received",
+      "webhookId": "0c9d895a-1ba3-449c-b3d4-b1a2baa39507"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T07:00:25.564Z",
+  "versionId": "2d52e176-a44a-4910-b224-4da2e3df8c02"
+}
