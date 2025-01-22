@@ -1,0 +1,244 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "App Features",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "App Outline",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "App Code",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "App Features",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "App Features": {
+      "main": [
+        [
+          {
+            "node": "App Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "App Outline": {
+      "main": [
+        [
+          {
+            "node": "App Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "App Code": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T07:01:53.739Z",
+  "id": "EjfqRjfaLX3xrjHK",
+  "meta": null,
+  "name": "streamlit chain",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        680
+      ],
+      "id": "5e132dc5-f573-4a23-91ca-0f1686ffb7ee",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4b793f-101f-46c9-a220-86984350df79",
+              "name": "appTopic",
+              "value": "={{ $('Edit Fields1').item.json.appTopic }}",
+              "type": "string"
+            },
+            {
+              "id": "2d131f39-94bc-436e-a0d3-a619e3925cf0",
+              "name": "appCode",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1900,
+        160
+      ],
+      "id": "7856e7b7-1c27-43e5-b3f5-9972b3e75899",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bc8f269e-d7e1-4066-a6b5-c0ab455a930b",
+              "name": "appTopic",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        300,
+        160
+      ],
+      "id": "891e87f8-2227-4f61-bb1e-c30927f3e87b",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We will be creating a Streamlit app about: \n{{ $json.appTopic }}  \n\nCome up with 5 key features that would be suitable for this Streamlit app. Each feature should be innovative and utilize Streamlit's capabilities. List the 5 features only and nothing else.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are an experienced Python developer specializing in Streamlit applications."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        500,
+        160
+      ],
+      "id": "41658a5d-e774-4081-843b-b974be377252",
+      "name": "App Features"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a detailed outline for a Streamlit app on the following topic: \n{{ $('Edit Fields1').item.json.appTopic }}\n\nIncorporate all of the following features into your outline, ensuring a logical flow and user-friendly interface. Include sections for app setup, main functionality, and additional utilities. Output the outline in JSON format and nothing else. \n\nUse the following JSON format:  \n{ \n\"AppTitle\": \"title\", \n\"Outline\": {}, \n}  \n\nHere are the features to include: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You're an experienced Streamlit developer and UI/UX designer."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        820,
+        160
+      ],
+      "id": "b8d4da07-fe56-40f4-80bf-8a6a321120c2",
+      "name": "App Outline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Using the outline provided, write a detailed Python Streamlit app on the following topic: \n{{ $('Edit Fields1').item.json.appTopic }}\n\nYour task is to write a comprehensive, functional Streamlit app. Follow these guidelines:\n\n1. Start with necessary imports and app configuration.\n2. Implement each section from the outline as a separate function or code block.\n3. Use appropriate Streamlit widgets (e.g., st.text_input, st.button, st.slider) for user interactions.\n4. Incorporate data visualization where relevant (e.g., using matplotlib, plotly, or Streamlit's native chart functions).\n5. Include error handling and user input validation.\n6. Add comments to explain complex parts of the code.\n7. Use Streamlit's layout options (e.g., columns, expanders) for a clean UI.\n8. Implement any data processing or calculations required for the app's functionality.\n9. Include a sidebar for app navigation or additional controls if necessary.\n10. End with the main() function that ties everything together.\n\nEnsure the code is well-structured, efficient, and follows Python best practices. Write the entire app in a single code block, ready to be run as a Streamlit application.\n\nHere's the app outline:\n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a senior Python developer specializing in Streamlit applications."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1540,
+        160
+      ],
+      "id": "b7f27de7-1e5c-4483-b65d-08b56d71ffce",
+      "name": "App Code"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        160
+      ],
+      "id": "a8bcf224-4edf-40e4-a2ce-42721667959d",
+      "name": "When chat message received",
+      "webhookId": "0c9d895a-1ba3-449c-b3d4-b1a2baa39507"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T07:02:10.735Z",
+  "versionId": "887cc1f2-b6c9-41c7-ae91-d6f72288ca20"
+}
