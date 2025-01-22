@@ -1,0 +1,186 @@
+{
+  "active": true,
+  "connections": {
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Chat LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat LLM Chain": {
+      "main": [
+        []
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Chat LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-06T21:52:58.290Z",
+  "id": "sABvLeMkze42aZcz",
+  "meta": null,
+  "name": "ollama cloud",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "02482f4b-6d78-4e0b-a6cd-971dcac24b85",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        220,
+        400
+      ],
+      "webhookId": "ebdeba3f-6b4f-49f3-ba0a-8253dd226161",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "model": "=llama3.2",
+        "options": {
+          "temperature": 0.7,
+          "topK": -1,
+          "topP": 1,
+          "frequencyPenalty": 0,
+          "keepAlive": "5m"
+        }
+      },
+      "id": "651aa4bf-c5fe-48ba-8b02-f116682ffab4",
+      "name": "Ollama Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "position": [
+        640,
+        560
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "ollamaApi": {
+          "id": "guwnC25XoZzCbQ7G",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Chat with local LLMs using n8n and Ollama\nThis n8n workflow allows you to seamlessly interact with your self-hosted Large Language Models (LLMs) through a user-friendly chat interface. By connecting to Ollama, a powerful tool for managing local LLMs, you can send prompts and receive AI-generated responses directly within n8n.\n\n### How it works\n1. When chat message received: Captures the user's input from the chat interface.\n2. Chat LLM Chain: Sends the input to the Ollama server and receives the AI-generated response.\n3. Delivers the LLM's response back to the chat interface.\n\n### Set up steps\n* Make sure Ollama is installed and running on your machine before executing this workflow.\n* Edit the Ollama address if different from the default.\n",
+        "height": 473,
+        "width": 485
+      },
+      "id": "4428e868-1e7b-458c-961a-cbea9bd77b3e",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -100,
+        -40
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Ollama setup\n* Connect to your local Ollama, usually on http://localhost:11434\n* If running in Docker, make sure that the n8n container has access to the host's network in order to connect to Ollama. You can do this by passing `--net=host` option when starting the n8n Docker container",
+        "height": 258,
+        "width": 368,
+        "color": 6
+      },
+      "id": "9f94f06c-47d7-4ac5-8e88-6603b56d33b9",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1220,
+        440
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=You are a helpful and intelligent research assistant."
+            }
+          ]
+        }
+      },
+      "id": "8f21916f-0763-4031-9fed-f30eacb1bd64",
+      "name": "Chat LLM Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        660,
+        300
+      ],
+      "typeVersion": 1.4,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        460,
+        360
+      ],
+      "id": "6ed72db9-385d-487e-b7a9-cca7f32dd33c",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "MYlWBHrMwyFsUO0L",
+          "name": "Unnamed credential"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "f8be2776-26d0-486c-99d5-990b99a884ed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        1020,
+        340
+      ],
+      "id": "3981cb08-611d-4e13-b9aa-39d02e9e214c",
+      "name": "Webhook",
+      "webhookId": "f8be2776-26d0-486c-99d5-990b99a884ed"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 3,
+  "updatedAt": "2025-01-19T08:18:33.921Z",
+  "versionId": "f91c5a21-0fb3-407f-9fd5-854c7ad695c5"
+}
