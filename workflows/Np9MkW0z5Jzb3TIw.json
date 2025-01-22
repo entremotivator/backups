@@ -1,0 +1,95 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Ollama API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama API": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-13T05:17:20.162Z",
+  "id": "Np9MkW0z5Jzb3TIw",
+  "meta": null,
+  "name": "ooolllama",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chat",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "0a6ebed5-f4df-479d-98db-d84dcd68a4df",
+      "webhookId": "8b64108f-34da-4d6f-adb7-21420dde55e3"
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "url": "https://theaisource-u29564.vm.elestio.app:57987/api/chat",
+        "options": {}
+      },
+      "name": "Ollama API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        200,
+        0
+      ],
+      "id": "e8faf0af-7028-44f8-b695-cc353e3d36a1"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "response",
+              "value": "={{ $input.body.choices[0].message.content }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Format Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        400,
+        0
+      ],
+      "id": "8086aece-c368-4b31-9993-cacd3cb80f1f"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-13T05:33:44.366Z",
+  "versionId": "78d36155-f5ca-40cb-ae38-22e093599fb3"
+}
