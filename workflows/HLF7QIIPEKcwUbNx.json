@@ -1,0 +1,235 @@
+{
+  "active": false,
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Research Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Research Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hacker News": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Agent": {
+      "main": [
+        [
+          {
+            "node": "Success",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Try Again",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-07T19:56:28.395Z",
+  "id": "HLF7QIIPEKcwUbNx",
+  "meta": null,
+  "name": "Research Agent",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "7f34047c-cfee-43cd-a1fc-ecab5b015774",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "b091dd47-165d-4a81-80ab-f645218c9cd7",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        380
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7ab380a2-a8d3-421c-ab4e-748ea8fb7904",
+              "name": "response",
+              "value": "Unable to perform task. Please try again.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "80bcf6f4-244b-4130-8f69-d6421092dc67",
+      "name": "Try Again",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -80,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "39c2f302-03be-4464-a17a-d7cc481d6d44",
+              "name": "=response",
+              "value": "={{$json.output}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3e3f0db8-b89b-49ef-b0d8-e88f94569f9e",
+      "name": "Success",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -80,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "bc8695ab-d41a-40d0-90a5-44d583bd3d97",
+      "name": "SerpAPI",
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        360
+      ],
+      "credentials": {
+        "serpApi": {
+          "id": "gCxj7rk6YqXn3FfB",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "d6cbd234-a977-4fd3-868c-990add137536",
+      "name": "Wikipedia",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "all",
+        "limit": "={{ $fromAI(\"limit\",\"number of articles\") }}",
+        "additionalFields": {
+          "keyword": "={{ $fromAI(\"keywords\",\"keywords for the articles\") }}"
+        }
+      },
+      "id": "30febce4-07fa-4d70-8de1-0ec0ea033f63",
+      "name": "Hacker News",
+      "type": "n8n-nodes-base.hackerNewsTool",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "You are a research assistant agent. You have Wikipedia, Hacker News API, and Serp API at your disposal. \n\nTo answer the user's question, first search wikipedia. If you can't find your answer there, then search articles using Hacker News API. If that doesn't work either, then use Serp API to answer the user's question.\n"
+        }
+      },
+      "id": "932daf5c-a75d-4020-8091-c6f4f3eb106c",
+      "name": "Research Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -580,
+        120
+      ],
+      "onError": "continueErrorOutput"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-07T19:58:47.560Z",
+  "versionId": "502ab633-19a4-49fc-ba75-6a04293c54c0"
+}
