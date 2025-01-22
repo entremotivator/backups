@@ -1,0 +1,1215 @@
+{
+  "active": false,
+  "connections": {
+    "JWT": {
+      "main": [
+        [
+          {
+            "node": "Start Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update CRM": {
+      "main": [
+        [
+          {
+            "node": "JWT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Record": {
+      "main": [
+        [
+          {
+            "node": "OpenAI2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get CRM Record": {
+      "main": [
+        [
+          {
+            "node": "Guide message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Success?": {
+      "main": [
+        [
+          {
+            "node": "Qualified",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Qualified": {
+      "main": [
+        [
+          {
+            "node": "Update Record",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get CRM Record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Availability Tool",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Availability (Cal.com)": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Booking": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Respond to Booking Tool",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New Lead from Tally Form": {
+      "main": [
+        [
+          {
+            "node": "Update CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Availability Tool Call": {
+      "main": [
+        [
+          {
+            "node": "Get Availability (Cal.com)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Book Slot Tool Call": {
+      "main": [
+        [
+          {
+            "node": "OpenAI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "Create Booking",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "End of Call Report": {
+      "main": [
+        [
+          {
+            "node": "Call Success?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI2": {
+      "main": [
+        [
+          {
+            "node": "Email Personalized Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T19:22:23.929Z",
+  "id": "Vt5qOndZV5KBFhg5",
+  "meta": null,
+  "name": "Voice agent",
+  "nodes": [
+    {
+      "parameters": {
+        "useJson": true,
+        "claimsJson": "={\n  \"orgId\": \"Enter VAPI org ID found in settings\",\n  \"exp\": {{ Math.floor(new Date().getTime() / 1000) + 3600 }}\n}",
+        "options": {}
+      },
+      "id": "1b09f2cd-0594-4777-9449-8a23de6c9c24",
+      "name": "JWT",
+      "type": "n8n-nodes-base.jwt",
+      "typeVersion": 1,
+      "position": [
+        700,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.vapi.ai/call",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $json.token }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={\n  \"assistantId\": \"get Vapi Assistant ID from Vapi settings\",\n  \"customer\": {\n    \"number\": \"{{ $('New Lead from Tally Form').item.json.body.data.fields[4].value }}\"\n  },\n  \"phoneNumber\": {\n    \"twilioAccountSid\": \"get twilio SID from twilio account\",\n    \"twilioAuthToken\": \"get twilio Auth Token from twilio account\",\n    \"twilioPhoneNumber\": \"+12345678\"\n  },\n  \"name\": \"\",\n  \n  \"assistantOverrides\": {\n    \"variableValues\": {\n      \"first_name\": \"{{ $('New Lead from Tally Form').item.json.body.data.fields[3].value }}\",\n      \"goal\": \"{{ $('New Lead from Tally Form').item.json.body.data.fields[2].value }}\",\n      \"record_id\": \"{{ $('Update CRM').item.json.id }}\",\n      \"email\": \"{{ $('Update CRM').item.json.fields['Email Address'] }}\"}\n  }\n}",
+        "options": {}
+      },
+      "id": "b1936aa6-72a9-4bfb-8967-a4d11a90a8bb",
+      "name": "Start Call",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json['Email Address'] }}",
+        "subject": "Thanks for your interest",
+        "emailType": "text",
+        "message": "=Hi {{ $json['Full Name'] }},\n\nThanks again for your interest in our masterclass. We understand that it currently isn't a fit; however, we'd like to give you a free guide on AI automation.\n\nThe guide is attached and please let us know if things change!\n\nLiam",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "dd76b16b-8964-49d8-91e6-2914b47d7f83",
+      "name": "Guide message",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        4880,
+        300
+      ],
+      "webhookId": "4a8eb44e-fc4c-47de-962b-20d0e2444e5c"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "base": {
+          "__rl": true,
+          "value": "app2MRkM8IfMX4cfY",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbluUssPygX19OGz9",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY/tbluUssPygX19OGz9"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Qualified": false,
+            "Full Name": "={{ $json.body.data.fields[3].value }}",
+            "Sign up reason": "={{ $json.body.data.fields[2].value }}",
+            "Email Address": "={{ $json.body.data.fields[5].value }}",
+            "Company Website": "={{ $json.body.data.fields[0].value }}",
+            "phone": "={{ $json.body.data.fields[4].value }}",
+            "Sector": "=",
+            "LinkedIn Profile": "="
+          },
+          "matchingColumns": [
+            "Email Address"
+          ],
+          "schema": [
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Sign up reason",
+              "displayName": "Sign up reason",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "LinkedIn Profile",
+              "displayName": "LinkedIn Profile",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Company Website",
+              "displayName": "Company Website",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Sector",
+              "displayName": "Sector",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Location",
+              "displayName": "Location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "transcript",
+              "displayName": "transcript",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Needs",
+              "displayName": "Needs",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Call Summary",
+              "displayName": "Call Summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Qualified",
+              "displayName": "Qualified",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "boolean",
+              "readOnly": false,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "951fbd05-be77-4c35-8afb-0749c734a7e5",
+      "name": "Update CRM",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "app2MRkM8IfMX4cfY",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbluUssPygX19OGz9",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY/tbluUssPygX19OGz9"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Qualified": "={{ $json.body.message.analysis.structuredData.qualified }}",
+            "record_id": "={{ $json.body.message.call.assistantOverrides.variableValues.record_id }}",
+            "Call Summary": "={{ $json.body.message.analysis.summary }}",
+            "transcript": "={{ $json.body.message.artifact.transcript }}"
+          },
+          "matchingColumns": [
+            "record_id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Sign up reason",
+              "displayName": "Sign up reason",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email Address",
+              "displayName": "Email Address",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "LinkedIn Profile",
+              "displayName": "LinkedIn Profile",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Company Website",
+              "displayName": "Company Website",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Sector",
+              "displayName": "Sector",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Location",
+              "displayName": "Location",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "transcript",
+              "displayName": "transcript",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Needs",
+              "displayName": "Needs",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Call Summary",
+              "displayName": "Call Summary",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Qualified",
+              "displayName": "Qualified",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "boolean",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "record_id",
+              "displayName": "record_id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4872f3fa-189b-4400-b59e-324af3f35c97",
+      "name": "Update Record",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        4620,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "base": {
+          "__rl": true,
+          "value": "app2MRkM8IfMX4cfY",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbluUssPygX19OGz9",
+          "mode": "list",
+          "cachedResultName": "Contacts",
+          "cachedResultUrl": "https://airtable.com/app2MRkM8IfMX4cfY/tbluUssPygX19OGz9"
+        },
+        "id": "={{ $json.body.message.call.assistantOverrides.variableValues.record_id }}",
+        "options": {}
+      },
+      "id": "6616cca4-76cb-41f8-b245-226e6afb3d22",
+      "name": "Get CRM Record",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        4620,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "aabf6f4c-5faa-464e-aebf-d7b33002b983",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        4140,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "66b3b75a-50ce-4b7f-a4f2-fbb9c9127653",
+              "leftValue": "={{ $json.body.message.analysis.successEvaluation }}\n",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "87d7d9ee-897c-453f-9362-268dffa5a461",
+      "name": "Call Success?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3880,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d1be90de-4520-44d1-87ad-53116a8d048e",
+              "leftValue": "={{ $json.body.message.analysis.structuredData.qualified }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "47a867c3-78fd-4f03-85d8-1897d5378833",
+      "name": "Qualified",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4340,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "aa9b1a78-f69e-49be-9056-33da52b51852",
+              "name": "data",
+              "value": "={{ $json.data.slots }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0f9f03b4-c7ef-4cfc-8191-64ea788dda87",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2060,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "e4be276d-4e90-4322-bba0-f7e5eb8c053c",
+      "name": "Split Out",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ecc59fd5-b0c8-4fe9-9ec1-b7c330976d37",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a3d7ebc1-4173-4a98-9edf-dd6fb2841a32",
+              "name": "toolcallid",
+              "value": "={{ $('Availability Tool Call').item.json.body.message.toolCalls[0].id }}",
+              "type": "string"
+            },
+            {
+              "id": "a085b719-b23c-4151-b7b0-8b37888562a8",
+              "name": "availableslots",
+              "value": "={{ $json.message.content.availableSlots }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "393a7501-4068-4a77-9c8e-e1ca2e105b59",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3000,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.cal.com/v2/slots/available",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "startTime",
+              "value": "=2025-12-21T14:19:00.000Z"
+            },
+            {
+              "name": "endTime",
+              "value": "2025-01-30T14:19:00.000Z"
+            },
+            {
+              "name": "eventTypeId",
+              "value": "1234"
+            },
+            {
+              "name": "duration",
+              "value": "30"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer your_bearer_token"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e06c3d18-bc74-46e5-b321-b16c52a11181",
+      "name": "Get Availability (Cal.com)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1720,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cal.com/v2/bookings",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer your_bearer_token"
+            },
+            {
+              "name": "cal-api-version",
+              "value": "2024-08-13"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"start\": \"{{ $json.message.content.UTC }}\",\n  \"eventTypeId\": 12345,\n  \"attendee\": {\n    \"name\": \"{{ $('Book Slot Tool Call').item.json.body.message.toolCalls[0].function.arguments.firstname }}\",\n    \"email\": \"{{ $('Book Slot Tool Call').item.json.body.message.toolCalls[0].function.arguments.email }}\",\n    \"timeZone\": \"America/New_York\"\n  },\n  \"location\": \"integrations:google:meet\"\n}",
+        "options": {}
+      },
+      "id": "179566d0-2779-456e-850c-787843c64d35",
+      "name": "Create Booking",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2040,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n    \"results\": [\n        {\n            \"toolCallId\": \"{{ $('Book Slot Tool Call').item.json.body.message.toolCalls[0].id }}\",\n            \"result\": \"success\"\n        }\n    ]\n} ",
+        "options": {}
+      },
+      "id": "128fc986-02ab-403e-ac78-5ff975080826",
+      "name": "Edit Fields2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2260,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "236a310d-9110-46f2-b8e9-bb2f51a70f35",
+      "name": "Respond to Booking Tool",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2480,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n    \"results\": [\n        {\n            \"toolCallId\": \"{{ $json.toolcallid }}\",\n            \"result\": \"{{ $json.availableslots }}\"\n        }\n    ]\n} ",
+        "options": {}
+      },
+      "id": "62935880-d605-4df2-bfbf-bde45ad6ffba",
+      "name": "Respond to Availability Tool",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3240,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 1. Make call based on new sign up\n",
+        "height": 607.4748844094381,
+        "width": 1218.3428154588194
+      },
+      "id": "20f49415-392d-41ba-8720-5593c2a2126f",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2. Tools for Vapi Assistant\n",
+        "height": 611.5428379040694,
+        "width": 2249.569026347844,
+        "color": 4
+      },
+      "id": "eb321ecd-bc8d-419b-89b1-1c0319cd3f67",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3. End of Call Reporting\n",
+        "height": 607.4748844094382,
+        "width": 1966.0840851400892,
+        "color": 6
+      },
+      "id": "27fc44ac-9d9b-428d-b739-f570f71a1a4b",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3520,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Update Record').item.json.fields['Email Address'] }}",
+        "subject": "={{ $json.message.content.email.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.message.content.email.body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "abd0c708-207c-4d83-abd5-7a876579f1df",
+      "name": "Email Personalized Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        5220,
+        60
+      ],
+      "webhookId": "980f857b-6973-4715-bcf7-802ea85dfe9f"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "5037ebfc-2238-4dee-a124-44c302ccce4c",
+        "options": {}
+      },
+      "id": "bf7fb7ef-861b-4e8c-88c5-530ef88225a5",
+      "name": "New Lead from Tally Form",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        220,
+        280
+      ],
+      "webhookId": "5037ebfc-2238-4dee-a124-44c302ccce4c"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "bd4b0312-b9ce-473b-9f05-2f1d73d0d51a",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "3ceb8e6a-29ac-4c05-9d07-d765604c1981",
+      "name": "Availability Tool Call",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        60
+      ],
+      "webhookId": "bd4b0312-b9ce-473b-9f05-2f1d73d0d51a"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ JSON.stringify($('Limit').item) }}"
+            },
+            {
+              "content": "Return all the available slot times in a comma-separated list. Also assume that these times are in UTC and need to be converted to EST; all slots are on the same day\neg: \n{\n\"availableSlots\": \n\"January 6th 2025 at 10:00am, 11:00am, or 11:30am\"\n}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "id": "1f4e4321-fcd9-4dba-b2b8-fca6096737a2",
+      "name": "OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        2440,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "34a7aea6-c379-44fd-b285-5262ec77a88b",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "665556fa-eaf6-4831-b24c-bfed3d5f4237",
+      "name": "Book Slot Tool Call",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        400
+      ],
+      "webhookId": "34a7aea6-c379-44fd-b285-5262ec77a88b"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.body.message.toolCalls[0].function.arguments.slot_to_be_booked }}"
+            },
+            {
+              "content": "Convert time which is in EST to UTC.\n\nEg: {\n\"UTC\": \n\"2025-01-06T14:00:00.000Z\"\n}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "id": "7a51ac0a-e7a2-4bbc-847b-b3f7d7cad5e6",
+      "name": "OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        1660,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "d4a3bd02-775f-4ecb-b08e-95ac66dfcd9e",
+        "options": {}
+      },
+      "id": "881dd285-2b35-4e4f-9b40-8527b9b1f9dc",
+      "name": "End of Call Report",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        3660,
+        160
+      ],
+      "webhookId": "d4a3bd02-775f-4ecb-b08e-95ac66dfcd9e"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Write a personalized email to  {{ $json.fields['Full Name'] }} based on what we learned on the call: {{ $('End of Call Report').item.json.body.message.analysis.summary }} — However, do not make mention of the price or their commitment to pay it."
+            },
+            {
+              "content": "Here's an example:\n\nHey Tom,\n\nGreat chatting with you today and hearing more about your pet grooming business. We can't wait see you on January 6 and hope to see you at the masterclass!\n\nThanks for your interest,\n\nLiam's AI Assistant"
+            },
+            {}
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "id": "d9b45090-49b3-4ea6-8e19-17700ca0e309",
+      "name": "OpenAI2",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        4840,
+        60
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T19:22:23.929Z",
+  "versionId": "dabe6833-68c5-427b-83b2-47097f6ce1a8"
+}
