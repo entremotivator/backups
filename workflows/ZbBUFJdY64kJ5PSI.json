@@ -1,0 +1,883 @@
+{
+  "active": false,
+  "connections": {
+    "Get Image URL": {
+      "main": [
+        [
+          {
+            "node": "Download Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Audio": {
+      "main": [
+        [
+          {
+            "node": "Audio Transcriber",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Image": {
+      "main": [
+        [
+          {
+            "node": "Image Explainer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get User's Message": {
+      "main": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Text": {
+      "main": [
+        [
+          {
+            "node": "Text Summarizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Split out message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Explainer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Summarizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Audio Transcriber": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "n8n_demo",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n_demo": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Audio URL": {
+      "main": [
+        [
+          {
+            "node": "Download Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split out message": {
+      "main": [
+        [
+          {
+            "node": "Identify and ReRoute Message Types",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Calendar Events": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar Events": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recieve Multiple Emails": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create and Approve Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Frank's Assistant",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identify and ReRoute Message Types": {
+      "main": [
+        [
+          {
+            "node": "Get Audio URL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "Get Image URL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Frank's Assistant": {
+      "main": [
+        [
+          {
+            "node": "Respond to User",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Explainer": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Summarizer": {
+      "main": [
+        [
+          {
+            "node": "Get User's Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-06T01:06:30.650Z",
+  "id": "ZbBUFJdY64kJ5PSI",
+  "meta": null,
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.audio.id }}",
+        "requestOptions": {}
+      },
+      "id": "f0ef5f49-3077-4062-a623-a89c8696351f",
+      "name": "Get Audio URL",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        -40,
+        -180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "operation": "mediaUrlGet",
+        "mediaGetId": "={{ $json.image.id }}",
+        "requestOptions": {}
+      },
+      "id": "f4dc805e-f9a7-4999-9e3a-18736facf5cf",
+      "name": "Get Image URL",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        -20,
+        40
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "f466f885-48be-4ba9-afe8-14a02127ded2",
+      "name": "Download Audio",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        260,
+        -180
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "whatsAppApi",
+        "options": {}
+      },
+      "id": "9641dfdb-9fdb-4e0d-8ea0-9ece5ac2d27d",
+      "name": "Download Image",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        40
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d990cbd6-a408-4ec4-a889-41be698918d9",
+              "name": "message_type",
+              "type": "string",
+              "value": "={{ $('Split out message').item.json.type }}"
+            },
+            {
+              "id": "23b785c3-f38e-4706-80b7-51f333bba3bd",
+              "name": "message_text",
+              "type": "string",
+              "value": "={{ $json.text }}"
+            },
+            {
+              "id": "6e83f9a7-cf75-4182-b2d2-3151e8af76b9",
+              "name": "from",
+              "type": "string",
+              "value": "={{ $('WhatsApp Trigger1').item.json.messages[0].from }}"
+            },
+            {
+              "id": "da4b602a-28ca-4b0d-a747-c3d3698c3731",
+              "name": "message_caption",
+              "type": "string",
+              "value": "={{ $('Identify and ReRoute Message Types').item.json.video && $('Identify and ReRoute Message Types').item.json.video.caption || '' }}\n{{ $('Identify and ReRoute Message Types').item.json.image && $('Identify and ReRoute Message Types').item.json.image.caption || ''}}\n{{ $('Identify and ReRoute Message Types').item.json.audio && $('Identify and ReRoute Message Types').item.json.audio.caption || ''}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d94a8a32-65f8-4f70-b6c0-fcc06fb755ca",
+      "name": "Get User's Message",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        680,
+        40
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "amount": 0
+      },
+      "id": "6c00c950-2d5f-4e16-9e82-fd21bb3a4732",
+      "name": "Get Text",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        -20,
+        360
+      ],
+      "webhookId": "99b49c83-d956-46d2-b8d3-d65622121ad9",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "266511473204092",
+        "recipientPhoneNumber": "={{ $('WhatsApp Trigger1').item.json.messages[0].from }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "id": "d7b5b042-fd9c-410c-90fe-6c58720ca3fc",
+      "name": "Respond to User",
+      "type": "n8n-nodes-base.whatsApp",
+      "position": [
+        1480,
+        40
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ]
+      },
+      "id": "16ff4c7a-88b2-4c8b-a720-5ae2fe323d08",
+      "name": "WhatsApp Trigger1",
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "position": [
+        -800,
+        20
+      ],
+      "webhookId": "0b1b3a9b-2f6a-4f5a-8385-6365d96f4802",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-2024-08-06",
+        "options": {}
+      },
+      "id": "620c7f51-2548-4f3a-8081-fff1bf3fa58b",
+      "name": "OpenAI Chat Model5",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        300,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a405e565-628e-4ee8-9ca7-202ea5164010",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        300,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "441871ab-87b8-449e-b33f-4d181dd233eb",
+      "name": "Audio Transcriber",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        420,
+        -180
+      ],
+      "typeVersion": 1.5
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('WhatsApp Trigger1').item.json.contacts[0].wa_id }}",
+        "tableName": "n8n_personalagent_chat_histories",
+        "contextWindowLength": 15
+      },
+      "id": "af27139e-e342-49b0-9183-12fbfe126240",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "name": "contacts_data",
+        "description": "Retrieves information about contacts and associated email addresses, templates and more.",
+        "topK": 8
+      },
+      "id": "adcd83ab-4907-4312-bb7a-42c196144582",
+      "name": "Vector Store Tool",
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "7ce6b8b4-9d9e-4919-a818-6423a3a3cf37",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "c06d6eeb-cc83-426c-b744-a92ade8e0a9a",
+      "name": "OpenAI Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        620,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "1f8576d5-db96-49c9-9402-703e687f6e9e",
+      "name": "OpenAI Chat Model3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {
+          "queryName": "match_documents"
+        }
+      },
+      "id": "3470191e-ab83-4b7f-b352-a941578e34f1",
+      "name": "n8n_demo",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "bea06827-3e73-41a9-9e80-5b3eecb949ef",
+      "name": "SerpAPI",
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "messages",
+        "options": {}
+      },
+      "id": "d54a8212-0d03-4648-b288-f72396a64b32",
+      "name": "Split out message",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        -580,
+        20
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "frjimenez2009@gmail.com",
+          "mode": "list",
+          "cachedResultName": "frjimenez2009@gmail.com"
+        },
+        "limit": "={{ $fromAI(\"Limit\") }}",
+        "options": {
+          "timeMin": "={{ $fromAI(\"After\") }}",
+          "timeMax": "={{ $fromAI(\"Before\") }}"
+        }
+      },
+      "id": "8bc73cf6-c7a9-4a27-8fd9-e3775abd3da3",
+      "name": "Get Calendar Events",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.2,
+      "position": [
+        900,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "frjimenez2009@gmail.com",
+          "mode": "list",
+          "cachedResultName": "frjimenez2009@gmail.com"
+        },
+        "start": "={{ $fromAI('start_date', 'The start time of the event in ISO format', 'string') }}",
+        "end": "={{ $fromAI('end_date', 'The end time of the event in ISO format', 'string') }}",
+        "additionalFields": {
+          "attendees": [
+            "={{ $fromAI('attendees', 'Email addresses of attendees (comma-separated)', 'string') }}"
+          ],
+          "description": "={{ $fromAI('description', 'Details or agenda for the event', 'string') }}",
+          "summary": "={{ $fromAI('title', 'Specify the title of the event', 'string') }}"
+        }
+      },
+      "id": "b28d17ae-b465-4dd3-8b97-707b8ab66b4b",
+      "name": "Create Calendar Events",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.2,
+      "position": [
+        1040,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": "={{ $fromAI('limit', 'the number of emails to retrieve, max of 3') }}",
+        "simple": false,
+        "filters": {
+          "readStatus": "unread",
+          "receivedAfter": "={{ $fromAI('received_after', 'Retrieve emails received after the current date, given a period specified by user if any. This is calculated dynamically based on the current date.', 'string') }}",
+          "receivedBefore": "={{ $fromAI('received_before', 'Retrieve emails received before the current time today. This is calculated dynamically based on the current date.', 'string') }}"
+        },
+        "options": {}
+      },
+      "id": "5047a23d-1f49-4423-a4fa-17fd3ff4af47",
+      "name": "Recieve Multiple Emails",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        1200,
+        580
+      ],
+      "webhookId": "ee66615f-8ca6-4b86-bb55-56b1d30bb388"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $fromAI('email_send_to', 'The email recipient', 'string') }}",
+        "subject": "={{ $fromAI('email_subject', 'The subject of the email', 'string') }}",
+        "emailType": "text",
+        "message": "={{ $fromAI('email_content', 'The content of the email message', 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "id": "0a3769f8-3c0e-414d-96bc-8e6d14d72376",
+      "name": "Create and Approve Email",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        1360,
+        580
+      ],
+      "webhookId": "83bbb034-9202-415a-a146-0952b3716c6e",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.type == 'audio' && Boolean($json.audio) }}",
+                    "rightValue": "audio"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Audio Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "82aa5ff4-c9b6-4187-a27e-c7c5d9bfdda0",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.type == 'video' && Boolean($json.video) }}",
+                    "rightValue": ""
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Video Message"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "05b30af4-967b-4824-abdc-84a8292ac0e5",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.type == 'image' && Boolean($json.image) }}",
+                    "rightValue": ""
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Image Message"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra",
+          "renameFallbackOutput": "Text Message"
+        }
+      },
+      "id": "a2275190-201c-47bb-a75c-9d3ebde8c724",
+      "name": "Identify and ReRoute Message Types",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -300,
+        20
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=The user sent the following message\nmessage type: {{ $json.message_type }}\nmessage text or description:\n```{{ $json.message_text }}```\n{{ $json.message_caption ? `message caption: ${$json.message_caption.trim()}` : '' }}",
+        "options": {
+          "systemMessage": "=# **Role:**\nYou are a highly efficient and intelligent personal assistant, responsible for managing calendar events, emails, and communication tasks seamlessly.\n\n# **Primary Tasks:**\n\n1. **Retrieve Calendar Events**  \n   - Use the **\"Get Events\"** tool to fetch calendar events based on user instructions.  \n   - Handle queries such as:\n     - \"Retrieve today’s events\"\n     - \"Get tomorrow’s meetings\"\n   - Include details like:\n     - Event name, start and end time, location, video meeting link (if available), and participants’ names/emails.  \n   - Present results in a clear format:\n     ```\n     Event: [Event Name]  \n     Time: [Start Time] - [End Time]  \n     Location: [Location]  \n     Video Link: [Video Link]  \n     Participants:  \n     - [Name 1] ([Email 1])  \n     - [Name 2] ([Email 2])  \n     ```\n\n2. **Create Calendar Events**  \n   - Use the **\"Create Event\"** tool to schedule new events.  \n   - Inputs include:  \n     - Title, start date, end date, attendees, and description.  \n   - Resolve attendee names to email addresses using the **vector store tool** for contact references.  \n   - Example: For \"Add Sarah to the meeting,\" retrieve \"Sarah Thompson\" and her associated email from the vector store.  \n   - Confirm event details with the user before finalizing:\n     ```\n     Title: [Event Title]  \n     Time: [Start Date/Time] to [End Date/Time]  \n     Attendees: [List of Names/Emails]  \n     Description: [Event Description]  \n     ```\n   - If no end time or duration is stated, please assume the event will last 1 hour.\n\n\n3. **Retrieve Emails with Summaries**  \n   - Use the **\"Receive Many Emails\"** tool to fetch emails dynamically based on the user’s request:\n     - Examples: \"Get today’s emails,\" \"Show emails from last week.\"  \n   - Summarize the retrieved emails into a user-friendly list:\n     ```\n     Email 1:  \n     - Subject: [Subject]  \n     - From: [Sender Name/Email]  \n     - Summary: [Brief description of email content]  \n     ```\n   - Allow users to select a specific email for further action.\n\n4. **Send Emails Using Templates**  \n   - Use the **\"Send & Approve Email\"** tool to send or reply to emails based on user instructions.  \n   - Leverage the **vector store tool** for predefined templates.  \n     - Example: If the user says, \"Send a meeting request to John,\" retrieve the **\"Meeting Request\"** template from the vector store.  \n   - Dynamically populate the template using user-provided details (e.g., recipient, date, and time):\n     ```\n     Template: Meeting Request  \n     Greeting: Hi [Recipient’s Name],  \n     Purpose: [Reason for the email, dynamically populated].  \n     Closing: Best regards, [Your Name].  \n     ```\n   - Confirm with the user before sending:\n     ```\n     To: [Recipient’s Email]  \n     Subject: [Subject Line]  \n     Body: [Draft Content]  \n     ```\n   - For replying to specific emails, incorporate context dynamically and confirm the draft with the user.\n\n# **Tool Usage**:\n- Dynamically invoke:\n  - **Vector Store Tool**: Retrieve contact details (e.g., names to email mappings) and predefined templates for emails.  \n  - **Calendar Tools**: Fetch or create calendar events.  \n  - **Gmail Tool**: Fetch, summarize, reply to, or send emails.  \n  - **SERP API Tool**: Perform real-time internet searches and provide summarized results.\n\n# **Ambiguity Handling**:\n1. Resolve vague references (e.g., \"Sarah\") by checking the **vector store tool** for the closest match.  \n   - Example: \"Invite Sarah to the meeting\" → Resolve to \"Sarah Thompson\" (frjimenez2009@gmail.com).  \n2. If conflicting options exist, ask the user for clarification.  \n\n# **Examples**:\n\n## **Event Retrieval Example**\n**User Request**: \"Retrieve today’s events.\"  \n**Response**:\n```\n1. Event: Weekly Team Sync  \n   Time: 10:00 AM - 11:00 AM  \n   Location: FG Labs HQ  \n   Video Link: [Meet Link]  \n   Participants:  \n   - Fran Jimenez (frjimenez2009@gmail.com)  \n   - Frank Nillard (contact@fglabs.co)  \n\n2. Event: Client Presentation  \n   Time: 3:00 PM - 4:00 PM  \n   Location: Zoom  \n   Participants:  \n   - Sarah Thompson (frank@fglabs.co)  \n   - David Lee (frjimenez2009@hotmail.com)  \n```\n\n## **Email Summary Example**\n**User Request**: \"Get emails received today.\"  \n**Response**:\n```\n1. Email 1:  \n   - Subject: Collaboration Opportunity  \n   - From: Sarah Thompson (frank@fglabs.co)  \n   - Summary: \"Proposal to collaborate on a video project for next week.\"  \n\n2. Email 2:  \n   - Subject: Meeting Confirmation  \n   - From: Emily White (fglabs2024@gmail.com)  \n   - Summary: \"Confirmation of tomorrow’s meeting at 10:00 AM. Requested agenda input.\"  \n```\n\n---\n\n### Final Notes:\n- **Image Understanding**: You will be given descriptions of images so acknowledge that you understand them and ask the user what do they want to do next with this information.\n- Make sure that the emails you send have the name Frank at the end. Do not leave any square brackets.\n- **Today's Date**:  \n  {{ new Date().toISOString() }}\n"
+        }
+      },
+      "id": "1c9d8a4f-50c5-4a49-9792-5ae042d27e64",
+      "name": "Frank's Assistant",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1040,
+        -120
+      ],
+      "typeVersion": 1.6
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Here is an image sent by the user. Describe the image and transcribe any text visible in the image. Put in as much detail as possible.",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "HumanMessagePromptTemplate",
+              "messageType": "imageBinary"
+            }
+          ]
+        }
+      },
+      "id": "cb0021a7-9499-4c70-a42f-6afa728bf9da",
+      "name": "Image Explainer",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        280,
+        40
+      ],
+      "typeVersion": 1.4
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text.body }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Summarize the user's message succinctly."
+            }
+          ]
+        }
+      },
+      "id": "d2fb05ce-54bd-4e52-8ef1-57043b5c3952",
+      "name": "Text Summarizer",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        280,
+        360
+      ],
+      "typeVersion": 1.4
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-06T01:52:21.371Z",
+  "versionId": "b26b88bf-a427-4dd8-827a-6974826e1086"
+}
