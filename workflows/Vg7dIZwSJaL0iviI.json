@@ -1,0 +1,330 @@
+{
+  "active": false,
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Make Phone Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Make Phone Call": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Call Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Call Results": {
+      "main": [
+        [
+          {
+            "node": "NocoDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NocoDB": {
+      "main": [
+        [
+          {
+            "node": "Send NTFY Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get NoCoDB Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send NTFY Notification": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get NoCoDB Rows": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-18T03:09:54.819Z",
+  "id": "Vg7dIZwSJaL0iviI",
+  "meta": null,
+  "name": "Agent call auto dial",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "function formatPhoneNumber(phoneNumber) {\n   // Remove all non-digit characters\n   let cleaned = phoneNumber.replace(/\\D/g, '');\n   \n   // Handle cases where numbers might have extra digits\n   if (cleaned.length > 10) {\n       cleaned = cleaned.slice(0, 10);\n   }\n   \n   // Return empty array if not exactly 10 digits\n   if (cleaned.length !== 10) {\n       return [];\n   }\n   \n   // Return array with object containing formatted number\n   return [{\n       \"Cleaned Phone\": '+1' + cleaned\n   }];\n}\n\n// Get just the formatted number from the result:\nconst result = formatPhoneNumber($('Loop Over Items').all()[0].json['Phone']);\nif (result.length > 0) {\n   return [{\"Cleaned Number\": result[0][\"Cleaned Phone\"]}] ;\n}"
+      },
+      "id": "2b5787ca-06cb-4bbc-8853-1574876e0c01",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.vapi.ai/call/phone",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 3097c5d8-ad92-4f60-904a-b641d0fb0323"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"assistantId\": \"f25fd123-47cd-41cb-abb8-4fd5f4005408\",\n  \"phoneNumberId\": \"c385d18a-3eb8-477b-bfa5-5c3a6e7c3f31\",\n  \"customer\": {\n    \"number\": \"{{ $json[\"Cleaned Number\"] }}\"\n  }\n}",
+        "options": {}
+      },
+      "id": "09a025a7-663d-44f8-b300-00d59a4b485f",
+      "name": "Make Phone Call",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        860,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 6,
+        "unit": "minutes"
+      },
+      "id": "eb389376-60f1-46ce-9d99-1afeb22fb5d6",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1060,
+        140
+      ],
+      "webhookId": "fe50d079-19ef-4dd0-8a04-f8e71f45d08c"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.vapi.ai/call/{{ $json.id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 3097c5d8-ad92-4f60-904a-b641d0fb0323"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0c5ecd1f-7655-4093-a280-bf89a55b2ac8",
+      "name": "Get Call Results",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1300,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "update",
+        "projectId": "p396c1l7rjkrr41",
+        "table": "mwsufn0rwpc5q6e",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldName": "=Id",
+              "fieldValue": "={{ $('Loop Over Items').all()[0].json.Id }}"
+            },
+            {
+              "fieldName": "Call Success Evaluation",
+              "fieldValue": "={{ $json.analysis.successEvaluation }}"
+            },
+            {
+              "fieldName": "Call Summary",
+              "fieldValue": "={{ $json.summary }}"
+            },
+            {
+              "fieldName": "Transcript",
+              "fieldValue": "={{ $json.transcript }}"
+            },
+            {
+              "fieldName": "Recording",
+              "fieldValue": "={{ $json.recordingUrl }}"
+            },
+            {
+              "fieldName": "Call Cost",
+              "fieldValue": "={{ $json.cost }}"
+            },
+            {
+              "fieldName": "Messages JSON",
+              "fieldValue": "={{ $json.messages }}"
+            },
+            {
+              "fieldName": "Vapi Call ID",
+              "fieldValue": "={{ $json.id }}"
+            },
+            {
+              "fieldName": "Phone",
+              "fieldValue": "={{ $('Code').all()[0].json['Cleaned Number'] }}"
+            },
+            {
+              "fieldName": "Outbound Call",
+              "fieldValue": "1"
+            }
+          ]
+        }
+      },
+      "id": "293b7a78-2534-42ee-a880-28758e0f9f29",
+      "name": "NocoDB",
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        1520,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://ntfy.aspworkplace.com/n8nAutodialerResults",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "text/plain",
+        "body": "=Business: {{ $('Loop Over Items').all()[0].json.Business }}\n\nPhone: {{ $('Loop Over Items').all()[0].json.Phone }}\nSuccess Eval: {{ $json['Call Success Evaluation'] }}\n\nCall Summary: {{ $json['Call Summary'] }}\n",
+        "options": {}
+      },
+      "id": "43a9c999-bb77-4c7f-a682-9a4e531263ae",
+      "name": "Send NTFY Notification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1740,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 16-21 * * 1-5"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f9539cc8-0630-489f-94c3-fe8f5db809c4",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        440,
+        0
+      ],
+      "id": "95062b27-107c-4de0-8730-b70b39ee0f0d",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "authentication": "nocoDbApiToken",
+        "operation": "getAll",
+        "projectId": "p396c1l7rjkrr41",
+        "table": "mwsufn0rwpc5q6e",
+        "limit": 10,
+        "options": {
+          "viewId": "vw29x4t6pz4uj8cp"
+        }
+      },
+      "type": "n8n-nodes-base.nocoDb",
+      "typeVersion": 3,
+      "position": [
+        220,
+        0
+      ],
+      "id": "88dac82d-7518-42a6-80ce-7f3066c61323",
+      "name": "Get NoCoDB Rows"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-18T03:10:23.172Z",
+  "versionId": "cceca2df-fb45-47a2-b150-a4716d5db2be"
+}
