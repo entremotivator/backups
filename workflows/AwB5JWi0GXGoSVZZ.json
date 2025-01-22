@@ -1,0 +1,118 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Ollama API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama API": {
+      "main": [
+        [
+          {
+            "node": "Process Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T20:23:56.819Z",
+  "id": "AwB5JWi0GXGoSVZZ",
+  "meta": null,
+  "name": "My workflow 6",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f2e11b2b-0e31-41d4-a423-4788aebf5f0a"
+    },
+    {
+      "parameters": {
+        "jsCode": "const messages = [\n  {\n    role: 'user',\n    content: 'What can you help me with?'\n  }\n];\n\nconst data = {\n  model: 'llama2',\n  messages: messages,\n  stream: false\n};\n\nreturn { json: data };"
+      },
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        200,
+        0
+      ],
+      "id": "e7487f1b-a2db-4c3d-8c7b-79346cbd4b72"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "/api/chat",
+        "authentication": "basicAuth",
+        "sendBody": true,
+        "specifyBody": true,
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "name": "Ollama API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        420,
+        0
+      ],
+      "id": "56d0870a-f7a5-4839-a34d-fc40069a8984"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Log the response\nconsole.log('API Response:', $input.all());\n\n// Extract the message content\nconst response = $input.all()[0].json;\n\nif (response && response.message && response.message.content) {\n  return {\n    json: {\n      content: response.message.content\n    }\n  };\n} else {\n  return {\n    json: {\n      content: 'Error: Unable to get response from API'\n    }\n  };\n}"
+      },
+      "name": "Process Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        0
+      ],
+      "id": "abb33f7e-4d9b-4d9f-863d-cc2c05cceee6"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T20:23:56.819Z",
+  "versionId": "f1245324-c466-432a-95bd-9e60a9758740"
+}
