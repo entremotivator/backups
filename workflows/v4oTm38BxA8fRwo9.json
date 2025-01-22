@@ -1,0 +1,148 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Chat LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Chat LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-13T06:13:34.400Z",
+  "id": "v4oTm38BxA8fRwo9",
+  "meta": null,
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "id": "d2815d2d-e54a-409f-b658-14485e6bd8b7",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        1260,
+        880
+      ],
+      "webhookId": "ebdeba3f-6b4f-49f3-ba0a-8253dd226161",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "id": "c68b4702-4496-450c-9cff-0308225a91ef",
+      "name": "Ollama Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "position": [
+        1820,
+        1120
+      ],
+      "typeVersion": 1,
+      "notesInFlow": true,
+      "credentials": {
+        "ollamaApi": {
+          "id": "guwnC25XoZzCbQ7G",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "messages": {
+          "messageValues": [
+            {
+              "type": "system",
+              "message": "You are a helpful pirate assistant. Always respond in pirate speak while being informative and accurate."
+            },
+            {
+              "type": "user",
+              "message": "={{ $('When chat message received').item.json.action }}"
+            }
+          ]
+        }
+      },
+      "id": "8c924880-7289-4399-b48c-8599ddb5a6e2",
+      "name": "Chat LLM Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        1700,
+        880
+      ],
+      "typeVersion": 1.4,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app:57987",
+        "authentication": "genericCredentialType",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "authorization",
+              "value": "Basic cm9vdDplWmZMSzNYNC1TWDBpLVVtZ1VCZTZF"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1480,
+        880
+      ],
+      "id": "50b2512a-f514-49b4-8302-8786879c8a85",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-13T06:13:34.400Z",
+  "versionId": "39a5d587-42c3-4fe1-bc13-9f940753a7de"
+}
