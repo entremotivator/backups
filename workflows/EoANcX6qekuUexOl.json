@@ -1,0 +1,3786 @@
+{
+  "active": false,
+  "connections": {
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "For Each Research...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "For Each Extract...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "For Each Generate...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract": {
+      "main": [
+        [
+          {
+            "node": "Extract Result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extract Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate": {
+      "main": [
+        [
+          {
+            "node": "Generate Result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Generate Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research": {
+      "main": [
+        [
+          {
+            "node": "Research Result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Research Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append Row": {
+      "main": [
+        [
+          {
+            "node": "Response OK1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EventRouter": {
+      "main": [
+        [
+          {
+            "node": "Web Search For API Schema",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Query Templates",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get API Operations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Lists": {
+      "main": [
+        [
+          {
+            "node": "Has Operations?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Docs": {
+      "main": [
+        [
+          {
+            "node": "Query & Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Results?": {
+      "main": [
+        [
+          {
+            "node": "Results to List",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response Empty",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Query & Docs": {
+      "main": [
+        [
+          {
+            "node": "For Each Template...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Dupes": {
+      "main": [
+        [
+          {
+            "node": "Scrape Webpage Contents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Docs1": {
+      "main": [
+        [
+          {
+            "node": "Query & Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Error": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Event": {
+      "main": [
+        [
+          {
+            "node": "Extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Results?1": {
+      "main": [
+        [
+          {
+            "node": "Has API Documentation?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response Scrape Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Results?3": {
+      "main": [
+        [
+          {
+            "node": "Set Embedding Variables",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response No API Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Query & Docs1": {
+      "main": [
+        [
+          {
+            "node": "For Each Template...1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execution Data": {
+      "main": [
+        [
+          {
+            "node": "EventRouter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Result": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Results": {
+      "main": [
+        [
+          {
+            "node": "Remove Dupes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Error": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Event": {
+      "main": [
+        [
+          {
+            "node": "Generate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Error": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Event": {
+      "main": [
+        [
+          {
+            "node": "Research",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Pending": {
+      "main": [
+        [
+          {
+            "node": "Extract Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Result": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Extract": {
+      "main": [
+        [
+          {
+            "node": "All Extract Done?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Operations?": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response Empty1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Query Templates": {
+      "main": [
+        [
+          {
+            "node": "Template to List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Result": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Results to List": {
+      "main": [
+        [
+          {
+            "node": "Filter Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Successful Runs": {
+      "main": [
+        [
+          {
+            "node": "Has Results?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to Drive": {
+      "main": [
+        [
+          {
+            "node": "Response OK2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Pending": {
+      "main": [
+        [
+          {
+            "node": "Generate Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Generate": {
+      "main": [
+        [
+          {
+            "node": "All Generate Done?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Research": {
+      "main": [
+        [
+          {
+            "node": "All Research Done?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Pending": {
+      "main": [
+        [
+          {
+            "node": "Research Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out Chunks": {
+      "main": [
+        [
+          {
+            "node": "Store Document Embeddings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Template to List": {
+      "main": [
+        [
+          {
+            "node": "For Each Template...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All Extract Done?": {
+      "main": [
+        [
+          {
+            "node": "Get All Generate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "For Each Extract...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Append Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Upload Fields": {
+      "main": [
+        [
+          {
+            "node": "Upload to Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All Generate Done?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "For Each Generate...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "All Research Done?": {
+      "main": [
+        [
+          {
+            "node": "Get All Extract",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "For Each Research...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get API Operations": {
+      "main": [
+        [
+          {
+            "node": "Contruct JSON Schema",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Store Document Embeddings",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Extract...": {
+      "main": [
+        [
+          {
+            "node": "Get All Generate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extract Pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contruct JSON Schema": {
+      "main": [
+        [
+          {
+            "node": "Set Upload Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Document...": {
+      "main": [
+        [
+          {
+            "node": "Response OK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Content Chunking @ 50k Chars",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Generate...": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Generate Pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Research...": {
+      "main": [
+        [
+          {
+            "node": "Get All Extract",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Research Pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Template...": {
+      "main": [
+        [
+          {
+            "node": "Identify Service Products",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Search in Relevant Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract API Templates": {
+      "main": [
+        [
+          {
+            "node": "For Each Template...1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "For Each Template...1": {
+      "main": [
+        [
+          {
+            "node": "Extract API Operations",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Search in Relevant Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract API Operations": {
+      "main": [
+        [
+          {
+            "node": "Merge Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has API Documentation?": {
+      "main": [
+        [
+          {
+            "node": "Has Results?3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scrape Webpage Contents": {
+      "main": [
+        [
+          {
+            "node": "Successful Runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Relevant Docs": {
+      "main": [
+        [
+          {
+            "node": "Combine Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Embedding Variables": {
+      "main": [
+        [
+          {
+            "node": "For Each Document...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Google Gemini": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Store Document Embeddings",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Execution Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Has API Documentation?",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Relevant Docs1": {
+      "main": [
+        [
+          {
+            "node": "Combine Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Google Gemini1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Search in Relevant Docs",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Google Gemini2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Search in Relevant Docs1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Extract API Operations",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Identify Service Products",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identify Service Products": {
+      "main": [
+        [
+          {
+            "node": "Extract API Templates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store Document Embeddings": {
+      "main": [
+        [
+          {
+            "node": "For Each Document...",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Web Search For API Schema": {
+      "main": [
+        [
+          {
+            "node": "Has Results?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Content Chunking @ 50k Chars": {
+      "main": [
+        [
+          {
+            "node": "Split Out Chunks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get All Research",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-08T05:03:37.464Z",
+  "id": "EoANcX6qekuUexOl",
+  "meta": null,
+  "name": "API Schema Extractor",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c9325505-9580-4b68-b879-fef82bb404cd",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -720,
+        220
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/serping~fast-google-search-results-scraper/run-sync-get-dataset-items",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "searchTerms",
+              "value": "={{\n[\n  `site:${$json.data.url.replace(/^http[s]:\\/\\//, '').replace(/\\/$/, '').replace('www.', '')} \"${$json.data.service}\" api developer (intext:reference OR intext:resource) (-inurl:support OR -inurl:help) (inurl:api OR intitle:api) -filetype:pdf`\n]\n}}"
+            },
+            {
+              "name": "resultsPerPage",
+              "value": "={{ 10 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2a712259-2adc-467d-b3dd-1e3c63763940",
+      "name": "Web Search For API Schema",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -80,
+        1220
+      ],
+      "typeVersion": 4.2,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://api.apify.com/v2/acts/apify~web-scraper/run-sync-get-dataset-items",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "memory",
+              "value": "2048"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"startUrls\": [\n    {\n      \"url\": \"{{ $json.source.link }}\",\n      \"method\": \"GET\"\n    }\n  ],\n  \"breakpointLocation\": \"NONE\",\n  \"browserLog\": false,\n  \"closeCookieModals\": false,\n  \"debugLog\": false,\n  \"downloadCss\": false,\n  \"downloadMedia\": false,\n  \"excludes\": [\n    {\n      \"glob\": \"/**/*.{png,jpg,jpeg,pdf}\"\n    }\n  ],\n  \"headless\": true,\n  \"ignoreCorsAndCsp\": false,\n  \"ignoreSslErrors\": false,\n  \n  \"injectJQuery\": true,\n  \"keepUrlFragments\": false,\n  \"linkSelector\": \"a[href]\",\n  \"maxCrawlingDepth\": 1,\n  \"maxPagesPerCrawl\": 1,\n  \"maxRequestRetries\": 1,\n  \"maxResultsPerCrawl\": 1,\n  \"pageFunction\": \"// The function accepts a single argument: the \\\"context\\\" object.\\n// For a complete list of its properties and functions,\\n// see https://apify.com/apify/web-scraper#page-function \\nasync function pageFunction(context) {\\n\\n    await new Promise(res => { setTimeout(res, 6000) });\\n    // This statement works as a breakpoint when you're trying to debug your code. Works only with Run mode: DEVELOPMENT!\\n    // debugger; \\n\\n    // jQuery is handy for finding DOM elements and extracting data from them.\\n    // To use it, make sure to enable the \\\"Inject jQuery\\\" option.\\n    const $ = context.jQuery;\\n    const title = $('title').first().text();\\n\\n    // Clone the body to avoid modifying the original content\\n    const bodyClone = $('body').clone();\\n    bodyClone.find('iframe, img, script, style, object, embed, noscript, svg, video, audio').remove();\\n    const body = bodyClone.html();\\n\\n    // Return an object with the data extracted from the page.\\n    // It will be stored to the resulting dataset.\\n    return {\\n        url: context.request.url,\\n        title,\\n        body\\n    };\\n}\",\n  \"postNavigationHooks\": \"// We need to return array of (possibly async) functions here.\\n// The functions accept a single argument: the \\\"crawlingContext\\\" object.\\n[\\n    async (crawlingContext) => {\\n        // ...\\n    },\\n]\",\n  \"preNavigationHooks\": \"// We need to return array of (possibly async) functions here.\\n// The functions accept two arguments: the \\\"crawlingContext\\\" object\\n// and \\\"gotoOptions\\\".\\n[\\n    async (crawlingContext, gotoOptions) => {\\n        // ...\\n    },\\n]\\n\",\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  },\n  \"runMode\": \"PRODUCTION\",\n  \n  \"useChrome\": false,\n  \"waitUntil\": [\n    \"domcontentloaded\"\n  ],\n  \"globs\": [],\n  \"pseudoUrls\": [],\n  \"proxyRotation\": \"RECOMMENDED\",\n  \"maxConcurrency\": 50,\n  \"pageLoadTimeoutSecs\": 60,\n  \"pageFunctionTimeoutSecs\": 60,\n  \"maxScrollHeightPixels\": 5000,\n  \"customData\": {}\n}",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 2,
+              "batchInterval": 30000
+            }
+          }
+        }
+      },
+      "id": "094b73d0-e122-46f9-aa5a-27e582c2ba15",
+      "name": "Scrape Webpage Contents",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        760,
+        1120
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "origin_search.results",
+        "options": {}
+      },
+      "id": "0b6fb82e-8624-4752-b5ee-377e02539dbe",
+      "name": "Results to List",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        280,
+        1120
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chunkSize": 4000,
+        "options": {}
+      },
+      "id": "54b3563d-7e56-4965-82bb-8c315ea53703",
+      "name": "Recursive Character Text Splitter1",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "position": [
+        2620,
+        1420
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7753a4f4-3ec2-4c05-81df-3d5e8979a478",
+              "name": "=data",
+              "type": "array",
+              "value": "={{ new Array(Math.round($json.content.length / Math.min($json.content.length, 50000))).fill('').map((_,idx) => $json.content.substring(idx * 50000, idx * 50000 + 50000)) }}"
+            },
+            {
+              "id": "7973bcb4-f239-4619-85fc-c76e20386375",
+              "name": "service",
+              "type": "string",
+              "value": "={{ $json.service }}"
+            },
+            {
+              "id": "b46e44bc-ad01-4cf0-8b07-25eeb1fb5874",
+              "name": "url",
+              "type": "string",
+              "value": "={{ $json.url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0269f771-feb7-4936-bcd0-91bcdbcd7fa3",
+      "name": "Content Chunking @ 50k Chars",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2200,
+        1140
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "include": "allOtherFields",
+        "options": {}
+      },
+      "id": "ef15a426-53cc-4d06-9346-5580ad2d7bcf",
+      "name": "Split Out Chunks",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        2360,
+        1140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.data }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "service",
+                "value": "={{ $json.service }}"
+              },
+              {
+                "name": "url",
+                "value": "={{ $json.url }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "67186568-ea43-49e0-9fff-37a9e139d49e",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "position": [
+        2620,
+        1300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4008ae44-7998-4a6f-88c9-686f8b02e92b",
+              "name": "content",
+              "type": "string",
+              "value": "={{ $json.body }}"
+            },
+            {
+              "id": "f7381ac6-ef40-463c-ad2b-df2c31d3e828",
+              "name": "service",
+              "type": "string",
+              "value": "={{ $('EventRouter').first().json.data.service }}"
+            },
+            {
+              "id": "7eae99fd-75c7-4974-a128-641b8ada0cc2",
+              "name": "url",
+              "type": "string",
+              "value": "={{ $json.url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "44980540-15eb-4a2f-bf0e-385b56396a0d",
+      "name": "Set Embedding Variables",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1800,
+        980
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {},
+      "id": "5404146f-0a69-45f1-807d-80c9b6c19a2a",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        -760,
+        1600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "dataToSave": {
+          "values": [
+            {
+              "key": "eventType",
+              "value": "={{ $json.eventType }}"
+            },
+            {
+              "key": "executedById",
+              "value": "={{ $json.executedById }}"
+            },
+            {
+              "key": "service",
+              "value": "={{ $json.data.service }}"
+            }
+          ]
+        }
+      },
+      "id": "c9190528-c7ff-4838-a421-7ecd7db93624",
+      "name": "Execution Data",
+      "type": "n8n-nodes-base.executionData",
+      "position": [
+        -560,
+        1600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.eventType }}",
+                    "rightValue": "research"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "research"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5418515e-ef6a-42e0-aeb9-8d0d35b898ca",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.eventType }}",
+                    "rightValue": "extract"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "extraction"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "0135165e-d211-44f3-92a4-a91858a57d99",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.eventType }}",
+                    "rightValue": "generate"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "generate"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "75e1c9e0-7186-4675-a69c-f41e5f835ee5",
+      "name": "EventRouter",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        -380,
+        1600
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash-latest",
+        "options": {}
+      },
+      "id": "02230b90-de51-4757-b50c-cf0e280bb19d",
+      "name": "Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        1280,
+        1140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cac77cce-0a5c-469e-ba80-9fb026f04b18",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.body }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2948fdd8-e29d-4e9c-a0ca-11d32d2fdf86",
+      "name": "Successful Runs",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        920,
+        1120
+      ],
+      "typeVersion": 2.2,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a8f42374-f981-4e51-b54e-778acdff6b12",
+      "name": "For Each Document...",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        2000,
+        980
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "modelName": "models/text-embedding-004"
+      },
+      "id": "1e72d2c4-4926-4e84-8cfa-f2259de66d58",
+      "name": "Embeddings Google Gemini",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "position": [
+        2500,
+        1300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "inputText": "={{\n$json.body\n  .replaceAll('\\n', '')\n  .substring(0, 40000)\n}}",
+        "categories": {
+          "categories": [
+            {
+              "category": "contains_api_schema_documentation",
+              "description": "True if this document contains REST API schema documentation or definitions"
+            }
+          ]
+        },
+        "options": {
+          "fallback": "discard"
+        }
+      },
+      "id": "7ec1e7dd-bc99-4faf-aa27-cc224358fe8a",
+      "name": "Has API Documentation?",
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "position": [
+        1280,
+        980
+      ],
+      "typeVersion": 1,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('EventRouter').first().json.data.collection }}"
+        },
+        "options": {}
+      },
+      "id": "3488970d-d01a-4b57-ace6-ffcc74eeabc8",
+      "name": "Store Document Embeddings",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "position": [
+        2520,
+        1140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "modelName": "models/text-embedding-004"
+      },
+      "id": "a2921f91-2856-46f6-9284-fdbe3d1ca0ae",
+      "name": "Embeddings Google Gemini1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "position": [
+        520,
+        1920
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-pro-002",
+        "options": {}
+      },
+      "id": "e0b7cd5a-251a-449d-b85c-f2ecf92c01c2",
+      "name": "Google Gemini Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        1420,
+        1640
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.documents }}",
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"resource\": { \"type\": \"string\" },\n      \"operation\": { \"type\": \"string\" },\n      \"description\": { \"type\": \"string\" },\n      \"url\": { \"type\": \"string\" },\n      \"method\": { \"type\": \"string\" },\n      \"documentation_url\": { \"type\": \"string\" }\n    }\n  }\n}",
+        "options": {
+          "systemPromptTemplate": "=You have been given an extract of a webpage which should contain a list of web/REST api operations.\nStep 1. Extract all REST (eg. GET,POST,PUT,DELETE) API operation endpoints from the page content and generate appropriate labels for the resource, operation, description, method for each.\n* \"resource\" refers to the API group, for example: \"/v1/api/indicators/list\" and \"/v1/api/indicators/create\" will both have the resource name of \"indicators\". Use the following template \"<domain>\" eg. \"entities\", \"posts\", \"credentials\".\n* \"operation\" refers to the action performed, use the following template \"<verb> <entity>\" eg. \"List entities\", \"Create post\", \"Update credentials\"\n* only use one HTTP verb for \"method\"\n* \"description\" should be limited to one sentence.\n* Examples of API urls: \"/api/\", \"/api/v1/\", \"/v1/api\". API urls should not end with \"htm\" or html\".\n* Extract a maximum of 15 endpoints.\n* If the page content contains no api operations, return an empty array."
+        }
+      },
+      "id": "c2db4b35-0cec-45c7-b37a-9756a9237171",
+      "name": "Extract API Operations",
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "position": [
+        1420,
+        1500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "load",
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('EventRouter').first().json.data.collection }}"
+        },
+        "prompt": "={{ $json.query }}",
+        "topK": 5,
+        "options": {
+          "searchFilterJson": "={{\n{\n  \"must\": [\n    {\n      \"key\": \"metadata.service\",\n      \"match\": {\n        \"value\": $('EventRouter').first().json.data.service\n      }\n    }\n  ]\n}\n}}"
+        }
+      },
+      "id": "525b24c4-08dc-4d08-bb20-05e6be6595d8",
+      "name": "Search in Relevant Docs",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "position": [
+        520,
+        1780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "amount": 0
+      },
+      "id": "aec8afba-0a11-4b91-b59c-7f5e31f63754",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        600,
+        560
+      ],
+      "webhookId": "e9ad3ef0-7403-4e65-b0a4-4afdfb0cbc6d",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "source.link",
+        "options": {}
+      },
+      "id": "82367213-215e-46f2-b85f-3070cf45b28c",
+      "name": "Remove Dupes",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "position": [
+        600,
+        1120
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "42872456-411b-4d86-a9dd-b907d001ea1c",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.type }}",
+              "rightValue": "normal"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "82d06f68-3d0b-433d-ba48-d164f0e34822",
+      "name": "Filter Results",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        440,
+        1120
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $workflow.id }}"
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "db36b465-0314-4c9e-be1a-5362727512f2",
+      "name": "Research",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        280,
+        380
+      ],
+      "typeVersion": 1.1,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1223d607-45a8-44b1-b510-56fdbe013eba",
+              "operator": {
+                "type": "array",
+                "operation": "exists",
+                "singleValue": true
+              },
+              "leftValue": "={{ $jmespath($json, 'origin_search.results') }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0bd8e7e5-3838-4eda-9105-d381652b97aa",
+      "name": "Has Results?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        100,
+        1220
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5bb23ce9-eb72-4868-9344-9e5d3952cc52",
+              "name": "response",
+              "type": "string",
+              "value": "no web results"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "602850a1-36b7-4018-9068-cce51f898567",
+      "name": "Response Empty",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        280,
+        1300
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "79598789-4468-4565-828f-fedc48be15c3",
+              "name": "response",
+              "type": "string",
+              "value": "ok"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a37e5baf-42ad-4b60-b113-81bedc711408",
+      "name": "Response OK",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2200,
+        980
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "551fa224-6cf6-40d0-b4c4-537645f6d359",
+      "name": "Combine Docs",
+      "type": "n8n-nodes-base.aggregate",
+      "position": [
+        840,
+        1780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "queries",
+        "options": {
+          "destinationFieldName": "query"
+        }
+      },
+      "id": "415cca9a-5723-4b76-8298-b8e26d35b1cf",
+      "name": "Template to List",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        100,
+        1600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e2a02550-8f53-4f8d-bb83-68ee3606736e",
+              "name": "queries",
+              "type": "array",
+              "value": "=[\n\"What are the core functionalities, essential features, or primary use cases of {{ $json.data.service }}?\",\n\"Is there an API overview or API categories for {{ $json.data.service }}? What main APIs are listed or mentioned?\",\n\"What industry does  {{ $json.data.service }} operate in? What is the most important of the services in the industry? Return the important service as the function.\",\n\"What REST apis (GET, POST, DELETE, PATCH) and/or operations can you identify for {{ $json.data.service }}?\",\n\"Does {{ $json.data.service }} have any CURL examples? If you can, identify one such example and explain what it does.\"\n]"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df979fec-4b61-4b4e-80e9-1884b97f3c14",
+      "name": "Query Templates",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -80,
+        1600
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-pro-002",
+        "options": {}
+      },
+      "id": "7817935d-deef-4462-bc38-a4be1f7c4abe",
+      "name": "Google Gemini Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "position": [
+        520,
+        1640
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "84124e3e-7fd6-42cc-b632-099df5717589",
+      "name": "For Each Template...",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        280,
+        1600
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fdaea3de-3c9a-4f26-b7dc-769e534006a9",
+              "name": "query",
+              "type": "string",
+              "value": "={{ $('For Each Template...').item.json.query }}"
+            },
+            {
+              "id": "88198374-d2f9-4ae7-b262-d3b2e630e0ac",
+              "name": "documents",
+              "type": "string",
+              "value": "={{ $json.data.map(item => item.document.pageContent.replaceAll('\\n', ' ')).join('\\n---\\n') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7a062472-7809-4daf-8e45-51743b396ef7",
+      "name": "Query & Docs",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1000,
+        1780
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.query }}",
+        "attributes": {
+          "attributes": [
+            {
+              "name": "product_or_solution",
+              "description": "A product or solution offered by the service",
+              "required": true
+            },
+            {
+              "name": "description",
+              "description": "description of what the product or solution of the service does",
+              "required": true
+            }
+          ]
+        },
+        "options": {
+          "systemPromptTemplate": "=Use the following document to answer the user's question:\n```\n{{ $json.documents.replace(/[\\{\\}]/g, '') }}\n```"
+        }
+      },
+      "id": "839205f9-2f9b-469a-8afb-d000169b35a2",
+      "name": "Identify Service Products",
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "position": [
+        520,
+        1500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e2a02550-8f53-4f8d-bb83-68ee3606736e",
+              "name": "query",
+              "type": "string",
+              "value": "=I'm interested in {{ $json.output.product_or_solution }} apis which {{ $json.output.description }} What are the GET, POST, PATCH and/or DELETE endpoints of the {{ $json.output.product_or_solution }} api?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a2c5d32f-48de-4522-9625-1e24e83db0bd",
+      "name": "Extract API Templates",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1000,
+        1600
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "modelName": "models/text-embedding-004"
+      },
+      "id": "26f3671f-4fc1-4bd5-a56d-c6844abcb2cf",
+      "name": "Embeddings Google Gemini2",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "position": [
+        1420,
+        1920
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "load",
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('EventRouter').first().json.data.collection }}"
+        },
+        "prompt": "={{ $json.query }}",
+        "topK": 20,
+        "options": {
+          "searchFilterJson": "={{\n{\n  \"must\": [\n    {\n      \"key\": \"metadata.service\",\n      \"match\": {\n        \"value\": $('EventRouter').first().json.data.service\n      }\n    }\n  ]\n}\n}}"
+        }
+      },
+      "id": "05116b65-8c9e-4d2e-99fa-7806b6e20eab",
+      "name": "Search in Relevant Docs1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "position": [
+        1420,
+        1780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "id": "a6c9a3e7-e2f5-42e5-8131-2107d10f58db",
+      "name": "Combine Docs1",
+      "type": "n8n-nodes-base.aggregate",
+      "position": [
+        1740,
+        1780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fdaea3de-3c9a-4f26-b7dc-769e534006a9",
+              "name": "query",
+              "type": "string",
+              "value": "={{ $('For Each Template...1').item.json.query }}"
+            },
+            {
+              "id": "88198374-d2f9-4ae7-b262-d3b2e630e0ac",
+              "name": "documents",
+              "type": "string",
+              "value": "={{\n$json.data\n  .map(item =>\n`url: ${item.document.metadata.url}\ncontent: ${item.document.pageContent}`\n  )\n  .join('\\n---\\n')\n  .replaceAll('\\n\\n', '\\n')\n}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d351e55-75e5-4013-b856-2a38da0f4c89",
+      "name": "Query & Docs1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1900,
+        1780
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a474e887-3f93-4b98-85c7-48fe3286a354",
+      "name": "For Each Template...1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1200,
+        1600
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().flatMap(input => input.json.output) || [];"
+      },
+      "id": "e94420b2-8c0e-4766-9471-835efec4c05b",
+      "name": "Merge Lists",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1740,
+        1600
+      ],
+      "typeVersion": 2,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "method, url",
+        "options": {}
+      },
+      "id": "cbdea308-7e37-4732-b955-4bbc2baebb18",
+      "name": "Remove Duplicates",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "position": [
+        2100,
+        1600
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": 1042334767,
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=1042334767",
+          "cachedResultName": "Extracted API Operations"
+        },
+        "columns": {
+          "value": {
+            "url": "={{ $json.url }}",
+            "method": "={{ $json.method }}",
+            "service": "={{ $('EventRouter').first().json.data.service }}",
+            "resource": "={{ $json.resource }}",
+            "operation": "={{ $json.operation }}",
+            "description": "={{ $json.description }}",
+            "documentation_url": "={{ $json.documentation_url }}"
+          },
+          "schema": [
+            {
+              "id": "service",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "resource",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "resource",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "operation",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "operation",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "description",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "url",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "url",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "method",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "method",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "documentation_url",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "documentation_url",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": []
+        },
+        "options": {
+          "useAppend": true
+        }
+      },
+      "id": "3d93617f-6bda-4d93-a8e0-979ea806ce3e",
+      "name": "Append Row",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2260,
+        1600
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "79598789-4468-4565-828f-fedc48be15c3",
+              "name": "response",
+              "type": "string",
+              "value": "ok"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "23c6761c-ce10-41a5-bc9f-1f2fa77e591e",
+      "name": "Response OK1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2420,
+        1600
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a95420a7-6265-4ea3-9c01-82c2d7aeb4f8",
+              "operator": {
+                "type": "object",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.first().json }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bf4fbdb2-f980-43c9-a2f8-afe5b9e0b4db",
+      "name": "Has Operations?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1900,
+        1600
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5bb23ce9-eb72-4868-9344-9e5d3952cc52",
+              "name": "response",
+              "type": "string",
+              "value": "no api operations found"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bef4a66e-e390-4642-a252-1c5da04e0446",
+      "name": "Response Empty1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2100,
+        1780
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Research...').item.json.row_number }}",
+            "Stage 1 - Research": "=pending"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "72cd33eb-842f-4831-a867-90626994ed20",
+      "name": "Research Pending",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        0,
+        380
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Research...').item.json.row_number }}",
+            "Stage 1 - Research": "={{ $json.response }}"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "3195b6a0-2696-429e-a6c0-017ec6bc0a07",
+      "name": "Research Result",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        440,
+        380
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Research...').item.json.row_number }}",
+            "Stage 1 - Research": "=error"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "9cf76aa2-7f8b-42cf-add6-62ddea2e959b",
+      "name": "Research Error",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        440,
+        560
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Extract...').item.json.row_number }}",
+            "Stage 2 - Extraction": "pending"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "25962533-425b-4c3b-8151-0e89e20bcfe8",
+      "name": "Extract Pending",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        980,
+        380
+      ],
+      "executeOnce": false,
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{\n{\n  \"eventType\": \"research\",\n  \"createdAt\": $now.toISO(),\n  \"executedById\": $execution.id,\n  \"data\": {\n    \"row_number\": $('For Each Research...').item.json.row_number,\n    \"service\": $('For Each Research...').item.json.Service,\n    \"url\": $('For Each Research...').item.json.Website,\n    \"collection\": \"api_schema_crawler_and_extractor\"\n  }\n}\n}}",
+        "options": {}
+      },
+      "id": "05c5f0e1-5452-4856-b9d1-572ddfd9bc26",
+      "name": "Research Event",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        140,
+        380
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{\n{\n  \"eventType\": \"extract\",\n  \"createdAt\": $now.toISO(),\n  \"executedById\": $execution.id,\n  \"data\": {\n    \"row_number\": $('For Each Extract...').item.json.row_number,\n    \"service\": $('For Each Extract...').item.json.Service,\n    \"url\": $('For Each Extract...').item.json.Website,\n    \"collection\": \"api_schema_crawler_and_extractor\"\n  }\n}\n}}",
+        "options": {}
+      },
+      "id": "f974cf59-ddaf-4222-b0ed-e35f52f88383",
+      "name": "Extract Event",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1120,
+        380
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $workflow.id }}"
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "396b69aa-a6f8-4ae1-9a02-9de0c7a12f19",
+      "name": "Extract",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        1260,
+        380
+      ],
+      "typeVersion": 1.1,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Extract...').item.json.row_number }}",
+            "Stage 2 - Extraction": "={{ $json.response }}"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "06245f4b-29b8-41a5-9c1a-97c1cca119a1",
+      "name": "Extract Result",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1420,
+        380
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Extract...').item.json.row_number }}",
+            "Stage 2 - Extraction": "error"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "187b9157-89c5-4c31-8508-eb6c4df7cc60",
+      "name": "Extract Error",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1420,
+        560
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": 1042334767,
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=1042334767",
+          "cachedResultName": "Extracted API Operations"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "service",
+              "lookupValue": "={{ $json.data.service }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8fb7fad-9cfa-42cc-a968-dae8ed731036",
+      "name": "Get API Operations",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -80,
+        2140
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "jsCode": "const service = {\n  documentation_url: $('EventRouter').first().json.data.url,\n  endpoints: [],\n};\n\nconst resources = Array.from(new Set($input.all().map(item => item.json.resource.toLowerCase().trim())));\n\nfor (const resource of resources) {\n  const resourceLabel = resource.replace('api', '').trim();\n  if (!resourceLabel) continue;\n  const endpoint = {\n    resource: resourceLabel[0].toUpperCase() + resourceLabel.substring(1, resourceLabel.length)\n  };\n  const operations = $input.all()\n    .filter(item => item.json.resource.toLowerCase().trim() === resource)\n    .map(item => item.json);\n  endpoint.operations = operations.map(op => ({\n    \"operation\": op.operation[0].toUpperCase() + op.operation.substring(1, op.operation.length),\n    \"description\": op.description.match(/(^[^\\.]+.)/)[0],\n    \"ApiUrl\": op.url,\n    \"method\": op.method.toUpperCase(),\n    \"method_documentation_url\": op.documentation_url || ''\n  }));\n  service.endpoints.push(endpoint);\n}\n\nreturn service;"
+      },
+      "id": "7c43888a-3f6e-4117-a2f5-14fda46a2e7c",
+      "name": "Contruct JSON Schema",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        100,
+        2140
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "createFromText",
+        "content": "={{ $json.data }}",
+        "name": "={{ $json.filename }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "149rBJYv9RKQx-vQO2qKUGfUzxk_J4lfw",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/149rBJYv9RKQx-vQO2qKUGfUzxk_J4lfw",
+          "cachedResultName": "63. API Schema Extractor Remake"
+        },
+        "options": {}
+      },
+      "id": "e4acb195-e3f6-4a8f-8913-519572ad3d10",
+      "name": "Upload to Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        460,
+        2140
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3c7d4946-c385-4aff-93ec-ae0850964099",
+              "name": "filename",
+              "type": "string",
+              "value": "={{\n  $('EventRouter').first().json.data.service\n    .replace(/\\W+/, '_')\n    .toLowerCase()\n}}_api_operations_{{ $now.format('yyyyMMddhhmmss') }}.json"
+            },
+            {
+              "id": "4a7a9fae-7267-4ef6-ae33-ac4cd9777ee9",
+              "name": "data",
+              "type": "string",
+              "value": "={{ JSON.stringify($json, null, 4) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "54b68f60-5a09-43be-af0d-286f3656df16",
+      "name": "Set Upload Fields",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        280,
+        2140
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "79598789-4468-4565-828f-fedc48be15c3",
+              "name": "response",
+              "type": "object",
+              "value": "={{\n({\n  id: $json.id,\n  filename: $('Set Upload Fields').item.json.filename\n}).toJsonString()\n}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "726569b2-fc55-491c-b13e-aa269083d024",
+      "name": "Response OK2",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        640,
+        2140
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{\n{\n  \"eventType\": \"generate\",\n  \"createdAt\": $now.toISO(),\n  \"executedById\": $execution.id,\n  \"data\": {\n    \"row_number\": $('For Each Generate...').item.json.row_number,\n    \"service\": $('For Each Generate...').item.json.Service,\n    \"url\": $('For Each Generate...').item.json.Website,\n    \"collection\": \"api_schema_crawler_and_extractor\"\n  }\n}\n}}",
+        "options": {}
+      },
+      "id": "9e3315ca-9584-4452-9dee-7f7db5acd512",
+      "name": "Generate Event",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2120,
+        380
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Generate...').item.json.row_number }}",
+            "Stage 3 - Output File": "pending"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "da532883-a233-446c-b448-4366c038d3df",
+      "name": "Generate Pending",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1980,
+        380
+      ],
+      "executeOnce": false,
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $workflow.id }}"
+        },
+        "mode": "each",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "77413b86-2b84-4ba7-ae58-e4a1f9ffedd9",
+      "name": "Generate",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        2260,
+        380
+      ],
+      "typeVersion": 1.1,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Generate...').item.json.row_number }}",
+            "Stage 3 - Output File": "error"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "ab22dbeb-afd3-40a1-ac22-05b9bd09f36e",
+      "name": "Generate Error",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2420,
+        560
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "value": {
+            "row_number": "={{ $('For Each Generate...').item.json.row_number }}",
+            "Output Destination": "={{ $json.response.filename }}",
+            "Stage 3 - Output File": "ok"
+          },
+          "schema": [
+            {
+              "id": "Service",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Service",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Website",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Website",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 1 - Research",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 1 - Research",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 2 - Extraction",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "required": false,
+              "displayName": "Stage 2 - Extraction",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Stage 3 - Output File",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Stage 3 - Output File",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Output Destination",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "Output Destination",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ]
+        },
+        "options": {}
+      },
+      "id": "bbeb2a86-b76e-4a40-baee-c1b5e12d96a3",
+      "name": "Generate Result",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2420,
+        380
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Stage 1 - Research",
+              "lookupValue": "=ok"
+            },
+            {
+              "lookupColumn": "Stage 2 - Extraction",
+              "lookupValue": "={{ \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "befbd9cd-f2e2-47c9-a0ec-42bc2a2b254e",
+      "name": "Get All Extract",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        440,
+        220
+      ],
+      "executeOnce": true,
+      "typeVersion": 4.5,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Stage 1 - Research",
+              "lookupValue": "={{ \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e7d0de77-8b3b-4ba7-b000-a7dd6857190b",
+      "name": "Get All Research",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -540,
+        220
+      ],
+      "typeVersion": 4.5,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "3ef8136b-467e-45ed-b8d4-0d1be0f102e5",
+      "name": "For Each Research...",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        -160,
+        220
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "7d968ceb-1dfc-4bdb-a1d0-02893fcece14",
+      "name": "For Each Extract...",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        820,
+        220
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "amount": 0
+      },
+      "id": "8e182fab-964d-43e2-8033-6e831a4d9877",
+      "name": "Wait1",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1600,
+        560
+      ],
+      "webhookId": "e9ad3ef0-7403-4e65-b0a4-4afdfb0cbc6d",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8d4b0159-af18-445e-a9ee-bd7952d8e0bd",
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.first().json }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3cf02576-e057-4bf3-b234-8d399ac11cb4",
+      "name": "All Research Done?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -380,
+        220
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8d4b0159-af18-445e-a9ee-bd7952d8e0bd",
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.first().json }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "93785cda-b7f3-48e0-a0c1-0e2e56085f74",
+      "name": "All Extract Done?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        600,
+        220
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit?usp=drivesdk",
+          "cachedResultName": "API Schema Crawler & Extractor"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l59ikBvEwPNSWIm2k6KRMFPTNImJPYqs9bzGT5dUiU0/edit#gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Stage 1 - Research",
+              "lookupValue": "=ok"
+            },
+            {
+              "lookupColumn": "Stage 2 - Extraction",
+              "lookupValue": "=ok"
+            },
+            {
+              "lookupColumn": "Stage 3 - Output File",
+              "lookupValue": "={{ \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6804d32e-0713-4590-a37a-6038c5bde4af",
+      "name": "Get All Generate",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1420,
+        220
+      ],
+      "executeOnce": true,
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8d4b0159-af18-445e-a9ee-bd7952d8e0bd",
+              "operator": {
+                "type": "object",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.first().json }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "507d0286-6784-436b-bd6d-0e25228bb385",
+      "name": "All Generate Done?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1600,
+        220
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "d4d10ca1-8c59-4c79-9f5c-49dc3f731fa7",
+      "name": "For Each Generate...",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1820,
+        220
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "amount": 0
+      },
+      "id": "e9ad5f7b-32f2-4023-8611-e7fa283eac51",
+      "name": "Wait2",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        2600,
+        560
+      ],
+      "webhookId": "e9ad3ef0-7403-4e65-b0a4-4afdfb0cbc6d",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1223d607-45a8-44b1-b510-56fdbe013eba",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.all().filter(item => item.json.body) }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3acbe717-35a4-47f4-a931-5b117550f38f",
+      "name": "Has Results?1",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1080,
+        1120
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5bb23ce9-eb72-4868-9344-9e5d3952cc52",
+              "name": "response",
+              "type": "string",
+              "value": "web scraping error"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "14114daf-e8b7-45a3-ae65-de4c27a7fcfd",
+      "name": "Response Scrape Error",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1280,
+        1300
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "1223d607-45a8-44b1-b510-56fdbe013eba",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $input.all().filter(item => item.json.body) }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6a126227-5b72-447e-8017-8559e11c9910",
+      "name": "Has Results?3",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1600,
+        980
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5bb23ce9-eb72-4868-9344-9e5d3952cc52",
+              "name": "response",
+              "type": "string",
+              "value": "no api docs in web results"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a9d3cb94-ced2-4de6-9106-da14a73abaa0",
+      "name": "Response No API Docs",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1800,
+        1140
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "content": "## Stage 1 - Research for API Documentation\n- Fetch a list of services pending research from Database (Google Sheet)\n- Uses a search engine (Google) to find API Documentation for each service\n- Uses Webscraper (Apify) to read the contents of search results to filter irrelevant pages\n- Stores webpage contents and metadata into Vector Store (Qdrant)",
+        "height": 180,
+        "width": 620
+      },
+      "id": "bc9421bc-d96c-4ffb-a434-a96a3e86949c",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -160,
+        -20
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Stage 2 - Extract API Operations From Documentation\n- Fetch a list of services pending extraction from Database (Google Sheet)\n- Query Vector store (Qdrant) to figure out service's products, solutions and offerings\n- Query Vector store (Qdrant) again for API documentation relevant to these products, solutions and offerings\n- Extract any API operations found in the API documentation results using LLM (Gemini)\n- Store extracted API operations into Database (Google Sheet)",
+        "height": 180,
+        "width": 760
+      },
+      "id": "61914c6f-15ff-48f5-a7a5-4a251d4adc14",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        820,
+        -20
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Stage 3 - Generate Custom Schema From API Operations\n- Fetch a list of services pending generation from Database (Google Sheet)\n- Fetch all API operations for each service from Database (Google Sheet)\n- Use Code node to combine and group all API operations for a service and convert to a custom schema\n- Upload the resulting custom schema to file storage (Google Drive)",
+        "height": 180,
+        "width": 740
+      },
+      "id": "fc575529-0337-4854-94f7-da15c7c720c3",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1820,
+        -20
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Stage 1 - Subworkflow",
+        "height": 80,
+        "width": 180,
+        "color": 5
+      },
+      "id": "81a660e0-9536-44d3-accd-ad7b67cb2fd8",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        1080
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Stage 2 - Subworkflow",
+        "height": 80,
+        "width": 180,
+        "color": 5
+      },
+      "id": "d5c0f910-4e3f-4fcd-a71f-127f9b48ee81",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        1480
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Stage 3 - Subworkflow",
+        "height": 80,
+        "width": 180,
+        "color": 5
+      },
+      "id": "273f2b88-87a8-4f55-89af-bc9decb22669",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        2020
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {
+    "Execute Workflow Trigger": [
+      {
+        "json": {
+          "data": {
+            "url": "https://www.formstack.com/",
+            "service": "Formstack",
+            "collection": "api_schema_crawler_and_extractor",
+            "row_number": 2
+          },
+          "createdAt": "2024-12-07T12:22:35.344-05:00",
+          "eventType": "research",
+          "executedById": "10234"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-08T05:03:37.464Z",
+  "versionId": "1f81d836-a69d-4f69-a1e1-bf5a5e3f5f61"
+}
