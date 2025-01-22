@@ -1,0 +1,67 @@
+{
+  "active": false,
+  "connections": {
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Ollama Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T20:17:13.536Z",
+  "id": "lFbtO94XRyJbfV6m",
+  "meta": null,
+  "name": "My workflow 4",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app:57987/",
+        "authentication": "basicAuth",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "name": "Ollama Cloud API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "5a6b9e77-7c64-4180-865b-592c61a03cb8"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "name": "Chat Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4d513316-a8d6-4a0e-a3ce-f8d1d5ec5ef7"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T20:17:13.536Z",
+  "versionId": "58bb05f1-834f-4b6a-90e5-6d85d5f01140"
+}
