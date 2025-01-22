@@ -1,0 +1,18 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2025-01-15T01:03:51.595Z",
+  "id": "QiYaUc0pEOGcFtJj",
+  "meta": null,
+  "name": "Makeee",
+  "nodes": [],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-15T01:03:51.595Z",
+  "versionId": "7908f654-5d8d-4fba-8fb9-7de7c8e247d3"
+}
