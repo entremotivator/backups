@@ -1,0 +1,432 @@
+{
+  "active": false,
+  "connections": {
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Get Voice File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tasks": {
+      "ai_tool": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contacts": {
+      "ai_tool": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Voice or Text": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Voice File": {
+      "main": [
+        [
+          {
+            "node": "Speech to Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Speech to Text": {
+      "main": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Angie, AI Assistant 👩🏻‍🏫",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listen for incoming events": {
+      "main": [
+        [
+          {
+            "node": "Voice or Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Angie, AI Assistant 👩🏻‍🏫": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-08T05:06:27.456Z",
+  "id": "Q5MNdKsbPQ9ciZJO",
+  "meta": null,
+  "name": "Voice AI",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "mode": "list",
+          "value": "derekcheungsa@gmail.com",
+          "cachedResultName": "derekcheungsa@gmail.com"
+        },
+        "options": {
+          "timeMin": "={{$fromAI(\"date\",\"the date after which to fetch the messages in format YYYY-MM-DDTHH:MM:SS\")}}",
+          "fields": "=items(summary, start(dateTime))"
+        }
+      },
+      "id": "2ebaaef0-0b07-42bd-bc93-20c7ab4cebfa",
+      "name": "Google Calendar",
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "position": [
+        1620,
+        460
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Listen for incoming events').first().json.message.from.id }}"
+      },
+      "id": "5a5021fb-b7ce-4b3e-8876-395e6ba8a84a",
+      "name": "Window Buffer Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        1380,
+        460
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {
+          "labelIds": [
+            "INBOX",
+            "UNREAD"
+          ],
+          "readStatus": "unread",
+          "receivedAfter": "={{$fromAI(\"date\",\"the date after which to fetch the messages in format YYYY-MM-DDTHH:MM:SS\")}}"
+        }
+      },
+      "id": "87318d64-4970-4eab-9135-b28a845d01ba",
+      "name": "Get Email",
+      "type": "n8n-nodes-base.gmailTool",
+      "position": [
+        1500,
+        460
+      ],
+      "typeVersion": 2.1,
+      "webhookId": "3eea59d2-7440-4328-97e3-39bb330b0a3b"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "383d56b2-a0a8-4d10-ad96-e8e471dd79cf",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        1260,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "069ca5b2-06a6-40c7-9c63-abdf63a1d0b0",
+      "name": "Listen for incoming events",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        460,
+        140
+      ],
+      "webhookId": "322dce18-f93e-4f86-b9b1-3305519b7834",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Listen for incoming events').first().json.message.from.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "baec2653-ddb3-4c9a-858c-5398411c6b42",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        1900,
+        140
+      ],
+      "typeVersion": 1.1,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "a0bf9719-4272-46f6-ab3b-eda6f7b44fd8",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.message.text }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1bbe1ada-f454-4af3-befc-9cfb4447afcf",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        820,
+        140
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "9eb493f0-4205-4b1b-bd28-9ad8c0f06b31",
+      "name": "Speech to Text",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "position": [
+        1240,
+        140
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "text",
+              "stringValue": "={{ $json?.message?.text || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "eeb265d7-d267-4a07-8db7-646f73fc2895",
+      "name": "Voice or Text",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        660,
+        140
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $('Listen for incoming events').item.json.message.voice.file_id }}"
+      },
+      "id": "99f2fd54-c5de-4639-891a-901ecf4f6857",
+      "name": "Get Voice File",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        1000,
+        140
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "=You are a helpful assistant.\n\nToday's date is {{ $now }}.\n\nGuidelines:\n- When fetching emails, filter out any promotional emails. \n- When summarizing emails, include Sender, Message date, subject, and brief summary of email.\n- if the user did not specify a date in the request assume they are asking for today\n- Use baserow tool to answer questions about tasks\n- When answering questions about calendar events, filter out events that don't apply to the question.  For example, the question is about events for today, only reply with events for today. Don't mention future events if it's more than 1 week away"
+        }
+      },
+      "id": "23615d3a-199d-4430-82e3-9274b919f143",
+      "name": "Angie, AI Assistant 👩🏻‍🏫",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1400,
+        140
+      ],
+      "typeVersion": 1.6
+    },
+    {
+      "parameters": {
+        "content": "## Process Telegram Request\n",
+        "height": 278.75,
+        "width": 496.25,
+        "color": 5
+      },
+      "id": "ada6ee30-6d89-405b-a720-70f1f516abfb",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        640,
+        40
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "databaseId": 146496,
+        "tableId": 372174,
+        "additionalOptions": {}
+      },
+      "id": "c7b8aeed-69ea-427b-81c2-1cbd2de34520",
+      "name": "Tasks",
+      "type": "n8n-nodes-base.baserowTool",
+      "position": [
+        1740,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Useful for getting contact information.  For example emails or phone numbers.",
+        "databaseId": 146496,
+        "tableId": 372177,
+        "additionalOptions": {}
+      },
+      "id": "982184c5-5e97-4733-aa4a-d6a4c58e99e1",
+      "name": "Contacts",
+      "type": "n8n-nodes-base.baserowTool",
+      "position": [
+        1860,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Start here: Step-by Step Youtube Tutorial :star:\n\n[![Building an AI Personal Assistant](https://img.youtube.com/vi/pXjowPc6V2s/sddefault.jpg)](https://youtu.be/pXjowPc6V2s)\n",
+        "height": 389.78268107403096,
+        "width": 386.9292441979969,
+        "color": 5
+      },
+      "id": "f9a50e1f-ad35-4d9a-9861-b524df4567df",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-08T05:06:50.363Z",
+  "versionId": "c991f90c-3eca-4ee4-a37d-7052fcaf57fd"
+}
