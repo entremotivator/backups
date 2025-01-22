@@ -1,0 +1,244 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Learning Objectives",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Lesson Outline",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Lesson Plan",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Learning Objectives",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Learning Objectives": {
+      "main": [
+        [
+          {
+            "node": "Lesson Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lesson Outline": {
+      "main": [
+        [
+          {
+            "node": "Lesson Plan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lesson Plan": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T07:01:04.947Z",
+  "id": "8oF0LhcZ9Ucf2rzn",
+  "meta": null,
+  "name": "lesson chain",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        320,
+        200
+      ],
+      "id": "51776e87-c05e-4b08-8248-b82fdca26e63",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4b793f-101f-46c9-a220-86984350df79",
+              "name": "lessonTopic",
+              "value": "={{ $('Edit Fields1').item.json.lessonTopic }}",
+              "type": "string"
+            },
+            {
+              "id": "2d131f39-94bc-436e-a0d3-a619e3925cf0",
+              "name": "lessonPlan",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1680,
+        40
+      ],
+      "id": "87d74fe5-f60b-4c7f-a88a-da23c57f832e",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bc8f269e-d7e1-4066-a6b5-c0ab455a930b",
+              "name": "lessonTopic",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        80,
+        40
+      ],
+      "id": "0a7696c6-465d-4523-82c1-7a278c69305c",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We will be creating a lesson plan about: \n{{ $json.lessonTopic }}  \n\nCome up with 5 key learning objectives for this lesson. Each objective should be specific, measurable, and aligned with the topic. List the 5 learning objectives only and nothing else.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are an experienced educator specializing in curriculum development."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        280,
+        40
+      ],
+      "id": "1576b2f2-6142-40ef-a431-f8bf48e3d156",
+      "name": "Learning Objectives"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a detailed outline for a lesson plan on the following topic: \n{{ $('Edit Fields1').item.json.lessonTopic }}\n\nIncorporate all of the following learning objectives into your outline, ensuring a logical flow and engaging learning experience. Include sections for introduction, main activities, assessment, and conclusion. Output the outline in JSON format and nothing else. \n\nUse the following JSON format:  \n{ \n\"LessonTitle\": \"title\", \n\"Outline\": {}, \n}  \n\nHere are the learning objectives to include: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You're an experienced teacher and curriculum designer."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        600,
+        40
+      ],
+      "id": "baec6786-613d-4d1c-b755-b1ae5ab04afd",
+      "name": "Lesson Outline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Using the outline provided, write a detailed lesson plan on the following topic: \n{{ $('Edit Fields1').item.json.lessonTopic }}\n\nYour task is to write a comprehensive, engaging lesson plan. Follow these guidelines:\n\n1. Start with a brief overview of the lesson, including grade level and duration.\n2. List the learning objectives and any required materials or resources.\n3. Provide a detailed description of the introduction, including any hook or activating strategy.\n4. Describe the main learning activities in a step-by-step format, including time allocations.\n5. Include differentiation strategies for diverse learners.\n6. Incorporate various teaching methods (e.g., direct instruction, group work, hands-on activities).\n7. Describe assessment methods to evaluate student understanding.\n8. Include a conclusion or wrap-up activity.\n9. Add any homework or extension activities if applicable.\n10. End with a brief reflection section for teacher notes.\n\nEnsure the lesson plan is well-structured, engaging, and aligns with best teaching practices. Write in a clear, professional style suitable for educators.\n\nHere's the lesson outline:\n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a master teacher with extensive experience in lesson planning and delivery."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1320,
+        40
+      ],
+      "id": "6148e3d9-c7b9-4a51-a5b2-e72534af9602",
+      "name": "Lesson Plan"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -140,
+        40
+      ],
+      "id": "550dc953-8dbc-408e-9dbb-70e754c89603",
+      "name": "When chat message received",
+      "webhookId": "0c9d895a-1ba3-449c-b3d4-b1a2baa39507"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T07:01:11.187Z",
+  "versionId": "c56ad056-c2ca-4600-b4b0-99c2f1374edc"
+}
