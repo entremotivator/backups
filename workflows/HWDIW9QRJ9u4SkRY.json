@@ -1,0 +1,154 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Ollama Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Cloud API": {
+      "main": [
+        [
+          {
+            "node": "Response Check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response Check": {
+      "main": [
+        [
+          {
+            "node": "Process Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Handle Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T20:20:26.803Z",
+  "id": "HWDIW9QRJ9u4SkRY",
+  "meta": null,
+  "name": "My workflow 5",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app:57987/",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "name": "Ollama Cloud API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -440,
+        100
+      ],
+      "id": "1cf2b3ff-ce81-41e3-ae07-4df9dc0be598"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$node['Ollama Cloud API'].json !== undefined}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Response Check",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        100
+      ],
+      "id": "40d8e67d-964c-4add-ad16-6bbd3e0bd397"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "response",
+              "value": "={{$node['Ollama Cloud API'].json.message.content}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Process Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c61e2c39-4367-4cc9-8314-17e32eaff2bf"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "error",
+              "value": "Error processing request"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Handle Error",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        0,
+        200
+      ],
+      "id": "7ca48914-c683-4a0f-be8c-2cbcd793f126"
+    },
+    {
+      "parameters": {
+        "path": "b4e4d1de-e29d-4760-b39d-d97b521703a4",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        100
+      ],
+      "id": "b6b4c779-8d9d-41da-9507-3504d457f6a6",
+      "webhookId": "b4e4d1de-e29d-4760-b39d-d97b521703a4"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T20:20:26.803Z",
+  "versionId": "7ca56536-fb9f-454c-9258-2d3547bcf98f"
+}
