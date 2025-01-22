@@ -1,0 +1,201 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Prepare Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Messages": {
+      "main": [
+        [
+          {
+            "node": "Ollama Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Cloud API": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Set Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Prepare Messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T08:46:35.400Z",
+  "id": "CCfMngnue3eDMssK",
+  "meta": null,
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chat",
+        "authentication": "basicAuth",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        60
+      ],
+      "id": "9045c45d-bd44-472b-adcf-d8bf079dad4f",
+      "webhookId": "25ac06df-6afc-47a9-852d-93310ec49fbe",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "Ytj5h1MQJQ4vJrVR",
+          "name": "Unnamed credential 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Input validation and processing\ntry {\n  // Ensure we have a message\n  if (!items[0].json.message) {\n    throw new Error('Message is required');\n  }\n\n  let messages = [];\n  \n  // Handle message history if present\n  if (items[0].json.messageHistory) {\n    try {\n      const history = JSON.parse(items[0].json.messageHistory);\n      if (Array.isArray(history)) {\n        messages = history;\n      }\n    } catch (e) {\n      // If history is invalid, start fresh\n      messages = [];\n    }\n  }\n\n  // Add new message\n  messages.push({\n    role: 'user',\n    content: items[0].json.message.trim()\n  });\n\n  return {\n    json: {\n      messages,\n      originalMessage: items[0].json.message\n    }\n  };\n} catch (error) {\n  throw new Error(`Message processing error: ${error.message}`);\n}"
+      },
+      "name": "Prepare Messages",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        40,
+        60
+      ],
+      "id": "654f78d7-51ce-4759-8052-db3e40759115"
+    },
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app:57987/api/chat",
+        "authentication": "basicAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": true,
+          "timeout": 120000
+        }
+      },
+      "name": "Ollama Cloud API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        240,
+        60
+      ],
+      "id": "3c110f9e-7761-42be-a10b-f0713522ae9d"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process API response\ntry {\n  const response = items[0].json;\n  \n  if (!response || !response.message || !response.message.content) {\n    throw new Error('Invalid API response');\n  }\n\n  // Get previous messages\n  const messages = $input.item.json.messages || [];\n\n  // Add assistant response\n  messages.push({\n    role: 'assistant',\n    content: response.message.content\n  });\n\n  return {\n    json: {\n      status: 'success',\n      response: response.message.content,\n      messageHistory: JSON.stringify(messages)\n    }\n  };\n} catch (error) {\n  return {\n    json: {\n      status: 'error',\n      error: error.message,\n      messageHistory: JSON.stringify($input.item.json.messages || [])\n    }\n  };\n}"
+      },
+      "name": "Format Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        440,
+        60
+      ],
+      "id": "4dafa981-93bf-42b5-8049-a11716fc4b11"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "status",
+              "value": "={{ $json.status }}"
+            },
+            {
+              "name": "response",
+              "value": "={{ $json.response }}"
+            },
+            {
+              "name": "messageHistory",
+              "value": "={{ $json.messageHistory }}"
+            },
+            {
+              "name": "error",
+              "value": "={{ $json.error || null }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        640,
+        60
+      ],
+      "id": "afc3b9b1-d334-48b4-972c-e07cc96d3fd5"
+    },
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -200,
+        340
+      ],
+      "id": "bf4e17ef-a1a2-421d-b113-ed93f9868727",
+      "name": "When chat message received",
+      "webhookId": "fbce1a53-c19e-423a-8508-fe05b8b80632"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T08:46:35.400Z",
+  "versionId": "6a316297-56c9-4ba2-8dd8-80610359f874"
+}
