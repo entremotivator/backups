@@ -1,0 +1,244 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Subtopics",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Chapter Outline",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Chapter Content",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Subtopics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Subtopics": {
+      "main": [
+        [
+          {
+            "node": "Chapter Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chapter Outline": {
+      "main": [
+        [
+          {
+            "node": "Chapter Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chapter Content": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T07:02:49.085Z",
+  "id": "dA3OTC4Lfx3Zbtnl",
+  "meta": null,
+  "name": "Book Chap chain",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        420,
+        400
+      ],
+      "id": "46f5ad30-d0a9-4bc9-aae4-b1bae5c11e3a",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4b793f-101f-46c9-a220-86984350df79",
+              "name": "chapterTopic",
+              "value": "={{ $('Edit Fields1').item.json.chapterTopic }}",
+              "type": "string"
+            },
+            {
+              "id": "2d131f39-94bc-436e-a0d3-a619e3925cf0",
+              "name": "chapterContent",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1780,
+        240
+      ],
+      "id": "7a8e17db-acfb-4d21-b091-4336e98dc97c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bc8f269e-d7e1-4066-a6b5-c0ab455a930b",
+              "name": "chapterTopic",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        180,
+        240
+      ],
+      "id": "afd0aff2-83e0-4239-90a0-0afa554120ea",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We will be writing an advanced book chapter on: \n{{ $json.chapterTopic }}  \n\nCome up with 5 complex subtopics that would be suitable for an advanced book chapter on this topic. Each subtopic should be challenging and require in-depth exploration. List the 5 subtopics only and nothing else.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a knowledgeable academic expert in this field."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        380,
+        240
+      ],
+      "id": "5b4e823d-a9cd-4297-8261-2b00b2d2171f",
+      "name": "Subtopics"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a detailed outline for an advanced book chapter on the following topic: \n{{ $('Edit Fields1').item.json.chapterTopic }}\n\nIncorporate all of the following subtopics into your outline, ensuring a logical flow and progression of ideas. Include sections for introduction, conclusion, and references. Output the outline in JSON format and nothing else. \n\nUse the following JSON format:  \n{ \n\"ChapterTitle\": \"title\", \n\"Outline\": {}, \n}  \n\nHere are the subtopics to include: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You're an experienced academic author and researcher."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        700,
+        240
+      ],
+      "id": "b19e5323-db51-422c-a030-188a81303490",
+      "name": "Chapter Outline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Using the outline provided, write an advanced book chapter on the following topic: \n{{ $('Edit Fields1').item.json.chapterTopic }}\n\nYour task is to write a comprehensive, in-depth chapter of approximately 5000 words. Follow these guidelines:\n\n1. Begin with an abstract summarizing the chapter's content and significance.\n2. Write content for each section in the outline that flows together as a cohesive chapter.\n3. Include relevant theories, models, and current research findings.\n4. Discuss methodologies and their applications where appropriate.\n5. Incorporate critical analysis and evaluation of the subject matter.\n6. Use academic language and terminology appropriate for an advanced text.\n7. Include relevant equations, diagrams, or tables (describe them in text, as actual images cannot be generated).\n8. Provide examples of real-world applications or case studies.\n9. Conclude with a summary of key points and suggestions for further research.\n10. Include a comprehensive list of references in APA format.\n\nEnsure the content is original, well-structured, and of high academic quality. Write in Markdown format, using appropriate headers and formatting.\n\nHere's the chapter outline:\n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a distinguished professor and author in this field."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1420,
+        240
+      ],
+      "id": "b6d9212c-9040-43c7-9b1a-ce59ece2f212",
+      "name": "Chapter Content"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -40,
+        240
+      ],
+      "id": "d33c7027-3d1e-4de5-a29b-754d9686f6e8",
+      "name": "When chat message received",
+      "webhookId": "0c9d895a-1ba3-449c-b3d4-b1a2baa39507"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T07:02:55.345Z",
+  "versionId": "e1a95d63-a2b6-4532-b25f-ce896e1f1479"
+}
