@@ -1,0 +1,2208 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Comments Sentiment Analysis Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Summary Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Key Points Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Researcher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Researcher",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "article": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Researcher": {
+      "main": [
+        [
+          {
+            "node": "Title Generator Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inputs": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ptompts": {
+      "main": [
+        [
+          {
+            "node": "Inputs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Comments": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Comments Sentiment Analysis Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Positive": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Neutral": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Negative": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Youtube Metadata",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Comments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Youtube Metadata": {
+      "main": [
+        [
+          {
+            "node": "Metadata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Metadata": {
+      "main": [
+        [
+          {
+            "node": "Youtube Transcript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Youtube Transcript": {
+      "main": [
+        [
+          {
+            "node": "Summary Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text → Audio": {
+      "main": [
+        [
+          {
+            "node": "Knowledge Base",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Video Stats",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SEO Writer Agent": {
+      "main": [
+        [
+          {
+            "node": "Editor Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Editor Agent": {
+      "main": [
+        [
+          {
+            "node": "Formatter Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summary Agent": {
+      "main": [
+        [
+          {
+            "node": "Key Points Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Key Points Agent": {
+      "main": [
+        [
+          {
+            "node": "Text → Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Comments Sentiment Analysis Agent": {
+      "main": [
+        [
+          {
+            "node": "Positive",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Neutral",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Negative",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Title Generator Agent": {
+      "main": [
+        [
+          {
+            "node": "SEO Writer Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatter Agent": {
+      "main": [
+        [
+          {
+            "node": "article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sources": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Ptompts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger + 1 hr": {
+      "main": [
+        [
+          {
+            "node": "Researcher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    ".": {
+      "ai_tool": [
+        [
+          {
+            "node": "Researcher",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "Researcher",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Now": {
+      "ai_tool": [
+        [
+          {
+            "node": "Researcher",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Researcher",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "To Process",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YTB Channel SerpAPI": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Channel": {
+      "main": [
+        [
+          {
+            "node": "Split Out1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out1": {
+      "main": [
+        [
+          {
+            "node": "Channel1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "To Process": {
+      "main": [
+        [
+          {
+            "node": "YTB Channel SerpAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Channel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Output": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI YT": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-18T03:46:23.499Z",
+  "id": "xDFKr96Wosg0CTPg",
+  "meta": null,
+  "name": "Content gen",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "efd6559e-13b7-4eaa-9f70-ca8169a74a1f",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "4389b6ac-1893-42b8-88b4-1d851aab61f7",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        2040
+      ]
+    },
+    {
+      "parameters": {
+        "model": "o1-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1520
+      ],
+      "id": "64f3101e-ba46-4c63-b287-de953f8da1fc",
+      "name": "OpenAI Chat Model2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        600,
+        1520
+      ],
+      "id": "4f832e9b-d43d-49dd-ae4d-ba46d964f696",
+      "name": "OpenAI Chat Model4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1140,
+        2900
+      ],
+      "id": "c2ed4d5b-b199-443d-91f3-5a315fd12fae",
+      "name": "When chat message received",
+      "webhookId": "321d6759-49b5-4082-b810-a65b232ad1e9"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -900,
+        3340
+      ],
+      "id": "8963813b-bb9f-4eb8-a54a-cf881dd19479",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "operation": "createFromText",
+        "content": "={{ $('Formatter Agent').item.json.message.content }}",
+        "name": "=Article_{{ $now }}-{{ $json.Title }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "https://drive.google.com/drive/u/3/folders/13UmSvnHS93koswjnxKh0FhomXy49q3aO",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1220,
+        3060
+      ],
+      "id": "c94b0bf2-293f-475e-9511-72dcb5e8b7f6",
+      "name": "Google Drive"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9a0297ea-5830-47b6-888b-e832a65b594a",
+              "name": "content",
+              "value": "={{ $json.message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "54356597-da80-45e4-a073-91d293cb0796",
+              "name": "Research",
+              "value": "={{ $('Researcher').item.json.output }}",
+              "type": "string"
+            },
+            {
+              "id": "328a4bbb-ee0c-4754-b731-249c7d6578f3",
+              "name": "SEOwriteup",
+              "value": "={{ $('SEO Writer Agent').item.json.message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "dec9bb57-2935-46bb-ba87-71d99db09848",
+              "name": "Edited",
+              "value": "={{ $('Editor Agent').item.json.message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "03fcc827-01c0-45a7-ab68-e4ca64a01791",
+              "name": "Formatted",
+              "value": "={{ $json.message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "11e7f038-ccb9-4e56-93cd-cd6b5ddc2ec8",
+              "name": "Title",
+              "value": "={{ $('Title Generator Agent').item.json.message.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1020,
+        3060
+      ],
+      "id": "2f2b36e1-c3bb-40f4-918b-2c6bfe9159ca",
+      "name": "article"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "input": "={{ $('Formatter Agent').item.json.message.content }}",
+        "options": {
+          "response_format": "mp3",
+          "binaryPropertyOutput": "audio"
+        }
+      },
+      "id": "186f4646-fb5b-4653-a722-d21ca99332c8",
+      "name": "Text → Audio1",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [
+        1240,
+        3300
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('When chat message received').item.json.chatInput }}",
+        "options": {
+          "systemMessage": "=Today is: {{ $now }}\nYou are a web searcher agent assistant. You will be provided a topic or headline for an SEO blog article. Your task is to search the web for up to date and reliable factual information on this topic and summarize key points to provide helpful content. Be concise and clear, focusing on details that would enhance the article's SEO value and informative quality. \nPost should include a captivating and thought-provoking description. Description should be engaging and useful. \nRandomize the overall post so that you don't create same post every time. "
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -860,
+        3060
+      ],
+      "id": "4533fabf-b4c5-4fc5-9394-d98b7d0a2228",
+      "name": "Researcher"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 221143269,
+          "mode": "list",
+          "cachedResultName": "Content Input",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=221143269"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -960,
+        1620
+      ],
+      "id": "45d9d555-e8ee-4725-b96a-fd0ddda18ed6",
+      "name": "Inputs"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1471096355,
+          "mode": "list",
+          "cachedResultName": "prompts",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=1471096355"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -1160,
+        1620
+      ],
+      "id": "508bec61-a91f-4c40-8140-d193f09bb000",
+      "name": "Ptompts"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "={{\"data\"}}",
+        "name": "=yt_audiosumm-{{ $('Youtube Transcript').item.json.videoTitle }}.mp3",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1dFgXwWbG6-uj8iRKqUHKerkq0RW1bso_",
+          "mode": "list",
+          "cachedResultName": "KB",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1dFgXwWbG6-uj8iRKqUHKerkq0RW1bso_"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        1360
+      ],
+      "id": "4c4d30c0-7aff-4b1a-9ba8-71b15d09d38a",
+      "name": "Knowledge Base"
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=\" + $json.videoId + \"&maxResults=100&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "569048b0-a6f9-4d3f-8dfc-9284ea87e63b",
+      "name": "Comments",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -500,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "items",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        1900
+      ],
+      "id": "938f4f6b-37a4-4fa5-a9b8-5452c792daad",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "snippet.topLevelComment.snippet"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
+      "position": [
+        360,
+        1760
+      ],
+      "id": "3a0665ff-ce25-43d5-9e84-f89b776dc9a8",
+      "name": "Positive"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "snippet.topLevelComment.snippet"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
+      "position": [
+        360,
+        1900
+      ],
+      "id": "09d26a2d-f477-4a2e-9e8e-aa4edd62ca8e",
+      "name": "Neutral"
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "snippet.topLevelComment.snippet"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1,
+      "position": [
+        360,
+        2040
+      ],
+      "id": "fa157127-e7bd-498a-9f08-c3cc562685dd",
+      "name": "Negative"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2784ea3c-15e0-41ab-8b2c-a8e706a08135",
+              "name": "=Positive",
+              "value": "={{ $json.count_snippet_topLevelComment_snippet }}",
+              "type": "number"
+            },
+            {
+              "id": "6eeb2c38-0911-46eb-9967-6024110e7813",
+              "name": "Neutral",
+              "value": "={{ $('Neutral').all()[0].json.count_snippet_topLevelComment_snippet }}",
+              "type": "string"
+            },
+            {
+              "id": "8e4b9e08-4105-406f-819f-aff327ed1a82",
+              "name": "Negative",
+              "value": "={{ $('Negative').all()[0].json.count_snippet_topLevelComment_snippet }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        860,
+        1900
+      ],
+      "id": "0aa5b111-3d7e-43a2-8de9-43ad61a3f5f5",
+      "name": "Video Stats",
+      "alwaysOutputData": true,
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const url = $json['Link to Source']; // Your YouTube URL\nconst videoIdRegex = /(?:\\?v=|\\/embed\\/|\\/watch\\?v=|youtu\\.be\\/)([^&\\n?#]+)/;\nconst match = url.match(videoIdRegex);\nconst videoId = match ? match[1] : null;\n\nreturn {\n  json: {\n    videoId: videoId,\n    originalUrl: url\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -760,
+        1620
+      ],
+      "id": "3c490c28-2216-4895-ae9a-bffe84d4f9fb",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status,topicDetails&id=\" + $json.videoId + \"&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "5a04b625-12ae-4b34-9814-1eaa4b71fd1a",
+      "name": "Youtube Metadata",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -520,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "febfd458-f945-465e-a2b7-e46d74e6849b",
+              "name": "items[0].kind",
+              "value": "={{ $json.items[0].kind }}",
+              "type": "string"
+            },
+            {
+              "id": "5e765835-d80e-4dee-9aaa-44ea0faa0744",
+              "name": "items[0].snippet.publishedAt",
+              "value": "={{ $json.items[0].snippet.publishedAt }}",
+              "type": "string"
+            },
+            {
+              "id": "0c8bac8e-fde7-4911-8936-1ce164521644",
+              "name": "items[0].snippet.channelId",
+              "value": "={{ $json.items[0].snippet.channelId }}",
+              "type": "string"
+            },
+            {
+              "id": "4cec6b39-d436-4222-bd9f-af6360c6741b",
+              "name": "items[0].snippet.channelTitle",
+              "value": "={{ $json.items[0].snippet.channelTitle }}",
+              "type": "string"
+            },
+            {
+              "id": "cf702f06-e545-41a6-b918-436253fda505",
+              "name": "items[0].snippet.categoryId",
+              "value": "={{ $json.items[0].snippet.categoryId }}",
+              "type": "string"
+            },
+            {
+              "id": "d48ae9a2-2529-45e8-9d59-0de30ee6bb52",
+              "name": "items[0].snippet.title",
+              "value": "={{ $json.items[0].snippet.title }}",
+              "type": "string"
+            },
+            {
+              "id": "b3d70e35-e32b-4586-bf03-d986a19872b1",
+              "name": "items[0].snippet.description",
+              "value": "={{ $json.items[0].snippet.description }}",
+              "type": "string"
+            },
+            {
+              "id": "22d8d4e3-70ae-4176-8341-f183377320a9",
+              "name": "items[0].contentDetails.duration",
+              "value": "={{ $json.items[0].contentDetails.duration }}",
+              "type": "string"
+            },
+            {
+              "id": "fbf58e3b-7e98-4097-88a5-d9baf6cc7070",
+              "name": "items[0].contentDetails.definition",
+              "value": "={{ $json.items[0].contentDetails.definition }}",
+              "type": "string"
+            },
+            {
+              "id": "976eefbc-ba4d-48f9-8120-3f1c81e60596",
+              "name": "items[0].contentDetails.contentRating",
+              "value": "={{ $json.items[0].contentDetails.contentRating }}",
+              "type": "object"
+            },
+            {
+              "id": "19242081-4bfc-423b-a6fa-99a7dfb23a73",
+              "name": "items[0].statistics",
+              "value": "={{ $json.items[0].statistics }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -300,
+        1360
+      ],
+      "id": "42c907ec-c869-4f4f-9868-75d7bd7ec332",
+      "name": "Metadata"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ \"https://api.apify.com/v2/acts/topaz_sharingan~youtube-transcript-scraper-1/run-sync-get-dataset-items?token=apify_api_JhKdeVu3pgj83fvoqQyz4BPOAM2o222xmV0m\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"startUrls\": [\"{{ $('Code').item.json.originalUrl }}\"]\n}\n\n",
+        "options": {}
+      },
+      "id": "99826659-394f-4f36-813a-fb69fc879955",
+      "name": "Youtube Transcript",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -80,
+        1360
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "input": "=Summary\n{{ $('Summary Agent').item.json.text }}\n\nKey Points\n{{ $('Key Points Agent').item.json.text }}\n\nStatistics\nViews: {{ $('Youtube Metadata').item.json.items[0].statistics.viewCount }}\nLikes: {{ $('Youtube Metadata').item.json.items[0].statistics.likeCount }}\n\nSentiment Analysis of Commnents: \nNumber of Positive comments: {{ 5 }}\nNumber of Neutral comments: {{ 4 }} \nNumber of Negative comments: {{ 2 }} ",
+        "options": {
+          "response_format": "mp3"
+        }
+      },
+      "id": "3e320b28-4f7b-41af-af6e-629fb2a8da97",
+      "name": "Text → Audio",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [
+        960,
+        1360
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        660,
+        1900
+      ],
+      "id": "340fb30b-9d0d-4550-8d4f-9af774354b3a",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an SEO Content Writer. You'll receive a title: {{ $json.message.content }} and a summary: {{ $('Researcher').item.json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article that is informative, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and include actionable insights, examples, or tips that add unique value to the reader."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        -100,
+        3060
+      ],
+      "id": "10625372-eac7-40b3-b7bc-8e43eba22b8f",
+      "name": "SEO Writer Agent"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "o1-mini",
+          "mode": "list",
+          "cachedResultName": "O1-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an Editor. You'll receive a draft:\n{{ $json.message.content }} of a blog article. Your task is to thoroughly check for grammar, punctuation, and readability. Ensure that the text flows smoothly, is free from errors, and maintains a clear, engaging tone. Make any necessary adjustments to improve clarity, structure, and accessibility for a broad audience."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        260,
+        3060
+      ],
+      "id": "12bc88fa-26fa-4442-947b-78839046b01b",
+      "name": "Editor Agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.transcript }}",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "HumanMessagePromptTemplate",
+              "message": "={{ $('Ptompts').item.json.Summary }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        160,
+        1360
+      ],
+      "id": "951a04e5-32d7-4431-974e-b5802adeb0b6",
+      "name": "Summary Agent",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Ptompts').item.json.Highlights }}",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "HumanMessagePromptTemplate",
+              "message": "={{ $('Ptompts').item.json.Highlights }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        560,
+        1360
+      ],
+      "id": "b906cace-fb11-4332-add6-f9c44ddf84a6",
+      "name": "Key Points Agent",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "inputText": "={{ $json.snippet.topLevelComment.snippet.textOriginal }}",
+        "options": {}
+      },
+      "id": "357c068c-954e-4867-846f-e32d1dcd2b86",
+      "name": "Comments Sentiment Analysis Agent",
+      "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a Title Generator for articles and blogposts. You'll receive a summary: {{ $json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article title that is informative, engaging, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and keep the length under 12 words."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        -480,
+        3060
+      ],
+      "id": "10e75f33-1025-4e16-85c5-bf4dffa6ba47",
+      "name": "Title Generator Agent"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "o1-mini",
+          "mode": "list",
+          "cachedResultName": "O1-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a Formatter. You'll receive a refined article draft: {{ $json.message.content }}. \nYour task is to format it for optimal readability and SEO impact. Use headings (H1, H2, H3) where appropriate, create short paragraphs, and add bullet points or numbered lists for clarity. Ensure each section flows logically, and highlight important information for better reader engagement. Check that keywords are strategically placed without disrupting the flow. "
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        640,
+        3060
+      ],
+      "id": "c7506c11-48f1-4f4f-85e9-278adab01abb",
+      "name": "Formatter Agent"
+    },
+    {
+      "parameters": {
+        "options": {
+          "gl": "us",
+          "hl": "en"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        3460
+      ],
+      "id": "ced1be29-b75c-4f56-95e5-d2b588c3ddb2",
+      "name": "SerpAPI1"
+    },
+    {
+      "parameters": {
+        "options": {
+          "gl": "us",
+          "hl": "en"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        120,
+        3460
+      ],
+      "id": "98a51e0f-f4e5-405a-b4e8-d03fa6d7da9f",
+      "name": "SerpAPI2"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an SEO Content Writer. You'll receive a summary: {{ $json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article that is informative, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and include actionable insights, examples, or tips that add unique value to the reader."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        160,
+        3520
+      ],
+      "id": "4e60c790-3ffe-45de-a7e2-6d2c9b054da2",
+      "name": "Cover Picture & Charts Agent"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 194808887,
+          "mode": "list",
+          "cachedResultName": "Source",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=194808887"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -580,
+        440
+      ],
+      "id": "2eff8b97-c043-40d9-b847-3eca11e5c0f6",
+      "name": "Sources"
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status,topicDetails&id=\" + $json.videoId + \"&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "1032afa1-ff55-45ed-af61-11cfd917fb73",
+      "name": "Channels / Profiles",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 221143269,
+          "mode": "list",
+          "cachedResultName": "Content Input",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=221143269"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        400,
+        20
+      ],
+      "id": "6d779c57-d7f3-42d4-94b9-492f60e0b490",
+      "name": "Processed Inputs"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1360,
+        1620
+      ],
+      "id": "8d306b36-6a57-49c0-b372-e9a0f51dae73",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an SEO Content Writer. You'll receive a summary: {{ $json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article that is informative, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and include actionable insights, examples, or tips that add unique value to the reader."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        -240,
+        3520
+      ],
+      "id": "123a6ce6-3ee3-45ef-932c-3419de230db0",
+      "name": "Market Trend / Current News"
+    },
+    {
+      "parameters": {
+        "options": {
+          "gl": "us",
+          "hl": "en"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        540,
+        3460
+      ],
+      "id": "a0f09f24-1593-4aa6-a5e4-85c43cb9a48f",
+      "name": "SerpAPI3"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an SEO Content Writer. You'll receive a summary: {{ $json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article that is informative, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and include actionable insights, examples, or tips that add unique value to the reader."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        580,
+        3520
+      ],
+      "id": "9569fcc9-529a-4b29-b655-d97c6249d65b",
+      "name": "Knowledge Base RAG"
+    },
+    {
+      "parameters": {
+        "content": "## Roadmap",
+        "height": 80,
+        "width": 280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        3780
+      ],
+      "id": "f155f585-9260-4894-8d57-e4d5c5e1e397",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "",
+        "height": 460,
+        "width": 1200
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        3580
+      ],
+      "id": "d6cd271b-0442-40e7-bb7a-15991c1b3cb0",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1140,
+        3060
+      ],
+      "id": "a1b084cf-dd3a-4b00-849e-1718729ab10a",
+      "name": "Schedule Trigger + 1 hr"
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status,topicDetails&id=\" + $json.videoId + \"&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "74c3a813-cb1f-4635-bc81-4a4bb6309ff5",
+      "name": "Podcasts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -500,
+        2340
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status,topicDetails&id=\" + $json.videoId + \"&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "bc6c49c4-c436-48ef-a92e-5361a951137d",
+      "name": "RSS Feeds",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -280,
+        2340
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics,status,topicDetails&id=\" + $json.videoId + \"&key=AIzaSyCMWeQ5AXVGjzjzghkjpDRS0ULqBRkTNl4\" }}",
+        "options": {}
+      },
+      "id": "7e11fbf6-e098-4504-96d9-3d12c47f27e2",
+      "name": "News Letters",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -60,
+        2340
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Roadmap\n",
+        "height": 320,
+        "width": 1520
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        2260
+      ],
+      "id": "dabf88f6-48bd-472e-91ae-c0c4adc5ecf8",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        380,
+        2300
+      ],
+      "id": "f5473fab-46d0-47fc-880d-5ea5c1426418",
+      "name": "Blog"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        2360
+      ],
+      "id": "d3ce7e39-a68e-4a02-88bc-865f6a4875dc",
+      "name": "Email"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C085C7Q7FPY",
+          "mode": "list",
+          "cachedResultName": "content-generation"
+        },
+        "text": "awefr",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        540,
+        2420
+      ],
+      "id": "2d3c1b1a-8768-4558-b9da-2eb55477f9e3",
+      "name": "Slack",
+      "webhookId": "6dbc009e-41d1-4363-8b00-12037130eb37"
+    },
+    {
+      "parameters": {
+        "options": {
+          "gl": "us",
+          "hl": "en"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        3320
+      ],
+      "id": "26372f97-bdbd-4bc2-9ff9-a8494619d32f",
+      "name": "."
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an SEO Content Writer. You'll receive a summary: {{ $json.output }} with factual information on a topic. Your task is to craft a highly engaging, SEO-optimized blog article that is informative, well-structured, and aimed at outranking competitors. Prioritize readability, integrate relevant keywords naturally, and include actionable insights, examples, or tips that add unique value to the reader."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        120,
+        3700
+      ],
+      "id": "a98af65d-d1eb-4445-97f1-4b2f0c23e203",
+      "name": "Industry Voices"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -820,
+        240
+      ],
+      "id": "7c489af0-816b-43c4-abc7-690736e57452",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {},
+      "id": "180301d1-e7c9-41eb-8b67-82f7d597ed80",
+      "name": "Calculator",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        3360
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Now",
+        "description": "Call this tool to get the context of the time now - the date and time we are in and references to the past and the future. For example, today, up to date, last month, this week, tomorrow, and other.",
+        "jsCode": "function createDateReferences() {\n    try {\n        // Utility function to safely create dates and handle invalid dates\n        function createSafeDate(...args) {\n            const date = new Date(...args);\n            if (isNaN(date.getTime())) {\n                throw new Error(`Invalid date created with args: ${JSON.stringify(args)}`);\n            }\n            return date;\n        }\n\n        const now = createSafeDate();\n        const pstOptions = { timeZone: 'America/Los_Angeles' };\n\n        // Enhanced format function with error handling\n        function formatDate(date) {\n            try {\n                if (!date || isNaN(date.getTime())) {\n                    throw new Error('Invalid date provided to formatDate');\n                }\n                return date.toLocaleDateString('en-US', {\n                    weekday: 'long',\n                    year: 'numeric',\n                    month: 'long',\n                    day: 'numeric',\n                    ...pstOptions\n                });\n            } catch (error) {\n                console.error(`Error formatting date: ${error.message}`);\n                return 'Invalid Date';\n            }\n        }\n\n        // Safe date manipulation with error handling\n        function manipulateDate(date, manipulation) {\n            try {\n                if (!date || isNaN(date.getTime())) {\n                    throw new Error('Invalid base date for manipulation');\n                }\n                const newDate = createSafeDate(date);\n                manipulation(newDate);\n                if (isNaN(newDate.getTime())) {\n                    throw new Error('Date manipulation resulted in invalid date');\n                }\n                return newDate;\n            } catch (error) {\n                console.error(`Date manipulation error: ${error.message}`);\n                return createSafeDate(); // Return current date as fallback\n            }\n        }\n\n        // Handle month transitions safely\n        function getMonthBoundaries(yearOffset = 0, monthOffset = 0) {\n            try {\n                const year = now.getFullYear() + yearOffset;\n                const month = now.getMonth() + monthOffset;\n                \n                // Normalize month and year if we overflow\n                const normalizedYear = year + Math.floor(month / 12);\n                const normalizedMonth = ((month % 12) + 12) % 12; // Handle negative months\n\n                const start = createSafeDate(normalizedYear, normalizedMonth, 1);\n                const end = createSafeDate(normalizedYear, normalizedMonth + 1, 0);\n                \n                return { start, end };\n            } catch (error) {\n                console.error(`Error calculating month boundaries: ${error.message}`);\n                return {\n                    start: createSafeDate(),\n                    end: createSafeDate()\n                };\n            }\n        }\n\n        // Get week boundaries with error handling for DST transitions\n        function getWeekBoundaries(weekOffset = 0) {\n            try {\n                const startOfWeek = manipulateDate(now, d => {\n                    d.setDate(d.getDate() - d.getDay() + (weekOffset * 7));\n                    d.setHours(0, 0, 0, 0);\n                });\n\n                const endOfWeek = manipulateDate(startOfWeek, d => {\n                    d.setDate(d.getDate() + 6);\n                    d.setHours(23, 59, 59, 999);\n                });\n\n                return { start: startOfWeek, end: endOfWeek };\n            } catch (error) {\n                console.error(`Error calculating week boundaries: ${error.message}`);\n                return {\n                    start: createSafeDate(),\n                    end: createSafeDate()\n                };\n            }\n        }\n\n        // Safe time formatting with DST handling\n        function formatTime(date) {\n            try {\n                if (!date || isNaN(date.getTime())) {\n                    throw new Error('Invalid date provided to formatTime');\n                }\n                return date.toLocaleTimeString('en-US', {\n                    hour: '2-digit',\n                    minute: '2-digit',\n                    second: '2-digit',\n                    hour12: true,\n                    ...pstOptions\n                });\n            } catch (error) {\n                console.error(`Error formatting time: ${error.message}`);\n                return 'Invalid Time';\n            }\n        }\n\n        // Determine timezone with error handling\n        function getTimezoneIndicator() {\n            try {\n                const pstDate = new Date().toLocaleString('en-US', pstOptions);\n                return pstDate.includes('PDT') ? 'PDT' : 'PST';\n            } catch (error) {\n                console.error(`Error determining timezone: ${error.message}`);\n                return 'PST'; // Default to PST if there's an error\n            }\n        }\n\n        const thisWeek = getWeekBoundaries(0);\n        const lastWeek = getWeekBoundaries(-1);\n        const nextWeek = getWeekBoundaries(1);\n\n        const thisMonth = getMonthBoundaries(0, 0);\n        const lastMonth = getMonthBoundaries(0, -1);\n        const nextMonth = getMonthBoundaries(0, 1);\n\n        const thisYear = {\n            start: createSafeDate(now.getFullYear(), 0, 1),\n            end: createSafeDate(now.getFullYear(), 11, 31)\n        };\n        const lastYear = {\n            start: createSafeDate(now.getFullYear() - 1, 0, 1),\n            end: createSafeDate(now.getFullYear() - 1, 11, 31)\n        };\n        const nextYear = {\n            start: createSafeDate(now.getFullYear() + 1, 0, 1),\n            end: createSafeDate(now.getFullYear() + 1, 11, 31)\n        };\n\n        const formattedTime = formatTime(now);\n        const timezoneIndicator = getTimezoneIndicator();\n\n        return {\n            json: {\n                current: {\n                    dateTime: `${formatDate(now)} at ${formattedTime} ${timezoneIndicator}`,\n                    date: formatDate(now),\n                    time: `${formattedTime} ${timezoneIndicator}`,\n                    timezone: timezoneIndicator,\n                    timestamp: now.getTime() // Include timestamp for additional reference\n                },\n                relative: {\n                    yesterday: formatDate(manipulateDate(now, d => d.setDate(d.getDate() - 1))),\n                    today: formatDate(now),\n                    tomorrow: formatDate(manipulateDate(now, d => d.setDate(d.getDate() + 1)))\n                },\n                weeks: {\n                    thisWeek: {\n                        start: formatDate(thisWeek.start),\n                        end: formatDate(thisWeek.end)\n                    },\n                    lastWeek: {\n                        start: formatDate(lastWeek.start),\n                        end: formatDate(lastWeek.end)\n                    },\n                    nextWeek: {\n                        start: formatDate(nextWeek.start),\n                        end: formatDate(nextWeek.end)\n                    }\n                },\n                months: {\n                    thisMonth: {\n                        start: formatDate(thisMonth.start),\n                        end: formatDate(thisMonth.end)\n                    },\n                    lastMonth: {\n                        start: formatDate(lastMonth.start),\n                        end: formatDate(lastMonth.end)\n                    },\n                    nextMonth: {\n                        start: formatDate(nextMonth.start),\n                        end: formatDate(nextMonth.end)\n                    }\n                },\n                years: {\n                    thisYear: {\n                        start: formatDate(thisYear.start),\n                        end: formatDate(thisYear.end)\n                    },\n                    lastYear: {\n                        start: formatDate(lastYear.start),\n                        end: formatDate(lastYear.end)\n                    },\n                    nextYear: {\n                        start: formatDate(nextYear.start),\n                        end: formatDate(nextYear.end)\n                    }\n                }\n            }\n        };\n    } catch (error) {\n        // Global error handler\n        console.error('Critical error in date reference creation:', error);\n        // Return a minimal valid response with current date/time\n        const fallbackDate = new Date();\n        return {\n            json: {\n                error: true,\n                errorMessage: error.message,\n                current: {\n                    dateTime: fallbackDate.toISOString(),\n                    date: fallbackDate.toDateString(),\n                    time: fallbackDate.toTimeString(),\n                    timezone: 'PST'\n                }\n            }\n        };\n    }\n}\n\nreturn JSON.stringify(createDateReferences());"
+      },
+      "id": "4f9663b9-be2a-4b6e-b230-325aa692827b",
+      "name": "Now",
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.1,
+      "position": [
+        -700,
+        3400
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        3280
+      ],
+      "id": "4e61cbf7-7d34-4310-b962-64e4cbb5e411",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e22ea465-92e5-4eb3-bd45-3ba45dd8bab8",
+              "leftValue": "={{ $json.Process }}",
+              "rightValue": "TRUE",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -380,
+        440
+      ],
+      "id": "50713089-8525-4d38-a28e-08082c0dd51d",
+      "name": "If",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "advanced": "={{ $('Sources').item.json.Title }}",
+        "mergeByFields": {
+          "values": [
+            {}
+          ]
+        },
+        "outputDataFrom": "input1",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        740,
+        20
+      ],
+      "id": "7d6efa05-3694-4a25-97e9-b7aea720a041",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "url": "={{ \"https://serpapi.com/search.json\" }}\n",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"engine\": \"youtube\",\n    \"search_query\": \"{{ $json.Handle }}\",\n    \"api_key\": \"979f843b8d4d78365ccdb42501e70c6d12c848bce8e63bdbf0c04d8452e491c1\",\n    \"type\": \"channel\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        140,
+        320
+      ],
+      "id": "54a0eb6a-702d-454d-8dc4-ddf9deef7760",
+      "name": "YTB Channel SerpAPI",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "returnAll": true,
+        "filters": {
+          "channelId": "={{ $json.Channel_ID }}",
+          "publishedAfter": "2024-12-01T00:00:00"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        20
+      ],
+      "id": "74a2beeb-d740-4616-ae3a-aece1b3c1d97",
+      "name": "YouTube",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 194808887,
+          "mode": "list",
+          "cachedResultName": "Source",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=194808887"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Subscribers": "={{ $json.channel_results[0].subscribers }}",
+            "Description": "={{ $json.channel_results[0].description }}",
+            "Handle": "={{ $json.channel_results.handle }}"
+          },
+          "matchingColumns": [
+            "Handle"
+          ],
+          "schema": [
+            {
+              "id": "Process",
+              "displayName": "Process",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source",
+              "displayName": "Source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Handle",
+              "displayName": "Handle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Channel_ID",
+              "displayName": "Channel_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Description",
+              "displayName": "Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Subscribers",
+              "displayName": "Subscribers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Note",
+              "displayName": "Note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        320
+      ],
+      "id": "f0714bf3-24f3-4351-ae5d-5465952fd07f",
+      "name": "Channel",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8",
+          "mode": "list",
+          "cachedResultName": "Blue&: Content Generation Platform",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 194808887,
+          "mode": "list",
+          "cachedResultName": "Source",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/110Nw_L6hSvJHMAeNd9K1EK72tuUUfXoAaybOi2hmig8/edit#gid=194808887"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Subscribers": "={{ $json.channel_results[0].subscribers }}",
+            "Description": "={{ $json.channel_results[0].description }}",
+            "Handle": "={{ $json.channel_results[0].handle }}",
+            "Title": "={{ $json.channel_results[0].title }}"
+          },
+          "matchingColumns": [
+            "Handle"
+          ],
+          "schema": [
+            {
+              "id": "Process",
+              "displayName": "Process",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Source",
+              "displayName": "Source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Handle",
+              "displayName": "Handle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Channel_ID",
+              "displayName": "Channel_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Published On",
+              "displayName": "Published On",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Description",
+              "displayName": "Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Subscribers",
+              "displayName": "Subscribers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Note",
+              "displayName": "Note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1560,
+        320
+      ],
+      "id": "9a553b92-7cb6-4499-94d8-3a58e231b301",
+      "name": "Channel1"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "={{ $('YTB Channel SerpAPI').item.json.video_results[0] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        320
+      ],
+      "id": "f1e6415a-0910-4b62-9d3a-028593799b19",
+      "name": "Split Out1",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6de5eab2-bc17-4a24-aa4a-704058cb46db",
+              "name": "Source",
+              "value": "={{ $json.Source }}",
+              "type": "string"
+            },
+            {
+              "id": "c7e16f00-1bca-4536-b33b-5efaa5326505",
+              "name": "Type",
+              "value": "={{ $json.Type }}",
+              "type": "string"
+            },
+            {
+              "id": "54b8e27c-5a91-4060-860f-7d5b1bc32c04",
+              "name": "Handle",
+              "value": "={{ $json.Handle }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -80,
+        320
+      ],
+      "id": "ce48789c-4381-4870-a2ba-420c875cf7e3",
+      "name": "To Process"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Youtube Channel {{ $json.Handle }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a helpful assistant that retrieves youtube videos {{ $json.video_results }} exclusively the videos whose {{ $json.video_results[0].channel.name }} is the same as {{ $json.search_parameters.search_query }}",
+          "returnIntermediateSteps": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        400,
+        320
+      ],
+      "id": "8469aef9-19e4-4c07-b492-e0fd4435f70a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        340,
+        540
+      ],
+      "id": "a3945e0e-eceb-4bc3-a6b8-d8312692dd77",
+      "name": "OpenAI1"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        680,
+        540
+      ],
+      "id": "a80d819e-af93-4139-b90e-8df2874b17c0",
+      "name": "Output"
+    },
+    {
+      "parameters": {
+        "toolDescription": "You are a helpful assistant that can receive Youtube channel information and use the Serp tool to search Youtube videos in it.\n",
+        "url": "={{ \"https://serpapi.com/search.json\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{    \"engine\": \"youtube\",\n    \"api_key\": \"979f843b8d4d78365ccdb42501e70c6d12c848bce8e63bdbf0c04d8452e491c1\",\n    \"type\": \"channel\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        520,
+        540
+      ],
+      "id": "423f4c90-c799-44d1-8fc5-ec2f8994b3e7",
+      "name": "SerpAPI YT"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-18T03:46:57.673Z",
+  "versionId": "5309d457-21df-4ca4-9546-f17289c021f5"
+}
