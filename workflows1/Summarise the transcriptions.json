@@ -1,0 +1,519 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Retrieve Documents",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retrieve Documents": {
+      "ai_tool": [
+        [
+          {
+            "node": "Extract conversations",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Extract conversations",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Create summary of conversation",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract conversations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create summary of conversation",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Extract conversations",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Retrieve Documents",
+            "type": "ai_vectorStore",
+            "index": 0
+          },
+          {
+            "node": "Vector Store Retriever",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Extract conversations": {
+      "main": [
+        [
+          {
+            "node": "Create summary of conversation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create summary of conversation": {
+      "main": [
+        [
+          {
+            "node": "Create summary google doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create summary google doc": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-09T10:04:52.551Z",
+  "id": "h8bsd7dYznziFJgG",
+  "meta": null,
+  "name": "Summarise the transcriptions",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "gpt-4-turbo-2024-04-09",
+        "options": {}
+      },
+      "id": "4ba72961-929d-4b4b-af81-a9206d6ea213",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        480,
+        1300
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "user_documents",
+        "description": "Contains all the user's documents that you can check for context to answer user questions.",
+        "topK": 200
+      },
+      "id": "e2fb7113-b82b-4777-bcdb-8ea36c06ed15",
+      "name": "Retrieve Documents",
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Agent Tools for RAG",
+        "height": 528.85546469693,
+        "width": 581.3477402951079,
+        "color": 4
+      },
+      "id": "b09e1d88-cf6b-4c87-951b-d6a5b8a78d6d",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "232723e0-532d-46f5-8b58-3e7ab1e0b433",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        140,
+        1460
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "b324e9f5-e744-4eb2-a584-806ec35b1875",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1,
+      "position": [
+        320,
+        680
+      ],
+      "notesInFlow": false,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## RAG AI Agent with 24 hours schedule",
+        "height": 464.8027193303974,
+        "width": 692.7866482806627
+      },
+      "id": "9eae7df7-97c2-4bd8-a1bb-641317605a86",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "options": {}
+      },
+      "id": "83ed9962-aa87-4c2c-87cb-f040fe8a42ce",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        200,
+        680
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋\n\nI hold the data for all Incoming Calls on Zuma. Ask me a question and I will try my best answer. \n\nPlease remember that I am still learning about Zuma. I can make mistakes.",
+        "options": {}
+      },
+      "id": "bca87ef5-b28b-4ac9-be94-814880932480",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -860,
+        1060
+      ],
+      "webhookId": "e985d15f-b2f6-456d-be15-97e0b1544a40",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "c20936eb-bae6-46e0-894e-be6f8cd4833a",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -60,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "f717e0f2-5410-4ffe-822c-2e6f74d6c78a",
+      "name": "Anthropic Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        60,
+        680
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "HiJ8HZdm7AwxFgF6",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemPromptTemplate": "Use the following pieces of context to answer the users question.\nIf you don't know the answer, just say that you don't know, don't try to make up an answer.\n----------------\n{context}"
+        }
+      },
+      "id": "d625d57d-1ff6-4a5e-8933-4d925ffd6973",
+      "name": "Question and Answer Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.4,
+      "position": [
+        -640,
+        1060
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "46f1855c-178f-46a8-9a8b-cfb1812860b8",
+      "name": "Anthropic Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        -620,
+        1240
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "HiJ8HZdm7AwxFgF6",
+          "name": "Anthropic account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "551c0b09-76ac-4c14-8a34-81eba6bb5f1f",
+      "name": "Vector Store Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1200
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {
+          "queryName": "match_documents",
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "Call Date",
+                "value": "={{ $now.minus(3, 'days').toISO().split('T')[0]}}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "c498557e-119d-4819-ba92-b7a36e438c45",
+      "name": "Supabase Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        140,
+        1300
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "rhlUqsVeiwoHa4Oh",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Give me the conversation between the call center agent and the caller. I want original conversations only.",
+        "options": {
+          "systemMessage": "You are a skilled data analysis assistant specializing in analyzing call center transcriptions. Your task is to return all the conversations between call center agent and the caller.\n"
+        }
+      },
+      "id": "e06bf750-5232-40c6-ac9d-0b6ba0663b68",
+      "name": "Extract conversations",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        220,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Your job is to analyze the conversation and create a summary of it.\n\nHere is the conversation:\n\n{{ $json.output }}",
+        "options": {
+          "systemMessage": "Your job is to analyze the conversation and create a summary of it."
+        }
+      },
+      "id": "73d58eb7-b60d-43c5-b630-ca39a8a0993b",
+      "name": "Create summary of conversation",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        660,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "folderId": "1Tc5ftOXigK7XF6aA_HzGnZZs6FyL7bAB",
+        "title": "=call-summary-{{$now.toISO().split(\"T\")[0]}}\n"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        460
+      ],
+      "id": "be276fac-7637-4769-b836-508626e3a62d",
+      "name": "Create summary google doc",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "bDC7jhwLuCGe7LBM",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "asfand@zumasales.com",
+        "subject": "=Summary {{ $now }}",
+        "emailType": "text",
+        "message": "={{ $('Create summary of conversation').item.json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1720,
+        460
+      ],
+      "id": "3d2077a9-ab84-4873-8bd9-fa02a1b33101",
+      "name": "Gmail",
+      "webhookId": "0632c087-a547-4923-adee-19a8c12de9b9",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "HsQqJzc1GOCyh1eU",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-22T18:18:39.638Z",
+  "versionId": "38d52dc0-50a6-44c0-a50e-9478ce0fc8a9"
+}

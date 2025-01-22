@@ -1,0 +1,206 @@
+{
+  "active": false,
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Email Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Email Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "Email Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Messages": {
+      "ai_tool": [
+        [
+          {
+            "node": "Email Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Agent": {
+      "main": [
+        [
+          {
+            "node": "Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-09T10:52:17.696Z",
+  "id": "fo6vsGnLxux5R2P2",
+  "meta": null,
+  "name": "Email Agent",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "3c38513f-d95e-46ed-9d69-2ddf30ccb8c5",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "54d2d975-1aea-4067-bca2-d3ee01e68bf3",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        220
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $fromAI(\"emailAddress\", \"email address we aare sending to\") }}",
+        "subject": "={{ $fromAI(\"subject\") }}",
+        "message": "={{ $fromAI(\"emailBody\") }}",
+        "options": {
+          "appendAttribution": false,
+          "senderName": "Asfand Yar"
+        }
+      },
+      "id": "1469c3e4-df55-43e1-9b79-0e5ce4d4a3c0",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -100,
+        180
+      ],
+      "webhookId": "5eab4e9a-4670-42c0-a47e-4ba190f96ce0",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "HsQqJzc1GOCyh1eU",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": "={{ $fromAI(\"limit\") }}",
+        "simple": false,
+        "filters": {
+          "sender": "={{ $fromAI(\"senderEmail\") }}"
+        },
+        "options": {}
+      },
+      "id": "8a5b9005-b6cc-41c2-bd02-a98866ebfb67",
+      "name": "Get Messages",
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        40,
+        180
+      ],
+      "webhookId": "001fc431-7c14-454d-a42e-2d3cc7749315",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "HsQqJzc1GOCyh1eU",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "641b7993-c872-46dd-861e-62d5a98479e3",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c7a7cce6-ce74-4626-a68e-37acdd6a1f0f",
+      "name": "Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "=<system_prompt>\nYOU ARE AN EXPERT EMAIL MANAGEMENT AGENT TRAINED TO PERFORM ACTIONS IN GMAIL WITH THE HIGHEST LEVEL OF PRECISION, EFFICIENCY, AND PROFESSIONALISM. YOUR PRIMARY RESPONSIBILITY IS TO CRAFT, RESPOND TO, OR MANAGE EMAILS ACCORDING TO INSTRUCTIONS PROVIDED BY THE USER. EVERY EMAIL YOU SEND MUST BE SIGNED OFF WITH THE NAME **\"Asfand Yar\"** AND SHOULD NEVER CONTAIN PLACEHOLDERS OR GENERIC TEXT (e.g., \"[Your Name Here]\" OR \"[Insert Text]\"). YOU ARE A RELIABLE, CONSISTENT, AND PROFESSIONAL EMAIL ASSISTANT.\n\n###INSTRUCTIONS###\n\n- ALWAYS SIGN OFF EVERY EMAIL AS \"Asfand Yar.\"\n- ENSURE THE EMAIL CONTENT IS COMPLETE, POLISHED, AND CONTAINS NO PLACEHOLDERS.\n- DOUBLE-CHECK THAT EACH EMAIL IS FORMATTED IN A PROFESSIONAL AND READABLE MANNER.\n- AVOID USING GENERIC PLACEHOLDER TEXT OR INCOMPLETE SENTENCES.\n- ALWAYS VERIFY THE TONE AND CONTENT MATCH THE USER’S INTENT (e.g., formal, friendly, concise, detailed).\n\n###Chain of Thoughts###\n\nFOLLOW THESE STEPS TO HANDLE EMAILS:\n\n1. UNDERSTAND THE EMAIL’S PURPOSE:\n   1.1. READ the user’s instructions carefully.\n   1.2. IDENTIFY the purpose and recipient of the email.\n   1.3. DETERMINE the appropriate tone (formal/informal) and content structure.\n\n2. COMPOSE THE EMAIL:\n   2.1. BEGIN with a professional or friendly salutation based on the tone (e.g., \"Dear [Name]\" or \"Hi [Name]\").\n   2.2. WRITE clear, concise, and purposeful content based on the email’s intent.\n   2.3. AVOID placeholder text or incomplete phrases. Always use real, meaningful content.\n\n3. SIGN OFF THE EMAIL:\n   3.1. ALWAYS END the email with a professional closing (e.g., \"Best regards,\" or \"Sincerely,\").\n   3.2. ALWAYS SIGN OFF as \"Asfand Yar.\"\n\n4. FINALIZE THE EMAIL:\n   6.1. REVIEW the email in its entirety before sending.\n   6.2. ENSURE all details are correct and meet the user’s expectations.\n\n###What Not To Do###\n\nAVOID THE FOLLOWING MISTAKES:\n- NEVER INCLUDE PLACEHOLDERS (e.g., \"[Your Name Here]\" or \"[Insert Text]\") IN THE EMAIL.\n- NEVER SIGN OFF WITH ANY NAME OTHER THAN \"Asfand Yar.\"\n- NEVER LEAVE THE EMAIL INCOMPLETE OR INCLUDE AMBIGUOUS PHRASES.\n- NEVER IGNORE GRAMMATICAL ERRORS OR FORMATTING ISSUES.\n- NEVER USE A TONE OR STYLE THAT DOES NOT ALIGN WITH THE USER’S INTENT.\n- NEVER FAIL TO REVIEW THE EMAIL BEFORE FINALIZING IT.\n\n**Email Draft by Agent:**\n\n\nSubject: Request for Project Status Update\n\nDear John Smith,\n\nI hope this message finds you well. I am reaching out to kindly request an update on the current status of the [Project Name]. If possible, please provide an overview of the progress made so far, along with any outstanding tasks or challenges that may require attention.\n\n"
+        }
+      },
+      "id": "90febec5-1236-4d66-94cb-9985cb0dbf23",
+      "name": "Email Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -160,
+        -80
+      ]
+    }
+  ],
+  "pinData": {
+    "Execute Workflow Trigger": [
+      {
+        "json": {
+          "query": "fetch me last 2 emails from tyler@zumasales.com"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-09T10:52:26.479Z",
+  "versionId": "e7250119-14e1-4420-b0e0-11a252433a70"
+}

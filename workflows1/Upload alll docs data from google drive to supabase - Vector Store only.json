@@ -1,0 +1,1353 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Extract Document Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Document Text": {
+      "main": [
+        [
+          {
+            "node": "If document is empty",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Old Doc Rows": {
+      "main": [
+        []
+      ]
+    },
+    "Set File ID": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract custom fields": {
+      "main": [
+        [
+          {
+            "node": "If default summary is available",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check for record": {
+      "main": [
+        [
+          {
+            "node": "If call record is already added",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store in relational db": {
+      "main": [
+        [
+          {
+            "node": "Format Call Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Vectorstore": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Call Data": {
+      "main": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If default summary is available": {
+      "main": [
+        [
+          {
+            "node": "Return one of the summary",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create call summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create call summary",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return one of the summary": {
+      "main": [
+        [
+          {
+            "node": "Map Database Values",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create call summary": {
+      "main": [
+        [
+          {
+            "node": "Return one of the summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If call record is already added": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If document is empty": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extract custom fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map Database Values": {
+      "main": [
+        [
+          {
+            "node": "Store in relational db",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-04T22:37:24.685Z",
+  "id": "lVmalGZvCB4QXzUR",
+  "meta": null,
+  "name": "Upload alll docs data from google drive to supabase - Vector Store only",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "https://drive.google.com/drive/folders/13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz",
+            "mode": "url"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -300,
+        440
+      ],
+      "id": "9bcfa5ba-45fd-4108-9c5c-c7038ab882e9",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -580,
+        440
+      ],
+      "id": "4340b21e-e7b7-42e7-a9c4-d3c167a1a05c",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $('Format Call Data').item.json.result }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "=file_id",
+                "value": "={{ $('Set File ID').item.json.file_id }}"
+              },
+              {
+                "name": "call_date",
+                "value": "={{ $('Store in relational db').item.json.call_date }}"
+              },
+              {
+                "name": "call_time",
+                "value": "={{ $('Store in relational db').item.json.call_time }}"
+              },
+              {
+                "name": "agent_phone",
+                "value": "={{ $('Store in relational db').item.json.agent_phone }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "7a5544d1-8627-4a1d-9f32-bda334c7faf1",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        3440,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {}
+      },
+      "id": "9e4a67cb-2c45-45b9-814e-47dc1d9b9fb1",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        3320,
+        660
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Tool to Add a Google Drive File to Vector DB",
+        "height": 972,
+        "width": 4091,
+        "color": 5
+      },
+      "id": "1e9880a7-b84a-46c3-8018-055592ff6524",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Set File ID').item.json.file_id }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "text/plain"
+            }
+          }
+        }
+      },
+      "id": "6c0e4726-6608-4147-9b91-bff8d4fe78f9",
+      "name": "Download File",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        920,
+        440
+      ],
+      "executeOnce": true,
+      "notesInFlow": false,
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {
+          "keepSource": "json"
+        }
+      },
+      "id": "c2b1ea31-a1cd-496c-87fb-8bac96861259",
+      "name": "Extract Document Text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        440
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "chunkSize": 100,
+        "chunkOverlap": 20,
+        "options": {}
+      },
+      "id": "b04fc557-7923-4870-a7e3-f990cc9e8e07",
+      "name": "Recursive Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        3540,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "documents",
+        "filterType": "string",
+        "filterString": "=metadata->>file_id=like.*{{ $json.file_id }}*"
+      },
+      "id": "3a019280-6863-4157-9eb2-affd114122e6",
+      "name": "Delete Old Doc Rows",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        620,
+        180
+      ],
+      "alwaysOutputData": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1d87fd77-bdd8-4274-8d75-ce4e2c545693",
+      "name": "Set File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ $('Extract Document Text').item.json.data }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1600,
+        460
+      ],
+      "id": "b025d459-f2cd-4b35-becb-03f624edf84a",
+      "name": "Extract custom fields"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "call-records-complete",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "gdrive_file_id",
+              "keyValue": "={{ $json.file_id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        400,
+        440
+      ],
+      "id": "d2cac201-5c69-4ed1-b66c-cfc4c6cd3b09",
+      "name": "Check for record",
+      "executeOnce": true,
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "tableId": "call-records-complete",
+        "dataToSend": "autoMapInputData"
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        2800,
+        440
+      ],
+      "id": "a6c961a9-0703-47c9-a78f-5997fd6d5ece",
+      "name": "Store in relational db",
+      "retryOnFail": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "documents_large",
+          "mode": "list",
+          "cachedResultName": "documents_large"
+        },
+        "options": {
+          "queryName": "match_documents_large"
+        }
+      },
+      "id": "0e18ac6a-94dc-4cf6-a4fd-a97f1dd38fdb",
+      "name": "Insert into Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        3320,
+        440
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "let result = \"\";\nfor (const item of $input.all()) {\n    // result += Object.values(item).join('') + ' '; // Concatenate all fields, add space between items\n      result += \"## Call No: \"+ item.json.id + '\\n'; \n      result += 'call_date: '+ item.json.call_date + '\\n'; \n      result += 'call_time: '+ item.json.call_time + '\\n'; \n      result += 'customer_phone: '+ item.json.customer_phone + '\\n'; \n      result += 'customer_name: '+ item.json.customer_name + '\\n'; \n      result += 'customer_location: '+ item.json.customer_location + '\\n'; \n      result += 'call_direction: '+ item.json.call_direction + '\\n'; \n      result += 'duration: '+ item.json.duration + '\\n'; \n      result += 'agent_phone: '+ item.json.agent_phone + '\\n'; \n\n      result += 'transcription: '+ item.json.transcription + '\\n'; \n\n\n}\n\nreturn { result: result.trim() }; // Corrected: Return result as a JSON object, remove trailing space\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3040,
+        440
+      ],
+      "id": "145192b2-779d-4363-8ef9-a8d501b1e2d3",
+      "name": "Format Call Data"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3c604aad-3d23-4b07-a4f4-d029f7a9f83a",
+              "leftValue": "={{ $('Extract custom fields').item.json.call_summary }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1820,
+        700
+      ],
+      "id": "5f5e05f6-728e-4dcb-bf85-f9a5db3e2956",
+      "name": "If default summary is available"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        2080,
+        920
+      ],
+      "id": "ee6b6f47-aa21-4b19-8514-fb8adc7474c1",
+      "name": "Anthropic Chat Model",
+      "credentials": {
+        "anthropicApi": {
+          "id": "HiJ8HZdm7AwxFgF6",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e9a07c2-1782-415a-8169-ea043cacc83d",
+              "name": "summary",
+              "value": "={{ $('Extract custom fields').item.json.call_summary ? $('Extract custom fields').item.json.call_summary : $json.text}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2380,
+        680
+      ],
+      "id": "6652762d-4015-4902-84e9-2f71451bedc7",
+      "name": "Return one of the summary"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a summary of this call transcription. {{ $('Extract custom fields').item.json.transcription }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Your task is to create a summary of a recorder call transcription. Also do mention in the summary about the customer and the agent to understand easily. Sample summary is \"The caller, Winford from Nolt Equipment Repair, is seeking a quote from Alex for a JLG ES 1930 or 1930 ES scissors lift. Winford requests a complete decal kit, a battery box, and outer doors for the battery boxes. Alex agrees to provide a quote, including shipping costs, and requests a tax exemption form from Winford. Winford indicates he has dealt with the company in the past through Weaver's Equipment and is now operating under his own account. Alex will send the quote with the tax exemption applied once Winford provides the necessary form.\". Follow the format of the sample summary and return only the summary."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        2020,
+        740
+      ],
+      "id": "84b9db12-150b-43ba-b55d-26a05bf6f4e0",
+      "name": "Create call summary"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        240
+      ],
+      "id": "b1058a1c-8387-4635-8758-2b3cd576574d",
+      "name": "No Operation, do nothing1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a02a00d3-06eb-44b5-ba7a-5f7566e659b8",
+              "leftValue": "={{ $json.id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        580,
+        440
+      ],
+      "id": "d5a4886d-2d11-4a80-9fdb-48f47ff19150",
+      "name": "If call record is already added",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -60,
+        420
+      ],
+      "id": "6843b107-c553-43b1-bef9-2b7031a98cd9",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        260,
+        260
+      ],
+      "id": "72a26abd-6aee-4e5c-bb54-3fc57b8d572c",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "b7af01ba-d512-459f-9d7f-0bc4e8f4013f",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1320,
+        440
+      ],
+      "id": "95250905-018a-4747-88d9-ba4933c553d0",
+      "name": "If document is empty"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3907a126-9bb5-4d39-a9f5-23a4cc1b6665",
+              "name": "answered",
+              "value": "={{ $('Extract custom fields').item.json.answered }}",
+              "type": "boolean"
+            },
+            {
+              "id": "b73ee617-5c9f-40e1-86f6-1daf4844bdd2",
+              "name": "business_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.business_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "14f9076b-ec36-45d1-bb09-06ae1f7c9d45",
+              "name": "call_type",
+              "value": "={{ $('Extract custom fields').item.json.call_type }}",
+              "type": "string"
+            },
+            {
+              "id": "a3921db1-6d69-4a24-8c22-e4375bc360b4",
+              "name": "company_id",
+              "value": "={{ $('Extract custom fields').item.json.company_id }}",
+              "type": "number"
+            },
+            {
+              "id": "8be58117-85b3-4378-9658-6576a8716a15",
+              "name": "company_name",
+              "value": "={{ $('Extract custom fields').item.json.company_name }}",
+              "type": "string"
+            },
+            {
+              "id": "57f56b7f-f959-4ff9-95be-efe1bc279c96",
+              "name": "company_time_zone",
+              "value": "={{ $('Extract custom fields').item.json.company_time_zone }}",
+              "type": "string"
+            },
+            {
+              "id": "022bd0f9-ef70-4ad3-9c98-d3c1b188d455",
+              "name": "created_at",
+              "value": "={{ $('Extract custom fields').item.json.created_at }}",
+              "type": "string"
+            },
+            {
+              "id": "df4af10a-0bc1-4e66-8c20-370638db6913",
+              "name": "customer_city",
+              "value": "={{ $('Extract custom fields').item.json.customer_city }}",
+              "type": "string"
+            },
+            {
+              "id": "32668bba-ea6b-4899-b99b-3d5b9decfc89",
+              "name": "customer_country",
+              "value": "={{ $('Extract custom fields').item.json.customer_country }}",
+              "type": "string"
+            },
+            {
+              "id": "0aca5feb-8b08-4095-856d-6b5a1c3f2612",
+              "name": "customer_name",
+              "value": "={{ $('Extract custom fields').item.json.customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "160d6b00-67b9-4317-9512-fbdf6689d8fa",
+              "name": "customer_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.customer_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "88d50d73-b0d2-4caa-8ed3-5f5123fd652d",
+              "name": "customer_state",
+              "value": "={{ $('Extract custom fields').item.json.customer_state }}",
+              "type": "string"
+            },
+            {
+              "id": "0f3ab471-41fe-4154-b5a2-b99fdea0b44b",
+              "name": "device_type",
+              "value": "={{ $('Extract custom fields').item.json.device_type }}",
+              "type": "string"
+            },
+            {
+              "id": "6b5992e0-47b0-4b17-8371-3bd49bf898cc",
+              "name": "duration",
+              "value": "={{ $('Extract custom fields').item.json.duration }}",
+              "type": "string"
+            },
+            {
+              "id": "c2a50b06-9718-447f-8cb7-2fdc1719b083",
+              "name": "first_call",
+              "value": "={{ $('Extract custom fields').item.json.first_call }}",
+              "type": "boolean"
+            },
+            {
+              "id": "bbe03538-df37-47c5-bc9f-117b07dbb403",
+              "name": "formatted_call_type",
+              "value": "={{ $('Extract custom fields').item.json.formatted_call_type }}",
+              "type": "string"
+            },
+            {
+              "id": "c7f4f06b-8450-45e5-a903-24ec1e9d8b7b",
+              "name": "formatted_customer_location",
+              "value": "={{ $('Extract custom fields').item.json.formatted_customer_location }}",
+              "type": "string"
+            },
+            {
+              "id": "d05aee3e-8c6a-4d25-a375-cba2891f502c",
+              "name": "formatted_business_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.formatted_business_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "3eb04530-09fb-4982-b0be-f267fdff1e4b",
+              "name": "formatted_customer_name",
+              "value": "={{ $('Extract custom fields').item.json.formatted_customer_name }}",
+              "type": "string"
+            },
+            {
+              "id": "75c22326-4eb9-4822-b4aa-80869e350772",
+              "name": "prior_calls",
+              "value": "={{ $('Extract custom fields').item.json.prior_calls }}",
+              "type": "number"
+            },
+            {
+              "id": "6f78644e-7e8f-4702-aa7c-58ccb195717b",
+              "name": "formatted_customer_name_or_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.formatted_customer_name_or_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "6d58f3f2-e0fe-4212-a6b6-55ea00f9e629",
+              "name": "formatted_customer_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.formatted_customer_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "216aedc6-d180-4032-bbdf-72c2f7cdfb4d",
+              "name": "formatted_duration",
+              "value": "={{ $('Extract custom fields').item.json.formatted_duration }}",
+              "type": "string"
+            },
+            {
+              "id": "f1b2fbcf-1c19-4125-94af-7146fd1556b0",
+              "name": "formatted_tracking_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.formatted_tracking_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "5d2aaa26-da92-478d-a36b-e017d94d2c04",
+              "name": "formatted_tracking_source",
+              "value": "={{ $('Extract custom fields').item.json.formatted_tracking_source }}",
+              "type": "string"
+            },
+            {
+              "id": "dcaf43e1-04f7-46d4-ad03-81d39ef4ac5f",
+              "name": "formatted_value",
+              "value": "={{ $('Extract custom fields').item.json.formatted_value }}",
+              "type": "string"
+            },
+            {
+              "id": "12b47098-d25b-40a7-b94c-1e9a9f83552c",
+              "name": "good_lead_call_id",
+              "value": "={{ $('Extract custom fields').item.json.good_lead_call_id }}",
+              "type": "string"
+            },
+            {
+              "id": "018aa605-611a-40f8-8f04-7ea882be228c",
+              "name": "good_lead_call_time",
+              "value": "={{ $('Extract custom fields').item.json.good_lead_call_time }}",
+              "type": "string"
+            },
+            {
+              "id": "1bd90394-6e7f-4a78-8d3d-c58f1e59bd2e",
+              "name": "lead_status",
+              "value": "={{ $('Extract custom fields').item.json.lead_status }}",
+              "type": "string"
+            },
+            {
+              "id": "9feed2b6-c0a8-4947-9b52-e9f037187cb5",
+              "name": "note",
+              "value": "={{ $('Extract custom fields').item.json.note }}",
+              "type": "string"
+            },
+            {
+              "id": "062d554d-41c1-41ea-9c10-6756c82e3257",
+              "name": "recording",
+              "value": "={{ $('Extract custom fields').item.json.recording }}",
+              "type": "string"
+            },
+            {
+              "id": "68f1a012-8b68-4a8a-ae55-55bf0b890959",
+              "name": "recording_duration",
+              "value": "={{ $('Extract custom fields').item.json.recording_duration }}",
+              "type": "number"
+            },
+            {
+              "id": "343791a6-d5b5-4c32-adcf-e3b808f0f534",
+              "name": "source",
+              "value": "={{ $('Extract custom fields').item.json.source }}",
+              "type": "string"
+            },
+            {
+              "id": "6ee47b81-9a2c-437d-a256-ec49973286f4",
+              "name": "source_name",
+              "value": "={{ $('Extract custom fields').item.json.source_name }}",
+              "type": "string"
+            },
+            {
+              "id": "370e1278-0056-466a-8262-77e5f1b72837",
+              "name": "start_time",
+              "value": "={{ $('Extract custom fields').item.json.start_time }}",
+              "type": "string"
+            },
+            {
+              "id": "cc2c8a6b-0968-45a7-acf8-ec14fd5ca55a",
+              "name": "total_calls",
+              "value": "={{ $('Extract custom fields').item.json.total_calls }}",
+              "type": "number"
+            },
+            {
+              "id": "c43ab19f-6d5f-4e31-82c8-f27f083575e1",
+              "name": "tracking_phone_number",
+              "value": "={{ $('Extract custom fields').item.json.tracking_phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "d660fd56-0de7-4366-9ce3-eaa0d994ce8b",
+              "name": "transcription",
+              "value": "={{ $('Extract custom fields').item.json.transcription }}",
+              "type": "string"
+            },
+            {
+              "id": "6e0a09c6-11d2-4d89-8082-62789c6e8b78",
+              "name": "voicemail",
+              "value": "={{ $('Extract custom fields').item.json.voicemail }}",
+              "type": "boolean"
+            },
+            {
+              "id": "8a5a205a-a6f4-48e0-b279-87ce13d6767e",
+              "name": "call_summary",
+              "value": "={{ $('Extract custom fields').item.json.call_summary }}",
+              "type": "string"
+            },
+            {
+              "id": "bdd0c1bc-bd1f-4b39-a3e9-5cdc638c0b25",
+              "name": "keywords",
+              "value": "={{ $('Extract custom fields').item.json.keywords }}",
+              "type": "string"
+            },
+            {
+              "id": "8fcbe90a-242a-4158-8dc1-cc81356f236c",
+              "name": "medium",
+              "value": "={{ $('Extract custom fields').item.json.medium }}",
+              "type": "string"
+            },
+            {
+              "id": "91610341-e09a-4ff9-9637-585924499521",
+              "name": "referring_url",
+              "value": "={{ $('Extract custom fields').item.json.referring_url }}",
+              "type": "string"
+            },
+            {
+              "id": "92a6872a-39ce-4fce-be2c-655d0d2a9c0a",
+              "name": "landing_page_url",
+              "value": "={{ $('Extract custom fields').item.json.landing_page_url }}",
+              "type": "string"
+            },
+            {
+              "id": "ce2976fc-3134-42e2-ba01-53e44c00667e",
+              "name": "last_requested_url",
+              "value": "={{ $('Extract custom fields').item.json.last_requested_url }}",
+              "type": "string"
+            },
+            {
+              "id": "edee663b-7709-4f43-8ce1-f28ed4489f75",
+              "name": "referrer_domain",
+              "value": "={{ $('Extract custom fields').item.json.referrer_domain }}",
+              "type": "string"
+            },
+            {
+              "id": "c1c365bf-3ab2-433f-a7fa-eb1862e755f2",
+              "name": "utm_source",
+              "value": "={{ $('Extract custom fields').item.json.utm_source }}",
+              "type": "string"
+            },
+            {
+              "id": "6c940ac0-952f-4d58-bfa3-ec5065265f00",
+              "name": "utm_medium",
+              "value": "={{ $('Extract custom fields').item.json.utm_medium }}",
+              "type": "string"
+            },
+            {
+              "id": "6751ca54-8380-4c57-9169-cdf1ae76c0c2",
+              "name": "utm_term",
+              "value": "={{ $('Extract custom fields').item.json.utm_term }}",
+              "type": "string"
+            },
+            {
+              "id": "397bc78f-6ff2-49ae-8f96-51bf7ef8767f",
+              "name": "utm_content",
+              "value": "={{ $('Extract custom fields').item.json.utm_content }}",
+              "type": "string"
+            },
+            {
+              "id": "e7ae1d95-150d-4949-9c67-b27c287fae03",
+              "name": "utm_campaign",
+              "value": "={{ $('Extract custom fields').item.json.utm_campaign }}",
+              "type": "string"
+            },
+            {
+              "id": "f3f9e387-88a9-4774-af84-1f14c2931414",
+              "name": "recording_player",
+              "value": "={{ $('Extract custom fields').item.json.recording_player }}",
+              "type": "string"
+            },
+            {
+              "id": "c14e830e-e766-4890-9d2c-f57499e45652",
+              "name": "speaker_percent_agent",
+              "value": "={{ $('Extract custom fields').item.json.speaker_percent.agent }}",
+              "type": "number"
+            },
+            {
+              "id": "61a891f7-1c50-48d4-8526-02435351f860",
+              "name": "speaker_percent_customer",
+              "value": "={{ $('Extract custom fields').item.json.speaker_percent.customer }}",
+              "type": "number"
+            },
+            {
+              "id": "c3244763-1c77-42e0-ba13-a9a986a9282e",
+              "name": "call_highlights",
+              "value": "={{ $('Extract custom fields').item.json.call_highlights.toJsonString() }}",
+              "type": "string"
+            },
+            {
+              "id": "a6a8e9d6-934f-4402-8c9e-b44d6dec1383",
+              "name": "agent_email",
+              "value": "={{ $('Extract custom fields').item.json.agent_email }}",
+              "type": "string"
+            },
+            {
+              "id": "8ca9a9c6-043a-4655-8cb1-070ef27de03a",
+              "name": "keypad_entries",
+              "value": "={{ $('Extract custom fields').item.json.keypad_entries }}",
+              "type": "string"
+            },
+            {
+              "id": "bd060c03-dff5-4858-bae4-00b09536409e",
+              "name": "recording_redirect",
+              "value": "={{ $('Extract custom fields').item.json.recording_redirect }}",
+              "type": "string"
+            },
+            {
+              "id": "2b582f23-2ba2-489f-9d4c-4af31122d56e",
+              "name": "spam",
+              "value": "={{ $('Extract custom fields').item.json.spam }}",
+              "type": "boolean"
+            },
+            {
+              "id": "114277cc-fc79-4626-be74-4feee77fceac",
+              "name": "timeline_url",
+              "value": "={{ $('Extract custom fields').item.json.timeline_url }}",
+              "type": "string"
+            },
+            {
+              "id": "2df74d7a-4528-4a1d-a8a9-792df368b7b5",
+              "name": "custom",
+              "value": "={{ $('Extract custom fields').item.json.custom }}",
+              "type": "string"
+            },
+            {
+              "id": "cb278855-1f1a-4981-9ddf-538d5cd3fe6f",
+              "name": "vb_media_id",
+              "value": "={{ $('Extract custom fields').item.json.vb_media_id }}",
+              "type": "string"
+            },
+            {
+              "id": "ece7031a-7d7f-4d4f-97d9-110389f1ae92",
+              "name": "session_uuid",
+              "value": "={{ $('Extract custom fields').item.json.session_uuid }}",
+              "type": "string"
+            },
+            {
+              "id": "39e597f2-6fcc-4746-9acc-432a496c06a5",
+              "name": "sentiment",
+              "value": "={{ $('Extract custom fields').item.json.sentiment }}",
+              "type": "string"
+            },
+            {
+              "id": "b228eee9-87f5-4f9b-bc4a-d0eb94a4f8ee",
+              "name": "zip_code",
+              "value": "={{ $('Extract custom fields').item.json.zip_code }}",
+              "type": "string"
+            },
+            {
+              "id": "0cb2e9d9-df00-4db8-b8a2-fdc38731e887",
+              "name": "callercity",
+              "value": "={{ $('Extract custom fields').item.json.callercity }}",
+              "type": "string"
+            },
+            {
+              "id": "360f5db8-d90c-4c7b-9c31-8c8b070af93e",
+              "name": "callercountry",
+              "value": "={{ $('Extract custom fields').item.json.callercountry }}",
+              "type": "string"
+            },
+            {
+              "id": "7ecbc61b-410d-42c8-a378-b8fe9b34eb2a",
+              "name": "callername",
+              "value": "={{ $('Extract custom fields').item.json.callername }}",
+              "type": "string"
+            },
+            {
+              "id": "b97dc0bd-e8cb-44b8-9c21-217d2a6a0760",
+              "name": "callernum",
+              "value": "={{ $('Extract custom fields').item.json.callernum }}",
+              "type": "string"
+            },
+            {
+              "id": "0c3c3048-dd1f-45f6-bd90-32ff26f3f04b",
+              "name": "callerstate",
+              "value": "={{ $('Extract custom fields').item.json.callerstate }}",
+              "type": "string"
+            },
+            {
+              "id": "2840d760-100f-4e35-a762-939e0a1bbb4c",
+              "name": "callsource",
+              "value": "={{ $('Extract custom fields').item.json.callsource }}",
+              "type": "string"
+            },
+            {
+              "id": "98dc1241-a917-40e7-9c25-83e8101758cd",
+              "name": "datetime",
+              "value": "={{ $('Extract custom fields').item.json.datetime }}",
+              "type": "string"
+            },
+            {
+              "id": "34db45bc-c40f-4996-821a-7ef924d597a4",
+              "name": "destinationnum",
+              "value": "={{ $('Extract custom fields').item.json.destinationnum }}",
+              "type": "string"
+            },
+            {
+              "id": "b3bb4438-7ee8-43c4-ba75-e0f9dea3d745",
+              "name": "kissmetrics_id",
+              "value": "={{ $('Extract custom fields').item.json.kissmetrics_id }}",
+              "type": "string"
+            },
+            {
+              "id": "1e5091c9-8173-45e3-b889-0cb533267e4a",
+              "name": "landingpage",
+              "value": "={{ $('Extract custom fields').item.json.landingpage }}",
+              "type": "string"
+            },
+            {
+              "id": "3f746fbb-8ef6-4a0c-83bf-6e16e297ad65",
+              "name": "referrer",
+              "value": "={{ $('Extract custom fields').item.json.referrer }}",
+              "type": "string"
+            },
+            {
+              "id": "2590e1f6-e5d7-453c-8cdd-229cadc59140",
+              "name": "referrermedium",
+              "value": "={{ $('Extract custom fields').item.json.referrermedium }}",
+              "type": "string"
+            },
+            {
+              "id": "e880912f-fefc-45e8-b9ec-33ee4b2d89f4",
+              "name": "score",
+              "value": "={{ $('Extract custom fields').item.json.score }}",
+              "type": "string"
+            },
+            {
+              "id": "2c8659f5-ba13-4573-ac13-e4206af27b7b",
+              "name": "tag",
+              "value": "={{ $('Extract custom fields').item.json.tag }}",
+              "type": "string"
+            },
+            {
+              "id": "9d5e5c5f-69a3-4c99-b354-0d9c628cf0a3",
+              "name": "trackingnum",
+              "value": "={{ $('Extract custom fields').item.json.trackingnum }}",
+              "type": "string"
+            },
+            {
+              "id": "b8bfe77b-d98f-4a09-ac66-09f890ffb164",
+              "name": "timestamp",
+              "value": "={{ $('Extract custom fields').item.json.timestamp }}",
+              "type": "string"
+            },
+            {
+              "id": "2c19763b-3416-4e23-a59b-76aeeb33b6b5",
+              "name": "person_resource_id",
+              "value": "={{ $('Extract custom fields').item.json.person_resource_id }}",
+              "type": "string"
+            },
+            {
+              "id": "8e74655e-f81a-42b6-99ce-e9253e8f44a9",
+              "name": "resource_id",
+              "value": "={{ $('Extract custom fields').item.json.resource_id }}",
+              "type": "string"
+            },
+            {
+              "id": "98e6638a-f518-40ee-9dbe-88029be7fa39",
+              "name": "company_resource_id",
+              "value": "={{ $('Extract custom fields').item.json.company_resource_id }}",
+              "type": "string"
+            },
+            {
+              "id": "049b6103-6ca7-41b9-928c-e2ce23c0d8b7",
+              "name": "tracker_resource_id",
+              "value": "={{ $('Extract custom fields').item.json.tracker_resource_id }}",
+              "type": "string"
+            },
+            {
+              "id": "2855f42b-7bf4-41ba-b235-36a53380b680",
+              "name": "direction",
+              "value": "={{ $('Extract custom fields').item.json.direction }}",
+              "type": "string"
+            },
+            {
+              "id": "6024065d-4149-4d24-b7a4-acedcddf89bf",
+              "name": "gdrive_file_id",
+              "value": "={{ $('Set File ID').item.json.file_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2600,
+        440
+      ],
+      "id": "bc8b17a4-1e06-4fc5-99ff-112721d634e2",
+      "name": "Map Database Values"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-06T22:31:56.953Z",
+  "versionId": "536c4245-551e-4023-b271-f00364cd29ff"
+}

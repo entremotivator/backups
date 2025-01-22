@@ -1,0 +1,633 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Retrieve Documents",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retrieve Documents": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Extract Document Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File Created": {
+      "main": [
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "File Updated": {
+      "main": [
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Document Text": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Old Doc Rows": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set File ID": {
+      "main": [
+        [
+          {
+            "node": "Delete Old Doc Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Retrieve Documents",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-18T13:11:39.232Z",
+  "id": "MO3UnNQ9Fchh5YIW",
+  "meta": null,
+  "name": "Sales Transcription Agent copy",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "options": {}
+      },
+      "id": "c5711874-878b-4037-b1dd-a3e2f68b5249",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        260,
+        220
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.data }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "=file_id",
+                "value": "={{ $('Set File ID').item.json.file_id }}"
+              },
+              {
+                "name": "Call Date",
+                "value": "={{ $('File Created').item.json.createdTime.split('T')[0] }}"
+              },
+              {
+                "name": "Call Time",
+                "value": "={{ $('File Created').item.json.createdTime.split('T')[1] }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "60dc9072-a982-49e3-ac63-a4c0718d8217",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        320,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "a02737b8-2ae8-47f2-9391-1f5c82ce2bc4",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        160,
+        760
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "user_documents",
+        "description": "Contains all the user's documents that you can check for context to answer user questions.",
+        "topK": 100
+      },
+      "id": "28cbc34d-a5a4-4674-805f-7e9156e0a48d",
+      "name": "Retrieve Documents",
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        120,
+        -20
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Agent Tools for RAG",
+        "height": 528.85546469693,
+        "width": 581.3477402951079,
+        "color": 4
+      },
+      "id": "26d04c76-0836-4a53-b495-97b792a3c40c",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Tool to Add a Google Drive File to Vector DB",
+        "height": 671.8877842322804,
+        "width": 2070.8894079025763,
+        "color": 5
+      },
+      "id": "30f7ccab-e520-4b58-b403-10b3801dad7e",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1440,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Set File ID').item.json.file_id }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "text/plain"
+            }
+          }
+        }
+      },
+      "id": "ff28ce15-c950-4092-b5a9-3d601247f4ce",
+      "name": "Download File",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -340,
+        640
+      ],
+      "executeOnce": true,
+      "notesInFlow": false,
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "specificFolder",
+        "folderToWatch": {
+          "__rl": true,
+          "value": "13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz",
+          "mode": "list",
+          "cachedResultName": "N8N - Ai Agent",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz"
+        },
+        "event": "fileCreated",
+        "options": {}
+      },
+      "id": "0131507c-c013-4f13-ba1a-63b01ab955da",
+      "name": "File Created",
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        540
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "specificFolder",
+        "folderToWatch": {
+          "__rl": true,
+          "value": "13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz",
+          "mode": "list",
+          "cachedResultName": "N8N - Ai Agent",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz"
+        },
+        "event": "fileUpdated",
+        "options": {}
+      },
+      "id": "a1940aa4-13a1-426e-a20d-ae7dfd6a307d",
+      "name": "File Updated",
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        760
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {}
+      },
+      "id": "18e04a43-dcc0-4eca-85eb-e83ec98dde54",
+      "name": "Extract Document Text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        640
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "b5e826d9-be4e-4ec6-a27e-f9cde759105c",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        280
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chunkOverlap": 200,
+        "options": {}
+      },
+      "id": "0db31fc2-b2b8-42d6-babf-d2cb29440cb8",
+      "name": "Recursive Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        320,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "documents",
+        "filterType": "string",
+        "filterString": "=metadata->>file_id=like.*{{ $json.file_id }}*"
+      },
+      "id": "31353aea-30b2-4716-8a36-37b5f4f14a3c",
+      "name": "Delete Old Doc Rows",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        640
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "rhlUqsVeiwoHa4Oh",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "418da8e4-fe8a-4a39-9c1a-f9ccb4af21e0",
+      "name": "Set File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -960,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## RAG AI Agent with Chat Interface",
+        "height": 464.8027193303974,
+        "width": 692.7866482806627
+      },
+      "id": "6ff1c574-5caf-4819-b55c-9418d42f95d3",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "options": {}
+      },
+      "id": "db958ed1-ddd6-44da-9759-2fab005d81b2",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        240
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {
+          "queryName": "match_documents"
+        }
+      },
+      "id": "6fe73433-80a4-4658-8758-6bc5f64d3bfa",
+      "name": "Supabase Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        0,
+        140
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "rhlUqsVeiwoHa4Oh",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "=<system_prompt>\nYOU ARE A VECTOR DATABASE ANALYST AND INFORMATION RETRIEVAL EXPERT TRAINED TO EXTRACT, INTERPRET, AND ANALYZE DATA STORED IN COMPLEX FORMATS. YOU SPECIALIZE IN HANDLING CALL TRANSCRIPTION DATA AND PROVIDING HIGHLY CONTEXTUALIZED RESPONSES BASED ON USER QUERIES. YOUR PRIMARY GOAL IS TO RETRIEVE DATA, RESOLVE TIME REFERENCES (E.G., \"TODAY,\" \"YESTERDAY\"), AND PROVIDE DETAILED CALL ANALYSES WHEN PROMPTED.\n\n###INSTRUCTIONS###\n\n1. **DATA INTERPRETATION TASKS**:\n   - UNDERSTAND the transcription data schema and locate relevant fields (e.g., `created_at`, `transcription`, `call_summary`, `customer_name`, `duration`, `sentiment`, etc.).\n   - MAP time-relative terms (e.g., \"today,\" \"yesterday\") to the `created_at` field and calculate the specific date in question.\n   - WHEN ASKED, PROVIDE an analytical breakdown of the call details (e.g., agent behavior, customer intent, call duration, call sentiment, key takeaways).\n\n2. **CHAIN OF THOUGHT PROCESS**:\n   - STEP 1: PARSE the provided data object for relevant fields.\n   - STEP 2: RESOLVE relative dates like \"today\" or \"yesterday\" using the `created_at` timestamp as a reference point.\n   - STEP 3: IF AN ANALYSIS IS REQUESTED, ASSEMBLE a comprehensive response summarizing:\n     - Call purpose (if discernible from the `transcription` or `call_summary`)\n     - Agent and customer interaction\n     - Duration and sentiment\n     - Any other notable information or patterns\n   - STEP 4: RESPOND IN A CLEAR, CONCISE FORMAT with detailed insights or requested data.\n\n3. **ERROR HANDLING AND EDGE CASES**:\n   - IF TIME-BASED TERMS ARE AMBIGUOUS (e.g., \"last week\" without specific context), ASK THE USER FOR CLARIFICATION.\n   - IF DATA IS MISSING OR INCOMPLETE (e.g., no `transcription` field), ACKNOWLEDGE THE LIMITATION AND PROVIDE PARTIAL RESULTS OR SUGGEST ALTERNATIVES.\n\n4. **WHAT NOT TO DO**:\n   - NEVER GUESS OR FABRICATE DATA THAT DOES NOT EXIST IN THE DATABASE.\n   - NEVER PROVIDE GENERIC OR VAGUE RESPONSES. ALL OUTPUTS MUST BE BASED ON THE ACTUAL DATA PROVIDED.\n   - NEVER IGNORE RELATIVE TIME QUERIES LIKE \"TODAY\" OR \"YESTERDAY\"; ALWAYS RESOLVE THESE USING `created_at`.\n\n###CHAIN OF THOUGHT PROCESS IMPLEMENTATION###\n\n1. **RESOLVING RELATIVE DATES**:\n   - EXTRACT the `created_at` timestamp and convert it to the user's timezone (`company_time_zone` field if available).\n   - MAP \"today\" to the exact date of `created_at` in the relevant timezone.\n   - MAP \"yesterday\" to the day prior to the `created_at` date.\n\n2. **PROVIDING CALL ANALYSIS**:\n   - IDENTIFY and ANALYZE the following:\n     - **Purpose**: Determine the intent or context of the call (e.g., sales inquiry, customer complaint, etc.).\n     - **Interaction**: Summarize agent and customer dialogue based on the `transcription`.\n     - **Key Details**: Extract relevant data points such as `duration`, `sentiment`, `tags`, or call `source`.\n     - **Highlights**: Flag noteworthy events or insights (e.g., first call, good lead).\n\n3. **FORMATTING THE RESPONSE**:\n   - PRESENT data as structured text or a summary, depending on user request.\n   - INCLUDE all relevant timestamps, extracted fields, and insights.\n\n###EXAMPLES###\n\n#### 1. RELATIVE DATE RESOLUTION:\n**User Query:** \"What calls happened yesterday?\"\n**Agent Response:** \n- Parse the `created_at` timestamp (e.g., `2024-12-01T19:02:14.205-05:00`).\n- Resolve \"yesterday\" to `2024-11-30` in the relevant timezone (`America/Los_Angeles`).\n- RETURN calls matching the resolved date.\n\n**Sample Response:**\n> \"One call was recorded yesterday (2024-11-30, America/Los_Angeles): \n> - Customer: San Juan Pr \n> - Duration: 59 seconds \n> - Sentiment: Slightly Positive \n> - Source: Direct Calls USA \n> - Transcription: 'Good afternoon. Zuma sales. Hello? Is anyone on the line?'\"\n\n#### 2. CALL ANALYSIS REQUEST:\n**User Query:** \"Analyze the following call.\"\n**Agent Response:**\n- EXTRACT and ANALYZE fields such as `transcription`, `duration`, `sentiment`, and `call_summary`.\n\n**Sample Response:**\n> \"Analysis of Call ID CALdd832cf37a2d4e3e85ad23bba76b884d:\n> - **Purpose**: The caller attempted to reach Zuma Sales but did not respond to the agent's greeting.\n> - **Agent Interaction**: The agent greeted and waited for a response but received none.\n> - **Call Duration**: 59 seconds\n> - **Sentiment**: Slightly Positive\n> - **Key Insights**: \n>    - First call from the customer. \n>    - Recording available at [Link](https://app.callrail.com/calls/CALdd832cf37a2d4e3e85ad23bba76b884d/recording).\n> - **Summary**: A missed connection; the call did not progress.\"\n\n###WHAT NOT TO DO###\n\n- NEVER IGNORE TIMEZONE DIFFERENCES WHEN RESOLVING RELATIVE DATES.\n- NEVER OMIT IMPORTANT CONTEXTUAL DETAILS FROM THE ANALYSIS.\n- NEVER FAIL TO HANDLE EDGE CASES SUCH AS MISSING OR EMPTY TRANSCRIPTIONS.\n- NEVER PROVIDE RESPONSES WITHOUT VALIDATING DATA FROM THE VECTOR DATABASE.\n\n###ERROR HANDLING###\n\n- IF NO MATCHING DATA EXISTS FOR A QUERY (E.G., NO CALLS FOR THE RESOLVED DATE), INFORM THE USER CLEARLY: \n> \"No calls were recorded for the specified date.\"\n\n</system_prompt>\n"
+        }
+      },
+      "id": "6d543959-01eb-4b79-a34b-ba8411a0a949",
+      "name": "RAG AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        -700,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {
+          "queryName": "match_documents"
+        }
+      },
+      "id": "c9f8729c-dcf0-4462-ad1b-a7a65485aba3",
+      "name": "Insert into Supabase Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        200,
+        540
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "rhlUqsVeiwoHa4Oh",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "public": true,
+        "options": {},
+        "path": "2f4e0f19-f0b9-4c5a-8105-4146f9135848"
+      },
+      "id": "906e2fcf-a53f-4093-abe9-d96a4c10c801",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -920,
+        0
+      ],
+      "webhookId": "2f4e0f19-f0b9-4c5a-8105-4146f9135848"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-12-18T13:11:32.335Z",
+      "updatedAt": "2024-12-18T13:11:32.335Z",
+      "id": "ESNMREnHb7UG9cuH",
+      "name": "Backup"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-18T13:11:39.232Z",
+  "versionId": "6083e214-ff40-4164-8ff3-13e15d8b6eb9"
+}

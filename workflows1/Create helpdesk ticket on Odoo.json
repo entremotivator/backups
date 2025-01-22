@@ -1,0 +1,179 @@
+{
+  "active": false,
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Odoo - Zuma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-09T10:50:42.757Z",
+  "id": "1QpcqUbSkw9O3tmM",
+  "meta": null,
+  "name": "Create helpdesk ticket on Odoo",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "188e8e1e-fed6-4dd6-9a4b-36467d386ca8",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "options": {}
+      },
+      "id": "2d97e2d0-3a7a-4e6b-aa06-cbe03a61c87d",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        60
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "custom",
+        "customResource": "helpdesk.ticket",
+        "operation": "get",
+        "options": {
+          "fieldsList": []
+        }
+      },
+      "id": "de36d1da-8f15-4d35-adb5-deba3eda74b1",
+      "name": "Odoo",
+      "type": "n8n-nodes-base.odoo",
+      "typeVersion": 1,
+      "position": [
+        620,
+        200
+      ],
+      "credentials": {
+        "odooApi": {
+          "id": "VjWenaSJKhrYdzMw",
+          "name": "Odoo account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n\t\"ticket_content\": \"ticket content\",\n  \"created_at\": \"date and time in iso format\"\n  \n\t\n}"
+      },
+      "id": "4a0b51a6-37dd-4d76-a41c-9fbe348600e2",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        100,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a helpful assistant in creating a helpdesk ticket on Odoo. Your job is to analyze the query form customer and create a ticket on behalf of the support agent.\nHere is the customer query:\n{{ $json.query }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a helpful assistant in creating a helpdesk ticket on Odoo. Your job is to analyze the data and create a ticket on behalf of the person."
+        }
+      },
+      "id": "bf549692-96a2-485a-974c-975209ec7fb5",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -140,
+        -160
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "resource": "custom"
+      },
+      "type": "n8n-nodes-odoo.odoo",
+      "typeVersion": 1,
+      "position": [
+        340,
+        -160
+      ],
+      "id": "e4aab9c6-beb4-4324-8465-a1d8aa28649f",
+      "name": "Odoo - Zuma",
+      "credentials": {
+        "odooApi": {
+          "id": "VjWenaSJKhrYdzMw",
+          "name": "Odoo account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Execute Workflow Trigger": [
+      {
+        "json": {
+          "query": "Subject: Can't Log Into My Account\nMessage:\nHi Support,\n\nI’m unable to log into my account. I tried resetting my password, but I haven’t received any email yet. Can you please help me access my account?\n\nHere are my details:\n\nName: John Doe\nEmail: john.doe@example.com\n\nPlease look into this as soon as possible. Thanks!\n\nBest regards,\nJohn Doe"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-06T15:19:53.795Z",
+  "versionId": "4b756a4e-a1aa-46d5-93af-40d58bd41832"
+}

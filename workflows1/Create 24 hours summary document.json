@@ -1,0 +1,180 @@
+{
+  "active": true,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "main": [
+        [
+          {
+            "node": "Format Call Summaries",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Document": {
+      "main": [
+        [
+          {
+            "node": "Update Document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Call Summaries": {
+      "main": [
+        [
+          {
+            "node": "Create Document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-22T19:17:33.934Z",
+  "id": "dnOU0mdGKPpLrdsP",
+  "meta": null,
+  "name": "Create 24 hours summary document",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "call-records",
+        "returnAll": true,
+        "filterType": "=manual",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "call_date",
+              "condition": "eq",
+              "keyValue": "={{ $json.timestamp.toDateTime().minus(1, 'days').toISO().split('T')[0] }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "c94f0004-df93-45ff-b90b-08b07132b930",
+      "name": "Supabase",
+      "executeOnce": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "86b4ee10-4011-4544-98fe-b8db14ece729",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "folderId": "1Tc5ftOXigK7XF6aA_HzGnZZs6FyL7bAB",
+        "title": "=Call-Summaries-24hour-{{ $('Schedule Trigger').first().json.timestamp.toDateTime().minus(1, 'days').toISO().split('T')[0] }}"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        660,
+        0
+      ],
+      "id": "fe9a81b7-8eda-4cd7-b5b9-1863ac1a99bb",
+      "name": "Create Document",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "bDC7jhwLuCGe7LBM",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $json.id }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $('Format Call Summaries').item.json.result }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ],
+      "id": "6d60f7be-8ebd-4f73-92c2-58904b838b9b",
+      "name": "Update Document",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "bDC7jhwLuCGe7LBM",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "let result = '# 24-hour call summaries \\n\\n';\nfor (const item of $input.all()) {\n    // result += Object.values(item).join('') + ' '; // Concatenate all fields, add space between items\n      result += \"## Call Summary\" + '\\n'; \n      result += 'call_date: '+ item.json.call_date + '\\n'; \n      result += 'call_time: '+ item.json.call_time + '\\n'; \n      result += 'customer_phone: '+ item.json.customer_phone + '\\n'; \n      result += 'agent_phone: '+ item.json.agent_phone + '\\n'; \n      result += 'call_summary: '+ item.json.summary + '\\n'; \n      result += \"===========\" + '\\n \\n \\n'; \n\n\n}\n\nreturn { result: result.trim() }; // Corrected: Return result as a JSON object, remove trailing space\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ],
+      "id": "6b3dbeea-b158-4794-a5e0-f81dd0342265",
+      "name": "Format Call Summaries"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-12-25T18:13:07.619Z",
+  "versionId": "524c1228-0dd9-4a61-8707-84bfe0e4683a"
+}

@@ -1,0 +1,460 @@
+{
+  "active": false,
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calendar Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Voice File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Text Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Voice File": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sales Data Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Input": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-09T10:49:19.418Z",
+  "id": "2HhePU6UX0So2Cu8",
+  "meta": null,
+  "name": "Personal Assistant",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "876e5624-27cb-4726-acb4-ec7d180463dc",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1000,
+        100
+      ],
+      "webhookId": "5f29082e-44fd-4d5b-9823-93fde36be061"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "2cbc69c7-1694-46ea-b43a-4b00d46e439f",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        360
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+      },
+      "id": "2e88aa68-7629-4658-99ea-e64eccab9d1b",
+      "name": "Postgres Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        -220,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1g_HifQool7vinMPFr1DXAC6hsZV6S32w0UvKwY09h5g",
+          "mode": "list",
+          "cachedResultName": "Employee list",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1g_HifQool7vinMPFr1DXAC6hsZV6S32w0UvKwY09h5g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1g_HifQool7vinMPFr1DXAC6hsZV6S32w0UvKwY09h5g/edit#gid=0"
+        },
+        "options": {}
+      },
+      "id": "93ab6335-c702-425c-82e5-02daddf36c35",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        -100,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4WOfhsh0Xjl0tlvw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "email_agent",
+        "description": "Call this tool to take action in email",
+        "workflowId": {
+          "__rl": true,
+          "value": "PQh5VjeIxXziDq4v",
+          "mode": "list",
+          "cachedResultName": "RAG Agent Ai — Email Agent"
+        },
+        "responsePropertyName": "output"
+      },
+      "id": "5b13de49-1678-439a-8022-1b6d717bc25d",
+      "name": "Email Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        20,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "name": "calendar_agent",
+        "workflowId": {
+          "__rl": true,
+          "value": "9ADkOiZuU3eEKjQB",
+          "mode": "list",
+          "cachedResultName": "RAG Agent Ai — Calendar Agent"
+        }
+      },
+      "id": "710988b7-a211-4083-8ec3-f21db81d8f1a",
+      "name": "Calendar Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        140,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3d7d93b7-2237-4596-9050-01f7a548aec0",
+                    "leftValue": "={{ $json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "voice"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9b61ed45-cec9-4fea-a54e-c4d1776cc9ec",
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "text"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "32ea549f-dbbd-4519-9444-e90ec56491a2",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -820,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.voice.file_id }}"
+      },
+      "id": "8f8cf994-8430-4316-8570-e986127bb784",
+      "name": "Voice File",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -620,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "id": "bcce16ae-38cd-4aa6-be69-2ec25ca4eb44",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        560,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "name": "sales_report_agent",
+        "description": "Call this tool to get call transcriptions",
+        "workflowId": {
+          "__rl": true,
+          "value": "gWfo3UHDvMUQcHo6",
+          "mode": "list",
+          "cachedResultName": "RAG Agent Ai — Sales Transcription Agent"
+        }
+      },
+      "id": "dbade03f-d85d-436f-8de5-fb665761afad",
+      "name": "Sales Data Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        280,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "750118c8-390b-45a2-8f0f-2d4778cd182f",
+              "name": "text",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "daf88a99-e597-4bd4-a303-53555a9c6a30",
+      "name": "Text Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -380,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "c8215d53-f9b4-4375-9012-b9d78c03a74a",
+      "name": "OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        -380,
+        -140
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "=\nYOU ARE AN INTELLIGENT AI ASSISTANT INTEGRATED INTO AN N8N WORKFLOW. YOUR PRIMARY FUNCTION IS TO FETCH EMAILS FROM THE USER'S GMAIL ACCOUNT AND CROSS-REFERENCE THEM WITH A CONTACT DATABASE THAT IS ATTACHED TO A NODE IN THE WORKFLOW. YOU MUST ALWAYS EXECUTE TASKS PRECISELY ACCORDING TO THE FOLLOWING INSTRUCTIONS.\n\n### INSTRUCTIONS ###\n\n1. **FETCH EMAILS FROM GMAIL**:\n   - CONNECT TO the Gmail account configured in the workflow.\n   - RETRIEVE only the most recent emails or those within the specified date range, depending on the query.\n   - PRIORITIZE emails that match the query criteria provided by the user (e.g., subject keywords, sender).\n\n2. **ACCESS THE CONTACT DATABASE**:\n   - CONNECT TO the attached contact database node.\n   - EXTRACT contact information, including names, email addresses, and tags, for cross-referencing purposes.\n   - VERIFY the connection to ensure that no contact information is missed.\n\n3. **CROSS-REFERENCE AND PROCESS RESULTS**:\n   - MATCH the sender email addresses from the Gmail emails to the email addresses stored in the contact database.\n   - IDENTIFY and FLAG emails that come from contacts already stored in the database.\n   - ADD metadata, such as the contact's name, tags, or other relevant information, to the results.\n\n4. **HANDLE UNMATCHED EMAILS**:\n   - LIST emails from senders who are NOT in the contact database.\n   - SUGGEST actions such as adding these new contacts to the database or ignoring them.\n\n5. **RETURN THE FINAL OUTPUT**:\n   - GENERATE a structured output with the following:\n     - Matched emails (with contact details from the database).\n     - Unmatched emails (flagged as “unknown” or “new”).\n     - Summary statistics (e.g., number of matched vs unmatched emails).\n   - FORMAT the output in a clean, user-friendly structure (e.g., JSON or tabular format) for further use in the workflow.\n\n6. **LOGGING AND ERROR HANDLING**:\n   - LOG each step for traceability and debugging.\n   - HANDLE errors gracefully (e.g., if Gmail or the contact database is inaccessible, return a clear error message with troubleshooting steps).\n\n### CHAIN OF THOUGHTS ###\n\n1. **UNDERSTAND THE TASK**:\n   - COMPREHEND the user's query to determine the scope of email retrieval (e.g., all emails, specific filters).\n   - CONFIRM that both the Gmail node and the contact database node are active and accessible.\n\n2. **FETCH EMAILS**:\n   - FILTER emails based on the user's query.\n   - COLLECT relevant metadata, such as the sender email, subject line, date, and body preview.\n\n3. **ACCESS CONTACT DATABASE**:\n   - IDENTIFY the structure of the database (e.g., fields for name, email, tags).\n   - ENSURE that all relevant data is accessible for cross-referencing.\n\n4. **CROSS-REFERENCE EMAILS**:\n   - MATCH sender addresses to contact emails in the database.\n   - IF a match is found, ATTACH corresponding contact information to the email.\n   - IF no match is found, MARK the email as “unknown” and include it in the unmatched list.\n\n5. **RETURN RESULTS**:\n   - ORGANIZE matched and unmatched emails in a clear format.\n   - HIGHLIGHT key details (e.g., contact name, tags) for matched emails.\n   - PROVIDE actionable suggestions for unmatched emails.\n\n6. **CONSIDER EDGE CASES**:\n   - IF Gmail returns no emails, RETURN a message stating “No emails found matching the criteria.”\n   - IF the contact database node is inaccessible, RETURN a warning to check the node's configuration.\n   - IF an email sender matches multiple contacts, FLAG the ambiguity and include all potential matches.\n\n### WHAT NOT TO DO ###\n\n- NEVER FETCH ALL EMAILS WITHOUT FILTERS UNLESS THE USER EXPLICITLY REQUESTS IT.\n- NEVER FAIL TO CROSS-REFERENCE EMAILS WITH THE CONTACT DATABASE.\n- NEVER IGNORE ERRORS OR FAIL TO LOG THEM CLEARLY.\n- NEVER RETURN UNSTRUCTURED OUTPUTS OR RAW DATA WITHOUT FORMATTING.\n- NEVER OVERRIDE THE USER’S WORKFLOW WITHOUT EXPLICIT INSTRUCTION.\n\n### FEW-SHOT EXAMPLES ###\n\n**Example Query 1**: \n\"Fetch emails from last week and match them with my contacts.\"\n\n**Desired Output**:\n- Matched Emails:\n  - Email 1:\n    - Sender: john.doe@example.com\n    - Contact Name: John Doe\n    - Tags: Client, Priority\n    - Subject: Project Update\n  - Email 2:\n    - Sender: jane.smith@example.com\n    - Contact Name: Jane Smith\n    - Tags: Vendor\n    - Subject: Invoice for October\n- Unmatched Emails:\n  - Email 1:\n    - Sender: unknown.sender@example.com\n    - Subject: Collaboration Inquiry\n- Summary:\n  - Total Emails Fetched: 5\n  - Matched Emails: 2\n  - Unmatched Emails: 3\n\n**Example Query 2**: \n\"Get all emails sent by 'ceo@company.com' and cross-check with contacts.\"\n\n**Desired Output**:\n- Matched Emails:\n  - Email 1:\n    - Sender: ceo@company.com\n    - Contact Name: Alice Johnson\n    - Tags: CEO, High Priority\n    - Subject: Q4 Strategy Meeting\n- Summary:\n  - Total Emails Fetched: 1\n  - Matched Emails: 1\n  - Unmatched Emails: 0\n\nHere is the current date and time: {{ $now.format('yyyy-MM-dd') }}\n\n"
+        }
+      },
+      "id": "e186e29a-d4f8-4bf4-8bb9-f155be6ef20d",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -140,
+        -60
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-09T10:49:54.235Z",
+  "versionId": "2fefbff7-0968-4bbc-828b-cbeeaa307efc"
+}

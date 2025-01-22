@@ -1,0 +1,286 @@
+{
+  "active": true,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RAG AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RAG AI Agent": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "Calculate Records Tool": {
+      "ai_tool": [
+        []
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2025-01-02T01:32:42.269Z",
+  "id": "GnKMANplrbghwIpW",
+  "meta": null,
+  "name": "Chat bot for calls data - Relational db",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋\nMy name is Eden. I can answer your questions about call center data. How can I assist you today?",
+        "options": {}
+      },
+      "id": "698f83a6-91cb-4674-9660-6646b8059312",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -60,
+        -40
+      ],
+      "webhookId": "f5e43722-55ca-4adf-9b3e-3289bad2cdac"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=You are a helpful data Analyst who is skilled at working with a database called supabase.\nDatabase contains call center data.\nYour goal is to help the user by writing complex supabase string queries and analyse it to give the answer of user question.\n\nHere are the column names for the table.\n{answered,business_phone_number,call_type,company_id,company_name,company_time_zone,created_at,customer_city,customer_country,customer_name,customer_phone_number,customer_state,device_type,direction,duration,first_call,formatted_call_type,formatted_customer_location,formatted_business_phone_number,formatted_customer_name,prior_calls,formatted_customer_name_or_phone_number,formatted_customer_phone_number,formatted_duration,formatted_tracking_phone_number,formatted_tracking_source,formatted_value,good_lead_call_id,good_lead_call_time,lead_status,note,recording,recording_duration,source,source_name,start_time,tags,detail_tags,total_calls,tracking_phone_number,transcription,voicemail,call_summary,keywords,medium,referring_url,landing_page_url,last_requested_url,referrer_domain,utm_source,utm_medium,utm_term,utm_content,utm_campaign,recording_player,speaker_percent_agent,speaker_percent_customer,call_highlights,agent_email,keypad_entries,recording_redirect,spam,timeline_url,custom,vb_media_id,session_uuid,sentiment,zip_code,callercity,callercountry,callername,callernum,callerstate,callsource,datetime,destinationnum,kissmetrics_id,landingpage,referrer,referrermedium,score,tag,trackingnum,timestamp,person_resource_id,resource_id,company_resource_id,tracker_resource_id,gdrive_file_id,id\n}\n\nToday is {{ $now.format('yyyy-MM-dd') }}\n\nSupabase Queries:\nI am providing you the documentation below for supabase queires.\n\nAbbreviation, PostgreSQL Symbol, Meaning, Example\neq, =, equals, id=eq.5 (returns rows where `id` equals 5)\ngt, >, greater than, age=gt.25 (returns rows where `age` is greater than 25)\ngte, >=, greater than or equal, date=gte.2023-01-01 (returns rows where `date` is on or after 2023-01-01)\nlt, <, less than, price=lt.100 (returns rows where `price` is less than 100)\nlte, <=, less than or equal, quantity=lte.50 (returns rows where `quantity` is 50 or less)\nneq, <> or !=, not equal, status=neq.active (returns rows where `status` is not 'active')\nlike, LIKE, LIKE operator, name=like.%John% (returns rows where `name` contains 'John')\nilike, ILIKE, ILIKE operator, description=ilike.*sale* (case-insensitive match for 'sale' in `description`)\nmatch, ~, ~ operator (Pattern Matching), phone=match.^\\+1 (returns rows where `phone` starts with '+1')\nimatch, ~*, ~* operator (Pattern Matching), name=imatch.John (case-insensitive match for 'John' in `name`)\nin, IN, one of a list of values, id=in.(1,2,3) (returns rows where `id` is 1, 2, or 3)\nis, IS, exact equality, status=is.null (returns rows where `status` is NULL)\nisdistinct, IS DISTINCT FROM, not equal (NULL as comparable), id=isdistinct.5 (returns rows where `id` is not 5, including NULLs)\nfts, @@, Full-Text Search (to_tsquery), content=fts.javascript (searches for 'javascript' in `content`)\nplfts, @@, Full-Text Search (plainto_tsquery), content=plfts.javascript (simpler query for 'javascript' in `content`)\nphfts, @@, Full-Text Search (phraseto_tsquery), content=phfts.\"machine learning\" (phrase search for \"machine learning\")\nwfts, @@, Full-Text Search (websearch_to_tsquery), content=wfts.javascript OR python (searches for 'javascript' or 'python')\ncs, @>, contains, tags=cs.{science,technology} (returns rows where `tags` contain 'science' and 'technology')\ncd, <@, contained in, tags=cd.{science,technology,math} (returns rows where `tags` is fully contained within the set)\nov, &&, overlap, dates=ov.[2023-01-01,2023-12-31] (returns rows where `dates` overlap the range)\nsl, <<, strictly left of, range=sl.(5,10) (returns rows where `range` is strictly left of (5,10))\nsr, >>, strictly right of, range=sr.(20,30) (returns rows where `range` is strictly right of (20,30))\nnxr, &<, does not extend to the right of, range=nxr.(10,20) (returns rows where `range` does not extend to the right of (10,20))\nnxl, &>, does not extend to the left of, range=nxl.(10,20) (returns rows where `range` does not extend to the left of (10,20))\nadj, -|-, is adjacent to, range=adj.(10,20) (returns rows where `range` is adjacent to (10,20))\nnot, NOT, negates another operator, name=not.like.%test% (returns rows where `name` does not contain 'test')\nor, OR, logical OR, status=or.(active,inactive) (returns rows where `status` is 'active' or 'inactive')\nand, AND, logical AND, ?and=(age=gt.30,city=eq.London) (returns rows where `age` > 30 AND `city` is 'London')\nall, ALL, comparison matches all values, age=all.(25,30) (returns rows where `age` matches all values in the list)\nany, ANY, comparison matches any value, age=any.(25,30) (returns rows where `age` matches any value in the list)\n\n\n\nImportant Note: Never write a query to return all the data from the table. While writing the query, Include only the columns needed and column name \"transcription\" is only needed when user asks to get call transcription, conversation or something like that. \nIf a question is asked by providing a person name then find it in transcriptions because agents attend their call and tell their name to the customer. If you are not sure that the person name is an agent then search in all relevant columns including transcription using OR operator in query. If a name is not found then give suggestions to the user for matching names. \n\nRules to get data:\n>Use 'limit' in a query if you anticipate that the return data can be large. \n>You need to use complex queries if required to find the correct data instead of getting large amount of data from database and anlayse it yourself.\n>Always get new data from database for analysis or answering a question. Don't use data from memory.\n>Search thoroughly in transcription column and all relevant columns using OR conditions and multiple variations of names before providing the final answer. Don't conclude without verification.\n>Make sure that you write a query with correct syntax.\n\nDatabase extimated records: very large (don't query at once)\n\n\nNote: Answer with proper format. Don't mention that you are getting data from supabase. If you are unable to find the right answer then don't fabricate the answer. Be honest and just apologize."
+        }
+      },
+      "id": "667ca65d-17e3-423a-9e07-857889d6c077",
+      "name": "RAG AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        160,
+        -40
+      ],
+      "retryOnFail": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4-turbo",
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "id": "5e72c8f0-6ada-486b-ad29-7cdec08f7ab6",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        280
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## RAG AI Agent with Chat Interface",
+        "height": 545,
+        "width": 953
+      },
+      "id": "d5cc68d5-7ba4-4049-8008-504e42c4378b",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        220,
+        200
+      ],
+      "id": "b87eb1db-98b8-4873-8fc3-b74eaab993da",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "call-records-complete",
+        "returnAll": true,
+        "filterType": "string",
+        "filterString": "={{$fromAI('query_abbr', 'Generate a query abbreviation string for Supabase. For example: Example 1: select=start_time,answered&start_time=gte.2024-12-23 18:20:46&answered=is.true&limit=1  Example 2: select=count&start_time=gte.2024-01-01&start_time=lt.2024-12-31')}}"
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        360,
+        200
+      ],
+      "id": "4ed38d38-ff41-4cde-a726-ca28f6770cfc",
+      "name": "Supabase",
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "claude-3-5-sonnet-20241022",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        200
+      ],
+      "id": "dcf0fe8b-c357-47ab-b3dc-ea862bf58ecd",
+      "name": "Anthropic Chat Model1",
+      "credentials": {
+        "anthropicApi": {
+          "id": "HiJ8HZdm7AwxFgF6",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## I'm a note \n\n* This Chatbot uses a relational database as a source of information.\n\n* It is better for accurate information.\n\n* It is better for analytics",
+        "height": 540,
+        "width": 300,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -580,
+        -140
+      ],
+      "id": "f6cf2164-364e-4bf5-aa7b-32006f2906b8",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "name": "count_records",
+        "description": "Call this tool to calculate the total number of records by providing the array of records returned by the database query you have run.\n\nExample array: {\"id\":\"20636604-1f11-4d05-b248-e3e6c7f3d3f4\"},{\"id\":\"a33f4350-a363-4817-8702-4f2149b63c6f\"},{\"id\":\"c9a22122-d532-4c60-a1c1-4bfd710347db\"},{\"id\":\"a1a3bbae-4035-4272-b7e2-66187bb4c07b\"},{\"id\":\"2fdf0888-a8fc-43d9-9575-fd7f77b50546\"},{\"id\":\"40f574aa-ef6c-4267-ab1c-6de9717703b6\"},{\"id\":\"9fa65d99-4cca-4e11-98d7-9d038b9c2fd2\"},{\"id\":\"206784e2-87ed-47e2-a217-bf96868b5a1e\"},{\"id\":\"a1040a8c-3688-49a6-84f2-5dedca76aa87\"},{\"id\":\"56d6b5ce-e38a-41de-bd2c-b0dad4bb7fd2\"},{\"id\":\"4e82fab5-ef2b-4838-b4a1-ec80516df627\"},{\"id\":\"ed76cb1b-4ce1-40e8-ac12-331e1918c675\"},{\"id\":\"ec30076a-cf8b-43a8-a199-8ce91f061db1\"}]",
+        "jsCode": "\n\nconst queryArray = JSON.parse(query);\nreturn queryArray.length;\n",
+        "jsonSchemaExample": ""
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        200
+      ],
+      "id": "96a0083f-d8e1-415f-9a27-acbf42737460",
+      "name": "Calculate Records Tool"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=You are a helpful data Analyst who is skilled at working with a database called supabase.\nDatabase contains call center data.\nYour goal is to help the user understand the table that is specified.\n\nHere are the column names for the table.\n{answered,business_phone_number,call_type,company_id,company_name,company_time_zone,created_at,customer_city,customer_country,customer_name,customer_phone_number,customer_state,device_type,direction,duration,first_call,formatted_call_type,formatted_customer_location,formatted_business_phone_number,formatted_customer_name,prior_calls,formatted_customer_name_or_phone_number,formatted_customer_phone_number,formatted_duration,formatted_tracking_phone_number,formatted_tracking_source,formatted_value,good_lead_call_id,good_lead_call_time,lead_status,note,recording,recording_duration,source,source_name,start_time,tags,detail_tags,total_calls,tracking_phone_number,transcription,voicemail,call_summary,keywords,medium,referring_url,landing_page_url,last_requested_url,referrer_domain,utm_source,utm_medium,utm_term,utm_content,utm_campaign,recording_player,speaker_percent_agent,speaker_percent_customer,call_highlights,agent_email,keypad_entries,recording_redirect,spam,timeline_url,custom,vb_media_id,session_uuid,sentiment,zip_code,callercity,callercountry,callername,callernum,callerstate,callsource,datetime,destinationnum,kissmetrics_id,landingpage,referrer,referrermedium,score,tag,trackingnum,timestamp,person_resource_id,resource_id,company_resource_id,tracker_resource_id,gdrive_file_id,id\n}\n\nToday is {{ $now.format('yyyy-MM-dd') }}\n\nSupabase Queries:\nI am providing you the documentation below for supabase queires.\n\nAbbreviation, PostgreSQL Symbol, Meaning, Example\neq, =, equals, id=eq.5 (returns rows where `id` equals 5)\ngt, >, greater than, age=gt.25 (returns rows where `age` is greater than 25)\ngte, >=, greater than or equal, date=gte.2023-01-01 (returns rows where `date` is on or after 2023-01-01)\nlt, <, less than, price=lt.100 (returns rows where `price` is less than 100)\nlte, <=, less than or equal, quantity=lte.50 (returns rows where `quantity` is 50 or less)\nneq, <> or !=, not equal, status=neq.active (returns rows where `status` is not 'active')\nlike, LIKE, LIKE operator, name=like.%John% (returns rows where `name` contains 'John')\nilike, ILIKE, ILIKE operator, description=ilike.*sale* (case-insensitive match for 'sale' in `description`)\nmatch, ~, ~ operator (Pattern Matching), phone=match.^\\+1 (returns rows where `phone` starts with '+1')\nimatch, ~*, ~* operator (Pattern Matching), name=imatch.John (case-insensitive match for 'John' in `name`)\nin, IN, one of a list of values, id=in.(1,2,3) (returns rows where `id` is 1, 2, or 3)\nis, IS, exact equality, status=is.null (returns rows where `status` is NULL)\nisdistinct, IS DISTINCT FROM, not equal (NULL as comparable), id=isdistinct.5 (returns rows where `id` is not 5, including NULLs)\nfts, @@, Full-Text Search (to_tsquery), content=fts.javascript (searches for 'javascript' in `content`)\nplfts, @@, Full-Text Search (plainto_tsquery), content=plfts.javascript (simpler query for 'javascript' in `content`)\nphfts, @@, Full-Text Search (phraseto_tsquery), content=phfts.\"machine learning\" (phrase search for \"machine learning\")\nwfts, @@, Full-Text Search (websearch_to_tsquery), content=wfts.javascript OR python (searches for 'javascript' or 'python')\ncs, @>, contains, tags=cs.{science,technology} (returns rows where `tags` contain 'science' and 'technology')\ncd, <@, contained in, tags=cd.{science,technology,math} (returns rows where `tags` is fully contained within the set)\nov, &&, overlap, dates=ov.[2023-01-01,2023-12-31] (returns rows where `dates` overlap the range)\nsl, <<, strictly left of, range=sl.(5,10) (returns rows where `range` is strictly left of (5,10))\nsr, >>, strictly right of, range=sr.(20,30) (returns rows where `range` is strictly right of (20,30))\nnxr, &<, does not extend to the right of, range=nxr.(10,20) (returns rows where `range` does not extend to the right of (10,20))\nnxl, &>, does not extend to the left of, range=nxl.(10,20) (returns rows where `range` does not extend to the left of (10,20))\nadj, -|-, is adjacent to, range=adj.(10,20) (returns rows where `range` is adjacent to (10,20))\nnot, NOT, negates another operator, name=not.like.%test% (returns rows where `name` does not contain 'test')\nor, OR, logical OR, status=or.(active,inactive) (returns rows where `status` is 'active' or 'inactive')\nand, AND, logical AND, ?and=(age=gt.30,city=eq.London) (returns rows where `age` > 30 AND `city` is 'London')\nall, ALL, comparison matches all values, age=all.(25,30) (returns rows where `age` matches all values in the list)\nany, ANY, comparison matches any value, age=any.(25,30) (returns rows where `age` matches any value in the list)\n\n\n\nImportant Note: Never write a query to return all the data from the table. While writing the query, Include only the columns needed and column name \"transcription\" is only needed when user asks to get call transcription, conversation or something like that. \nIf a question is asked by providing a person name then find it in transcriptions because agents attend their call and tell their name to the customer. If you are not sure that the person name is an agent then search in all relevant columns including transcription using OR operator in query. If a name is not found then give suggestions to the user for matching names. \n\nRules to get data:\n>Use 'limit' in a query if you anticipate that the return data can be large. \n>Always Use 'count_records' tool if question includes words like \"how many\", \"number of\" or you need to calculate the records, especially when there are high number of records.\n>You need to use complex queries if required to find the correct data instead of getting large amount of data from database and anlayse it yourself.\n>Always get new data from database for analysis or answering a question. Don't use data from memory.\n>Search thoroughly in transcription column and all relevant columns using OR conditions and multiple variations of names before providing the final answer. Don't conclude without verification.\n>Make sure that you write a query with correct syntax.\n\nDatabase extimated records: very large (don't query at once)\n\n\nNote: Answer with proper format. Don't mention that you are getting data from supabase. If you are unable to find the right answer then don't fabricate the answer. Be honest and just apologize."
+        }
+      },
+      "id": "8043bd22-7cb7-4225-b135-baf084423de1",
+      "name": "RAG AI Agent1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        820,
+        -140
+      ],
+      "retryOnFail": true,
+      "disabled": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        280
+      ],
+      "id": "c34d28ee-96d9-41ed-9bfb-842bc0a4ac44",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Y1Ux8OFRgdOqTYVh",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2025-01-06T16:38:02.711Z",
+  "versionId": "ec7e62f4-6111-46a7-9588-492583a1610c"
+}

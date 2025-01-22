@@ -1,0 +1,871 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Extract Document Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Document Text": {
+      "main": [
+        [
+          {
+            "node": "If document is empty",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete Old Doc Rows": {
+      "main": [
+        []
+      ]
+    },
+    "Set File ID": {
+      "main": [
+        [
+          {
+            "node": "Check for record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract custom fields": {
+      "main": [
+        [
+          {
+            "node": "If default summary is available",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check for record": {
+      "main": [
+        [
+          {
+            "node": "If call record is already added",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store in relational db": {
+      "main": [
+        [
+          {
+            "node": "Format Call Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Vectorstore": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Call Data": {
+      "main": [
+        [
+          {
+            "node": "Insert into Vectorstore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If default summary is available": {
+      "main": [
+        [
+          {
+            "node": "Return one of the summary",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create call summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create call summary",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return one of the summary": {
+      "main": [
+        [
+          {
+            "node": "Store in relational db",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create call summary": {
+      "main": [
+        [
+          {
+            "node": "Return one of the summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If call record is already added": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If document is empty": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extract custom fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-25T19:46:26.277Z",
+  "id": "sFEpXDFnY8QmJwx3",
+  "meta": null,
+  "name": "Upload alll docs data from google drive to supabase",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "https://drive.google.com/drive/folders/13vmOoBvQ4fIRK0vFyyiqVeAPlxKfIvbz",
+            "mode": "url"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -300,
+        440
+      ],
+      "id": "90b6a22d-d385-4e53-9371-1792f3123fa8",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -580,
+        440
+      ],
+      "id": "0c8ec24b-2f1d-4a4a-b5ca-f1b843c1485f",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $('Format Call Data').item.json.result }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "=file_id",
+                "value": "={{ $('Set File ID').item.json.file_id }}"
+              },
+              {
+                "name": "call_date",
+                "value": "={{ $('Store in relational db').item.json.call_date }}"
+              },
+              {
+                "name": "call_time",
+                "value": "={{ $('Store in relational db').item.json.call_time }}"
+              },
+              {
+                "name": "agent_phone",
+                "value": "={{ $('Store in relational db').item.json.agent_phone }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "8503b9e1-7a9f-4e29-8815-7b18c85e6167",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        3440,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "2642a1dd-7a0b-4f85-8082-8b41b5939086",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        3320,
+        660
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "cdwc6Hh6aUKkk28V",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Tool to Add a Google Drive File to Vector DB",
+        "height": 972,
+        "width": 4091,
+        "color": 5
+      },
+      "id": "a484878c-7e55-4f81-8431-8d7ced0e3b69",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Set File ID').item.json.file_id }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "text/plain"
+            }
+          }
+        }
+      },
+      "id": "cf1c3339-d44d-49d0-9cf5-d0bee298f3d9",
+      "name": "Download File",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        920,
+        440
+      ],
+      "executeOnce": true,
+      "notesInFlow": false,
+      "alwaysOutputData": false,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KMgoHQtjoVvqKwxE",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "options": {
+          "keepSource": "json"
+        }
+      },
+      "id": "b98c1a36-9abc-4671-ac55-41df9075c920",
+      "name": "Extract Document Text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        440
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "chunkOverlap": 200,
+        "options": {}
+      },
+      "id": "f2846b1f-e191-4cd9-9b0d-d0439f17c1a5",
+      "name": "Recursive Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        3540,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "documents",
+        "filterType": "string",
+        "filterString": "=metadata->>file_id=like.*{{ $json.file_id }}*"
+      },
+      "id": "f59ca9d1-75da-44a2-9731-04ba79153a7b",
+      "name": "Delete Old Doc Rows",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        620,
+        180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "rhlUqsVeiwoHa4Oh",
+          "name": "Supabase account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "62ebac85-50f0-4541-9098-7eabe9517e7a",
+      "name": "Set File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ $json.data }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1640,
+        460
+      ],
+      "id": "e068fd44-da05-4dcb-b250-f39d90be0a19",
+      "name": "Extract custom fields"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "tableId": "call-records",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "gdrive_file_id",
+              "keyValue": "={{ $json.file_id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        340,
+        440
+      ],
+      "id": "8363ee55-e18f-438f-97ad-039f0bb82381",
+      "name": "Check for record",
+      "executeOnce": true,
+      "alwaysOutputData": true,
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "call-records",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "call_date",
+              "fieldValue": "={{ $('Extract custom fields').item.json.timestamp.split('T')[0] }}"
+            },
+            {
+              "fieldId": "call_time",
+              "fieldValue": "={{ $('Extract custom fields').item.json.timestamp.split('T')[1] }}"
+            },
+            {
+              "fieldId": "transcription",
+              "fieldValue": "={{ $('Extract custom fields').item.json.transcription }}"
+            },
+            {
+              "fieldId": "summary",
+              "fieldValue": "={{ $json.summary }}"
+            },
+            {
+              "fieldId": "customer_phone",
+              "fieldValue": "={{ $('Extract custom fields').item.json.customer_phone_number }}"
+            },
+            {
+              "fieldId": "agent_phone",
+              "fieldValue": "={{ $('Extract custom fields').item.json.business_phone_number }}"
+            },
+            {
+              "fieldId": "answered",
+              "fieldValue": "={{ $('Extract custom fields').item.json.answered }}"
+            },
+            {
+              "fieldId": "call_direction",
+              "fieldValue": "={{ $('Extract custom fields').item.json.direction }}"
+            },
+            {
+              "fieldId": "duration",
+              "fieldValue": "={{ $('Extract custom fields').item.json.formatted_duration }}"
+            },
+            {
+              "fieldId": "company_id",
+              "fieldValue": "={{ $('Extract custom fields').item.json.company_id }}"
+            },
+            {
+              "fieldId": "company_name",
+              "fieldValue": "={{ $('Extract custom fields').item.json.company_name }}"
+            },
+            {
+              "fieldId": "company_time_zone",
+              "fieldValue": "={{ $('Extract custom fields').item.json.company_time_zone }}"
+            },
+            {
+              "fieldId": "customer_name",
+              "fieldValue": "={{ $('Extract custom fields').item.json.formatted_customer_name }}"
+            },
+            {
+              "fieldId": "call_datetime",
+              "fieldValue": "={{ $('Extract custom fields').item.json.created_at }}"
+            },
+            {
+              "fieldId": "customer_location",
+              "fieldValue": "={{ $('Extract custom fields').item.json.formatted_customer_location }}"
+            },
+            {
+              "fieldId": "gdrive_file_id",
+              "fieldValue": "={{ $('Set File ID').item.json.file_id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        2800,
+        440
+      ],
+      "id": "73414deb-c5fe-46fc-b8a6-008156aff5f2",
+      "name": "Store in relational db",
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "documents",
+          "mode": "list",
+          "cachedResultName": "documents"
+        },
+        "options": {
+          "queryName": "match_documents"
+        }
+      },
+      "id": "eecbf678-377b-48e5-b300-9a9c4fa34cc6",
+      "name": "Insert into Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        3320,
+        440
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "nVXD7FEkRfpFvflF",
+          "name": "Supabase account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "let result = \"\";\nfor (const item of $input.all()) {\n    // result += Object.values(item).join('') + ' '; // Concatenate all fields, add space between items\n      result += \"## Call No: \"+ item.json.id + '\\n'; \n      result += 'call_date: '+ item.json.call_date + '\\n'; \n      result += 'call_time: '+ item.json.call_time + '\\n'; \n      result += 'customer_phone: '+ item.json.customer_phone + '\\n'; \n      result += 'customer_name: '+ item.json.customer_name + '\\n'; \n      result += 'customer_location: '+ item.json.customer_location + '\\n'; \n      result += 'call_direction: '+ item.json.call_direction + '\\n'; \n      result += 'duration: '+ item.json.duration + '\\n'; \n      result += 'agent_phone: '+ item.json.agent_phone + '\\n'; \n      result += 'transcription: '+ item.json.transcription + '\\n'; \n\n      result += \"===========\" + '\\n \\n \\n'; \n\n}\n\nreturn { result: result.trim() }; // Corrected: Return result as a JSON object, remove trailing space\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2980,
+        440
+      ],
+      "id": "3c149a0d-4b63-4ba7-80cf-dd1b96b423b8",
+      "name": "Format Call Data"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3c604aad-3d23-4b07-a4f4-d029f7a9f83a",
+              "leftValue": "={{ $('Extract custom fields').item.json.call_summary }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2000,
+        460
+      ],
+      "id": "5bd75ee6-34d5-40c9-9bd5-8760c021ac42",
+      "name": "If default summary is available"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        2300,
+        920
+      ],
+      "id": "905e5cf1-7d6a-4e63-b387-7f7244c81a06",
+      "name": "Anthropic Chat Model",
+      "credentials": {
+        "anthropicApi": {
+          "id": "HiJ8HZdm7AwxFgF6",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e9a07c2-1782-415a-8169-ea043cacc83d",
+              "name": "summary",
+              "value": "={{ $('Extract custom fields').item.json.call_summary ? $('Extract custom fields').item.json.call_summary : $json.text}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2580,
+        440
+      ],
+      "id": "dfeba7ce-8f14-4381-924a-9d5f58530796",
+      "name": "Return one of the summary"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Create a summary of this call transcription. {{ $('Extract custom fields').item.json.transcription }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Your task is to create a summary of a recorder call transcription. Also do mention in the summary about the customer and the agent to understand easily. Sample summary is \"The caller, Winford from Nolt Equipment Repair, is seeking a quote from Alex for a JLG ES 1930 or 1930 ES scissors lift. Winford requests a complete decal kit, a battery box, and outer doors for the battery boxes. Alex agrees to provide a quote, including shipping costs, and requests a tax exemption form from Winford. Winford indicates he has dealt with the company in the past through Weaver's Equipment and is now operating under his own account. Alex will send the quote with the tax exemption applied once Winford provides the necessary form.\". Follow the format of the sample summary and return only the summary."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        2220,
+        740
+      ],
+      "id": "bab84ec7-bb5a-41c9-a97a-9f97bc750c18",
+      "name": "Create call summary"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        240
+      ],
+      "id": "8c7325d6-a41c-457d-a2f2-9a6135474b51",
+      "name": "No Operation, do nothing1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a02a00d3-06eb-44b5-ba7a-5f7566e659b8",
+              "leftValue": "={{ $json.id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        580,
+        440
+      ],
+      "id": "42ae3522-2f0f-4b43-8c61-f23ac9be1365",
+      "name": "If call record is already added"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -60,
+        420
+      ],
+      "id": "091b2220-c950-4f09-9113-dbf12c1ca6bf",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        260,
+        260
+      ],
+      "id": "d1a3cb55-975b-4bbf-bff9-a32082d19eef",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "b7af01ba-d512-459f-9d7f-0bc4e8f4013f",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1320,
+        440
+      ],
+      "id": "14be5bfd-9d45-44b8-92a1-63b8566ec305",
+      "name": "If document is empty"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Los_Angeles",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-06T22:32:25.490Z",
+  "versionId": "5ec08e4b-9ed4-4473-b3c9-e3f77d884498"
+}
