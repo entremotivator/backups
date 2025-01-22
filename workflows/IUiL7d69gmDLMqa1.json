@@ -1,0 +1,115 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-21T20:44:03.929Z",
+  "id": "IUiL7d69gmDLMqa1",
+  "meta": null,
+  "name": "My workflow 7",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -520,
+        -120
+      ],
+      "id": "74301452-7fe3-48ea-90c7-cb7dbd50564c",
+      "name": "When chat message received",
+      "webhookId": "7e4c1c0d-5211-4162-89c6-47b1886309f0"
+    },
+    {
+      "parameters": {
+        "url": "https://theaisource-u29564.vm.elestio.app:443/api/v1",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -220,
+        -200
+      ],
+      "id": "19e868fd-7d8d-44ac-b368-e3ed3950784f",
+      "name": "HTTP Request",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        100,
+        40
+      ],
+      "id": "364b2c86-e1c4-4b3e-a707-fbb31d8317b0",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "p2qnaxe4zHXQaAgY",
+          "name": "Ollama account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        80,
+        -260
+      ],
+      "id": "38fa882d-b37c-45ed-8b8c-e5a08c40c391",
+      "name": "AI Agent"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-21T20:50:54.696Z",
+  "versionId": "0b0edf26-5a79-4a2e-8d02-2a125e988e98"
+}
