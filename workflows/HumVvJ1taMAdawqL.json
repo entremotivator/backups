@@ -1,0 +1,965 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Citations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Information Extractor": {
+      "main": [
+        [
+          {
+            "node": "Save Research",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Information Extractor",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Doc": {
+      "main": [
+        [
+          {
+            "node": "Search Perplexity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Save Perplexity Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "node": "Create WP Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Topics": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Topics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Perplexity": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Perplexity Data": {
+      "main": [
+        [
+          {
+            "node": "Get Research Doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Research Doc": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Research": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Citations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Citation Website": {
+      "main": [
+        [
+          {
+            "node": "Get  HTML Body",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get  HTML Body": {
+      "main": [
+        [
+          {
+            "node": "Information Extractor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create WP Post": {
+      "main": [
+        [
+          {
+            "node": "Update Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Format Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Get Topics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Citations": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get Citation Website",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Topics": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Create Doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-18T03:16:47.172Z",
+  "id": "HumVvJ1taMAdawqL",
+  "meta": null,
+  "name": "Post wp Ai",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "158181c7-dc8e-482c-997c-2972c8424ae7",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1900,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "citations",
+        "options": {}
+      },
+      "id": "3592d3b7-b89d-4a0c-bcfc-1e1b4175b437",
+      "name": "Split Out",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.data }}",
+        "schemaType": "fromJson",
+        "jsonSchemaExample": "{\n\t\"content\": \"content of the information given\"\n}",
+        "options": {
+          "systemPromptTemplate": "You are an expert extraction algorithm.\nOnly extract relevant information from the text.\nIf you do not know the value of an attribute asked to extract, you may omit the attribute's value."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "typeVersion": 1,
+      "position": [
+        800,
+        -100
+      ],
+      "id": "5e84944e-2914-4d3a-a03c-7882ff84cb2b",
+      "name": "Information Extractor"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        880,
+        120
+      ],
+      "id": "41a8f9ee-eba7-4ef8-b44a-22afef0c7636",
+      "name": "OpenAI Chat Model2"
+    },
+    {
+      "parameters": {
+        "folderId": "default",
+        "title": "=Research Doc - {{ JSON.stringify($('Get Topics').itemMatching(0).json['Topics List']) }} - {{ $('Format Date & Time').item.json.formattedDate }}"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        -220
+      ],
+      "id": "0edc1087-d176-4324-9e08-037bd694e450",
+      "name": "Create Doc"
+    },
+    {
+      "parameters": {
+        "content": "## Current Date Info\n",
+        "height": 420,
+        "width": 400
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1720,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "55dd7654-b48d-4575-afd8-99afb466bfe4",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Create Blank Research Doc",
+        "height": 420
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -780,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "0813c58b-f35a-487b-957e-8540698af861",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Get Research Topics",
+        "height": 420
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1300,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "40cca99c-2a73-4797-bf57-faad397047e3",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## Research Topics using Perplexity",
+        "height": 420
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -520,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "47d204ec-7aff-41f7-a2bd-acfa5e8c696f",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## Split out Perplexity Citations",
+        "height": 420,
+        "width": 280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -260,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "c63d3130-d35f-4be9-a6b1-ea59c9cad818",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## Additional Research",
+        "height": 560,
+        "width": 1280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        40,
+        -300
+      ],
+      "typeVersion": 1,
+      "id": "e89ca681-714a-4a06-9531-8280ff6d7284",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "## Write new article using research results",
+        "height": 260,
+        "width": 1280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        40,
+        -580
+      ],
+      "typeVersion": 1,
+      "id": "8ad80763-9709-45c5-ad3b-201537431104",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "documentId"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        320,
+        -480
+      ],
+      "id": "e2080607-dbb2-4226-b869-a7c0e8dbbbd1",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.content }}"
+            },
+            {
+              "content": "=# Writing Assistant Prompt: N-E-E-A-T-Driven Content Creation\n\nYou are a highly knowledgeable and skilled writing assistant specializing in technology, dedicated to creating high-quality, **N-E-E-A-T-driven content** (Notability, Experience, Expertise, Authoritativeness, Trustworthiness). Your goal is to explain complex technical topics with precision, clarity, and relevance, tailored to your audience's needs, while engaging them in an approachable and conversational manner.\n\n---\n\n## Key Principles\n1. **Notability**: Highlight your credentials and achievements as a content creator or expert to establish credibility. Incorporate detailed author bios, relevant accomplishments, and schema markup for Google’s recognition.\n2. **Experience**: Share firsthand insights, examples, and practical applications drawn from real-world scenarios or your expertise.\n3. **Expertise**: Deliver well-researched, accurate, and detailed insights supported by authoritative sources, including studies, technical documentation, or expert opinions.\n4. **Authoritativeness**: Establish authority by referencing proven methods, industry standards, case studies, and reputable sources. Use visuals and real-life applications to emphasize reliability.\n5. **Trustworthiness**: Build reader confidence by maintaining transparency, objectivity, and a balanced perspective. Address uncertainties or ethical concerns where appropriate.\n\n---\n\n## Writing Guidelines\n- Adjust the **tone and depth of detail** to align with your audience's knowledge level and interests.\n- Use **visuals** like diagrams, charts, and screenshots to complement written content.\n- Define **technical terms and concepts** with relatable analogies or plain language.\n- Present **multiple perspectives**, and highlight practical, actionable takeaways.\n- Summarize key points at the beginning or end, and include a clear **call to action** encouraging engagement.\n\n---\n\n## Structure\n### 1. **Title**\nBegin with a compelling and clear title that summarizes the topic and attracts the reader's attention.\n\n### 2. **Introduction**\nCapture interest with a relatable hook that underscores the topic’s relevance. Highlight your **credentials** to establish notability.\n\n### 3. **Core Content**\nBreak the topic into **digestible sections**, addressing key questions or challenges. Use:\n- Subheadings\n- Visuals\n- Bullet points\n\n### 4. **Conclusion**\nSummarize the **main takeaways**, address lingering questions, and provide **actionable next steps**.\n\n### 5. **Author Section**\nInclude a bio that emphasizes your **credentials, achievements, and authority** in the field. Use **schema markup** for enhanced SEO.\n\n---\n\n## Final Output Requirements\nYour final output must always include:\n- **Title**: A clear, engaging, and topic-relevant title.\n- **Content**: Comprehensive, well-structured content based on the writing guidelines and structure provided above.\n- **Author Section**: An engaging author bio with credentials and notable achievements for credibility.\n\n---\n\n*\"For further guidance or to share your thoughts, reach out to us—we value your feedback and are here to assist!\"*\n\n---\n\n## Additional Writing Guidelines\n- Use a **conversational tone** to engage readers without oversimplifying. Keep technical accuracy intact while ensuring content remains digestible for non-experts.\n- Define **jargon and technical terms** using everyday analogies or comparisons to make concepts relatable.\n- Offer **practical applications and examples**, connecting abstract ideas to real-world scenarios.\n- Write **succinctly** but comprehensively, eliminating unnecessary fluff and focusing on core takeaways.\n- Maintain **neutrality**, presenting all sides of an issue objectively without overt favoritism or criticism.\n- Incorporate **actionable steps or takeaways** to empower readers, ensuring they leave with knowledge they can apply immediately.",
+              "role": "system"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.7,
+      "position": [
+        960,
+        -480
+      ],
+      "id": "a7cbb361-86d0-4a9e-83ae-7b96901c6034",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "={{ $json.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        -480
+      ],
+      "id": "26238f95-e933-431e-af48-2f867f17bdf6",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "content": "## Format and Publish to Website",
+        "height": 260,
+        "width": 460
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1600,
+        -580
+      ],
+      "typeVersion": 1,
+      "id": "12a24331-2dce-4cd5-9207-4bb04fd055bd",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "content": "## Update Publish Date",
+        "height": 260,
+        "width": 280
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2080,
+        -580
+      ],
+      "typeVersion": 1,
+      "id": "43bd0b5e-c9eb-4379-a80d-429a8a2940cb",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo",
+          "mode": "list",
+          "cachedResultName": "Perlexity N8n Research Topics",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Publish Date"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -1240,
+        -240
+      ],
+      "id": "46196028-cc5f-4a05-8424-b51a484fe726",
+      "name": "Get Topics"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.1-sonar-small-128k-online\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a researcher. Finding information about the given topic\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $('Get Topics').all()[0].json['Topics List'] }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "97b4561d-9a38-4cf9-bce3-8026fba2ec1f",
+      "name": "Search Perplexity",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -440,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $json.documentId[0] }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ JSON.stringify($('Search Perplexity').all()[0].json) }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        540,
+        -480
+      ],
+      "id": "8fc5c0e7-af28-4534-b8e0-88ea1dbeaaf4",
+      "name": "Save Perplexity Data"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "documentURL": "={{ $json.documentId }}"
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        740,
+        -480
+      ],
+      "id": "55ec8c5f-a083-4d07-819d-08fe043f90e6",
+      "name": "Get Research Doc"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('Create Doc').item.json.id }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "=\n-------------------------------------------------------------------\nInfo Extraction for {{ $('Loop Over Citations').item.json.citations }}\n-------------------------------------------------------------------\n{{ $json.output.content }}\n-------------------------------------------------------------------\n"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        -100
+      ],
+      "id": "479e1090-91e6-4315-a027-95ae035578f7",
+      "name": "Save Research"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://browserless.aspworkplace.com/content",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "31a645e3-8903-4aae-8e9e-7854174259de"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Cache-Control",
+              "value": "no-cache"
+            },
+            {
+              "name": "cookie",
+              "value": "browserless_token=31a645e3-8903-4aae-8e9e-7854174259de;"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "https://workspace.google.com/resources/ai-for-small-business/"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        360,
+        -100
+      ],
+      "id": "0ecf9805-ceab-45f7-92a5-c555693ef0ed",
+      "name": "Get Citation Website"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data",
+              "cssSelector": "body"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        580,
+        -100
+      ],
+      "id": "22ec9041-6c15-4e9b-9f82-a9dab98b5593",
+      "name": "Get  HTML Body"
+    },
+    {
+      "parameters": {
+        "title": "={{ $json.title }}",
+        "additionalFields": {
+          "content": "={{ $json.data }}",
+          "status": "draft"
+        }
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        -480
+      ],
+      "id": "5a16f2c6-a44e-42cc-bbc5-cd88af3ed70e",
+      "name": "Create WP Post"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -1680,
+        -240
+      ],
+      "id": "181a91de-7fe6-4655-bb1c-df84ae2e9d5b",
+      "name": "Get Date & Time"
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.currentDate }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -1480,
+        -240
+      ],
+      "id": "5ee284cf-aa1a-4514-ac30-ddead01151f4",
+      "name": "Format Date & Time"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo",
+          "mode": "list",
+          "cachedResultName": "Perlexity N8n Research Topics",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j1OwR4x1i9WjA6agN0G42ay4MJTC9GU3qfWZ7v3yoSo/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Publish Date": "={{ $('Format Date & Time').item.json.formattedDate }}",
+            "row_number": "={{ $('Loop Over Topics').all()[0].json.row_number }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "Topics List",
+              "displayName": "Topics List",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Publish Date",
+              "displayName": "Publish Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2180,
+        -480
+      ],
+      "id": "11fb2c57-2692-4aa6-87c1-4a2be39093dc",
+      "name": "Update Google Sheet"
+    },
+    {
+      "parameters": {
+        "content": "## Loop through Topics",
+        "height": 420
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        -420
+      ],
+      "id": "dbcffcc7-35b0-4765-8cc4-5e21366090a3",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1900,
+        -320
+      ],
+      "id": "eeeceb34-b66f-420c-89b7-726996a987c2",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "bb38a60a-3653-4c32-88af-d5fd46cd8c90",
+      "name": "Loop Over Citations",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        140,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -980,
+        -240
+      ],
+      "id": "7f20c7cb-c65a-4f2c-88e0-ee496d1d9d2c",
+      "name": "Loop Over Topics"
+    },
+    {
+      "parameters": {
+        "content": "## Map Title & Content",
+        "height": 260
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1340,
+        -580
+      ],
+      "typeVersion": 1,
+      "id": "68ce81d9-26df-42c9-a3ca-cd9f8003d731",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3a876ff8-dee5-4ef1-997e-41cadfe92e7f",
+              "name": "title",
+              "value": "={{ $json.message.content.title }}",
+              "type": "string"
+            },
+            {
+              "id": "fe06a5db-7968-4832-a8d9-fe21aaac50ac",
+              "name": "content",
+              "value": "={{ $json.message.content.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1400,
+        -480
+      ],
+      "id": "5d1cfb18-fadb-4dd4-9c20-5423c14bfd50",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger": [
+      {
+        "json": {
+          "timestamp": "2024-12-30T09:00:37.007-05:00",
+          "Readable date": "December 30th 2024, 9:00:37 am",
+          "Readable time": "9:00:37 am",
+          "Day of week": "Monday",
+          "Year": "2024",
+          "Month": "December",
+          "Day of month": "30",
+          "Hour": "09",
+          "Minute": "00",
+          "Second": "37",
+          "Timezone": "America/New_York (UTC-05:00)"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-18T03:18:03.874Z",
+  "versionId": "744be5cb-3e8d-4156-aa53-a148feac339c"
+}
