@@ -1,0 +1,899 @@
+{
+  "active": true,
+  "connections": {
+    "23h59": {
+      "main": [
+        [
+          {
+            "node": "procura_leads_qualificados_de_hoje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "contador_de_leads": {
+      "main": [
+        [
+          {
+            "node": "infos_bc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_leads_qualificados_de_hoje": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "procura_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "transforma_em_1_item",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_agendamento": {
+      "main": [
+        [
+          {
+            "node": "responsavel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_agendou": {
+      "main": [
+        [
+          {
+            "node": "procura_aplicacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "1s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_aplicacao": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_daily_report": {
+      "main": [
+        [
+          {
+            "node": "1s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_leads_daily_report": {
+      "main": [
+        [
+          {
+            "node": "só_lead_luiza",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "transforma_em_1_item": {
+      "main": [
+        [
+          {
+            "node": "procura_leads_daily_report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "insert_data_daily_report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_head_comercial": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_lilian",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "responsavel": {
+      "main": [
+        [
+          {
+            "node": "nao_agendou",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "contador_de_leads1": {
+      "main": [
+        [
+          {
+            "node": "infos_bc1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "infos_bc": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_head_comercial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_lilian": {
+      "main": [
+        [
+          {
+            "node": "deleta_registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_sdr_luiza": {
+      "main": [
+        [
+          {
+            "node": "deleta_registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "só_lead_luiza": {
+      "main": [
+        [],
+        [
+          {
+            "node": "contador_de_leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "infos_bc1": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_sdr_luiza",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T16:36:09.530Z",
+  "id": "5CxXSqusZ47B6UBu",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete \"Qualificado Não Agendou\"",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "1ce1633c-7f94-487a-ad21-62ed7b079427"
+            },
+            {
+              "name": "Data do Evento",
+              "value": "={{ $now.toFormat('dd/MM/yyyy') }}"
+            },
+            {
+              "name": "id_sdr_luiza",
+              "value": "508598335"
+            },
+            {
+              "name": "mensagem",
+              "value": "={{ String($node[\"contador_de_leads\"].json[\"message\"]) }}"
+            },
+            {
+              "name": "Mensagem zerada",
+              "value": "=🎉 *RELATÓRIO DIÁRIO*\n\nHoje todos os leads que aplicaram avançaram para o agendamento."
+            },
+            {
+              "name": "id_sdr_head_comercial",
+              "value": "426782784"
+            },
+            {
+              "name": "id_lilian",
+              "value": "239409865"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ca8cd53f-a794-428c-8701-cf23532fbfd0",
+      "name": "infos_bc",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        2100
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 23,
+              "triggerAtMinute": 59
+            }
+          ]
+        }
+      },
+      "id": "f31b2e49-83b3-4a16-ba01-8b9babd16c6c",
+      "name": "23h59",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1680,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Verifique se há leads no input\nif (items.length === 0 || $node[\"procura_leads_daily_report\"].json[\"success\"]) {\n    // Caso não haja leads ou a chave \"success\" seja verdadeira, envie a mensagem correta\n    return [{\n        json: {\n            message: \"🔔 *RELATÓRIO DIÁRIO*\\n🎉 Hoje todos os leads que aplicaram avançaram para o agendamento.\"\n        }\n    }];\n} else {\n    // Caso haja leads, preencha a mensagem com os detalhes de cada lead\n    const leads = items.map((item) => ({\n        nome: item.json.nome,\n        email: item.json.email,\n        telefone: item.json.telefone,\n        data_aplicacao: item.json.data_aplicacao,\n        whatsapp: `wa.me/+${item.json.telefone}`\n    }));\n\n    const quantidadeDeLeads = leads.length;\n\n    const mensagem = `🔔 *RELATÓRIO DIÁRIO*\\nHoje houveram ${quantidadeDeLeads} leads qualificados que não agendaram. Segue resumo abaixo:\\n\\n----------------------------\\n${leads.map((lead) => `\nNome: ${lead.nome}\nEmail: ${lead.email}\nTelefone: ${lead.telefone}\nWhatsApp: ${lead.whatsapp}\n`).join(\"\\n\")}`;\n\n    // Envie a mensagem de relatório\n    return [{\n        json: {\n            message: mensagem,\n            Quantidade: quantidadeDeLeads\n        }\n    }];\n}"
+      },
+      "id": "f094f0f7-78a1-4f15-80f6-1b19821f202f",
+      "name": "contador_de_leads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -420,
+        2100
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM leads\nWHERE DATE(data_de_entrada) = CURDATE()\nAND nivel_qualificacao IN ('Qualificado', 'Médio Qualificado');",
+        "options": {}
+      },
+      "id": "d9584d6f-8a0b-4ee0-91fe-6a7453c1373b",
+      "name": "procura_leads_qualificados_de_hoje",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1460,
+        1580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {
+          "reset": false
+        }
+      },
+      "id": "1e42c12f-5e63-4721-b64e-0c5399dc7019",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        -1240,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "75a463f6-e495-44b8-9651-d77a8ba54868",
+      "name": "procura_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        1560
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"procura_agendamento\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "82659f77-3091-4aca-a5d5-20d100994ea1",
+      "name": "nao_agendou",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        1560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "aplicacoes",
+          "mode": "list",
+          "cachedResultName": "aplicacoes"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "data_aplicacao",
+              "direction": "DESC"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "735bb759-a1d5-44aa-a7fc-9d436040c734",
+      "name": "procura_aplicacao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -380,
+        1440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "nags_diarios",
+          "mode": "list",
+          "cachedResultName": "nags_diarios"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "=id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"nome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "data_aplicacao",
+              "value": "={{ $node[\"procura_aplicacao\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "column": "closer_responsavel",
+              "value": "={{ $node[\"responsavel\"].json[\"nome\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "18eebe53-43df-43cc-9ee7-10970501b458",
+      "name": "insert_data_daily_report",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -20,
+        1440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM nags_diarios\nWHERE DATE(data_aplicacao) = CURDATE();",
+        "options": {}
+      },
+      "id": "40c9f427-9a8a-42d0-8313-8d7ec6ab561e",
+      "name": "procura_leads_daily_report",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -820,
+        2000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "e8cfd9c8-e047-4a63-81e3-c3b774366801",
+      "name": "1s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1240
+      ],
+      "webhookId": "440efce3-1b10-4758-a260-3f510a494b96"
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "nags_diarios",
+          "mode": "list",
+          "cachedResultName": "nags_diarios"
+        },
+        "options": {}
+      },
+      "id": "8adf4eac-ee21-47a4-8975-3963ad61292d",
+      "name": "deleta_registro",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        340,
+        2100
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "15e5a3ed-fb07-43fc-8d43-8f825facaedc",
+      "name": "transforma_em_1_item",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -1000,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM leads\nWHERE DATE(data_de_entrada) = DATE_SUB(CURDATE(), INTERVAL 1 DAY)\nAND nivel_qualificacao IN ('Qualificado', 'Médio Qualificado');\n",
+        "options": {}
+      },
+      "id": "6f149932-c1ab-4280-bfd4-24cc078fbeb8",
+      "name": "procura_leads_qualificados_de_ontem",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1460,
+        1400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM nags_diarios\nWHERE DATE(data_aplicacao) = DATE_SUB(CURDATE(), INTERVAL 1 DAY);",
+        "options": {}
+      },
+      "id": "102bee20-cc8d-46db-826f-f1a1da8f7d45",
+      "name": "procura_leads_daily_report_ontem",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -820,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "6f646bd5-81a1-4bec-a93d-b4794246ee96",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"infos_bc\"].json[\"id_sdr_head_comercial\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"infos_bc\"].json[\"mensagem\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bc\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_msg_head_comercial",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        2100
+      ],
+      "id": "f5cf62f5-4c2f-41a2-aa94-48069144e35d"
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"infos_bc1\"].json[\"id_sdr_luiza\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"infos_bc1\"].json[\"mensagem\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bc1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_msg_sdr_luiza",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        1900
+      ],
+      "id": "58eb0208-df92-4b55-ab1b-b0c2732858da"
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"infos_bc\"].json[\"id_lilian\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"infos_bc\"].json[\"mensagem\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bc\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_msg_lilian",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        120,
+        2100
+      ],
+      "id": "10812ca5-58d9-4640-8fa8-d8aaf791370c"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/consulta-colaborador",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "time",
+              "value": "Closer"
+            },
+            {
+              "name": "user",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7304300b-7669-4ca7-95d3-afe5e1af89df",
+      "name": "responsavel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -840,
+        1560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "b3a938a0-0aa2-4af2-920d-014544724424",
+              "leftValue": "={{ $json[\"closer_responsavel\"] }}",
+              "rightValue": "Luiza Campos",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b030a9d4-59e1-4979-92b1-61a82b4ad6ef",
+      "name": "só_lead_luiza",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "1ce1633c-7f94-487a-ad21-62ed7b079427"
+            },
+            {
+              "name": "Data do Evento",
+              "value": "={{ $now.toFormat('dd/MM/yyyy') }}"
+            },
+            {
+              "name": "id_sdr_luiza",
+              "value": "508598335"
+            },
+            {
+              "name": "mensagem",
+              "value": "={{ String($node[\"contador_de_leads1\"].json[\"message\"]) }}"
+            },
+            {
+              "name": "Mensagem zerada",
+              "value": "=🎉 *RELATÓRIO DIÁRIO*\n\nHoje todos os leads que aplicaram avançaram para o agendamento."
+            },
+            {
+              "name": "id_sdr_head_comercial",
+              "value": "426782784"
+            },
+            {
+              "name": "id_lilian",
+              "value": "239409865"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9e50052e-3da0-4491-8e3d-75a6ef541743",
+      "name": "infos_bc1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -220,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Verifique se há leads no input\nif (items.length === 0 || $node[\"procura_leads_daily_report\"].json[\"success\"]) {\n    // Caso não haja leads ou a chave \"success\" seja verdadeira, envie a mensagem correta\n    return [{\n        json: {\n            message: \"🔔 *RELATÓRIO DIÁRIO*\\n🎉 Hoje todos os leads que aplicaram avançaram para o agendamento.\"\n        }\n    }];\n} else {\n    // Caso haja leads, preencha a mensagem com os detalhes de cada lead\n    const leads = items.map((item) => ({\n        nome: item.json.nome,\n        email: item.json.email,\n        telefone: item.json.telefone,\n        data_aplicacao: item.json.data_aplicacao,\n        whatsapp: `wa.me/+${item.json.telefone}`\n    }));\n\n    const quantidadeDeLeads = leads.length;\n\n    const mensagem = `🔔 *RELATÓRIO DIÁRIO*\\nHoje houveram ${quantidadeDeLeads} leads qualificados que não agendaram. Segue resumo abaixo:\\n\\n----------------------------\\n${leads.map((lead) => `\nNome: ${lead.nome}\nEmail: ${lead.email}\nTelefone: ${lead.telefone}\nWhatsApp: ${lead.whatsapp}\n`).join(\"\\n\")}`;\n\n    // Envie a mensagem de relatório\n    return [{\n        json: {\n            message: mensagem,\n            Quantidade: quantidadeDeLeads\n        }\n    }];\n}"
+      },
+      "id": "6259900a-41d4-4e9f-bb51-bcebbcdaafb2",
+      "name": "contador_de_leads1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -420,
+        1900
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:everyday_7am": {
+      "recurrencyRules": []
+    },
+    "node:23h59": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-11-06T14:09:25.049Z",
+  "versionId": "6ee4f512-c7c0-4907-b8b3-a0ab21ae5bc4"
+}

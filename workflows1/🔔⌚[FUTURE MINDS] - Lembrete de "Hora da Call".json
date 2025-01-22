@@ -1,0 +1,1008 @@
+{
+  "active": false,
+  "connections": {
+    "infos_bot_conversa": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamentos_do_dia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "sessao_estrategica1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamentos_do_dia": {
+      "main": [
+        [
+          {
+            "node": "inexistente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "horarios_formatados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_via_id": {
+      "main": [
+        [
+          {
+            "node": "inexistente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_se": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_app": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_se1": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_app1": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera_3_segundos": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cancelado_ou_reagendado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "esta_na_hora": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_via_id",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calculadora": {
+      "main": [
+        [
+          {
+            "node": "esta_na_hora",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "horarios_formatados": {
+      "main": [
+        [
+          {
+            "node": "calculadora",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_bc_existe": {
+      "main": [
+        [
+          {
+            "node": "sessao_estrategica",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cadastrar_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "id_bc_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sessao_estrategica": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_se",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_app",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sessao_estrategica1": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_se1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_app1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2 min antes dos horarios de call1": {
+      "main": [
+        [
+          {
+            "node": "infos_bot_conversa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelado_ou_reagendado": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T14:27:37.488Z",
+  "id": "VuUHj3yZ8T1BHgZN",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete de \"Hora da Call\"",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "1ce1633c-7f94-487a-ad21-62ed7b079427"
+            },
+            {
+              "name": "flow_de_lembrete_na_hora_da_call_se",
+              "value": "1869046"
+            },
+            {
+              "name": "flow_de_lembrete_na_hora_da_call_app",
+              "value": "1722603"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ee28bd77-947a-4d0e-b1ba-24e4d912be28",
+      "name": "infos_bot_conversa",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -3200,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "=+{{ $node[\"pesquisa_lead_via_id\"].json[\"telefone\"].replace('+','') }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"nome\"] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"sobrenome\"] }}."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -740,
+        1560
+      ],
+      "id": "84abbf32-9f3b-4335-920d-73564f6d9e0f",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $now.toFormat('dd/MM/yyyy').slice(6,10) }}-{{ $now.toFormat('dd/MM/yyyy').slice(3,5) }}-{{ $now.toFormat('dd/MM/yyyy').slice(0,2) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "da2b345e-35ac-4592-a197-78401e7be292",
+      "name": "pesquisa_agendamentos_do_dia",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3000,
+        1480
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "5ca42640-c08b-4f77-be1f-627920b40734",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        -2380,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "83b29f98-68e8-4483-a1e5-4ef6e79ff331",
+      "name": "pesquisa_lead_via_id",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1540,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_na_hora_da_call_se\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_se",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        1120
+      ],
+      "id": "885066d4-8f05-4738-8487-8abba02ed0b3",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_na_hora_da_call_app\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_app",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        1300
+      ],
+      "id": "052dcc22-5292-4fc4-9b98-1bfdf5f1cc2e",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_na_hora_da_call_se\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_se1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        1480
+      ],
+      "id": "67c5875e-d4e7-4d1d-9557-396cb05f88c6",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_na_hora_da_call_app\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_app1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        1660
+      ],
+      "id": "fcee059a-1801-4733-b10f-c10234c03c85",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "seconds"
+      },
+      "id": "822eed73-3016-46da-b7a3-cbb1b7c3b7a1",
+      "name": "espera_3_segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        120,
+        1840
+      ],
+      "webhookId": "3f04edd2-2f7d-4b98-9635-32d743824e37"
+    },
+    {
+      "parameters": {},
+      "id": "90b1b447-a1d6-44be-92f7-04380751b8bc",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        1640
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "be633cbe-1b36-419b-b465-34411ca6e934",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2400,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "ce64a901-f254-4caa-9fc9-dc09405545f3",
+      "name": "inexistente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2800,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"calculadora\"].json[\"No Intervalo\"].toString() }}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "a8a36129-65af-4322-a604-8c6942cb7acc",
+      "name": "esta_na_hora",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1760,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const horaInicio = $node[\"horarios_formatados\"].json[\"HORA INICIO\"];\nconst agora = $node[\"horarios_formatados\"].json[\"AGORA\"];\n\n// Divida a hora de início e a hora atual em horas e minutos\nconst [horaInicioHora, horaInicioMinuto] = horaInicio.split(':').map(Number);\nconst [agoraHora, agoraMinuto] = agora.split(':').map(Number);\n\n// Calcule a diferença em minutos\nconst diferencaMinutos = (agoraHora - horaInicioHora) * 60 + agoraMinuto - horaInicioMinuto;\n\n// Crie um objeto com os resultados\nconst resultado = {\n  \"HORA INICIO\": horaInicio,\n  \"AGORA\": agora,\n  \"Diferença em Minutos\": diferencaMinutos,\n  \"No Intervalo\": diferencaMinutos >= -5 && diferencaMinutos <= 0\n};\n\nreturn resultado;\n"
+      },
+      "id": "018abe5d-6305-49ad-be97-c0d6b20df02d",
+      "name": "calculadora",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1960,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "HORA INICIO",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"hora_de_inicio\"].slice(0,5) }}"
+            },
+            {
+              "name": "AGORA",
+              "value": "={{ $now.toFormat('HH:mm') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "86f6a1b9-21f5-436f-8f40-e68f0293643a",
+      "name": "horarios_formatados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -2140,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "62feffc9-3d20-4c78-83a8-060f4f0175aa",
+      "name": "id_bc_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "14287acc-526a-4fa4-9ab2-1b9849122814",
+      "name": "inexistente1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1340,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "34d7e534-bbea-47de-bca1-601cafca26ee",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -1140,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_linhas\"].json[\"servico\"] }}",
+              "operation": "contains",
+              "value2": "Sprint de Carreira"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "42d26106-e74d-4cde-97ba-7f2df652ee42",
+      "name": "sessao_estrategica",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_linhas\"].json[\"servico\"] }}",
+              "operation": "contains",
+              "value2": "Sprint de Carreira"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "72e41768-09f1-4355-b791-ae7982dbbafc",
+      "name": "sessao_estrategica1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        1560
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 6,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 7,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 7,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 8,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 8,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 9,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 9,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 10,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 10,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 11,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 11,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 12,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 12,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 13,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 13,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 14,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 14,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 15,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 15,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 16,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 16,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 17,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 17,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 18,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 18,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 20,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 20,
+              "triggerAtMinute": 58
+            },
+            {
+              "triggerAtHour": 21,
+              "triggerAtMinute": 28
+            },
+            {
+              "triggerAtHour": 21,
+              "triggerAtMinute": 58
+            }
+          ]
+        }
+      },
+      "id": "2bf2080d-3041-4227-bdfd-6dd1f2a46ed1",
+      "name": "2 min antes dos horarios de call1",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3380,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"status_evento\"] }}",
+              "value2": "Cancelado"
+            },
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"status_evento\"] }}",
+              "value2": "Reagendado"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "190df24c-9b88-4b0b-b03d-7df0022b52a6",
+      "name": "cancelado_ou_reagendado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2620,
+        1500
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:a_cada_hora1": {
+      "recurrencyRules": []
+    },
+    "node:2 min antes dos horarios de call1": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-09-04T19:52:58.693Z",
+  "versionId": "b4e275cf-e982-4a71-aa6f-01d8e4e11287"
+}

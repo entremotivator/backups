@@ -1,0 +1,1342 @@
+{
+  "active": true,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "procurar ad",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar paginas conectadas": {
+      "main": [
+        [
+          {
+            "node": "listar contas de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separar contas de anuncio": {
+      "main": [
+        [
+          {
+            "node": "pegar conta de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar contas de anuncio": {
+      "main": [
+        [
+          {
+            "node": "separar contas de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separar anuncios": {
+      "main": [
+        [
+          {
+            "node": "pegar anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "listar anuncios da conta de anuncio": {
+      "main": [
+        [
+          {
+            "node": "rodou anuncio ontem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separar paginacao": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separar anuncios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "pegar conta de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit1": {
+      "main": [
+        [
+          {
+            "node": "separar paginacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pegar anuncio": {
+      "main": [
+        [
+          {
+            "node": "Limit1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pegar metricas do anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formatar metricas": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "pegar metricas do anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pegar metricas do anuncio": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pegar conta de anuncio": {
+      "main": [
+        [],
+        [
+          {
+            "node": "listar anuncios da conta de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis": {
+      "main": [
+        [
+          {
+            "node": "listar paginas conectadas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "rodou anuncio ontem": {
+      "main": [
+        [
+          {
+            "node": "separar paginacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pegar conta de anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formatar metricas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procurar ad": {
+      "main": [
+        [
+          {
+            "node": "metricas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "metricas": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "atualizar2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualizar1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizar1": {
+      "main": [
+        [
+          {
+            "node": "pegar anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizar2": {
+      "main": [
+        [
+          {
+            "node": "pegar anuncio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-10-19T13:37:08.620Z",
+  "id": "efK8wxQmCUEhqArA",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Extração de métricas diárias do meta ads",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "19 8 * * *"
+            }
+          ]
+        }
+      },
+      "id": "d1cf8835-6a2c-482b-879a-a880fb7a4a61",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        980,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ { ad_data: $node[\"formatar metricas\"].json[\"ad_id\"] + '_' +$node[\"formatar metricas\"].json[\"date_start\"] ,...$node[\"pegar anuncio\"].json, ...$node[\"formatar metricas\"].json } }}",
+        "options": {}
+      },
+      "id": "0aaa3eb6-1e09-4072-a5c6-ca10753b4207",
+      "name": "metricas",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        4840,
+        500
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a4186f27-c17b-479f-820b-87fa61e1bad1",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        4420,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://graph.facebook.com/v20.0/me/accounts?limit=1",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{ $node[\"variaveis\"].json[\"access_token_permanente\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "437e70a3-977b-4a09-a960-4682a5b684b7",
+      "name": "listar paginas conectadas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "necessário para pegar o access_token,, precisa utilizar o token do usuário do sistema",
+        "height": 282.58226565976645,
+        "width": 207.2424061941624
+      },
+      "id": "3d3fb498-4d69-4347-932c-6ff0398f273a",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1385,
+        324
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "5ce43fac-f9f7-418f-8e97-20fc6cb7fdcd",
+      "name": "separar contas de anuncio",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "lista as contas de anuncios, precisa utilizar o token do usuário do sistema",
+        "height": 256.7837998808816,
+        "width": 207.2424061941624
+      },
+      "id": "fdec7dd6-8299-4336-b344-d6693960a638",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        335
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://graph.facebook.com/v20.0/me/adaccounts?fields=id,name,account_status&limit=100",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{ $node[\"variaveis\"].json[\"access_token_permanente\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8ae7002-660e-4192-b941-5b1dc2dbb8b3",
+      "name": "listar contas de anuncio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1680,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "remove as contas de anuncio do array",
+        "height": 230.9853341019966,
+        "width": 178.57744421762334
+      },
+      "id": "18582ab8-9756-4c7b-98e2-d78b97e62039",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        355
+      ]
+    },
+    {
+      "parameters": {
+        "content": "cria loop para verificar se as contas de anuncio tem anuncios ativos ontem",
+        "height": 266.3387872063946,
+        "width": 178.57744421762334
+      },
+      "id": "31cbb070-c60f-44c5-9d15-8dd42cbb9bbf",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "content": "lista todos os anuncios de ontem da conta de anuncio do loop",
+        "height": 244.3623163577149,
+        "width": 178.57744421762334
+      },
+      "id": "fc0f570e-3097-40b2-aa06-67f5183b1f6c",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2360,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "content": "só avança se existir anuncio ontem",
+        "height": 244.3623163577149,
+        "width": 178.57744421762334
+      },
+      "id": "735d327f-06a5-442c-959d-26ce16b396b9",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2580,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "content": "separa os anuncios de ontem do array",
+        "height": 206.142367055663,
+        "width": 178.57744421762334
+      },
+      "id": "c642b8cd-f767-4fb0-853b-560881d5bcea",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3040,
+        278
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "8ae0d744-0469-4681-b96b-8420e2888fb5",
+      "name": "separar anuncios",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3080,
+        338
+      ]
+    },
+    {
+      "parameters": {
+        "content": "coloca os anuncios em loop",
+        "height": 206.142367055663,
+        "width": 178.57744421762334,
+        "color": 3
+      },
+      "id": "a972424b-5264-4eb2-8d4e-629c6d3a3190",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3260,
+        278
+      ]
+    },
+    {
+      "parameters": {
+        "content": "busca metricas do anuncio atual do loop",
+        "height": 226.20784043924027,
+        "width": 178.57744421762334
+      },
+      "id": "17966e05-5d94-43d8-a3e3-c9054ebfc778",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3580,
+        298
+      ]
+    },
+    {
+      "parameters": {
+        "content": "formata metricas do anuncio atual do loop",
+        "height": 205.1868683231118,
+        "width": 178.57744421762334
+      },
+      "id": "98e3f165-7e1d-4d11-a780-64c1806edc3e",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4160,
+        438
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://graph.facebook.com/v20.0/{{  $node[\"pegar conta de anuncio\"].json[\"id\"] }}/insights",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{ $node[\"listar paginas conectadas\"].json[\"data\"][\"0\"][\"access_token\"] }}"
+            },
+            {
+              "name": "time_range",
+              "value": "={{ `{'since':'${$now.minus(3, 'days').format('yyyy-MM-dd')}','until':'${$now.minus(1, 'days').format('yyyy-MM-dd')}'}` }}"
+            },
+            {
+              "name": "fields",
+              "value": "ad_id,campaign_name,adset_name,ad_name,spend,impressions,inline_link_clicks,frequency"
+            },
+            {
+              "name": "level",
+              "value": "ad"
+            },
+            {
+              "name": "breakdowns",
+              "value": "device_platform, publisher_platform, platform_position"
+            },
+            {
+              "name": "limit",
+              "value": "200"
+            },
+            {
+              "name": "time_increment",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "pagination": {
+            "pagination": {
+              "paginationMode": "responseContainsNextURL",
+              "nextURL": "={{ $response.body.paging.next }}",
+              "paginationCompleteWhen": "other",
+              "completeExpression": "={{ $response.body.paging.next ? false : true }}",
+              "requestInterval": 1000
+            }
+          }
+        }
+      },
+      "id": "8e2bb92a-a7d3-49b5-a20f-ad0a77359eef",
+      "name": "listar anuncios da conta de anuncio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2400,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $node[\"separar paginacao\"].context[\"done\"] }}"
+        }
+      },
+      "id": "be6a0527-0510-4ede-9169-8659b6a972c2",
+      "name": "separar paginacao",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2860,
+        318
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "beb721e1-bc2d-4d9e-a0f9-68ff7e2830c4",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        2960,
+        618
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c49e7815-76fc-4f7d-bafa-d0ca2f723219",
+      "name": "Limit1",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        3540,
+        678
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $node[\"pegar anuncio\"].context[\"done\"] }}"
+        }
+      },
+      "id": "2ae8f184-dbf0-46d1-829d-1b75ddb7c1df",
+      "name": "pegar anuncio",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        3300,
+        338
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Pega os dados do \"body\" do input\nlet data = $json.data; // Acessa o array \"data\"\nlet consolidated = {};\n\n// Faz o loop sob cada item no array \"data\"\nfor (let i = 0; i < data.length; i++) {\n  let adId = data[i].ad_id;\n  let platformKey = `${data[i].platform_position}_${data[i].publisher_platform}_${data[i].device_platform}`;\n\n  // Se o anúncio ainda não foi adicionado ao objeto consolidado, cria uma nova entrada\n  if (!consolidated[adId]) {\n    consolidated[adId] = {};\n  }\n\n  // Se a combinação de platform_position, publisher_platform e device_platform ainda não foi adicionada, cria uma nova entrada\n  if (!consolidated[adId][platformKey]) {\n    consolidated[adId][platformKey] = { ...data[i] };\n  } else {\n    // Consolida métricas para anúncios já existentes na mesma combinação de plataforma\n    consolidated[adId][platformKey].spend = parseFloat(consolidated[adId][platformKey].spend) + parseFloat(data[i].spend);\n    consolidated[adId][platformKey].impressions = parseInt(consolidated[adId][platformKey].impressions) + parseInt(data[i].impressions);\n    consolidated[adId][platformKey].frequency = parseFloat(consolidated[adId][platformKey].frequency) + parseFloat(data[i].frequency);\n\n    // Consolida outros campos específicos, se necessário\n    if (data[i].inline_link_clicks) {\n      consolidated[adId][platformKey].inline_link_clicks = (consolidated[adId][platformKey].inline_link_clicks || 0) + parseInt(data[i].inline_link_clicks);\n    }\n    if (data[i].unique_clicks) {\n      consolidated[adId][platformKey].unique_clicks = (consolidated[adId][platformKey].unique_clicks || 0) + parseInt(data[i].unique_clicks);\n    }\n    // Adicione outros campos que precisam ser consolidados aqui, conforme necessário\n  }\n}\n\n// Remove \"data\", \"paging\" e \"insights\" do JSON original\ndelete $json[\"data\"];\ndelete $json[\"paging\"];\ndelete $json[\"insights\"];\n\n// Pega os dados do \"pegar anuncio\" do input\nlet pegarAnuncio = $node[\"pegar anuncio\"].json; // Acessa o objeto \"pegar_anuncio\"\n\n// Adiciona os dados do \"pegar anuncio\" ao consolidado (sobrescrevendo caso exista conflito)\nif (pegarAnuncio) {\n  Object.assign($json, pegarAnuncio);\n}\n\n// Adiciona os novos campos consolidados ao input\nif (Object.values(consolidated).length > 0) {\n  // Transforma o objeto consolidado em um array\n  let consolidatedArray = [];\n  for (let adId in consolidated) {\n    for (let platformKey in consolidated[adId]) {\n      consolidatedArray.push(consolidated[adId][platformKey]);\n    }\n  }\n  Object.assign($json, consolidatedArray[0]); // Adiciona o primeiro item consolidado ao JSON principal\n}\n\n// Retorna o input com os novos campos consolidados\nreturn $json;"
+      },
+      "id": "2f9c90bf-f549-49c6-8d91-d7588512e0ad",
+      "name": "formatar metricas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4200,
+        498
+      ]
+    },
+    {
+      "parameters": {
+        "errorMessage": "Erro no fluxo"
+      },
+      "id": "adaa99e6-eafc-4ab5-b9cf-808137ca3c02",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        4180,
+        178
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "id": "8584730b-340d-4101-ad7c-96b3e5b969ff",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3900,
+        518
+      ],
+      "webhookId": "4982962b-04f1-4649-86ff-d0dead451af6"
+    },
+    {
+      "parameters": {
+        "url": "=https://graph.facebook.com/v20.0/{{ $node[\"pegar anuncio\"].json[\"ad_id\"] }}/insights",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_token",
+              "value": "={{ $node[\"listar paginas conectadas\"].json[\"data\"][\"0\"][\"access_token\"] }}"
+            },
+            {
+              "name": "time_range",
+              "value": "={'since':'{{ $node[\"pegar anuncio\"].json[\"date_start\"] }}','until':'{{ $node[\"pegar anuncio\"].json[\"date_start\"] }}'}"
+            },
+            {
+              "name": "fields",
+              "value": "account_id,account_name,campaign_id,campaign_name,adset_id,adset_name,ad_id,ad_name,spend,impressions,inline_link_clicks,unique_clicks,clicks,objective,reach,attribution_setting,buying_type,action_values,account_currency,ad_impression_actions,canvas_avg_view_percent,canvas_avg_view_time,conversion_values,conversions,frequency,full_view_impressions,full_view_reach,inline_link_click_ctr,inline_post_engagement,instant_experience_clicks_to_open,optimization_goal,outbound_clicks,social_spend,video_30_sec_watched_actions"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ed0c1f80-7ece-4c22-ad80-ae1850300088",
+      "name": "pegar metricas do anuncio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3620,
+        358
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": "={{ $node[\"pegar conta de anuncio\"].context[\"done\"] }}"
+        }
+      },
+      "id": "ccd8c436-64a5-4e1d-9630-a4d26c2e56ee",
+      "name": "pegar conta de anuncio",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b4c52ac1-0380-42c5-b4f1-565ac3b2d649",
+              "name": "access_token_permanente",
+              "value": "EAAQg5m7iaAEBOZBopx1UWbT1b3rWWdhUCp7sQsphaI5cHIBQMpx5GJ5ig5H2TCCdvwIzFdeK56yiMy0Op9suBHrqs0vbCn0h6uHp0gEiKnrDu9MwWsEOfO9dOY8Y2iWqBMONZCjCCiMxzDtOWJfQpKwZBqfgZCYIOqrS1x9CHXJ19lriJHZC1EuRAZA51e9bitzwZDZD",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8d02c51c-c91e-4ee3-ae56-8ae314e5e450",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1180,
+        419
+      ]
+    },
+    {
+      "parameters": {
+        "content": "access_token do usuário do sistema",
+        "height": 241.49582016006065,
+        "width": 207.2424061941624
+      },
+      "id": "58d28583-127a-4bec-b8f8-fbfb6aae5d7f",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "62bf116f-216c-467d-a1c9-f002fa16d008",
+              "leftValue": "={{ $json[\"data\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "array",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "62df891a-fd3f-443a-85c7-99e2577362d6",
+      "name": "rodou anuncio ontem",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2620,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "be84cec7-032e-4e32-9b14-4b06e8506b4a",
+              "leftValue": "={{ $node[\"pegar metricas do anuncio\"].json[\"errorDetails\"][\"httpCode\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "b604efad-1527-4627-8d2c-5cd681397c75",
+              "leftValue": "={{ $node[\"pegar metricas do anuncio\"].json[\"errorDetails\"][\"rawErrorMessage\"][\"0\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1fb69ea9-8caf-4b43-99da-5f3c64bc6f47",
+      "name": "If1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        3860,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "metricas_meta",
+          "mode": "list",
+          "cachedResultName": "metricas_meta"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "ad_data",
+              "value": "={{ $node[\"formatar metricas\"].json[\"ad_id\"] }}_{{ $node[\"formatar metricas\"].json[\"date_start\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a8222605-f571-4e9c-a915-893fd5d78ede",
+      "name": "procurar ad",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        4640,
+        500
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "55d18b40-8b01-45ec-9228-ae9a4eca68ca",
+              "leftValue": "={{ $node[\"procurar ad\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": true,
+          "looseTypeValidation": true
+        }
+      },
+      "id": "8742449a-4b58-4007-8d1d-68d636550362",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        5020,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ { ad_data: $node[\"formatar metricas\"].json[\"ad_id\"] + '_' +$node[\"formatar metricas\"].json[\"date_start\"] ,...$node[\"pegar anuncio\"].json, ...$node[\"formatar metricas\"].json } }}",
+        "options": {}
+      },
+      "id": "0e9870b0-cd1d-4b5c-98ba-6b4b22ea7d0c",
+      "name": "metricas1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        4800,
+        1040
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "metricas_meta",
+          "mode": "list",
+          "cachedResultName": "metricas_meta"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "ad_data",
+              "value": "={{ $node[\"metricas\"].json[\"ad_data\"] }}"
+            },
+            {
+              "column": "ad_id",
+              "value": "={{ $node[\"metricas\"].json[\"ad_id\"] }}"
+            },
+            {
+              "column": "campaign_name",
+              "value": "={{ $node[\"metricas\"].json[\"campaign_name\"] }}"
+            },
+            {
+              "column": "adset_name",
+              "value": "={{ $node[\"metricas\"].json[\"adset_name\"] }}"
+            },
+            {
+              "column": "ad_name",
+              "value": "={{ $node[\"metricas\"].json[\"ad_name\"] }}"
+            },
+            {
+              "column": "spend",
+              "value": "={{ $node[\"metricas\"].json[\"spend\"] }}"
+            },
+            {
+              "column": "impressions",
+              "value": "={{ $node[\"metricas\"].json[\"impressions\"] }}"
+            },
+            {
+              "column": "frequency",
+              "value": "={{ $node[\"metricas\"].json[\"frequency\"] }}"
+            },
+            {
+              "column": "date_start",
+              "value": "={{ $node[\"metricas\"].json[\"date_start\"] }}"
+            },
+            {
+              "column": "date_stop",
+              "value": "={{ $node[\"metricas\"].json[\"date_start\"] }}"
+            },
+            {
+              "column": "device_platform",
+              "value": "={{ $node[\"metricas\"].json[\"device_platform\"] }}"
+            },
+            {
+              "column": "publisher_platform",
+              "value": "={{ $node[\"metricas\"].json[\"publisher_platform\"] }}"
+            },
+            {
+              "column": "platform_position",
+              "value": "={{ $node[\"metricas\"].json[\"platform_position\"] }}"
+            },
+            {
+              "column": "account_id",
+              "value": "={{ $node[\"metricas\"].json[\"account_id\"] }}"
+            },
+            {
+              "column": "account_name",
+              "value": "={{ $node[\"metricas\"].json[\"account_name\"] }}"
+            },
+            {
+              "column": "campaign_id",
+              "value": "={{ $node[\"metricas\"].json[\"campaign_id\"] }}"
+            },
+            {
+              "column": "adset_id",
+              "value": "={{ $node[\"metricas\"].json[\"adset_id\"] }}"
+            },
+            {
+              "column": "inline_link_clicks",
+              "value": "={{ $node[\"metricas\"].json[\"inline_link_clicks\"] }}"
+            },
+            {
+              "column": "unique_clicks",
+              "value": "={{ $node[\"metricas\"].json[\"unique_clicks\"] }}"
+            },
+            {
+              "column": "objective",
+              "value": "={{ $node[\"metricas\"].json[\"objective\"] }}"
+            },
+            {
+              "column": "reach",
+              "value": "={{ $node[\"metricas\"].json[\"reach\"] }}"
+            },
+            {
+              "column": "buying_type",
+              "value": "={{ $node[\"metricas\"].json[\"buying_type\"] }}"
+            },
+            {
+              "column": "account_currency",
+              "value": "={{ $node[\"metricas\"].json[\"account_currency\"] }}"
+            },
+            {
+              "column": "full_view_impressions",
+              "value": "={{ $node[\"metricas\"].json[\"full_view_impressions\"] }}"
+            },
+            {
+              "column": "full_view_reach",
+              "value": "={{ $node[\"metricas\"].json[\"full_view_reach\"] }}"
+            },
+            {
+              "column": "inline_link_click_ctr",
+              "value": "={{ $node[\"metricas\"].json[\"inline_link_click_ctr\"] }}"
+            },
+            {
+              "column": "inline_post_engagement",
+              "value": "={{ $node[\"metricas\"].json[\"inline_post_engagement\"] }}"
+            },
+            {
+              "column": "optimization_goal",
+              "value": "={{ $node[\"metricas\"].json[\"optimization_goal\"] }}"
+            },
+            {
+              "column": "social_spend",
+              "value": "={{ $node[\"metricas\"].json[\"social_spend\"] }}"
+            },
+            {
+              "column": "video_30_sec_watched_actions",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"video_30_sec_watched_actions\"]) }}"
+            },
+            {
+              "column": "conversions",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"conversions\"]) }}"
+            },
+            {
+              "column": "outbound_clicks",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"outbound_clicks\"]) }}"
+            },
+            {
+              "column": "clicks",
+              "value": "={{ $node[\"metricas\"].json[\"clicks\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "dc080694-204b-4f28-81cc-263f91669a3f",
+      "name": "atualizar1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        5220,
+        660
+      ],
+      "alwaysOutputData": true,
+      "executeOnce": true,
+      "retryOnFail": false,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "metricas_meta",
+          "mode": "list",
+          "cachedResultName": "metricas_meta"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"procurar ad\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "ad_id",
+              "value": "={{ $node[\"metricas\"].json[\"ad_id\"] }}"
+            },
+            {
+              "column": "campaign_name",
+              "value": "={{ $node[\"metricas\"].json[\"campaign_name\"] }}"
+            },
+            {
+              "column": "adset_name",
+              "value": "={{ $node[\"metricas\"].json[\"adset_name\"] }}"
+            },
+            {
+              "column": "ad_name",
+              "value": "={{ $node[\"metricas\"].json[\"ad_name\"] }}"
+            },
+            {
+              "column": "spend",
+              "value": "={{ $node[\"metricas\"].json[\"spend\"] }}"
+            },
+            {
+              "column": "impressions",
+              "value": "={{ $node[\"metricas\"].json[\"impressions\"] }}"
+            },
+            {
+              "column": "frequency",
+              "value": "={{ $node[\"metricas\"].json[\"frequency\"] }}"
+            },
+            {
+              "column": "date_start",
+              "value": "={{ $node[\"metricas\"].json[\"date_start\"] }}"
+            },
+            {
+              "column": "date_stop",
+              "value": "={{ $node[\"metricas\"].json[\"date_stop\"] }}"
+            },
+            {
+              "column": "device_platform",
+              "value": "={{ $node[\"metricas\"].json[\"device_platform\"] }}"
+            },
+            {
+              "column": "publisher_platform",
+              "value": "={{ $node[\"metricas\"].json[\"publisher_platform\"] }}"
+            },
+            {
+              "column": "platform_position",
+              "value": "={{ $node[\"metricas\"].json[\"platform_position\"] }}"
+            },
+            {
+              "column": "account_id",
+              "value": "={{ $node[\"metricas\"].json[\"account_id\"] }}"
+            },
+            {
+              "column": "account_name",
+              "value": "={{ $node[\"metricas\"].json[\"account_name\"] }}"
+            },
+            {
+              "column": "campaign_id",
+              "value": "={{ $node[\"metricas\"].json[\"campaign_id\"] }}"
+            },
+            {
+              "column": "adset_id",
+              "value": "={{ $node[\"metricas\"].json[\"adset_id\"] }}"
+            },
+            {
+              "column": "inline_link_clicks",
+              "value": "={{ $node[\"metricas\"].json[\"inline_link_clicks\"] }}"
+            },
+            {
+              "column": "unique_clicks",
+              "value": "={{ $node[\"metricas\"].json[\"unique_clicks\"] }}"
+            },
+            {
+              "column": "objective",
+              "value": "={{ $node[\"metricas\"].json[\"objective\"] }}"
+            },
+            {
+              "column": "reach",
+              "value": "={{ $node[\"metricas\"].json[\"reach\"] }}"
+            },
+            {
+              "column": "buying_type",
+              "value": "={{ $node[\"metricas\"].json[\"buying_type\"] }}"
+            },
+            {
+              "column": "account_currency",
+              "value": "={{ $node[\"metricas\"].json[\"account_currency\"] }}"
+            },
+            {
+              "column": "full_view_impressions",
+              "value": "={{ $node[\"metricas\"].json[\"full_view_impressions\"] }}"
+            },
+            {
+              "column": "full_view_reach",
+              "value": "={{ $node[\"metricas\"].json[\"full_view_reach\"] }}"
+            },
+            {
+              "column": "inline_link_click_ctr",
+              "value": "={{ $node[\"metricas\"].json[\"inline_link_click_ctr\"] }}"
+            },
+            {
+              "column": "inline_post_engagement",
+              "value": "={{ $node[\"metricas\"].json[\"inline_post_engagement\"] }}"
+            },
+            {
+              "column": "optimization_goal",
+              "value": "={{ $node[\"metricas\"].json[\"optimization_goal\"] }}"
+            },
+            {
+              "column": "social_spend",
+              "value": "={{ $node[\"metricas\"].json[\"social_spend\"] }}"
+            },
+            {
+              "column": "video_30_sec_watched_actions",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"video_30_sec_watched_actions\"]) }}"
+            },
+            {
+              "column": "conversions",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"conversions\"]) }}"
+            },
+            {
+              "column": "outbound_clicks",
+              "value": "={{ JSON.stringify($node[\"metricas\"].json[\"outbound_clicks\"]) }}"
+            },
+            {
+              "column": "clicks",
+              "value": "={{ $node[\"metricas\"].json[\"clicks\"] }}"
+            },
+            {
+              "column": "ad_data",
+              "value": "={{ $node[\"metricas\"].json[\"ad_data\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true
+        }
+      },
+      "id": "07dccbe9-84e8-4a26-9754-4c97bd3568eb",
+      "name": "atualizar2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        5220,
+        320
+      ],
+      "alwaysOutputData": true,
+      "executeOnce": true,
+      "retryOnFail": false,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-10-24T11:18:30.892Z",
+  "versionId": "97190bfc-1de1-4592-9769-c6102ab45271"
+}

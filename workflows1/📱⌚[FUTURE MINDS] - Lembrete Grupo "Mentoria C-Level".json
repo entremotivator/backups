@@ -1,0 +1,1125 @@
+{
+  "active": false,
+  "connections": {
+    "le_planilha": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis": {
+      "main": [
+        [
+          {
+            "node": "le_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_groups1": {
+      "main": [
+        [
+          {
+            "node": "e_grupo_mentoria_c_level1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_grupos": {
+      "main": [
+        [
+          {
+            "node": "e_grupo_mentoria_c_level",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e_grupo_mentoria_c_level": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não faça nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e_grupo_mentoria_c_level1": {
+      "main": [
+        [
+          {
+            "node": "Limit1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não faça nada1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "EnviaLembrete7h",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit1": {
+      "main": [
+        [
+          {
+            "node": "EnviaLembrete19:30",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dispara_as_19_45": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dispara_as_19_30": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dispara_as_7_manha": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tipo_de_lembrete": {
+      "main": [
+        [
+          {
+            "node": "esta_na_hora_7_manha",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tipo_do_lembrete",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_lotes": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tipo_de_lembrete",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EnviaLembrete7h": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "esta_na_hora_7_manha": {
+      "main": [
+        [
+          {
+            "node": "busca_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "esta_na_hora_19:30": {
+      "main": [
+        [
+          {
+            "node": "get_groups1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EnviaLembrete19:30": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "esta_na_hora_19:45": {
+      "main": [
+        [
+          {
+            "node": "get_groups",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e_grupo_mentoria_c_level2": {
+      "main": [
+        [
+          {
+            "node": "Limit2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não faça nada2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit2": {
+      "main": [
+        [
+          {
+            "node": "EnviaLembrete19:45",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EnviaLembrete19:45": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tipo_do_lembrete": {
+      "main": [
+        [
+          {
+            "node": "esta_na_hora_19:30",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tipo_do_lembrete1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tipo_do_lembrete1": {
+      "main": [
+        [
+          {
+            "node": "esta_na_hora_19:45",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_groups": {
+      "main": [
+        [
+          {
+            "node": "e_grupo_mentoria_c_level2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T15:02:27.156Z",
+  "id": "g6GoqCuSAndjFnXW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "📱⌚[FUTURE MINDS] - Lembrete Grupo \"Mentoria C-Level\"",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1y6swcAzy-PyCnwgKuZE7vKza8zxzHOGqQyv_hIZTKcQ",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1584150562,
+          "mode": "list",
+          "cachedResultName": "Lembrete - C - Level",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1y6swcAzy-PyCnwgKuZE7vKza8zxzHOGqQyv_hIZTKcQ/edit#gid=1584150562"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "DATA DISPARO",
+              "lookupValue": "={{ $now.toFormat('dd/MM/yyyy') }}"
+            }
+          ]
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "9f2fa85e-d834-49bb-b71d-e1f981d59b57",
+      "name": "le_planilha",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -620,
+        620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY"
+            },
+            {
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br"
+            },
+            {
+              "name": "apikey",
+              "value": "27wqfrcybyalo11h3syb9h"
+            },
+            {
+              "name": "nome_da_instancia",
+              "value": "FutureMinds"
+            },
+            {
+              "name": "id_grupo",
+              "value": "120363029854442152@g.us"
+            },
+            {
+              "name": "numero_adm",
+              "value": "5521988995629"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "379dd9e6-a4bd-4577-b4e3-5d2d8243c8b5",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        620
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "929c93cc-ada9-4d67-af0a-0463af9d3804",
+      "name": "Não faça nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 1 dia antes \n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)"
+      },
+      "id": "fb669e15-a931-4462-9afb-d35e7093d5da",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/group/fetchAllGroups/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}?getParticipants=false",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1de815f3-0b22-48a0-b575-dac3d3e4e543",
+      "name": "get_groups1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        560,
+        740
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a08585a4-42fd-4833-95ae-dc8caaa47d87",
+      "name": "Não faça nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/group/fetchAllGroups/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}?getParticipants=false",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8eccab55-cd75-4737-b792-ef5b2511d5d2",
+      "name": "busca_grupos",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        580,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"subject\"] }}",
+              "operation": "contains",
+              "value2": "Mentoria C-Level"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "788a22d9-878f-4525-b1c0-41dc20819ae6",
+      "name": "e_grupo_mentoria_c_level",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        780,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"subject\"] }}",
+              "operation": "contains",
+              "value2": "Mentoria C-Level"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a74b2e66-0d03-4f49-9f2b-fd99c015159b",
+      "name": "e_grupo_mentoria_c_level1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        820,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "ad31de69-c53f-40c8-acd2-832127085805",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "0fb503d5-ad38-41ff-877b-4d59bddcac5b",
+      "name": "Limit1",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 45
+            }
+          ]
+        }
+      },
+      "id": "60b28d02-83f5-428f-8373-377fbe4dd476",
+      "name": "dispara_as_19_45",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "da148401-cd3b-4077-9c34-bee1d5eed2a9",
+      "name": "dispara_as_19_30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "id": "86ab9ceb-5c33-48f1-8f62-d07eef2ea879",
+      "name": "dispara_as_7_manha",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "45e0a6fe-3699-4c6d-9217-fc68af0bb6ff",
+      "name": "Replace Me1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY"
+            },
+            {
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br"
+            },
+            {
+              "name": "apikey",
+              "value": "27wqfrcybyalo11h3syb9h"
+            },
+            {
+              "name": "nome_da_instancia",
+              "value": "FutureMinds"
+            },
+            {
+              "name": "id_grupo",
+              "value": "120363029854442152@g.us"
+            },
+            {
+              "name": "numero_adm",
+              "value": "5521988995629"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "12401b2a-3e2b-4f48-97a1-3f18d841714a",
+      "name": "variaveis1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_lotes\"].json[\"LIVE\"] }}",
+              "operation": "contains",
+              "value2": "É HOJE"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "9a7564d7-3fa8-4d12-a097-104016284324",
+      "name": "tipo_de_lembrete",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "2d22af28-941a-4af2-9e13-565f4f53dd07",
+      "name": "separa_em_lotes",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -360,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"variaveis\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $node[\"separa_em_lotes\"].json[\"MENSAGEM\"] }}"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "823bd6b2-7c23-48b2-b122-8258a87c1594",
+      "name": "EnviaLembrete7h",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1200,
+        280
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('HH:mm') }}",
+              "value2": "7:00"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "02987be9-e32f-4429-be5b-3a5e7bd0a3de",
+      "name": "esta_na_hora_7_manha",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        160,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('HH:mm') }}",
+              "value2": "19:30"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "651f5ea1-c957-452e-92d7-5fea3206d654",
+      "name": "esta_na_hora_19:30",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        340,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"variaveis\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $node[\"separa_em_lotes\"].json[\"MENSAGEM\"] }}"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "d82d5684-b613-4ab0-9c4e-8ca967b79a88",
+      "name": "EnviaLembrete19:30",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1220,
+        620
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('HH:mm') }}",
+              "value2": "19:45"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "cff0d0e4-54e7-4f5e-861c-674709e6afdc",
+      "name": "esta_na_hora_19:45",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        420,
+        1160
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ddcf4124-01c0-41db-8014-7230a8a7acd7",
+      "name": "Não faça nada2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"subject\"] }}",
+              "operation": "contains",
+              "value2": "Mentoria C-Level"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "39ef0ca8-abc9-4d2d-b221-f8abd58990f5",
+      "name": "e_grupo_mentoria_c_level2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        860,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "21f712b9-2f04-4120-ac84-140a76b1cc0e",
+      "name": "Limit2",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"variaveis\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $node[\"separa_em_lotes\"].json[\"MENSAGEM\"] }}"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "81cfd5bb-b09b-4950-abbd-b390a5b396ff",
+      "name": "EnviaLembrete19:45",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1220,
+        960
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_lotes\"].json[\"LIVE\"] }}",
+              "value2": "É AGORA"
+            },
+            {
+              "value1": "={{ $node[\"separa_em_lotes\"].json[\"HORA DO DISPARO\"] }}",
+              "value2": "19:30:00"
+            }
+          ]
+        }
+      },
+      "id": "29f17a09-2277-427f-82e3-73e78a4c2ef3",
+      "name": "tipo_do_lembrete",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        80,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_lotes\"].json[\"LIVE\"] }}",
+              "value2": "É AGORA"
+            },
+            {
+              "value1": "={{ $node[\"separa_em_lotes\"].json[\"HORA DO DISPARO\"] }}",
+              "value2": "19:45:00"
+            }
+          ]
+        }
+      },
+      "id": "baa929c3-1364-44f6-86e7-6a78dbc1aa42",
+      "name": "tipo_do_lembrete1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/group/fetchAllGroups/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}?getParticipants=false",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9016013a-c644-4b74-b5cb-0ec0f5a0dc26",
+      "name": "get_groups",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        700,
+        1080
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:everyday_7am": {
+      "recurrencyRules": []
+    },
+    "node:dispara_as_19_45": {
+      "recurrencyRules": []
+    },
+    "node:dispara_as_19_30": {
+      "recurrencyRules": []
+    },
+    "node:dispara_as_7_manha": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:56:44.273Z",
+      "updatedAt": "2024-04-24T16:30:41.113Z",
+      "id": "RmpVzInPuZvf5mdM",
+      "name": "[GRUPO WHATSAPP]"
+    }
+  ],
+  "triggerCount": 3,
+  "updatedAt": "2024-04-24T18:24:13.015Z",
+  "versionId": "d17745a4-05fd-40f1-9f83-4e2bff278e52"
+}

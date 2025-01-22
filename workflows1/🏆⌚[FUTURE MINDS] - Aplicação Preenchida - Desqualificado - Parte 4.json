@@ -1,0 +1,1457 @@
+{
+  "active": false,
+  "connections": {
+    "pesquisa_lead5": {
+      "main": [
+        [
+          {
+            "node": "insert_data_aplicacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_aplicacao": {
+      "main": [
+        [
+          {
+            "node": "insert_data_utm_aplicacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_utm_aplicacao": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segundo_ou_mais_erro": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia4": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_qualificacao_qualificado3": {
+      "main": [
+        [
+          {
+            "node": "add_id_banco1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_qualificacao_qualificado1": {
+      "main": [
+        [
+          {
+            "node": "add_id_banco1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_id_banco1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_campos_deal2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_campos_deal2": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "add_tag_qualif2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "add_tag_qualif",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "add_tag_qualif",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "add_tag_qualif2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_qualif": {
+      "main": [
+        [
+          {
+            "node": "update_qualificacao_qualificado3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_qualif2": {
+      "main": [
+        [
+          {
+            "node": "update_qualificacao_qualificado1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T00:31:44.197Z",
+  "id": "TCsYKtBAnnrDnlLQ",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🏆⌚[FUTURE MINDS] - Aplicação Preenchida - Desqualificado - Parte 4",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "Não Agendamentos - Sessão - Parte 5 - Desqualificado",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "f9e9f860-17b7-4b4b-928a-4b84cb8dd5d8",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        520
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bd\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "81079d84-65b7-4788-b320-6615a3371ac5",
+      "name": "pesquisa_lead5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3000,
+        520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "aplicacoes",
+          "mode": "list",
+          "cachedResultName": "aplicacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead5\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "tempo_emprego_atual_p0",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}"
+            },
+            {
+              "column": "salario_p1",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}"
+            },
+            {
+              "column": "ultima_remuneracao_p2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}"
+            },
+            {
+              "column": "cargo_atual_p3",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}"
+            },
+            {
+              "column": "data_aplicacao",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "atrapalha_alcancar_objetivo_p4",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}"
+            },
+            {
+              "column": "escolaridade_p5",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}"
+            },
+            {
+              "column": "objetivo_este_ano_p6",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}"
+            },
+            {
+              "column": "maior_obstaculo_p7",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta7\"] }}"
+            },
+            {
+              "column": "resolver_desafio_p8",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "616e32a2-0c3a-4af0-b631-896098e9365c",
+      "name": "insert_data_aplicacao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2800,
+        520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "aplicacoes_2_utms",
+          "mode": "list",
+          "cachedResultName": "aplicacoes_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_aplicacao",
+              "value": "={{ $node[\"insert_data_aplicacao\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "queryBatching": "single",
+          "detailedOutput": true
+        }
+      },
+      "id": "5f020abf-2a81-457b-9418-4ee50983cb37",
+      "name": "insert_data_utm_aplicacao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2580,
+        520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "ebc770d3-e3f3-4629-9016-6a0533b58e00",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        -3000,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.fields.redelivered }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "4b990b69-0dc0-49c4-aea0-320a887ec14a",
+      "name": "segundo_ou_mais_erro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3200,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_data_data_lake\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "eefd64bb-c24b-4139-a872-aca45a19122d",
+      "name": "nao_encontrou_registro_hj_data_lake1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2160,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"verificacao_lead\"] }}"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "385c30f5-96e9-4267-9ff3-3ebd5b9f0c4a",
+      "name": "lead_ja_existia",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1840,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"verificacao_lead\"] }}"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "ceecd2a4-f620-4de5-bd07-061bbe1c138e",
+      "name": "lead_ja_existia4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1840,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "5eb5f3f3-595c-4fc3-9e28-397d86703419",
+      "name": "pesquisa_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2380,
+        520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead5\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "nivel_qualificacao",
+              "value": "Desqualificado"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "30afcfbf-3f1f-4a40-b809-e6e60bae29ba",
+      "name": "update_qualificacao_qualificado1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1140,
+        320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead5\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "nivel_qualificacao",
+              "value": "Desqualificado"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c2cb69ca-c689-46e7-8727-5a1c6532318f",
+      "name": "update_qualificacao_qualificado3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1140,
+        720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_fluxo_nao_agendou_10_min\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            },
+            {
+              "name": "pergunta0",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}"
+            },
+            {
+              "name": "pergunta1",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}"
+            },
+            {
+              "name": "pergunta2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}"
+            },
+            {
+              "name": "pergunta3",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}"
+            },
+            {
+              "name": "pergunta4",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}"
+            },
+            {
+              "name": "pergunta5",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}"
+            },
+            {
+              "name": "pergunta6",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}"
+            },
+            {
+              "name": "pergunta7",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta7\"] }}"
+            },
+            {
+              "name": "pergunta8",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"] }}"
+            },
+            {
+              "name": "pergunta9",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta9\"] }}"
+            },
+            {
+              "name": "pergunta10",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta10\"] }}"
+            },
+            {
+              "name": "pergunta11",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta11\"] }}"
+            },
+            {
+              "name": "pergunta12",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta12\"] }}"
+            },
+            {
+              "name": "pergunta13",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta13\"] }}"
+            },
+            {
+              "name": "pergunta14",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta14\"] }}"
+            },
+            {
+              "name": "pergunta15",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta15\"] }}"
+            },
+            {
+              "name": "pergunta16",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta16\"] }}"
+            },
+            {
+              "name": "pergunta17",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta17\"] }}"
+            },
+            {
+              "name": "pergunta18",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta18\"] }}"
+            },
+            {
+              "name": "pergunta19",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta19\"] }}"
+            },
+            {
+              "name": "pergunta20",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta20\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta0_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta1_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta2_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta3_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta4_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta5_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta6_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta7_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta8_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta9_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta9_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta10_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta10_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta11_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta11_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta12_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta12_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta13_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta13_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta14_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta14_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta15_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta15_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta16_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta16_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta17_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta17_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta18_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta18_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta19_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta19_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_pergunta20_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta20_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_ending_typeform\"] }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_banco_de_dados_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_iddealac_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_iddealac_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_idleadac_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_idleadac_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_source_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_campaign_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_term_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_medium_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_content_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_fun_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_var_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_instagram_bot_conversa\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_emailse_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_tag_desqualificado_bot_conversa\"] }}"
+            },
+            {
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_tag_qualificado_bot_conversa\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_resposta_type\"]}}"
+            },
+            {
+              "name": "id_campo_data_resposta_type_bot_conversa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_data_resposta_type_bot_conversa\"]}}"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qualificacao\"]}}"
+            },
+            {
+              "name": "id_lead_bd",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bd\"]}}"
+            },
+            {
+              "name": "id_lead_bc",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"]}}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_fluxo_nao_agendou_10_min_desqualificados\"] }}"
+            },
+            {
+              "name": "id_lead_activecampaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_activecampaign\"] }}"
+            },
+            {
+              "name": "id_deal_activecampaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_deal_activecampaign\"] }}"
+            },
+            {
+              "name": "id_sdr_crm",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_sdr_crm\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "33501689-94e6-40fc-9f24-e81b3cd9af19",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Não Agendamentos - Sessão - Parte 4 - Desqualificado",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "8851d546-6e29-4e0c-b89c-7f16735a5a30",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3420,
+        520
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "email": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+        "updateIfExists": true,
+        "additionalFields": {
+          "fieldValues": {
+            "property": [
+              {
+                "field": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_banco_de_dados_crm\"] }}",
+                "value": "={{ $node[\"pesquisa_lead5\"].json[\"id_lead\"] }}"
+              },
+              {
+                "field": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_bot_conversa_crm\"] }}",
+                "value": "={{ $node[\"pesquisa_lead5\"].json[\"id_botconversa\"] }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "54cce60d-e68d-4259-a771-8e029fff68d8",
+      "name": "add_id_banco1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        520
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://{{ $node[\"chega_da_fila\"].json[\"content\"][\"url_api_activecampaign_crm\"] }}.api-us1.com/api/3/deals/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_deal_activecampaign\"] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "activeCampaignApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"deal\": {\n\"fields\": [\n{\n\"customFieldId\": {{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_banco_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bd\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_bot_conversa_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}\"\n}\n]\n}\n}",
+        "options": {}
+      },
+      "id": "1e88de2f-4dbf-49d7-9e4c-1ab931897f2c",
+      "name": "atualiza_campos_deal2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -680,
+        520
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_aplicacoes",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_aplicacoes\"] + 1 }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "df848220-159f-44e8-b8b2-6bd429af8db6",
+      "name": "update_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1600,
+        820
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            },
+            {
+              "column": "qtd_aplicacoes",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "1d4f82e9-066f-456d-b4a8-a5f918a2e944",
+      "name": "insert_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1600,
+        420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_aplicacoes",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_aplicacoes\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "04e15d5b-c245-4c60-b57b-2b18166ea17c",
+      "name": "update_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1600,
+        600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            },
+            {
+              "column": "qtd_aplicacoes",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "79122433-6b43-4f26-bb6b-836d78e101bd",
+      "name": "insert_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1600,
+        220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "tagId": "190",
+        "contactId": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead_activecampaign\"] }}"
+      },
+      "id": "16536c9b-c7e3-4f8b-b0b3-2e94f473a6d1",
+      "name": "add_tag_qualif2",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        -1340,
+        320
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "tagId": "190",
+        "contactId": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead_activecampaign\"] }}"
+      },
+      "id": "66932186-3660-42ff-a6d5-6c0d58d81947",
+      "name": "add_tag_qualif",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        -1340,
+        720
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-vAtDVymjrKW-Lift9xjCJA",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Não Agendamentos - Sessão - Parte 4 - Desqualificado"
+          },
+          "properties": {
+            "headers": {}
+          },
+          "content": {
+            "verificacao_lead": false,
+            "Nome do Cliente": "Teste Correto",
+            "E-mail do Cliente": "vitorrqueiroztrafego@gmail.com",
+            "Telefone do Cliente - Formato BC": "+5519984574874",
+            "Telefone do Cliente - Formato Z-API": "5519984574874",
+            "utm_content": "content3",
+            "utm_source": "source1",
+            "utm_campaign": "campaign4",
+            "utm_medium": "medium2",
+            "utm_term": "term5",
+            "instagram": "",
+            "id_fluxo_nao_agendou_10_min": "",
+            "API-KEY": "e9072792-f5ae-4bce-8b48-f3e70109c213",
+            "pergunta0": "Mais de 6 anos",
+            "pergunta1": "Entre R$15.000 e R$19.999",
+            "pergunta2": "Entre R$4.000 e R$5.999",
+            "pergunta3": "Especialista",
+            "pergunta4": "Tenho pouco tempo na empresa que trabalho",
+            "pergunta5": "Pós-graduação",
+            "pergunta6": "objetivo este ano",
+            "pergunta7": "impede objetivo",
+            "pergunta8": "10",
+            "pergunta9": "",
+            "pergunta10": "",
+            "pergunta11": "",
+            "pergunta12": "",
+            "pergunta13": "",
+            "pergunta14": "",
+            "pergunta15": "",
+            "pergunta16": "",
+            "pergunta17": "",
+            "pergunta18": "",
+            "pergunta19": "",
+            "pergunta20": "",
+            "id_campo_pergunta0_bot_conversa": "1141321",
+            "id_campo_pergunta1_bot_conversa": "1141327",
+            "id_campo_pergunta2_bot_conversa": "1237033",
+            "id_campo_pergunta3_bot_conversa": "1141320",
+            "id_campo_pergunta4_bot_conversa": "2048353",
+            "id_campo_pergunta5_bot_conversa": "1141326",
+            "id_campo_pergunta6_bot_conversa": "1758470",
+            "id_campo_pergunta7_bot_conversa": "2249838",
+            "id_campo_pergunta8_bot_conversa": "2249840",
+            "id_campo_pergunta9_bot_conversa": "",
+            "id_campo_pergunta10_bot_conversa": "",
+            "id_campo_pergunta11_bot_conversa": "",
+            "id_campo_pergunta12_bot_conversa": "",
+            "id_campo_pergunta13_bot_conversa": "",
+            "id_campo_pergunta14_bot_conversa": "",
+            "id_campo_pergunta15_bot_conversa": "",
+            "id_campo_pergunta16_bot_conversa": "",
+            "id_campo_pergunta17_bot_conversa": "",
+            "id_campo_pergunta18_bot_conversa": "",
+            "id_campo_pergunta19_bot_conversa": "",
+            "id_campo_pergunta20_bot_conversa": "",
+            "url_api_activecampaign_crm": "futureminds14016",
+            "id_ending_typeform": "Desqualificado",
+            "id_campo_id_banco_de_dados_bot_conversa": "1333394",
+            "id_campo_iddealac_bot_conversa": "1343862",
+            "id_campo_idleadac_bot_conversa": "1343869",
+            "id_campo_utm_source_bot_conversa": "1139617",
+            "id_campo_utm_campaign_bot_conversa": "1139618",
+            "id_campo_utm_term_bot_conversa": "1139619",
+            "id_campo_utm_medium_bot_conversa": "1139620",
+            "id_campo_utm_content_bot_conversa": "1139622",
+            "id_campo_utm_fun_bot_conversa": "1374334",
+            "id_campo_utm_var_bot_conversa": "1374335",
+            "id_campo_instagram_bot_conversa": "",
+            "funil": "sessao estrategica",
+            "variacao_do_funil": "v1",
+            "data_ultima_quinzena": "2024-03-31",
+            "id_campo_emailse_bot_conversa": "1139626",
+            "id_tag_desqualificado_bot_conversa": "4929805",
+            "id_tag_qualificado_bot_conversa": "4891807",
+            "data_resposta_type": "15/04/2024 17:37",
+            "qualificacao": "Desqualificado",
+            "id_lead_bd": 2952,
+            "id_lead_bc": 396757924,
+            "id_fluxo_nao_agendou_10_min_desqualificados": "",
+            "id_lead_activecampaign": "12838",
+            "id_deal_activecampaign": "9859",
+            "id_campo_id_banco_deal_crm": "39",
+            "id_campo_id_bot_conversa_deal_crm": "71",
+            "id_campo_id_banco_de_dados_crm": "106",
+            "id_campo_id_bot_conversa_crm": "43",
+            "id_campo_dia_aplicou_se": "",
+            "dia_da_semana_se": "Segunda-feira"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-04-23T23:55:46.262Z",
+      "updatedAt": "2024-04-23T23:55:46.262Z",
+      "id": "yNSDHOw1YJWwN8cd",
+      "name": "[NAG]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-19T16:24:32.703Z",
+  "versionId": "b8ca9543-bb79-4ba8-b297-2aa1cd961430"
+}

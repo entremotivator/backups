@@ -1,0 +1,2724 @@
+{
+  "active": false,
+  "connections": {
+    "Evento Criado": {
+      "main": [
+        [
+          {
+            "node": "É Reagendamento1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É Reagendamento": {
+      "main": [
+        [
+          {
+            "node": "reagendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Evento Criado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É Reagendamento1": {
+      "main": [
+        [
+          {
+            "node": "Não faça nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelamento": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reagendamento": {
+      "main": [
+        [
+          {
+            "node": "formata_dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "numeros_de_teste": {
+      "main": [
+        [],
+        [
+          {
+            "node": "nao_faça_nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados_do_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados2": {
+      "main": [
+        [
+          {
+            "node": "dados_do_reagendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Deals da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Listar Pipelines e Status da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Pipelines e Status da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Consulta Users da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Deals da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consulta Users da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sessao_estrategica": {
+      "main": [
+        [
+          {
+            "node": "É Reagendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "aplicacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Tags da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tipos de Task da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "aplicacao": {
+      "main": [
+        [
+          {
+            "node": "É Reagendamento2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evento Criado1": {
+      "main": [
+        [
+          {
+            "node": "É Reagendamento3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É Reagendamento2": {
+      "main": [
+        [
+          {
+            "node": "reagendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Evento Criado1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados3": {
+      "main": [
+        [
+          {
+            "node": "dados_do_agendamento1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É Reagendamento3": {
+      "main": [
+        [
+          {
+            "node": "Não faça nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evento": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_do_agendamento": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_do_reagendamento": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_do_cancelamento": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_do_agendamento1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "sessao_estrategica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T01:25:25.137Z",
+  "id": "0lq5KXszKCTl9aRM",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🏆⌚[FUTURE MINDS] - Calendly - Parte 1",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"event\"] }}",
+              "value2": "invitee.created"
+            }
+          ]
+        }
+      },
+      "id": "d1820984-3eab-44e4-bdd9-6ed7ad22a5dd",
+      "name": "Evento Criado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"is_reschedule\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "4883d3f3-f72b-4f2a-8818-bd328ad2f7be",
+      "name": "É Reagendamento",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1080,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"old_invitee\"][\"is_reschedule\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "cd0a74f8-a6ad-44d0-a8e3-1eafa8d7e249",
+      "name": "É Reagendamento1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        1520
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "de133c10-4a6f-41d9-b952-590d3a519cf5",
+      "name": "Não faça nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -320,
+        1080
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "dbd85c23-e441-47d0-ae81-189927c53b73",
+      "name": "cancelamento",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1840
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4ea957b3-e0b1-492a-943e-32ef582b476e",
+      "name": "reagendamento",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        1260
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "eb59648c-8cb6-4b5f-b401-e1d75be426a8",
+      "name": "nao_faça_nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2240,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"payload\"][\"questions_and_responses\"][\"1_response\"] }}",
+              "value2": "+55 31 98493-9743"
+            },
+            {
+              "value1": "={{ $json[\"payload\"][\"questions_and_responses\"][\"1_response\"] }}",
+              "value2": "+55 31 98571-1260"
+            },
+            {
+              "value1": "={{ $json[\"payload\"][\"questions_and_responses\"][\"1_response\"] }}",
+              "value2": "+55 71 98160-6543"
+            },
+            {
+              "value1": "={{ $json[\"payload\"][\"questions_and_responses\"][\"1_response\"] }}",
+              "value2": "+55 14 99158-8346"
+            },
+            {
+              "value1": "={{ $json[\"payload\"][\"questions_and_responses\"][\"1_response\"] }}",
+              "value2": "+55 31 99958-0682"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "d3865d48-c30e-4eca-98cb-6934e792b76b",
+      "name": "numeros_de_teste",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Sessão Estratégica",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "c904c094-132f-4354-bfca-36ee8742cd9c",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1540
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = items[0].json.payload;\n\n// Pegar o parâmetro \"created_at\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst createdAt = new Date(payload.event.created_at);\nconst dataAgendamento = createdAt.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Pegar o parâmetro \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst startTime = new Date(payload.event.start_time);\nconst dataInicio = startTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 24 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete24h = new Date(startTime.getTime() - 24 * 60 * 60 * 1000);\nconst dataLembrete24h = lembrete24h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 2 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete2h = new Date(startTime.getTime() - 2 * 60 * 60 * 1000);\nconst dataLembrete2h = lembrete2h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Pegar o parâmetro \"end_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst endTime = new Date(payload.event.end_time);\nconst dataTermino = endTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Buscar o telefone nos campos do array \"questions_and_answers\" no objeto \"invitee\" e formatá-lo\nlet telefone = '';\nconst questionsAndAnswers = payload.questions_and_answers;\nfor (let i = 0; i < questionsAndAnswers.length; i++) {\n  const answer = questionsAndAnswers[i].answer;\n  if (/^[\\+\\s\\d-]+$/.test(answer)) {\n    telefone = answer.replace(/[\\+\\s-]/g, '');\n    break;\n  }\n}\n\n// Extrair o DDI a partir do telefone limpo\nconst ddi = telefone.slice(0, 2);\n\n// Verificar se o DDI é igual a 55\nif (ddi === '55') {\n  const ddd = telefone.slice(2, 4);\n  if (Number(ddd) > 28) {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-8).replace(/\\s/g, '');\n  } else {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-9).replace(/\\s/g, '');\n  }\n} else {\n  telefone = telefone.replace(/[\\+\\s-]/g, ''); // Tratar como número internacional\n}\n\n\n// Função para formatar a primeira letra de cada palavra em maiúsculo\nfunction formatarPrimeiraLetraMaiuscula(str) {\n  const palavras = str.toLowerCase().split(\" \");\n\n  for (let i = 0; i < palavras.length; i++) {\n    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);\n  }\n\n  return palavras.join(\" \");\n}\n\n// ...\n\n// Formatar o parâmetro \"name\" do objeto \"invitee\" com a primeira letra de cada palavra em maiúsculo\nconst name = formatarPrimeiraLetraMaiuscula(payload.invitee.name);\n\n// Validar se o parâmetro \"email\" é um email válido e colocar todas as letras em minúsculo\nconst email = payload.invitee.email.toLowerCase();\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n\n// Retornar os resultados\nreturn {\n  'Data em que foi feito o Agendamento': dataAgendamento,\n  'Data de Início': dataInicio,\n  'Lembrete 24h': dataLembrete24h,\n  'Lembrete 2h': dataLembrete2h,\n  'Data de Término': dataTermino,\n  'Telefone': telefone,\n  'Nome': name,\n  'Email válido': isEmailValid,\n  'Email': email\n};\n"
+      },
+      "id": "19187654-83dc-474e-9524-d170c91c630a",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = items[0].json.payload;\n\n// Acesse a data do JSON\nconst canceledAt = payload.event.canceled_at;\n\n// Crie um objeto de data a partir da string\nconst data = new Date(canceledAt);\n\n// Extraia o ano, mês e dia\nconst ano = data.getFullYear();\nconst mes = String(data.getMonth() + 1).padStart(2, '0'); // Adiciona zero à esquerda, se necessário\nconst dia = String(data.getDate()).padStart(2, '0');\n\n// Crie a string formatada no formato YYYY-MM-DD\nconst dataCancelamento = `${ano}-${mes}-${dia}`;\n\n// Buscar o telefone nos campos do array \"questions_and_answers\" no objeto \"invitee\" e formatá-lo\nlet telefone = '';\nconst questionsAndAnswers = payload.questions_and_answers;\nfor (let i = 0; i < questionsAndAnswers.length; i++) {\n  const answer = questionsAndAnswers[i].answer;\n  if (/^[\\+\\s\\d-]+$/.test(answer)) {\n    telefone = answer.replace(/[\\+\\s-]/g, '');\n    break;\n  }\n}\n\n// Extrair o DDI a partir do telefone limpo\nconst ddi = telefone.slice(0, 2);\n\n// Verificar se o DDI é igual a 55\nif (ddi === '55') {\n  const ddd = telefone.slice(2, 4);\n  if (Number(ddd) > 28) {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-8).replace(/\\s/g, '');\n  } else {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-9).replace(/\\s/g, '');\n  }\n} else {\n  telefone = telefone.replace(/[\\+\\s-]/g, ''); // Tratar como número internacional\n}\n\n// Função para formatar a primeira letra de cada palavra em maiúsculo\nfunction formatarPrimeiraLetraMaiuscula(str) {\n  const palavras = str.toLowerCase().split(\" \");\n\n  for (let i = 0; i < palavras.length; i++) {\n    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);\n  }\n\n  return palavras.join(\" \");\n}\n\n// Formatar o parâmetro \"name\" do objeto \"invitee\" com a primeira letra de cada palavra em maiúsculo\nconst name = formatarPrimeiraLetraMaiuscula(payload.invitee.name);\n\n// Retornar os resultados\nreturn {\n  'Telefone': telefone,\n  'Nome': name,\n  'Data do Cancelamento': dataCancelamento\n};\n"
+      },
+      "id": "33d01ad8-79e5-42e7-be57-e6dd9950627e",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = items[0].json.payload;\n\n// Pegar o parâmetro \"created_at\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst createdAt = new Date(payload.new_event.created_at);\nconst dataAgendamento = createdAt.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Acesse a data do JSON\nconst canceledAt = payload.invitee.canceled_at;\n\n// Crie um objeto de data a partir da string\nconst data = new Date(canceledAt);\n\n// Extraia o ano, mês e dia\nconst ano = data.getFullYear();\nconst mes = String(data.getMonth() + 1).padStart(2, '0'); // Adiciona zero à esquerda, se necessário\nconst dia = String(data.getDate()).padStart(2, '0');\n\n// Crie a string formatada no formato YYYY-MM-DD\nconst dataReagendamento = `${ano}-${mes}-${dia}`;\n\n\n// Pegar o parâmetro \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst startTime = new Date(payload.new_event.start_time);\nconst dataInicio = startTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 24 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete24h = new Date(startTime.getTime() - 24 * 60 * 60 * 1000);\nconst dataLembrete24h = lembrete24h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 2 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete2h = new Date(startTime.getTime() - 2 * 60 * 60 * 1000);\nconst dataLembrete2h = lembrete2h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Pegar o parâmetro \"end_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst endTime = new Date(payload.new_event.end_time);\nconst dataTermino = endTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Buscar o telefone nos campos do array \"questions_and_answers\" no objeto \"invitee\" e formatá-lo\nlet telefone = '';\nconst questionsAndAnswers = payload.questions_and_answers;\nfor (let i = 0; i < questionsAndAnswers.length; i++) {\n  const answer = questionsAndAnswers[i].answer;\n  if (/^[\\+\\s\\d-]+$/.test(answer)) {\n    telefone = answer.replace(/[\\+\\s-]/g, '');\n    break;\n  }\n}\n\n// Extrair o DDI a partir do telefone limpo\nconst ddi = telefone.slice(0, 2);\n\n// Verificar se o DDI é igual a 55\nif (ddi === '55') {\n  const ddd = telefone.slice(2, 4);\n  if (Number(ddd) > 28) {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-8).replace(/\\s/g, '');\n  } else {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-9).replace(/\\s/g, '');\n  }\n} else {\n  telefone = telefone.replace(/[\\+\\s-]/g, ''); // Tratar como número internacional\n}\n\n// Função para formatar o nome com a primeira letra de cada palavra em maiúsculo,\n// levando em consideração as letras com acentos\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .replace(/(?:^|\\s|[-'’])(\\S)/g, (match) => match.toUpperCase());\n}\n\n// Usar a função formatarNome para formatar o nome\nconst name = formatarNome(payload.new_invitee.name);\n// Validar se o parâmetro \"email\" é um email válido e colocar todas as letras em minúsculo\nconst email = payload.new_invitee.email.toLowerCase();\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n\n\n// Pegar o parâmetro \"created_at\" e converter para o formato YYYY-MM-DD\nconst newCreatedAt = new Date(payload.new_event.created_at);\nconst newDataAgendamento = newCreatedAt.toISOString().slice(0, 10);\n\n// Pegar o parâmetro \"start_time\" e converter para o formato YYYY-MM-DD\nconst newStartTime = new Date(payload.new_event.start_time);\nconst newDataInicio = newStartTime.toISOString().split('T')[0];\n\n// Retornar os resultados\nreturn {\n  'Data em que foi feito o Reagendamento': dataReagendamento,\n  'Data de Início': dataInicio,\n  'Lembrete 24h': dataLembrete24h,\n  'Lembrete 2h': dataLembrete2h,\n  'Data de Término': dataTermino,\n  'Telefone': telefone,\n  'Nome': name,\n  'Email válido': isEmailValid,\n  'Email': email,\n  'data_inicio_evento_novo': newDataInicio,\n  'data_agendamento_evento_novo': newDataAgendamento\n};\n"
+      },
+      "id": "049496a9-55b4-4241-b415-ea7bad891199",
+      "name": "formata_dados2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "6b469555-fe2d-406e-9c3d-a80e95e4ea4a",
+      "name": "cancelamento1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -2380,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "317c2a99-c064-4ecd-a880-013188743cc8",
+      "name": "reagendamento1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -2260,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados2\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "ID do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"uuid\"] }}"
+            },
+            {
+              "name": "Responsável pelo Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"extended_assigned_to\"][\"0\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Responsável",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('hiltoncaf@gmail.com','carolinafortaleza@gmail.com') }}"
+            },
+            {
+              "name": "Data de Início",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Data de Início\"].split('T')[0].replace(',','') }}"
+            },
+            {
+              "name": "Data em que foi feito o Reagendamento",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Data em que foi feito o Reagendamento\"] }}"
+            },
+            {
+              "name": "Data de Término",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Data de Término\"].replace(',','') }}"
+            },
+            {
+              "name": "Dia da Semana de Início do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"start_time_pretty\"].split(',')[0].split('- ')[1].replace('Monday','Segunda').replace('Tuesday','Terça').replace('Wednesday','Quarta').replace('Thursday','Quinta').replace('Friday','Sexta').replace('Saturday','Sábado').replace('Sunday','Domingo') }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "Motivo do Reagendamento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"cancel_reason\"] }}"
+            },
+            {
+              "name": "ID do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_invitee\"][\"uuid\"] }}"
+            },
+            {
+              "name": "ID do Evento Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"uuid\"] }}"
+            },
+            {
+              "name": "Tipo de Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"name\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e9072792-f5ae-4bce-8b48-f3e70109c213"
+            },
+            {
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "1139627"
+            },
+            {
+              "name": "id_do_campo_inviteeid_bot_conversa",
+              "value": "1139629"
+            },
+            {
+              "name": "id_do_campo_horario_agendado_bot_conversa",
+              "value": "1139625"
+            },
+            {
+              "name": "id_campo_data_do_agendamento_bot_conversa",
+              "value": "1139612"
+            },
+            {
+              "name": "id_do_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "1139616"
+            },
+            {
+              "name": "fluxo_de_confirmacao_de_reagendamento",
+              "value": "2360303"
+            },
+            {
+              "name": "Link da Reunião",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"location\"] }}"
+            },
+            {
+              "name": "ID do Cliente Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"uuid\"] }}"
+            },
+            {
+              "name": "data_de_inicio_antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[0] }}"
+            },
+            {
+              "name": "hora_de_inicio_antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "Link da Reunião Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"location\"] }}"
+            },
+            {
+              "name": "Dia da Semana de Início do Evento Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time_pretty\"].split(',')[0].split('- ')[1].replace('Monday','Segunda').replace('Tuesday','Terça').replace('Wednesday','Quarta').replace('Thursday','Quinta').replace('Friday','Sexta').replace('Saturday','Sábado').replace('Sunday','Domingo') }}"
+            },
+            {
+              "name": "Data do Agendamento Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"created_at\"].split('T')[0] }} {{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"created_at\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "Responsável pelo Evento Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Responsável Antigo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"] }}"
+            },
+            {
+              "name": "data_de_inicio_novo",
+              "value": "={{ $node[\"formata_dados2\"].json[\"data_inicio_evento_novo\"] }}"
+            },
+            {
+              "name": "data_agendamento_novo",
+              "value": "={{ $node[\"formata_dados2\"].json[\"data_agendamento_evento_novo\"] }} {{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"created_at\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "hora_de_inicio_novo",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"new_event\"][\"start_time\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1333394"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "funil",
+              "value": "sessao_estrategica"
+            },
+            {
+              "name": "id_campo_link_da_reuniao_bot_conversa",
+              "value": "1139628"
+            },
+            {
+              "name": "id_campo_email_closer_do_responsavel",
+              "value": "2257938"
+            },
+            {
+              "name": "id_campo_servico_escolhido_conversa",
+              "value": "1093702"
+            },
+            {
+              "name": "id_campo_closer_responsavel_bot_conversa",
+              "value": "1139623"
+            },
+            {
+              "name": "id_do_campo_idleadac_bot_conversa",
+              "value": "1343869"
+            },
+            {
+              "name": "id_do_campo_iddealac_bot_conversa",
+              "value": "1343862"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos",
+              "value": "840000"
+            },
+            {
+              "name": "id_pipeline_se_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_stage_agendou_reuniao_deal_crm",
+              "value": "73"
+            },
+            {
+              "name": "id_sdr_deal_crm",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('lilian.cidreira@futureminds.com.br','1').replace('paula.diel@futureminds.com.br','22').replace('gil.guerra@futureminds.com.br','26').replace('beatriz.borges@futureminds.com.br','28') }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_deal_crm",
+              "value": "39"
+            },
+            {
+              "name": "id_campo_link_de_cancelamento_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_campo_link_de_reagendamento_deal_crm",
+              "value": "15"
+            },
+            {
+              "name": "id_campo_id_do_cliente_deal_crm",
+              "value": "17"
+            },
+            {
+              "name": "id_campo_dia_semana_agendamento_deal_crm",
+              "value": "7"
+            },
+            {
+              "name": "id_campo_data_de_inicio_ac",
+              "value": "9"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_inicio_ac",
+              "value": "8"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_termino_ac",
+              "value": "18"
+            },
+            {
+              "name": "id_campo_data_de_termino_ac",
+              "value": "12"
+            },
+            {
+              "name": "id_campo_email_do_responsavel_ac",
+              "value": "11"
+            },
+            {
+              "name": "id_campo_data_do_agendamento_ac",
+              "value": "10"
+            },
+            {
+              "name": "id_campo_link_da_reuniao_ac",
+              "value": "13"
+            },
+            {
+              "name": "id_campo_tipo_de_evento_ac",
+              "value": "14"
+            },
+            {
+              "name": "id_campo_id_do_evento_ac",
+              "value": "6"
+            },
+            {
+              "name": "id_campo_utm_source_ac",
+              "value": "77"
+            },
+            {
+              "name": "id_campo_utm_campaign_ac",
+              "value": "76"
+            },
+            {
+              "name": "id_campo_utm_term_ac",
+              "value": "80"
+            },
+            {
+              "name": "id_campo_utm_medium_ac",
+              "value": "78"
+            },
+            {
+              "name": "id_campo_utm_content_ac",
+              "value": "79"
+            },
+            {
+              "name": "id_campo_utm_fun_ac",
+              "value": "40"
+            },
+            {
+              "name": "id_campo_utm_var_ac",
+              "value": "41"
+            },
+            {
+              "name": "id_task_reuniao_ac",
+              "value": "4"
+            },
+            {
+              "name": "id_campo_id_bot_conversa_deal_crm",
+              "value": "43"
+            },
+            {
+              "name": "id_campo_data_reagendamento_deal_crm",
+              "value": "84"
+            },
+            {
+              "name": "id_campo_motivo_reagendamento_deal_crm",
+              "value": "83"
+            },
+            {
+              "name": "id_pipeline_se_deal_crm_renovacao",
+              "value": "15"
+            },
+            {
+              "name": "id_stage_agendou_reuniao_deal_crm_renovacao",
+              "value": "68"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "67d2361f-beab-4c92-8747-88923edc5233",
+      "name": "dados_do_reagendamento",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -420,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node.formata_dados1.json.Telefone }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node.formata_dados1.json.Telefone }}"
+            },
+            {
+              "name": "ID do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"uuid\"] }}"
+            },
+            {
+              "name": "Data do Cancelamento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Data do Cancelamento\"] }}"
+            },
+            {
+              "name": "ID do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"uuid\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e9072792-f5ae-4bce-8b48-f3e70109c213"
+            },
+            {
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "1139627"
+            },
+            {
+              "name": "id_do_campo_inviteeid_bot_conversa",
+              "value": "1139629"
+            },
+            {
+              "name": "id_do_campo_horario_agendado_bot_conversa",
+              "value": "1139625"
+            },
+            {
+              "name": "id_do_campo_data_do_agendamento_bot_conversa",
+              "value": "1139612"
+            },
+            {
+              "name": "id_do_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "1139616"
+            },
+            {
+              "name": "fluxo_de_confirmacao_de_cancelamento",
+              "value": "2360305"
+            },
+            {
+              "name": "id_do_campo_motivo_do_cancelamento_bot_conversa",
+              "value": "1139614"
+            },
+            {
+              "name": "Motivo do Cancelamento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"cancel_reason\"] }}"
+            },
+            {
+              "name": "Data de Início",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[0] }}"
+            },
+            {
+              "name": "Hora de Início",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "Link da Reunião",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"location\"] }}"
+            },
+            {
+              "name": "Tipo de Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"name\"] }}"
+            },
+            {
+              "name": "Dia da Semana do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time_pretty\"].split(',')[0].split('- ')[1].replace('Monday','Segunda').replace('Tuesday','Terça').replace('Wednesday','Quarta').replace('Thursday','Quinta').replace('Friday','Sexta').replace('Saturday','Sábado').replace('Sunday','Domingo') }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "data_agendamento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"created_at\"].split('T')[0] }} {{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"created_at\"].split('T')[1].split('-')[0] }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1333394"
+            },
+            {
+              "name": "data_termino_ac",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[0] }}"
+            },
+            {
+              "name": "data_e_hora_de_termino",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[0].split('-')[2] }}/{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[0].split('-')[1] }}/{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[0].split('-')[0] }} {{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[1].split('-')[0].split(':')[0] }}:{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"end_time\"].split('T')[1].split('-')[0].split(':')[1] }}"
+            },
+            {
+              "name": "data_e_hora_de_inicio",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[0].split('-')[2] }}/{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[0].split('-')[1] }}/{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[0].split('-')[0] }} {{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[1].split('-')[0].split(':')[0] }}:{{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time\"].split('T')[1].split('-')[0].split(':')[1] }}"
+            },
+            {
+              "name": "funil",
+              "value": "sessao_estrategica"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "E-mail do Responsável",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('hiltoncaf@gmail.com','carolinafortaleza@gmail.com') }}"
+            },
+            {
+              "name": "Nome do Responsável",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"name\"] }}"
+            },
+            {
+              "name": "id_do_campo_idleadac_bot_conversa",
+              "value": "1343869"
+            },
+            {
+              "name": "id_do_campo_iddealac_bot_conversa",
+              "value": "1343862"
+            },
+            {
+              "name": "CAMPO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO BOT CONVERSA"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos",
+              "value": "840000"
+            },
+            {
+              "name": "id_pipeline_se_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_stage_no_show_deal_crm",
+              "value": "83"
+            },
+            {
+              "name": "id_sdr_deal_crm",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('lilian.cidreira@futureminds.com.br','1').replace('paula.diel@futureminds.com.br','22').replace('gil.guerra@futureminds.com.br','26').replace('beatriz.borges@futureminds.com.br','28') }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_deal_crm",
+              "value": "39"
+            },
+            {
+              "name": "id_campo_link_de_cancelamento_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_campo_link_de_reagendamento_deal_crm",
+              "value": "15"
+            },
+            {
+              "name": "id_campo_id_do_cliente_deal_crm",
+              "value": "17"
+            },
+            {
+              "name": "id_campo_dia_semana_agendamento_deal_crm",
+              "value": "7"
+            },
+            {
+              "name": "id_campo_data_de_inicio_ac",
+              "value": "9"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_inicio_ac",
+              "value": "8"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_termino_ac",
+              "value": "18"
+            },
+            {
+              "name": "id_campo_data_de_termino_ac",
+              "value": "12"
+            },
+            {
+              "name": "id_campo_email_do_responsavel_ac",
+              "value": "11"
+            },
+            {
+              "name": "id_campo_data_do_agendamento_ac",
+              "value": "10"
+            },
+            {
+              "name": "id_campo_link_da_reuniao_ac",
+              "value": "13"
+            },
+            {
+              "name": "id_campo_tipo_de_evento_ac",
+              "value": "14"
+            },
+            {
+              "name": "id_campo_id_do_evento_ac",
+              "value": "6"
+            },
+            {
+              "name": "id_campo_utm_source_ac",
+              "value": "77"
+            },
+            {
+              "name": "id_campo_utm_campaign_ac",
+              "value": "76"
+            },
+            {
+              "name": "id_campo_utm_term_ac",
+              "value": "80"
+            },
+            {
+              "name": "id_campo_utm_medium_ac",
+              "value": "78"
+            },
+            {
+              "name": "id_campo_utm_content_ac",
+              "value": "79"
+            },
+            {
+              "name": "id_campo_utm_fun_ac",
+              "value": "40"
+            },
+            {
+              "name": "id_campo_utm_var_ac",
+              "value": "41"
+            },
+            {
+              "name": "id_task_reuniao_ac",
+              "value": "4"
+            },
+            {
+              "name": "id_campo_motivo_cancelamento_deal_crm",
+              "value": "82"
+            },
+            {
+              "name": "id_campo_data_cancelamento_deal_crm",
+              "value": "81"
+            },
+            {
+              "name": "id_campo_id_bot_conversa_deal_crm",
+              "value": "71"
+            },
+            {}
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "c8ab7e39-e8a3-4dad-8b48-dab585645898",
+      "name": "dados_do_cancelamento",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -320,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Tipo de Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"name\"] }}"
+            },
+            {
+              "name": "ID do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"uuid\"] }}"
+            },
+            {
+              "name": "Responsável pelo Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Responsável",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('hiltoncaf@gmail.com','carolinafortaleza@gmail.com') }}"
+            },
+            {
+              "name": "Data de Início",
+              "value": "={{ $node[\"formata_dados\"].json[\"Data de Início\"].replace(',',' ') }}"
+            },
+            {
+              "name": "Data em que foi feito o Agendamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"Data em que foi feito o Agendamento\"].replace(',',' ') }}"
+            },
+            {
+              "name": "Data de Término",
+              "value": "={{ $node[\"formata_dados\"].json[\"Data de Término\"].replace(',',' ') }}"
+            },
+            {
+              "name": "Dia da Semana de Início do Evento",
+              "value": "={{                $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time_pretty\"].split(',')[0].split('- ')[1].replace('Monday','Segunda').replace('Tuesday','Terça').replace('Wednesday','Quarta').replace('Thursday','Quinta').replace('Friday','Sexta').replace('Saturday','Sábado').replace('Sunday','Domingo')                  }}"
+            },
+            {
+              "name": "Link da Reunião",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"location\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "ID do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"uuid\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e9072792-f5ae-4bce-8b48-f3e70109c213"
+            },
+            {
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "1139627"
+            },
+            {
+              "name": "fluxo_de_confirmacao_de_agendamento",
+              "value": "1869018"
+            },
+            {
+              "name": "id_campo_link_da_reuniao_bot_conversa",
+              "value": "1139628"
+            },
+            {
+              "name": "id_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "1139616"
+            },
+            {
+              "name": "id_campo_data_do_agendamento_bot_conversa",
+              "value": "1139612"
+            },
+            {
+              "name": "id_campo_horario_agendado_bot_conversa",
+              "value": "1139625"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1333394"
+            },
+            {
+              "name": "funil",
+              "value": "sessao_estrategica"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_campo_id_do_cliente_bot_conversa",
+              "value": "1139629"
+            },
+            {
+              "name": "id_campo_email_closer_do_responsavel",
+              "value": "2257938"
+            },
+            {
+              "name": "id_campo_servico_escolhido_conversa",
+              "value": "1093702"
+            },
+            {
+              "name": "id_campo_closer_responsavel_bot_conversa",
+              "value": "1139623"
+            },
+            {
+              "name": "id_do_campo_idleadac_bot_conversa",
+              "value": "1343869"
+            },
+            {
+              "name": "id_do_campo_iddealac_bot_conversa",
+              "value": "1343862"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "CAMPO PARA USO NO BOT CONVERSA"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos",
+              "value": "840000"
+            },
+            {
+              "name": "id_pipeline_se_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_stage_agendou_reuniao_deal_crm",
+              "value": "73"
+            },
+            {
+              "name": "id_sdr_deal_crm",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"].replace('lilian.cidreira@futureminds.com.br','1').replace('paula.diel@futureminds.com.br','22').replace('gil.guerra@futureminds.com.br','26').replace('beatriz.borges@futureminds.com.br','28') }}"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_deal_crm",
+              "value": "39"
+            },
+            {
+              "name": "id_campo_link_de_cancelamento_deal_crm",
+              "value": "16"
+            },
+            {
+              "name": "id_campo_link_de_reagendamento_deal_crm",
+              "value": "15"
+            },
+            {
+              "name": "id_campo_id_do_cliente_deal_crm",
+              "value": "17"
+            },
+            {
+              "name": "id_campo_dia_semana_agendamento_deal_crm",
+              "value": "7"
+            },
+            {
+              "name": "id_campo_data_de_inicio_ac",
+              "value": "9"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_inicio_ac",
+              "value": "8"
+            },
+            {
+              "name": "id_campo_data_e_hora_de_termino_ac",
+              "value": "18"
+            },
+            {
+              "name": "id_campo_data_de_termino_ac",
+              "value": "12"
+            },
+            {
+              "name": "id_campo_email_do_responsavel_ac",
+              "value": "11"
+            },
+            {
+              "name": "id_campo_data_do_agendamento_ac",
+              "value": "10"
+            },
+            {
+              "name": "id_campo_link_da_reuniao_ac",
+              "value": "13"
+            },
+            {
+              "name": "id_campo_tipo_de_evento_ac",
+              "value": "14"
+            },
+            {
+              "name": "id_campo_id_do_evento_ac",
+              "value": "6"
+            },
+            {
+              "name": "id_campo_utm_source_ac",
+              "value": "77"
+            },
+            {
+              "name": "id_campo_utm_campaign_ac",
+              "value": "76"
+            },
+            {
+              "name": "id_campo_utm_term_ac",
+              "value": "80"
+            },
+            {
+              "name": "id_campo_utm_medium_ac",
+              "value": "78"
+            },
+            {
+              "name": "id_campo_utm_content_ac",
+              "value": "79"
+            },
+            {
+              "name": "id_campo_utm_fun_ac",
+              "value": "40"
+            },
+            {
+              "name": "id_campo_utm_var_ac",
+              "value": "41"
+            },
+            {
+              "name": "id_task_reuniao_ac",
+              "value": "4"
+            },
+            {
+              "name": "id_campo_id_bot_conversa_deal_crm",
+              "value": "71"
+            },
+            {
+              "name": "id_pipeline_se_deal_crm_renovacao",
+              "value": "15"
+            },
+            {
+              "name": "id_stage_agendou_reuniao_deal_crm_renovacao",
+              "value": "68"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d1d3a70b-06f1-48f9-80f3-c0014481488e",
+      "name": "dados_do_agendamento",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n\nUtilize estes Nodes para Consultar o ID dos Campos do Deal e o ID das Pipelines e Stages no ActiveCampaign",
+        "height": 494.4652796495957,
+        "width": 1558.7543199104232
+      },
+      "id": "5468ac24-67c9-4910-8f94-027704d5647b",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1480,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealCustomFieldMeta",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Deals da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -1200,
+        520
+      ],
+      "id": "846e1cc2-b1e9-47f0-af15-d25fe72e6696"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealGroups",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Pipelines e Status da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -980,
+        520
+      ],
+      "id": "ddb185f5-de48-4584-a351-022846a30d34"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ab9b6bfc-4de7-4ec3-8f0a-d5cec4622854",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -1400,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/users",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e3061be2-94b3-497d-9602-1d6f5dc1f56a",
+      "name": "Consulta Users da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -760,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        520
+      ],
+      "id": "aeff721a-db2e-46ee-8b74-827307bdcdc6"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -540,
+        520
+      ],
+      "id": "3cb9a956-a0cd-4d92-a4a0-b827c7907312"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"slug\"] }}",
+              "value2": "xyz"
+            },
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"slug\"] }}",
+              "value2": "abc"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "ec417738-1a24-466d-a4db-f3c52498ee85",
+      "name": "eventos_permitidos",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1860,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Observação\n\n- Use esse node se o cliente tiver apenas alguns eventos do Calendly que devem entrar na automação",
+        "height": 318.2284579191374,
+        "width": 468.74007115902964
+      },
+      "id": "e1a26854-e80d-416c-9585-9b5004155afc",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2000,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Observação\n\n- Use esse node para permitir que apenas alguns números entrem na automação para testar",
+        "height": 318.2284579191374,
+        "width": 468.74007115902964
+      },
+      "id": "b33f72bb-e58e-4fe4-825a-6702440e2bab",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2540,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Observação\n\n- Use os Nodes abaixo para armazenar JSON de execuções de cancelamento e reagendamento para testes",
+        "height": 545.775102619946,
+        "width": 468.74007115902964
+      },
+      "id": "57b26772-7491-4b4d-b97d-5ec5bdcdf9e1",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2540,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"slug\"] }}",
+              "operation": "notEqual",
+              "value2": "aplicacao"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "5181af0e-5d58-4ca3-823b-323fc9e284a2",
+      "name": "sessao_estrategica",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1480,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "=aplicacaoaplicacao",
+              "operation": "contains",
+              "value2": "aplicacao"
+            }
+          ]
+        }
+      },
+      "id": "58fbf697-fd77-4423-91bf-62bdbbabb9ba",
+      "name": "aplicacao",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1320,
+        1640
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Reagendamentos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "7da494e4-0c62-47ab-9f69-5eafef3e8d3e",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        1260
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Cancelamentos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "0562fff0-282f-4036-bf9b-c4f5020bf503",
+      "name": "entra_na_fila2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        1840
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealTasktypes",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e8507357-0fb5-40fc-b45e-4910a4f5872f",
+      "name": "Listar Tipos de Task da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -140,
+        520
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "89a358bd-47c3-4252-befb-b39076396429",
+      "name": "nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1200,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"event\"] }}",
+              "value2": "invitee.created"
+            }
+          ]
+        }
+      },
+      "id": "545c3dfa-9025-4dff-a46d-ac277174a7d9",
+      "name": "Evento Criado1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        1940
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"is_reschedule\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "e2076558-498a-4e03-b6cf-55b119723fef",
+      "name": "É Reagendamento2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"Evento\"].json[\"payload\"][\"old_invitee\"][\"is_reschedule\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "a93a469d-a6de-49d0-aa9d-a5ca8b0f91ea",
+      "name": "É Reagendamento3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        2100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b5da5f83-bba3-4dc6-91c6-357b23938100",
+      "name": "Não faça nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Aplicação",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "d19c2e08-8e36-4d9c-ad50-a30126d1f34b",
+      "name": "entra_na_fila3",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        2180
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = items[0].json.payload;\n\n// Pegar o parâmetro \"created_at\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst createdAt = new Date(payload.event.created_at);\nconst dataAgendamento = createdAt.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Pegar o parâmetro \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst startTime = new Date(payload.event.start_time);\nconst dataInicio = startTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 24 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete24h = new Date(startTime.getTime() - 24 * 60 * 60 * 1000);\nconst dataLembrete24h = lembrete24h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Subtrair 2 horas do \"start_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst lembrete2h = new Date(startTime.getTime() - 2 * 60 * 60 * 1000);\nconst dataLembrete2h = lembrete2h.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Pegar o parâmetro \"end_time\" e converter para o formato DD/MM/YYYY HH:mm no fuso horário de São Paulo\nconst endTime = new Date(payload.event.end_time);\nconst dataTermino = endTime.toLocaleString('pt-BR', {\n  timeZone: 'America/Sao_Paulo',\n  day: '2-digit',\n  month: '2-digit',\n  year: 'numeric',\n  hour: '2-digit',\n  minute: '2-digit'\n});\n\n// Buscar o telefone nos campos do array \"questions_and_answers\" no objeto \"invitee\" e formatá-lo\nlet telefone = '';\nconst questionsAndAnswers = payload.questions_and_answers;\nfor (let i = 0; i < questionsAndAnswers.length; i++) {\n  const answer = questionsAndAnswers[i].answer;\n  if (/^[\\+\\s\\d-]+$/.test(answer)) {\n    telefone = answer.replace(/[\\+\\s-]/g, '');\n    break;\n  }\n}\n\n// Extrair o DDI a partir do telefone limpo\nconst ddi = telefone.slice(0, 2);\n\n// Verificar se o DDI é igual a 55\nif (ddi === '55') {\n  const ddd = telefone.slice(2, 4);\n  if (Number(ddd) > 28) {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-8).replace(/\\s/g, '');\n  } else {\n    telefone = '55' + telefone.slice(2, 4) + telefone.slice(-9).replace(/\\s/g, '');\n  }\n} else {\n  telefone = telefone.replace(/[\\+\\s-]/g, ''); // Tratar como número internacional\n}\n\n\n// Função para formatar a primeira letra de cada palavra em maiúsculo\nfunction formatarPrimeiraLetraMaiuscula(str) {\n  const palavras = str.toLowerCase().split(\" \");\n\n  for (let i = 0; i < palavras.length; i++) {\n    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);\n  }\n\n  return palavras.join(\" \");\n}\n\n// ...\n\n// Formatar o parâmetro \"name\" do objeto \"invitee\" com a primeira letra de cada palavra em maiúsculo\nconst name = formatarPrimeiraLetraMaiuscula(payload.invitee.name);\n\n// Validar se o parâmetro \"email\" é um email válido e colocar todas as letras em minúsculo\nconst email = payload.invitee.email.toLowerCase();\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n\n// Retornar os resultados\nreturn {\n  'Data em que foi feito o Agendamento': dataAgendamento,\n  'Data de Início': dataInicio,\n  'Lembrete 24h': dataLembrete24h,\n  'Lembrete 2h': dataLembrete2h,\n  'Data de Término': dataTermino,\n  'Telefone': telefone,\n  'Nome': name,\n  'Email válido': isEmailValid,\n  'Email': email\n};\n"
+      },
+      "id": "0fc1fb8b-4fda-4983-a052-d5dc542c411d",
+      "name": "formata_dados3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        2180
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados3\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Tipo de Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event_type\"][\"name\"] }}"
+            },
+            {
+              "name": "ID do Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"uuid\"] }}"
+            },
+            {
+              "name": "Responsável pelo Evento",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"name\"] }}"
+            },
+            {
+              "name": "E-mail do Responsável",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"extended_assigned_to\"][\"0\"][\"email\"] }}"
+            },
+            {
+              "name": "Data de Início",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Data de Início\"] }}"
+            },
+            {
+              "name": "Data em que foi feito o Agendamento",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Data em que foi feito o Agendamento\"] }}"
+            },
+            {
+              "name": "Data de Término",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Data de Término\"] }}"
+            },
+            {
+              "name": "Dia da Semana de Início do Evento",
+              "value": "={{                $node[\"Evento\"].json[\"payload\"][\"event\"][\"start_time_pretty\"].split(',')[0].split('- ')[1].replace('Monday','Segunda').replace('Tuesday','Terça').replace('Wednesday','Quarta').replace('Thursday','Quinta').replace('Friday','Sexta').replace('Saturday','Sábado').replace('Sunday','Domingo')                  }}"
+            },
+            {
+              "name": "Link da Reunião",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"event\"][\"location\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"tracking\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "ID do Cliente",
+              "value": "={{ $node[\"Evento\"].json[\"payload\"][\"invitee\"][\"uuid\"] }}"
+            },
+            {
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "1798742"
+            },
+            {
+              "name": "fluxo_de_confirmacao_de_agendamento"
+            },
+            {
+              "name": "API-KEY"
+            },
+            {
+              "name": "id_do_campo_link_da_reuniao_bot_conversa",
+              "value": "1798743"
+            },
+            {
+              "name": "id_do_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "1783350"
+            },
+            {
+              "name": "id_do_campo_data_do_agendamento_bot_conversa",
+              "value": "1798741"
+            },
+            {
+              "name": "id_do_campo_horario_agendado_bot_conversa",
+              "value": "1836528"
+            },
+            {
+              "name": "id_do_campo_id_banco_de_dados_bot_conversa",
+              "value": "1823034"
+            },
+            {
+              "name": "funil",
+              "value": "aplicacao_direta"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_do_campo_id_do_cliente_bot_conversa",
+              "value": "1798744"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f92f9116-278b-40b6-96ee-9b1f2c0a42e4",
+      "name": "dados_do_agendamento1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -320,
+        2180
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "7844f93a-4208-453f-bd66-e6e41bb3a40b",
+      "name": "agendamento",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -2480,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "scope": "organization",
+        "events": [
+          "invitee.created",
+          "invitee.canceled"
+        ]
+      },
+      "id": "7975107b-86d7-402c-9146-707afbbb3f81",
+      "name": "Evento",
+      "type": "n8n-nodes-base.calendlyTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        1400
+      ],
+      "webhookId": "945ee3d2-a828-4b8f-9b49-5175de6629d8",
+      "credentials": {
+        "calendlyApi": {
+          "id": "jXDdnsracFSzSfax",
+          "name": "[Calendly] - Future Minds"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "queue": "Fila Temporaria - Calendly",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "66c1b16b-b651-4bf2-b8f4-7fb1c08e9b51",
+      "name": "entra_na_fila4",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -1500,
+        1220
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "d9ca71b0-bab0-46b3-883f-68f0765d4d09",
+              "leftValue": "={{ $json[\"payload\"][\"event_type\"][\"name\"] }}",
+              "rightValue": "Sessão Sprint de Carreira - Reunião",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7cffd159-c2b3-4aa4-a998-f1ba6aeb80f3",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1740,
+        1400
+      ]
+    }
+  ],
+  "pinData": {
+    "agendamento": [
+      {
+        "json": {
+          "event": "invitee.created",
+          "payload": {
+            "event_type": {
+              "uuid": "353703ad-2262-48e9-afd2-1a3b25b80663",
+              "kind": "One-on-One",
+              "slug": "sprint-de-carreira",
+              "name": "Sessão Sprint de Carreira",
+              "duration": 30,
+              "owner": {
+                "type": "users",
+                "uuid": "4f8be891-24ad-45fb-b235-b3940c4cb5e1"
+              }
+            },
+            "event": {
+              "uuid": "45c31745-0143-407c-a923-557a3b4516f7",
+              "assigned_to": [
+                "Future Minds"
+              ],
+              "extended_assigned_to": [
+                {
+                  "name": "Future Minds",
+                  "email": "lilian.cidreira@futureminds.com.br",
+                  "primary": true
+                }
+              ],
+              "start_time": "2024-04-20T13:00:00-03:00",
+              "start_time_pretty": "01:00pm - Saturday, April 20, 2024",
+              "invitee_start_time": "2024-04-20T13:00:00-03:00",
+              "invitee_start_time_pretty": "01:00pm - Saturday, April 20, 2024",
+              "end_time": "2024-04-20T13:30:00-03:00",
+              "end_time_pretty": "01:30pm - Saturday, April 20, 2024",
+              "invitee_end_time": "2024-04-20T13:30:00-03:00",
+              "invitee_end_time_pretty": "01:30pm - Saturday, April 20, 2024",
+              "created_at": "2024-04-16T07:53:28-03:00",
+              "location": "https://calendly.com/events/45c31745-0143-407c-a923-557a3b4516f7/google_meet",
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            },
+            "invitee": {
+              "uuid": "34eabd05-5747-4ad1-ba4d-c89eb1290b5b",
+              "first_name": null,
+              "last_name": null,
+              "name": "Mariana",
+              "email": "mari.serpeloni@gmail.com",
+              "text_reminder_number": "+55 41 99875-1535",
+              "timezone": "America/Sao_Paulo",
+              "created_at": "2024-04-16T07:53:28-03:00",
+              "is_reschedule": false,
+              "payments": [],
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            },
+            "questions_and_answers": [
+              {
+                "question": "Telefone com WhatsApp",
+                "answer": "+55 41 99875-1535"
+              }
+            ],
+            "questions_and_responses": {
+              "1_question": "Telefone com WhatsApp",
+              "1_response": "+55 41 99875-1535"
+            },
+            "tracking": {
+              "utm_campaign": "_____",
+              "utm_source": "_____",
+              "utm_medium": "_____",
+              "utm_content": "_____",
+              "utm_term": "_____",
+              "salesforce_uuid": null
+            },
+            "old_event": null,
+            "old_invitee": null,
+            "new_event": null,
+            "new_invitee": null
+          },
+          "time": "2024-04-16T10:53:28Z"
+        }
+      }
+    ],
+    "reagendamento1": [
+      {
+        "json": {
+          "event": "invitee.canceled",
+          "payload": {
+            "event_type": {
+              "uuid": "5d20d458-6fea-4eee-ba51-6c545961d548",
+              "kind": "Round Robin",
+              "slug": null,
+              "name": "[Q] Sessão Sprint de Carreira",
+              "duration": 30,
+              "owner": {
+                "type": "organizations",
+                "uuid": null
+              }
+            },
+            "event": {
+              "uuid": "be30f457-5402-4f46-a2cf-07bb6e73aef9",
+              "assigned_to": [
+                "Gil Guerra"
+              ],
+              "extended_assigned_to": [
+                {
+                  "name": "Gil Guerra",
+                  "email": "gil.guerra@futureminds.com.br",
+                  "primary": true
+                }
+              ],
+              "start_time": "2024-04-19T08:00:00-03:00",
+              "start_time_pretty": "08:00am - Friday, April 19, 2024",
+              "invitee_start_time": "2024-04-19T08:00:00-03:00",
+              "invitee_start_time_pretty": "08:00am - Friday, April 19, 2024",
+              "end_time": "2024-04-19T08:30:00-03:00",
+              "end_time_pretty": "08:30am - Friday, April 19, 2024",
+              "invitee_end_time": "2024-04-19T08:30:00-03:00",
+              "invitee_end_time_pretty": "08:30am - Friday, April 19, 2024",
+              "created_at": "2024-04-18T13:47:44-03:00",
+              "location": "https://calendly.com/events/be30f457-5402-4f46-a2cf-07bb6e73aef9/google_meet",
+              "canceled": true,
+              "canceler_name": "Future Minds",
+              "cancel_reason": "teste reagendamento",
+              "canceled_at": "2024-04-18T13:50:24-03:00"
+            },
+            "invitee": {
+              "uuid": "9c606870-d564-4aff-b1fc-80af6696c16b",
+              "first_name": null,
+              "last_name": null,
+              "name": "Vitor Reagendamento",
+              "email": "vitorrqueiroztrafego@gmail.com",
+              "text_reminder_number": null,
+              "timezone": "America/Sao_Paulo",
+              "created_at": "2024-04-18T13:47:44-03:00",
+              "is_reschedule": true,
+              "payments": [],
+              "canceled": true,
+              "canceler_name": "Future Minds",
+              "cancel_reason": "teste reagendamento",
+              "canceled_at": "2024-04-18T13:50:24-03:00"
+            },
+            "questions_and_answers": [
+              {
+                "question": "Telefone com WhatsApp",
+                "answer": "+55 19 98457-4874"
+              }
+            ],
+            "questions_and_responses": {
+              "1_question": "Telefone com WhatsApp",
+              "1_response": "+55 19 98457-4874"
+            },
+            "tracking": {
+              "utm_campaign": null,
+              "utm_source": null,
+              "utm_medium": null,
+              "utm_content": null,
+              "utm_term": null,
+              "salesforce_uuid": null
+            },
+            "old_event": null,
+            "old_invitee": null,
+            "new_event": {
+              "uuid": "c535c4cf-dbda-4102-a8ed-dd48b4d4e046",
+              "assigned_to": [
+                "Gil Guerra"
+              ],
+              "extended_assigned_to": [
+                {
+                  "name": "Gil Guerra",
+                  "email": "gil.guerra@futureminds.com.br",
+                  "primary": true
+                }
+              ],
+              "start_time": "2024-04-20T14:00:00-03:00",
+              "start_time_pretty": "02:00pm - Saturday, April 20, 2024",
+              "invitee_start_time": "2024-04-20T14:00:00-03:00",
+              "invitee_start_time_pretty": "02:00pm - Saturday, April 20, 2024",
+              "end_time": "2024-04-20T14:30:00-03:00",
+              "end_time_pretty": "02:30pm - Saturday, April 20, 2024",
+              "invitee_end_time": "2024-04-20T14:30:00-03:00",
+              "invitee_end_time_pretty": "02:30pm - Saturday, April 20, 2024",
+              "created_at": "2024-04-18T13:50:24-03:00",
+              "location": "https://calendly.com/events/c535c4cf-dbda-4102-a8ed-dd48b4d4e046/google_meet",
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            },
+            "new_invitee": {
+              "uuid": "2f488f50-617b-4898-af79-af131d199fc5",
+              "first_name": null,
+              "last_name": null,
+              "name": "Vitor Reagendamento",
+              "email": "vitorrqueiroztrafego@gmail.com",
+              "text_reminder_number": null,
+              "timezone": "America/Sao_Paulo",
+              "created_at": "2024-04-18T13:50:24-03:00",
+              "is_reschedule": false,
+              "payments": [],
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            }
+          },
+          "time": "2024-04-18T16:50:24Z"
+        }
+      }
+    ],
+    "cancelamento1": [
+      {
+        "json": {
+          "event": "invitee.canceled",
+          "payload": {
+            "event_type": {
+              "uuid": "5d20d458-6fea-4eee-ba51-6c545961d548",
+              "kind": "Round Robin",
+              "slug": null,
+              "name": "[Q] Sessão Sprint de Carreira",
+              "duration": 30,
+              "owner": {
+                "type": "organizations",
+                "uuid": null
+              }
+            },
+            "event": {
+              "uuid": "a6198a3f-bc5a-4731-a4dd-6ef867046e7a",
+              "assigned_to": [
+                "Juliana Ramos"
+              ],
+              "extended_assigned_to": [
+                {
+                  "name": "Juliana Ramos",
+                  "email": "juliana.ramos@futureminds.com.br",
+                  "primary": true
+                }
+              ],
+              "start_time": "2024-04-16T10:00:00-03:00",
+              "start_time_pretty": "10:00am - Tuesday, April 16, 2024",
+              "invitee_start_time": "2024-04-16T10:00:00-03:00",
+              "invitee_start_time_pretty": "10:00am - Tuesday, April 16, 2024",
+              "end_time": "2024-04-16T10:30:00-03:00",
+              "end_time_pretty": "10:30am - Tuesday, April 16, 2024",
+              "invitee_end_time": "2024-04-16T10:30:00-03:00",
+              "invitee_end_time_pretty": "10:30am - Tuesday, April 16, 2024",
+              "created_at": "2024-04-14T01:02:42-03:00",
+              "location": "https://calendly.com/events/a6198a3f-bc5a-4731-a4dd-6ef867046e7a/google_meet",
+              "canceled": true,
+              "canceler_name": "Juliana Ramos",
+              "cancel_reason": null,
+              "canceled_at": "2024-04-16T08:32:04-03:00"
+            },
+            "invitee": {
+              "uuid": "b1bcd6a2-4f8f-4a34-9233-ef4c54f5fed5",
+              "first_name": null,
+              "last_name": null,
+              "name": "Pauliane ",
+              "email": "paulianebatista24@gmail.com",
+              "text_reminder_number": null,
+              "timezone": "America/Sao_Paulo",
+              "created_at": "2024-04-14T01:02:42-03:00",
+              "is_reschedule": false,
+              "payments": [],
+              "canceled": true,
+              "canceler_name": "Juliana Ramos",
+              "cancel_reason": null,
+              "canceled_at": "2024-04-16T08:32:04-03:00"
+            },
+            "questions_and_answers": [
+              {
+                "question": "Telefone com WhatsApp",
+                "answer": "+55 31 99590-0458"
+              }
+            ],
+            "questions_and_responses": {
+              "1_question": "Telefone com WhatsApp",
+              "1_response": "+55 31 99590-0458"
+            },
+            "tracking": {
+              "utm_campaign": "_____",
+              "utm_source": "_____",
+              "utm_medium": "_____",
+              "utm_content": "_____",
+              "utm_term": "_____",
+              "salesforce_uuid": null
+            },
+            "old_event": null,
+            "old_invitee": null,
+            "new_event": null,
+            "new_invitee": null
+          },
+          "time": "2024-04-16T11:32:04Z"
+        }
+      }
+    ],
+    "Evento": [
+      {
+        "json": {
+          "event": "invitee.created",
+          "payload": {
+            "event_type": {
+              "uuid": "63a1756a-0987-4bb3-9c54-2369c0adaf1e",
+              "kind": "Round Robin",
+              "slug": null,
+              "name": "Sessão Sprint de Carreira - Reunião",
+              "duration": 30,
+              "owner": {
+                "type": "organizations",
+                "uuid": null
+              }
+            },
+            "event": {
+              "uuid": "83279ef0-167c-47cf-9259-49c1835ab425",
+              "assigned_to": [
+                "Juliana Lopes"
+              ],
+              "extended_assigned_to": [
+                {
+                  "name": "Juliana Lopes",
+                  "email": "juliana.lopes@futureminds.com.br",
+                  "primary": true
+                }
+              ],
+              "start_time": "2024-07-19T12:00:00-03:00",
+              "start_time_pretty": "12:00pm - Friday, July 19, 2024",
+              "invitee_start_time": "2024-07-19T12:00:00-03:00",
+              "invitee_start_time_pretty": "12:00pm - Friday, July 19, 2024",
+              "end_time": "2024-07-19T12:30:00-03:00",
+              "end_time_pretty": "12:30pm - Friday, July 19, 2024",
+              "invitee_end_time": "2024-07-19T12:30:00-03:00",
+              "invitee_end_time_pretty": "12:30pm - Friday, July 19, 2024",
+              "created_at": "2024-07-18T15:41:27-03:00",
+              "location": "https://calendly.com/events/83279ef0-167c-47cf-9259-49c1835ab425/google_meet",
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            },
+            "invitee": {
+              "uuid": "2317f608-8fec-4a52-9a15-5bf48e35f5a3",
+              "first_name": null,
+              "last_name": null,
+              "name": "Vitor Queiroz de Almeida",
+              "email": "vitorrqueiroztrafego@gmail.com",
+              "text_reminder_number": null,
+              "timezone": "America/Sao_Paulo",
+              "created_at": "2024-07-18T15:41:27-03:00",
+              "is_reschedule": false,
+              "payments": [],
+              "canceled": false,
+              "canceler_name": null,
+              "cancel_reason": null,
+              "canceled_at": null
+            },
+            "questions_and_answers": [
+              {
+                "question": "Telefone com WhatsApp",
+                "answer": "+55 19 98457-4874"
+              }
+            ],
+            "questions_and_responses": {
+              "1_question": "Telefone com WhatsApp",
+              "1_response": "+55 19 98457-4874"
+            },
+            "tracking": {
+              "utm_campaign": null,
+              "utm_source": null,
+              "utm_medium": null,
+              "utm_content": null,
+              "utm_term": null,
+              "salesforce_uuid": null
+            },
+            "old_event": null,
+            "old_invitee": null,
+            "new_event": null,
+            "new_invitee": null
+          },
+          "time": "2024-07-18T18:41:27Z"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:Evento": {}
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T02:37:32.447Z",
+      "updatedAt": "2024-04-24T02:37:32.447Z",
+      "id": "vyeFDAo2U21qEbMD",
+      "name": "[CALENDLY]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-19T16:42:53.103Z",
+  "versionId": "2fb5a4d6-554f-4e35-af61-066223148860"
+}

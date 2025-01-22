@@ -1,0 +1,892 @@
+{
+  "active": false,
+  "connections": {
+    "everyday_7am": {
+      "main": [
+        [
+          {
+            "node": "dados_bc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamentos_do_dia": {
+      "main": [
+        [
+          {
+            "node": "inexistente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_via_id",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_via_id": {
+      "main": [
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cancelado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelado": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "busca_closer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "armazena": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados": {
+      "main": [
+        [
+          {
+            "node": "calculadora",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico1": {
+      "main": [
+        [
+          {
+            "node": "busca_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calculadora": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "limpa_dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamentos_do_dia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_closer": {
+      "main": [
+        [
+          {
+            "node": "armazena",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas1": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_closer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_closer": {
+      "main": [
+        [
+          {
+            "node": "respira1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "respira1": {
+      "main": [
+        [
+          {
+            "node": "limpa_closer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "limpa_closer": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico3": {
+      "main": [
+        [
+          {
+            "node": "busca_closers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas2": {
+      "main": [
+        [
+          {
+            "node": "armazena1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_closers": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "armazena1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_bc": {
+      "main": [
+        [
+          {
+            "node": "limpa_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T14:35:13.410Z",
+  "id": "5ndoyQIpkBTqEvV7",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete \"Reuniões Diárias\"",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "id": "0de129a5-5296-422d-9cac-8f564cfdba4f",
+      "name": "everyday_7am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1360,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $now.toFormat('dd/MM/yyyy').slice(6,10) }}-{{ $now.toFormat('dd/MM/yyyy').slice(3,5) }}-{{ $now.toFormat('dd/MM/yyyy').slice(0,2) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "ffd0e1ca-8dbb-4f1c-ae9b-fb5d85b6e2f1",
+      "name": "pesquisa_agendamentos_do_dia",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -880,
+        1120
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "cd6c92b1-2ab7-4e43-9179-273a6b458c6d",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "94e067d5-f86e-4335-b93e-e315a7267a3f",
+      "name": "pesquisa_lead_via_id",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -140,
+        1080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "9974d5a4-fe20-46ef-a8b6-054768e7a617",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "21b68521-afe1-4733-8aae-ae6dcad307b4",
+      "name": "inexistente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"status_evento\"] }}",
+              "value2": "Cancelado"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "74213cc4-730b-4836-84f5-f332bbba0e61",
+      "name": "cancelado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "7858093c-7f21-4aaf-a254-947ffef63b0b",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        20,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamento_diario",
+          "mode": "list",
+          "cachedResultName": "agendamento_diario"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"nome\"] }} {{ $node[\"pesquisa_lead_via_id\"].json[\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"hora_de_inicio\"].slice(0,5) }}"
+            },
+            {
+              "column": "link_da_reuniao",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"link_reuniao\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_responsavel\"] }}"
+            },
+            {
+              "column": "email_responsavel",
+              "value": "={{ $node[\"busca_closer\"].json[\"email\"] }}"
+            },
+            {
+              "column": "id_bot_conversa",
+              "value": "={{ $node[\"busca_closer\"].json[\"id_bot_conversa\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "afc7b560-1c09-4820-b064-a6c8e2194e3a",
+      "name": "armazena",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        360,
+        1080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamento_diario",
+          "mode": "list",
+          "cachedResultName": "agendamento_diario"
+        },
+        "limit": 500,
+        "options": {}
+      },
+      "id": "e27d6951-7534-4e28-838c-a6e3f0af5910",
+      "name": "busca_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        620,
+        1480
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "2871ddfe-65f8-4124-972b-04ec38131583",
+      "name": "item_unico1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        460,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const inputData = items.map((item) => item.json);\n\nconst closers = {};\nconst data = new Date($node[\"everyday_7am\"].json[\"timestamp\"].split(\"T\")[0]);\nconst datadodia = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`;\n\ninputData.forEach((agendamento) => {\n  const closerId = agendamento['id_responsavel'];\n  const closerNumber = `closer${closerId}`;\n  const closerBotID = agendamento['id_bot_conversa'];\n\n  if (!closers[closerNumber]) {\n    closers[closerNumber] = { agendamentos: [], closerBotID, count: 0 };\n  }\n\n  const telefone = agendamento['telefone'];\n  const email = agendamento['email'];\n\n  if (telefone || email) {\n    closers[closerNumber].agendamentos.push(agendamento);\n    closers[closerNumber].count += 1;\n  }\n});\n\n// Ordenar as chaves dos closers em ordem crescente (ordenando numericamente)\nconst sortedClosers = Object.keys(closers).sort((a, b) => {\n  const numA = parseInt(a.match(/\\d+/)[0]);\n  const numB = parseInt(b.match(/\\d+/)[0]);\n  return numA - numB;\n});\n\nconst mensagens = sortedClosers.map((closer) => {\n  const quantidade = closers[closer].count;\n  const mensagem = {\n    [closer]: closers[closer].closerBotID,\n    id_bc: closers[closer].closerBotID,\n    mensagem: quantidade > 0\n      ? `Relatório - Agendamentos de hoje - ${datadodia}\\n\\nQuantidade: ${quantidade}\\n\\n`\n      : `Relatório - Agendamentos de hoje - ${datadodia}\\n\\nQuantidade: 0\\n\\n`,\n  };\n\n  if (quantidade > 0) {\n    const agendamentos = closers[closer].agendamentos;\n    agendamentos.forEach((agendamento) => {\n      const telefone = agendamento['telefone'];\n      const email = agendamento['email'];\n      const hora_de_inicio = agendamento['hora_de_inicio'].slice(0, 5);\n      const link_da_reuniao = agendamento['link_da_reuniao'];\n      const linkWhatsApp = telefone ? `Link do WhatsApp: https://wa.me/${telefone}` : '';\n      mensagem.mensagem += `Cliente: ${agendamento['nome']}\\nEmail: ${email}\\nHorário: ${hora_de_inicio}\\nLink da Reunião: ${link_da_reuniao}\\nTelefone: ${telefone}\\n${linkWhatsApp}\\n----\\n`;\n    });\n  }\n\n  return mensagem;\n});\n\nreturn mensagens;\n"
+      },
+      "id": "6e6b0b11-5fb8-4bcd-8ce5-c61e8610ce60",
+      "name": "calculadora",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "agendamento_diario",
+          "mode": "list",
+          "cachedResultName": "agendamento_diario"
+        },
+        "options": {}
+      },
+      "id": "022f1e61-4dd5-42e1-8da7-5708096f89af",
+      "name": "limpa_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        1120
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_colaborador",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_responsavel\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "913805dc-1bb2-4813-a91b-29d45ec4bc79",
+      "name": "busca_closer",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        200,
+        1080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "15a91597-ec8d-4ae0-badd-d51ba7495bd5",
+      "name": "separa_em_linhas1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        920,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"separa_em_linhas1\"].json[\"id_bc\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"separa_em_linhas1\"].json[\"mensagem\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados_bc\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_msg_closer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        1380
+      ],
+      "id": "cceb40f0-0a52-4b9d-9874-218651995753"
+    },
+    {
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "7b728172-8ad5-4ea7-abaf-91e2507ee6bb",
+      "name": "respira1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1380
+      ],
+      "webhookId": "4a8a6198-9e4c-4497-ba89-58c9183b75a5"
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "agendamento_diario",
+          "mode": "list",
+          "cachedResultName": "agendamento_diario"
+        },
+        "deleteCommand": "delete",
+        "where": {
+          "values": [
+            {
+              "column": "id_bot_conversa",
+              "value": "={{ $node[\"separa_em_linhas1\"].json[\"id_bc\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6407ed74-cbf6-44f6-895a-c833a2a5032b",
+      "name": "limpa_closer",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1420,
+        1380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "e8424019-cf8a-450c-8b67-e58a41abee62",
+      "name": "item_unico3",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -140,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "41896190-153a-4f04-a756-5c7c4732d174",
+      "name": "separa_em_linhas2",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        200,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "limit": 500,
+        "options": {}
+      },
+      "id": "70046677-e69a-43e5-bcea-dc29e49137f6",
+      "name": "busca_closers",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        20,
+        1280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "table": {
+          "__rl": true,
+          "value": "agendamento_diario",
+          "mode": "list",
+          "cachedResultName": "agendamento_diario"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_responsavel",
+        "valueToMatchOn": "={{ $node[\"separa_em_linhas2\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_bot_conversa",
+              "value": "={{ $node[\"separa_em_linhas2\"].json[\"id_bot_conversa\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6db9f254-4677-48bd-b4a3-4dd5e092a566",
+      "name": "armazena1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        380,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "66aaec8d-34e6-424b-8d5a-1f9e1aa74628",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "e9072792-f5ae-4bce-8b48-f3e70109c213"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ca7b6c78-5be9-4fb6-bfdb-480b60905975",
+      "name": "dados_bc",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -1200,
+        1120
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:everyday_7am": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-04-24T14:36:04.306Z",
+  "versionId": "4fff3324-da14-4d18-bf6c-1bec69227bce"
+}

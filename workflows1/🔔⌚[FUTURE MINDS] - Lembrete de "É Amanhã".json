@@ -1,0 +1,1003 @@
+{
+  "active": false,
+  "connections": {
+    "infos_bot_conversa": {
+      "main": [
+        [
+          {
+            "node": "data_de_amanha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "sessao_estrategica1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamentos_do_dia": {
+      "main": [
+        [
+          {
+            "node": "inexistente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_via_id",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_via_id": {
+      "main": [
+        [
+          {
+            "node": "inexistente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_se": {
+      "main": [
+        [
+          {
+            "node": "cria_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_app": {
+      "main": [
+        [
+          {
+            "node": "cria_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_bc_existe": {
+      "main": [
+        [
+          {
+            "node": "sessao_estrategica",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cadastrar_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_se1": {
+      "main": [
+        [
+          {
+            "node": "cria_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_app1": {
+      "main": [
+        [
+          {
+            "node": "cria_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera_3_segundos": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "todo_dia_8pm": {
+      "main": [
+        [
+          {
+            "node": "infos_bot_conversa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data_de_amanha": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamentos_do_dia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cancelado_ou_reagendado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "id_bc_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sessao_estrategica": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_se",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_app",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sessao_estrategica1": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_se1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_app1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_lead": {
+      "main": [
+        [
+          {
+            "node": "add_tag_e_amanha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_e_amanha": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cancelado_ou_reagendado": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T14:32:36.524Z",
+  "id": "If1LEfePeUrvRGVT",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete de \"É Amanhã\"",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "e9072792-f5ae-4bce-8b48-f3e70109c213"
+            },
+            {
+              "name": "flow_de_lembrete_e_amanha_se",
+              "value": "1869042"
+            },
+            {
+              "name": "flow_de_lembrete_e_amanha_app",
+              "value": "1801580"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f508051d-e9cb-4210-915f-a9f28dd7b145",
+      "name": "infos_bot_conversa",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "=+{{ $node[\"pesquisa_lead_via_id\"].json[\"telefone\"].replace('+','') }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"nome\"] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"sobrenome\"] }}."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        1700
+      ],
+      "id": "6d6e12ba-cfcd-4c9e-bc9f-22fa1d75b784",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"data_de_amanha\"].json[\"amanha\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "0ff0d39d-8d69-4c7d-ac31-d14c215bb910",
+      "name": "pesquisa_agendamentos_do_dia",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -580,
+        1600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "1e3c23f1-4128-4c49-8b97-8fd7e1b1657d",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        40,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "56239ea8-e179-4547-aea2-a60e796e9c3b",
+      "name": "pesquisa_lead_via_id",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        260,
+        1540
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_e_amanha_se\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_se",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        1260
+      ],
+      "id": "8c8bb1ec-2d9f-41b4-ad79-2cd743b5c971",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_e_amanha_app\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_app",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        1440
+      ],
+      "id": "eb84cfa4-8957-4286-8f03-ad51afce11a5",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "d8eaa4e9-1c91-472f-94d8-51d5d620bf6d",
+      "name": "id_bc_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        820,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_e_amanha_se\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_se1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        1620
+      ],
+      "id": "51e6ca1b-a3d5-4ec2-8559-10d0ac253f97",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"flow_de_lembrete_e_amanha_app\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_app1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        1800
+      ],
+      "id": "d15dd567-9b8f-4fdc-956e-b45b62a55485",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "seconds"
+      },
+      "id": "cc0c42fa-aa9e-43bb-ac05-3bd1dedd4440",
+      "name": "espera_3_segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        1800
+      ],
+      "webhookId": "3f04edd2-2f7d-4b98-9635-32d743824e37"
+    },
+    {
+      "parameters": {},
+      "id": "1d9d3357-f617-44af-be39-b7b3547e1bc4",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        260,
+        1720
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 20
+            }
+          ]
+        }
+      },
+      "id": "b859aa2c-dd3b-47d4-8863-049f2268d732",
+      "name": "todo_dia_8pm",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1140,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const hoje = new Date();\nhoje.setHours(hoje.getHours() - 3); // Ajuste para o fuso horário de Brasília (GMT-3)\nhoje.setDate(hoje.getDate() + 1);\nconst dia = hoje.getDate();\nconst mes = hoje.getMonth() + 1;\nconst ano = hoje.getFullYear();\nconst dataAmanha = `${ano}-${mes.toString().padStart(2, '0')}-${dia.toString().padStart(2, '0')}`;\nreturn [{ amanha: dataAmanha }];\n"
+      },
+      "id": "03680971-798d-4439-9889-b7c949693160",
+      "name": "data_de_amanha",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        1600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b287a076-a81f-42ce-943a-81d1ff75fdd6",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "387585d8-6256-4dce-872a-7c4e7724dda5",
+      "name": "inexistente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "621aad9d-8ba4-42f1-9cef-f82e9783657b",
+      "name": "inexistente1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        440,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "cc7f3d62-99a4-4425-833a-41c1e7a824d8",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        640,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_linhas\"].json[\"servico\"] }}",
+              "operation": "contains",
+              "value2": "Sprint de Carreira"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "b7905e9f-d375-4d4a-ba4a-56f8f7a96feb",
+      "name": "sessao_estrategica",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"separa_em_linhas\"].json[\"servico\"] }}",
+              "operation": "contains",
+              "value2": "Sprint de Carreira"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "b5b87de0-0353-4237-93bb-b49919cb22c0",
+      "name": "sessao_estrategica1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "email": "={{ $node[\"pesquisa_lead_via_id\"].json[\"email\"] }}",
+        "updateIfExists": true,
+        "additionalFields": {}
+      },
+      "id": "d43698c5-94a3-429e-be8f-65c58ca5fac5",
+      "name": "cria_lead",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        1560
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "tagId": "161",
+        "contactId": "={{ $node[\"cria_lead\"].json[\"id\"] }}"
+      },
+      "id": "5d200daf-ce08-43ec-99cf-ab811858d0ca",
+      "name": "add_tag_e_amanha",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        1560
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags?limit=1000&search={{ $node[\"Set\"].json[\"tag_procurada\"] }}",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        1180
+      ],
+      "id": "ab9ebad0-2da8-4d51-a5ac-2d5f5a2ea9e3"
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n \nUtilize os Nodes Abaixo para consultar os IDs dos Campos e Tags no ActiveCampaign",
+        "height": 407.6377565498652,
+        "width": 747.0856205721786
+      },
+      "id": "463abbd2-a5e3-4e2b-87cf-21608ffa61dc",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1200,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -900,
+        1180
+      ],
+      "id": "5b7478d7-425e-4295-baec-9791b308fd24"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "tag_procurada",
+              "value": "EAmanha"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7c2c580c-825c-4709-a167-1e719f1b838b",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -1100,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"status_evento\"] }}",
+              "operation": "contains",
+              "value2": "Cancelado"
+            },
+            {
+              "value1": "={{ $node[\"pesquisa_agendamentos_do_dia\"].json[\"status_evento\"] }}",
+              "value2": "Reagendado"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "8af961f9-44ad-459c-b13c-39fcabebc2fb",
+      "name": "cancelado_ou_reagendado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1620
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:a_cada_hora1": {
+      "recurrencyRules": []
+    },
+    "node:2 min antes dos horarios de call1": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-04-24T14:33:21.625Z",
+  "versionId": "a2df7953-ef29-444e-a00f-cc4070a9f95e"
+}

@@ -1,0 +1,3263 @@
+{
+  "active": false,
+  "connections": {
+    "Listar Campos Personalizados de Deals da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Listar Pipelines e Status da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Pipelines e Status da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Consulta Users da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Deals da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consulta Users da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Tags da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tipos de Task da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta20": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_dia_aplicou",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta19": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta18": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta17": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta16": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta15": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta14": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta13": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta12": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta10": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta9": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta8": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta7": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta6": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta5": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta4": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta3": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta2": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta0": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segundo_ou_mais_erro": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_campo_id_banco_de_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_emailse1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta0",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_content1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_term1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_var": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_emailse1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_fun": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_var",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_medium1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_fun",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_source1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_medium1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_campaign1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_source1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_utm_term1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_campaign1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_id_banco_de_dados1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_id_lead_ac2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_instagram1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_utm_content1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_id_lead_ac2": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_id_deal_ac2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_id_deal_ac2": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_instagram1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_pergunta11": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_pergunta12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_dia_aplicou": {
+      "main": [
+        [
+          {
+            "node": "qualificado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agendamento_nao_existe": {
+      "main": [
+        [
+          {
+            "node": "é_aplicacao_com_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamento_menos_de_15d": {
+      "main": [
+        [
+          {
+            "node": "agendamento_nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "numeros_de_teste1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_menos_de_15d",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "10s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_tag_qualificado": {
+      "main": [
+        [
+          {
+            "node": "é_agendamento_sem_calendly",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_tag_medio_qualificado": {
+      "main": [
+        [
+          {
+            "node": "é_agendamento_sem_calendly",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "qualificado": {
+      "main": [
+        [
+          {
+            "node": "envia_tag_qualificado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_tag_medio_qualificado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s": {
+      "main": [
+        [
+          {
+            "node": "10s1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s1": {
+      "main": [
+        [
+          {
+            "node": "10s2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s2": {
+      "main": [
+        [
+          {
+            "node": "10s3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s3": {
+      "main": [
+        [
+          {
+            "node": "10s8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s4": {
+      "main": [
+        [
+          {
+            "node": "10s5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s5": {
+      "main": [
+        [
+          {
+            "node": "10s6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s6": {
+      "main": [
+        [
+          {
+            "node": "10s7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s7": {
+      "main": [
+        [
+          {
+            "node": "10s9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s8": {
+      "main": [
+        [
+          {
+            "node": "10s4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10s9": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_menos_de_15d",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "notificacao_bc_gislaine1": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_lilian",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_aplicacao_com_agendamento": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_gislaine_app3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "notificacao_bc_gislaine1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_agendamento_sem_calendly": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_gislaine_app2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "é_agendamento_sem_calendly_dados_finais",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_agendamento_sem_calendly_dados_finais": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_gislaine_app4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "numeros_de_teste1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "notificacao_bc_gislaine_app3": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_lilian_app1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "notificacao_bc_gislaine_app2": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_lilian1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "notificacao_bc_gislaine_app4": {
+      "main": [
+        [
+          {
+            "node": "notificacao_bc_lilian_app",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-05-28T13:50:44.545Z",
+  "id": "X9M1Kk4KpIz3arxm",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🏆⌚[FUTURE MINDS] - Aplicação Preenchida - Qualificado - Parte 5 [2.0]",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Para consulta\n\nUtilize estes Nodes para Consultar o ID dos Campos do Deal e o ID das Pipelines e Stages no ActiveCampaign",
+        "height": 494.4652796495957,
+        "width": 1510.0404531979405
+      },
+      "id": "bfa347e5-0140-4b5b-980e-9f605a76a6b1",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealCustomFieldMeta?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Deals da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1620,
+        400
+      ],
+      "id": "f28746a2-cd5a-419b-b2ba-8fda6e7c592f"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealGroups",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Pipelines e Status da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        400
+      ],
+      "id": "c68b8685-a9eb-4e20-9cf4-e6f7f5a5005d"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "d0aa5c89796c6403850c539dbd5bcb58ffc0f8c7ff28b9fc6be0c3b54a540a15403f99b1"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "gestaodesaloes67530"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "103d526e-e9fb-4ac2-b5b9-c1c5c3b20040",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/users",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c4e2475d-f42e-4da3-80b9-38ae6afdeffb",
+      "name": "Consulta Users da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2060,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n\nP0 = tem_recepcionista\nP1 = tamanho_da_equipe\nP2 = faturamento\nP3 = etapa_montar_salao\nP4 = objetivo_este_ano\nP5 = impede_objetivo\nP6 = porque_voce\nP7 = acompanhamento_unico\nP8 = nao_e_momento_ideal\nP9 = momento_atual\nP10 =\n\nProduto 1 = Precificações Lucrativa\nProduto 2 = 5 dimensões da Gestão",
+        "height": 494.4652796495957,
+        "width": 406.19790552805046
+      },
+      "id": "4ae28b1d-dd95-481a-8fd4-7c9efe14b661",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        900,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2260,
+        400
+      ],
+      "id": "8f819b82-efa8-4125-9d0d-7860af33d59f"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set1\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set1\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2460,
+        400
+      ],
+      "id": "620f422d-c9b0-44fc-90c8-6d769287b56f"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set1\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealTasktypes",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set1\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4512bafb-d59f-4a99-aad3-18c47e2455b3",
+      "name": "Listar Tipos de Task da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2660,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta20_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta20\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2a693f53-3546-4fd0-b607-01f8db76c1ad",
+      "name": "envia_campo_pergunta20",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2520,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta19_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta19\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dd0ed3bd-976d-4362-b6e8-3c2e4bde0972",
+      "name": "envia_campo_pergunta19",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2340,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta18_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta18\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "440e4300-25dc-4926-bc5b-4abb96263e83",
+      "name": "envia_campo_pergunta18",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta17_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta17\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cf8faa80-63b3-45d2-92b0-253bd7726097",
+      "name": "envia_campo_pergunta17",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1940,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta16_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta16\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aeff3455-4c04-47ff-9ad4-9f0b5ff68b81",
+      "name": "envia_campo_pergunta16",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1740,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta15_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta15\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3ddbd17c-7746-4c55-b7d9-490b91364e04",
+      "name": "envia_campo_pergunta15",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1540,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta14_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta14\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cf5b1ec9-270b-40fe-a481-e5d43bec32db",
+      "name": "envia_campo_pergunta14",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1300,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta13_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta13\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "89a2b0d3-5989-4ff5-9fc1-a846e5cbcbd0",
+      "name": "envia_campo_pergunta13",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta12_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta12\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f804b82f-86b7-420e-861d-65a6309f2366",
+      "name": "envia_campo_pergunta12",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        920,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta10_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta10\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f7b4c08a-bd6e-4387-8674-eeeac2efff38",
+      "name": "envia_campo_pergunta10",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2700,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta9_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta9\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8e1b0b7-015f-4f6b-ad6d-928c10e14efe",
+      "name": "envia_campo_pergunta9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2520,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta8_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "93d87048-3a10-48d2-8307-0e6c04551437",
+      "name": "envia_campo_pergunta8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2340,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta7_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta7\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "24362f6b-aef6-4d76-8245-53967f6771f1",
+      "name": "envia_campo_pergunta7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta6_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "560dfc7f-4813-4a46-a0dc-80630c16f609",
+      "name": "envia_campo_pergunta6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1940,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta5_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c5fa9134-5d9a-438c-88ab-41b3db0a3eab",
+      "name": "envia_campo_pergunta5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1740,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta4_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d49f976b-b25e-452c-9924-3e7d93711a78",
+      "name": "envia_campo_pergunta4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1540,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta3_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d5aea8c4-45e0-455a-a1e2-31a72312317b",
+      "name": "envia_campo_pergunta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1300,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta2_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8b0b2353-67cd-4109-9f49-4377959e3fab",
+      "name": "envia_campo_pergunta2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta1_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8cc6515e-74a2-41d6-822f-0fdbe0c656a2",
+      "name": "envia_campo_pergunta1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        920,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta0_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3cc8ae90-1724-475d-969c-97f88cf254cc",
+      "name": "envia_campo_pergunta0",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        700,
+        1540
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "683509d2-2a39-4adf-b3eb-bd9584c001ee",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.fields.redelivered }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "e37c9f48-82ba-4602-ae27-ddcb30bb6343",
+      "name": "segundo_ou_mais_erro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_emailse_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0c76b4e2-065e-4a2a-9ba6-95902ede6ad1",
+      "name": "envia_campo_emailse1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2880,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_content_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8553e96b-a446-4e5c-aa25-81c1a0dd4ee7",
+      "name": "envia_campo_utm_content1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1540,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_var_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de1652ff-393d-4e9c-ac06-301d29cb6d25",
+      "name": "envia_campo_utm_var",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2700,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_fun_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "34d96af6-ae8a-417c-a53e-2762a0f76d1c",
+      "name": "envia_campo_utm_fun",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2520,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_medium_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9283dc0a-0f94-4829-b96e-36b33ce44e12",
+      "name": "envia_campo_utm_medium1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2340,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_source_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "105a5d32-855b-4a79-9ecb-f209bd94bd87",
+      "name": "envia_campo_utm_source1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_campaign_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "84b2ab2e-9c3b-4243-871c-50b0e3c238f3",
+      "name": "envia_campo_utm_campaign1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1940,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_utm_term_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9e0974b7-79eb-4814-9320-f269a4e254cd",
+      "name": "envia_campo_utm_term1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1740,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_id_banco_de_dados_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json.content[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bd\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0adb3293-3cc2-4874-88b1-fde56f627419",
+      "name": "envia_campo_id_banco_de_dados1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        700,
+        1320
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_instagram_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "061a0b7f-0946-4eb9-8266-ccfc29b7f57d",
+      "name": "envia_campo_instagram1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "queue": "Não Agendamentos - Sessão - Parte 5 - Qualificado 2.0",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": true,
+          "parallelMessages": 3
+        }
+      },
+      "id": "c3c7b8aa-8fdb-4b0f-99bc-1ebae5937ebf",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        280,
+        1300
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_idleadac_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json.content[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_activecampaign\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "870329a3-c666-4e34-b2aa-891c4d4405f2",
+      "name": "envia_campo_id_lead_ac2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        920,
+        1320
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_iddealac_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json.content[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_deal_activecampaign\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "00bd6535-df19-4e80-b37c-efe9ef100f8b",
+      "name": "envia_campo_id_deal_ac2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1320
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_pergunta11_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta11\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "427ed030-4330-47d9-a931-1225103968e4",
+      "name": "envia_campo_pergunta11",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        700,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/custom_fields/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dia_aplicou_se\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dia_da_semana_se\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "39f8633f-de79-4619-ac2e-108a138b41e6",
+      "name": "envia_campo_dia_aplicou",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2720,
+        1760
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamento_menos_de_15d\"].json[\"data\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1194145d-bb8e-44ce-b63b-7f02265dc592",
+      "name": "agendamento_nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5360,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM agendamentos\nWHERE id_lead = {{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bd\"] }}\nAND data_de_inicio > {{ $node[\"chega_da_fila\"].json[\"content\"][\"data_ultima_quinzena\"] }}\nAND data_de_inicio <> CURDATE();\n",
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "6e766367-c240-4bec-b0bc-9f3681a54278",
+      "name": "pesquisa_agendamento_menos_de_15d",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5160,
+        1740
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "value2": "5519984574874"
+            },
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "value2": "5519982022213"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "2f257511-f56e-44d1-b086-be45c1e5bb4f",
+      "name": "numeros_de_teste1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4060,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/tags/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_tag_qualificado_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4212359f-1146-40fe-b441-aa333e292d86",
+      "name": "envia_tag_qualificado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        3140,
+        1680
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_lead_bc\"] }}/tags/{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_tag_medio_qualificado_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e8b5db72-b20a-402e-9942-fa5e5c717cbd",
+      "name": "envia_tag_medio_qualificado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        3140,
+        1820
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_ending_typeform\"] }}",
+              "value2": "Qualificado"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "9084feab-5ccb-44bc-acdf-fd27316015eb",
+      "name": "qualificado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/239409865/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO NÃO AGENDOU*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação e não agendou.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_lilian",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        1640
+      ],
+      "id": "fe1618a0-cb0f-4305-b4f7-58ae1ccf3573",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "41df28ed-4523-4c78-bb43-02cfc8c93c18",
+      "name": "10s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4300,
+        1900
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "f1827d6a-9b23-469f-af68-c4b69614a4b2",
+      "name": "10s1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4460,
+        1900
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "32828a7b-8a59-4226-ae79-aad79a1b37d8",
+      "name": "10s2",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4600,
+        1900
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "959b4712-e8b5-4db9-9463-1460f69033bc",
+      "name": "10s3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4760,
+        1900
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "16b79897-a2b1-4e1e-a5d0-034592970491",
+      "name": "10s4",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4300,
+        2120
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "262114f9-c577-4e56-a5dc-a26758ccfc5d",
+      "name": "10s5",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4460,
+        2120
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "5fa875d0-26c8-40ea-b178-0eee21ab41b5",
+      "name": "10s6",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4600,
+        2120
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "79289f7e-1e9f-4d88-b4b1-414f706688c2",
+      "name": "10s7",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4760,
+        2120
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "b8ce76c3-f48c-419e-8d54-bf357901629f",
+      "name": "10s8",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4920,
+        1900
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "amount": 10,
+        "unit": "seconds"
+      },
+      "id": "ad827133-ae08-4474-9201-fe9e2642124c",
+      "name": "10s9",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        4920,
+        2120
+      ],
+      "webhookId": "f21b9a3d-af46-48a8-b137-b38969a27d0e"
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/381310138/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO NÃO AGENDOU - APLICAÇÃO 1*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação e não agendou.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_gislaine1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        5760,
+        1640
+      ],
+      "id": "bd188c80-1d12-48b8-9ad8-a87e4768a3aa",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {},
+      "id": "daacbe3a-c3c6-46ed-83ea-33100547cc30",
+      "name": "Fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        5620,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "2cbe6110-2b1a-4706-82e7-52ff3cd6eae1",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}",
+              "rightValue": "aplicacao3_com_calendly",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7f8fe3ef-026d-4fdd-9f19-3d7f5a7f2547",
+      "name": "é_aplicacao_com_agendamento",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        5540,
+        1560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}",
+              "value2": "aplicacao_sem_calendly_aplicacao2"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a034f467-7151-402c-b557-f32680cad545",
+      "name": "é_agendamento_sem_calendly",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}",
+              "value2": "aplicacao_sem_calendly_aplicacao4"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a783ca06-4062-4484-b9bf-4f7d5e681e3b",
+      "name": "é_agendamento_sem_calendly_dados_finais",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3780,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/381310138/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO NÃO AGENDOU C/ CALENDLY - APLICAÇÃO 3*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação e não agendou.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_gislaine_app3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        5760,
+        1480
+      ],
+      "id": "7a581649-6901-4d83-9c32-3c6fbd72572f",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/381310138/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO DO FUNIL SEM CALENDLY - APLICAÇÃO 2*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_gislaine_app2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3540,
+        1580
+      ],
+      "id": "f9355ff5-3023-4d1b-b432-bba73c639e74",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/381310138/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO DO FUNIL SEM CALENDLY - APLICAÇÃO 4*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_gislaine_app4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3940,
+        1580
+      ],
+      "id": "5ed9ca22-b010-4daa-b595-21b49d0fb46f",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/239409865/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO DO FUNIL SEM CALENDLY - APLICAÇÃO 2*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_lilian1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3720,
+        1580
+      ],
+      "id": "2014330e-7c35-4a94-8d5f-90c19b738ff1",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/239409865/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO DO FUNIL SEM CALENDLY - APLICAÇÃO 4*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_lilian_app",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        4140,
+        1580
+      ],
+      "id": "84e8afd2-61d6-411c-93f5-3dd6cb46deae",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/239409865/send_message/",
+        "jsonParameters": "={{ false }}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *LEAD QUALIFICADO NÃO AGENDOU C/ CALENDLY - APLICAÇÃO 3*\n\nO cliente {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}, finalizou a aplicação e não agendou.\n\n🚨 Entre em contato com o Lead e ajude-o a realizar o agendamento assim que possível.\n\n.................................\n*Nome do Cliente:* {{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\n*Telefone do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\n*E-mail do Cliente:* +{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\n*Link do WhatsApp:* wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notificacao_bc_lilian_app1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        1480
+      ],
+      "id": "988a0776-8ca8-47c9-99be-c54ffe176cd4",
+      "continueOnFail": true
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-mY1uEdFn0eeuO0IsulALHw",
+            "deliveryTag": 2,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Não Agendamentos - Sessão - Parte 5 - Qualificado 2.0"
+          },
+          "properties": {
+            "headers": {}
+          },
+          "content": {
+            "Nome do Cliente": "Teste",
+            "E-mail do Cliente": "vitorrqueiroztrafego@gmail.com",
+            "Telefone do Cliente - Formato BC": "+5519984574874",
+            "Telefone do Cliente - Formato Z-API": "5519984574874",
+            "utm_content": "xxxxx",
+            "utm_source": "xxxxx",
+            "utm_campaign": "xxxxx",
+            "utm_medium": "xxxxx",
+            "utm_term": "xxxxx",
+            "instagram": "",
+            "id_fluxo_nao_agendou_10_min": "",
+            "API-KEY": "e9072792-f5ae-4bce-8b48-f3e70109c213",
+            "pergunta0": "Entre 2 e 4 anos",
+            "pergunta1": "Acima de R$20.000",
+            "pergunta2": "",
+            "pergunta3": "Coordenador",
+            "pergunta5": "Doutorado",
+            "pergunta6": "teste",
+            "pergunta7": "A empresa só valoriza quem vem do mercado",
+            "pergunta8": 10,
+            "pergunta9": "",
+            "pergunta10": "",
+            "pergunta11": "",
+            "pergunta12": "",
+            "pergunta13": "",
+            "pergunta14": "",
+            "pergunta15": "",
+            "pergunta16": "",
+            "pergunta17": "",
+            "pergunta18": "",
+            "pergunta19": "",
+            "pergunta20": "",
+            "id_campo_pergunta0_bot_conversa": "1141321",
+            "id_campo_pergunta1_bot_conversa": "1141327",
+            "id_campo_pergunta2_bot_conversa": "1237033",
+            "id_campo_pergunta3_bot_conversa": "1141320",
+            "id_campo_pergunta4_bot_conversa": "2048353",
+            "id_campo_pergunta5_bot_conversa": "1141326",
+            "id_campo_pergunta6_bot_conversa": "1758470",
+            "id_campo_pergunta7_bot_conversa": "2249838",
+            "id_campo_pergunta8_bot_conversa": "2249840",
+            "id_campo_pergunta9_bot_conversa": "",
+            "id_campo_pergunta10_bot_conversa": "",
+            "id_campo_pergunta11_bot_conversa": "",
+            "id_campo_pergunta12_bot_conversa": "",
+            "id_campo_pergunta13_bot_conversa": "",
+            "id_campo_pergunta14_bot_conversa": "",
+            "id_campo_pergunta15_bot_conversa": "",
+            "id_campo_pergunta16_bot_conversa": "",
+            "id_campo_pergunta17_bot_conversa": "",
+            "id_campo_pergunta18_bot_conversa": "",
+            "id_campo_pergunta19_bot_conversa": "",
+            "id_campo_pergunta20_bot_conversa": "",
+            "id_ending_typeform": "Qualificado",
+            "id_campo_id_banco_de_dados_bot_conversa": "1333394",
+            "id_campo_iddealac_bot_conversa": "1343862",
+            "id_campo_idleadac_bot_conversa": "1343869",
+            "id_campo_utm_source_bot_conversa": "1139617",
+            "id_campo_utm_campaign_bot_conversa": "1139618",
+            "id_campo_utm_term_bot_conversa": "1139619",
+            "id_campo_utm_medium_bot_conversa": "1139620",
+            "id_campo_utm_content_bot_conversa": "1139622",
+            "id_campo_utm_fun_bot_conversa": "1374334",
+            "id_campo_utm_var_bot_conversa": "1374335",
+            "id_campo_instagram_bot_conversa": "",
+            "funil": "sessao estrategica",
+            "variacao_do_funil": "aplicacao_sem_calendly_aplicacao4",
+            "data_ultima_quinzena": "2024-05-14",
+            "id_campo_emailse_bot_conversa": "1139626",
+            "id_tag_desqualificado_bot_conversa": "4929805",
+            "id_tag_qualificado_bot_conversa": "4891807",
+            "data_resposta_type": "29/05/2024 15:46",
+            "qualificacao": "Qualificado",
+            "id_lead_bd": 3630,
+            "id_lead_bc": 445130242,
+            "id_tag_medio_qualificado_bot_conversa": "5175766",
+            "id_lead_activecampaign": "13439",
+            "id_deal_activecampaign": "10545",
+            "id_campo_dia_aplicou_se": "",
+            "dia_da_semana_se": "Quarta-feira",
+            "id_sdr_crm": "24"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-04-23T23:55:46.262Z",
+      "updatedAt": "2024-04-23T23:55:46.262Z",
+      "id": "yNSDHOw1YJWwN8cd",
+      "name": "[NAG]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-19T16:24:31.028Z",
+  "versionId": "594c9320-5708-459e-98e7-51b5eec07489"
+}

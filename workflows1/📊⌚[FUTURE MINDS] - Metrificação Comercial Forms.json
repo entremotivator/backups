@@ -1,0 +1,5567 @@
+{
+  "active": true,
+  "connections": {
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe3": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_calls_realizadas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake6": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake12": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_calls_realizadas": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake3": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake3": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamento": {
+      "main": [
+        [
+          {
+            "node": "update_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe4": {
+      "main": [
+        [
+          {
+            "node": "insere_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer": {
+      "main": [
+        [
+          {
+            "node": "nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_produto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_produto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_faturamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_closer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia1": {
+      "main": [
+        [
+          {
+            "node": "produto1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "produto2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_faturamento1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_faturamento": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake6": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake7": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_faturamento1": {
+      "main": [
+        [
+          {
+            "node": "produto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_utm_lead": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_conversao2": {
+      "main": [
+        [
+          {
+            "node": "cria_utm_conversao1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_utm_conversao1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_produto": {
+      "main": [
+        [
+          {
+            "node": "nao_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_produto": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_utm_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe2": {
+      "main": [
+        [
+          {
+            "node": "insert_data_produto",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_utm_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead1": {
+      "main": [
+        [
+          {
+            "node": "dias_para_conversao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dias_para_conversao": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada9": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_conversao2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_conversao": {
+      "main": [
+        [
+          {
+            "node": "cria_utm_conversao1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "forms_preenchido": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake8": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada1": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista1": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake9": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada2": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista2": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake14": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada3": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista3": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake15": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada6": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista6": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada7": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista7": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada8": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista8": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista9": {
+      "main": [
+        [
+          {
+            "node": "cria_conversao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_conversao1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_conversao1": {
+      "main": [
+        [
+          {
+            "node": "cria_utm_conversao1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "forms_preenchido1": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "forms_preenchido2": {
+      "main": [
+        [
+          {
+            "node": "formata_dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake20": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake21": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake22": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake23": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada10": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake24",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista10": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake20",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake24": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada11": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista11": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake21",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake25": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "produto": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "produto2": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake26": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake27": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada12": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake28",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista12": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake26",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake27",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake28": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake8": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada4": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista4": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake16": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "produto1": {
+      "main": [
+        [
+          {
+            "node": "n_teve_entrada2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "n_teve_entrada4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_teve_entrada13": {
+      "main": [
+        [
+          {
+            "node": "n_foi_a_vista13",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake29",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n_foi_a_vista13": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T17:08:39.517Z",
+  "id": "pFVHRrj6iGK8dXMo",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "📊⌚[FUTURE MINDS] - Metrificação Comercial Forms",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Função para formatar a primeira letra de cada palavra em maiúsculo\nfunction formatarPrimeiraLetraMaiuscula(str) {\n  if (!str) {\n    return \"\"; // Retorna uma string vazia se o campo estiver vazio\n  }\n\n  const palavras = str.toLowerCase().split(\" \");\n\n  for (let i = 0; i < palavras.length; i++) {\n    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);\n  }\n\n  return palavras.join(\" \");\n}\n\n\nconst vendedor = formatarPrimeiraLetraMaiuscula($node[\"forms_preenchido1\"].json[\"body\"][\"Qual é o seu nome?\"]) || '';\nconst calls_agendadas = parseFloat($node[\"forms_preenchido1\"].json[\"body\"][\"Quantas calls você tinha marcadas na sua agenda para hoje?\"].replace(',','.'));\nconst calls_realizadas = parseFloat($node[\"forms_preenchido1\"].json[\"body\"][\"Quantas calls você fez hoje? \"].replace(',','.'));\nconst noshow = parseFloat($node[\"forms_preenchido1\"].json[\"body\"][\"Quantos no-shows você teve hoje? \"].replace(',','.'));\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  vendedor,\n  calls_agendadas,\n  calls_realizadas,\n  noshow\n  };\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;"
+      },
+      "id": "749dae3b-afee-44eb-b45f-7dac66afcd2e",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -5140,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"formata_dados1\"].json[\"vendedor\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "7ca27479-1c57-4c97-a3b4-48e2e1c26da8",
+      "name": "pesquisa_closer1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4960,
+        2600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer1\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "c0d217f7-811b-4dc1-8695-bea6749af616",
+      "name": "nao_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4740,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"forms_preenchido1\"].json[\"body\"][\"Qual é o seu nome?\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "80f1bc44-7469-4f6c-89bf-6fc268b58050",
+      "name": "insert_data_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4580,
+        2460
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer1\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "74ef3ab0-2654-469d-b5b6-0a037736118c",
+      "name": "update_data_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4580,
+        2660
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "1510b87b-1a87-4cf3-a5e9-99f3af1398f5",
+      "name": "pesquisa_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4360,
+        2560
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "5fdfb727-3cb3-48c2-a450-a58fc68fd75c",
+      "name": "nao_encontrou_registro_hj_data_lake2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4140,
+        2560
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "qtd_calls_realizadas",
+              "value": "={{ $node[\"forms_preenchido1\"].json[\"body\"][\"Quantas calls você fez hoje? \"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "3cbb028a-16b4-48a9-8665-beb6cd872dad",
+      "name": "insert_data_data_lake6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3940,
+        2440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_calls_realizadas",
+              "value": "={{ $node[\"formata_calls_realizadas\"].json[\"qtd_calls_realizadas\"] + $node[\"formata_dados1\"].json[\"calls_realizadas\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "009d1e2e-23e0-4e51-a33a-ea7b8cf4c6d8",
+      "name": "update_data_data_lake12",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3720,
+        2620
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Verifica se o valor de faturamento é nulo e, se for, define como 0\nif (items[0].json.qtd_calls_realizadas === null) {\n    items[0].json.qtd_calls_realizadas = 0;\n} else {\n    // Caso o valor não seja nulo, converte para um número\n    items[0].json.qtd_calls_realizadas = parseFloat(items[0].json.qtd_calls_realizadas);\n}\n\nreturn items;\n"
+      },
+      "id": "e79e83bf-8389-4661-8995-b49cc34d0e65",
+      "name": "formata_calls_realizadas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -3940,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador1\"].runIndex >= 0 ? $node[\"insert_data_colaborador1\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer1\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "6a423f86-f7aa-4f64-9eef-3691b598264c",
+      "name": "pesquisa_data_data_lake3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3560,
+        2440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e8a36fff-4549-4162-b75b-fbfc50f8735e",
+      "name": "nao_encontrou_registro_hj_data_lake3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3360,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador1\"].runIndex >= 0 ? $node[\"insert_data_colaborador1\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer1\"].json[\"id_colaborador\"] }}"
+            },
+            {
+              "column": "qtd_calls_agendadas",
+              "value": "={{ $node[\"forms_preenchido1\"].json[\"body\"][\"Quantas calls você tinha marcadas na sua agenda para hoje?\"] }}"
+            },
+            {
+              "column": "qtd_calls_realizadas",
+              "value": "={{ $node[\"forms_preenchido1\"].json[\"body\"][\"Quantas calls você fez hoje? \"] }}"
+            },
+            {
+              "column": "qtd_noshow",
+              "value": "={{ $node[\"forms_preenchido1\"].json[\"body\"][\"Quantos no-shows você teve hoje? \"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "6aefec9e-5930-418b-9207-f49c1347e2ee",
+      "name": "insert_data_data_lake7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3160,
+        2340
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_calls_agendadas",
+              "value": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"qtd_calls_agendadas\"] + $node[\"formata_dados1\"].json[\"calls_agendadas\"] }}"
+            },
+            {
+              "column": "qtd_calls_realizadas",
+              "value": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"qtd_calls_realizadas\"] + $node[\"formata_dados1\"].json[\"calls_realizadas\"] }}"
+            },
+            {
+              "column": "qtd_noshow",
+              "value": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"qtd_noshow\"] + $node[\"formata_dados1\"].json[\"noshow\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c84678da-82e2-43db-bef4-debf3be56373",
+      "name": "update_data_data_lake13",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3160,
+        2520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "sort": {
+          "values": [
+            {
+              "column": "id_agendamento",
+              "direction": "DESC"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "f685d8e4-5371-4057-a6ac-d05723298090",
+      "name": "pesquisa_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4460,
+        3080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status_evento",
+              "value": "={{ $node[\"formata_dados3\"].json[\"status\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "07530688-aa21-4899-b390-f69813aec475",
+      "name": "update_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4260,
+        3080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $node[\"forms_preenchido2\"].json[\"body\"][\"Qual é o e-mail do lead referente a esta call?\"];\nconst status = $node[\"forms_preenchido2\"].json[\"body\"][\"Qual é o status desta call?\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  lead,\n  status\n  };\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;"
+      },
+      "id": "3334a55c-163b-4b20-94fb-c91c97e6cf75",
+      "name": "formata_dados3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -5140,
+        3080
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"formata_dados3\"].json[\"lead\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"formata_dados3\"].json[\"lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "29f5f18b-476d-448d-824c-f945143bac3c",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4960,
+        3080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "bad34756-7ffb-4fe1-ac54-68a4e0495ba9",
+      "name": "nao_existe4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4780,
+        3080
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"formata_dados3\"].json[\"lead\"] }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "60437feb-d43f-4896-a33b-fc6ee70520a8",
+      "name": "insere_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4620,
+        2880
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Função para formatar a primeira letra de cada palavra em maiúsculo\nfunction formatarPrimeiraLetraMaiuscula(str) {\n  if (!str) {\n    return \"\"; // Retorna uma string vazia se o campo estiver vazio\n  }\n\n  const palavras = str.toLowerCase().split(\" \");\n\n  for (let i = 0; i < palavras.length; i++) {\n    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);\n  }\n\n  return palavras.join(\" \");\n}\n\nconst faturamento = parseFloat($node[\"forms_preenchido\"].json[\"body\"][\"Valor total da venda\"].replace(',','.'));\nconst vendedor = formatarPrimeiraLetraMaiuscula($node[\"forms_preenchido\"].json[\"body\"][\"Qual é o seu nome?\"]) || '';\nconst cliente = formatarPrimeiraLetraMaiuscula($node[\"forms_preenchido\"].json[\"body\"][\"Nome do comprador \"]) || '';\nconst email = $node[\"forms_preenchido\"].json[\"body\"][\"E-mail do comprador \"];\nconst telefone = $node[\"forms_preenchido\"].json[\"body\"][\"Telefone do comprador \"] || '';\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nconst ddi = '55';\nconst ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n\nconst produto = $node[\"forms_preenchido\"].json[\"body\"][\"Produto Comprado\"];\nconst forma_de_pagamento = $node[\"forms_preenchido\"].json[\"body\"][\"Forma de Pagamento\"];\nconst parcelas = $node[\"forms_preenchido\"].json[\"body\"][\"Parcelas\"];\nconst entrada = parseFloat($node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"].replace(',','.'));\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  vendedor,\n  telefone: telefoneFormatado,\n  cliente,\n  email,\n  faturamento,\n  produto,\n  forma_de_pagamento,\n  parcelas,\n  entrada  \n  };\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;"
+      },
+      "id": "ab362127-0a5a-4013-bb21-ee90495567c9",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -5140,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"vendedor\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "918300ae-cc18-4835-8588-8ce659af6436",
+      "name": "pesquisa_closer",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4480,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "ff432f0b-0ddc-42f2-b036-221b68ddd5c9",
+      "name": "nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4260,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Qual é o seu nome?\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e8d2570d-d13b-4519-9a0c-f2e64b511484",
+      "name": "insert_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4100,
+        1660
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a73ea404-26a0-47a5-b7d2-0c05ed5e86e6",
+      "name": "update_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4100,
+        1860
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "b8fb18b0-7772-4b13-a0ff-e9d245163f67",
+      "name": "pesquisa_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2340,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "4080de30-53e5-479e-9385-c442c3191969",
+      "name": "nao_encontrou_registro_hj_data_lake",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2120,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"formata_dados\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "2b47589b-18f6-4f8e-8ef7-bbb6737a759a",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4960,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "e46c61dd-6f88-4da1-856e-a9121cbc4152",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4800,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"formata_dados\"].json[\"cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "0506ca49-63b3-431c-b249-5247eeefc932",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4640,
+        1600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c22d8fd4-5e60-44d4-8569-c9ff3d64a522",
+      "name": "update_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        1900
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "8c69d49d-07dd-4967-bf3b-ddded80b67a2",
+      "name": "lead_ja_existia",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1860,
+        1660
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "b73ff717-dde0-4616-93b5-3a6946663997",
+      "name": "lead_ja_existia1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1740,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "36a82d37-cb54-4ef3-b495-1c83c40beff9",
+      "name": "insert_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        960
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "name"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4aaaf1a9-5ddb-4c38-a568-c33da87e3158",
+      "name": "insert_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c303ca8d-da76-401a-b029-b8ff7b6ab870",
+      "name": "update_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        2340
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "e0426dcf-2237-4b01-86bf-a9456b765313",
+      "name": "pesquisa_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -720,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "07f53ba5-3f3f-4b79-82fa-94ca62ec3b62",
+      "name": "nao_encontrou_registro_hj_data_lake1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Verifica se o valor de faturamento é nulo e, se for, define como 0\nif (items[0].json.faturamento === null) {\n    items[0].json.faturamento = 0;\n} else {\n    // Caso o valor não seja nulo, converte para um número\n    items[0].json.faturamento = parseFloat(items[0].json.faturamento);\n}\n\n// Verifica se o valor de comissao_gateway é nulo e, se for, define como 0\nif (items[0].json.recebimento === null) {\n    items[0].json.recebimento = 0;\n} else {\n    // Caso o valor não seja nulo, converte para um número\n    items[0].json.recebimento = parseFloat(items[0].json.recebimento);\n}\n\nreturn items;\n"
+      },
+      "id": "b08c4e03-1713-4f55-910b-7b307d8feead",
+      "name": "formata_faturamento",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -1900,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "3233efd0-f50b-47e7-a460-b423b6361037",
+      "name": "insert_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        40,
+        1300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "08d471d6-6915-43d3-8a4f-96a41d627c70",
+      "name": "update_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        420,
+        1580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4d6cf841-fa9f-46c4-becc-a4dc8fc5f778",
+      "name": "update_data_data_lake5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        2020
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "22e72029-204a-4c4e-a288-7c1a9196d723",
+      "name": "insert_data_data_lake3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "27e0e6e7-9f53-4a18-822b-6851393dfb30",
+      "name": "insert_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "36635a48-b3cf-47c3-91ab-5bc02ad15f8a",
+      "name": "update_data_data_lake6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        2080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "1f538ac0-7a93-4613-8167-9c442ff5f9f9",
+      "name": "update_data_data_lake7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        2500
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "290bd26e-bdd1-4bc2-8db5-eddb396bcfd6",
+      "name": "insert_data_data_lake5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        40,
+        1480
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "096f9452-605e-441c-bbb4-6e468759c74a",
+      "name": "update_data_data_lake10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        420,
+        1780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_clevel\"] + 1 }}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "52981eb6-5d56-4b16-8b1d-5a7ccfa4e1a4",
+      "name": "update_data_data_lake11",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        2220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Verifica se o valor de faturamento é nulo e, se for, define como 0\nif (items[0].json.faturamento === null) {\n    items[0].json.faturamento = 0;\n} else {\n    // Caso o valor não seja nulo, converte para um número\n    items[0].json.faturamento = parseFloat(items[0].json.faturamento);\n}\n\n// Verifica se o valor de comissao_gateway é nulo e, se for, define como 0\nif (items[0].json.recebimento === null) {\n    items[0].json.recebimento = 0;\n} else {\n    // Caso o valor não seja nulo, converte para um número\n    items[0].json.recebimento = parseFloat(items[0].json.recebimento);\n}\n\nreturn items;\n"
+      },
+      "id": "5874cf61-16d4-4805-a793-83b74e2e5863",
+      "name": "formata_faturamento1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        1980
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads_2_utms",
+          "mode": "list",
+          "cachedResultName": "leads_2_utms"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "8fc3c15c-7fa3-4d5c-9d8f-0e0fc2cb07e9",
+      "name": "pesquisa_utm_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3460,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "product_id",
+              "value": "={{ $node[\"insert_data_produto\"].runIndex >= 0 ? $node[\"insert_data_produto\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_produto\"].json[\"id_produto\"] }}"
+            },
+            {
+              "column": "value",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "installments",
+              "value": "={{ $node[\"formata_dados\"].json[\"parcelas\"].replace('À vista','1') }}"
+            },
+            {
+              "column": "currency",
+              "value": "=BRL"
+            },
+            {
+              "column": "payment_method",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Forma de Pagamento\"] }}"
+            },
+            {
+              "column": "trans_status",
+              "value": "=Compra Aprovada"
+            },
+            {
+              "column": "dias_para_conversao",
+              "value": "={{ $node[\"dias_para_conversao\"].json[\"diffEmDias\"] }}"
+            },
+            {
+              "column": "warranty_date",
+              "value": "={{new Date(new Date().setDate(new Date().getDate() + 7)).toISOString().split('T')[0]}}"
+            },
+            {
+              "column": "conversion_date",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "vendedor",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            },
+            {
+              "column": "entrada",
+              "value": "={{ $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "74ea5845-bf53-4782-8a2f-3278b30b2c13",
+      "name": "cria_conversao2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2760,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "conversion_2_utms",
+          "mode": "list",
+          "cachedResultName": "conversion_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_conversion",
+              "value": "={{ $json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"pesquisa_utm_lead\"].json[\"utm_var\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "0912699d-fce7-45b1-8fad-fff9608b08a5",
+      "name": "cria_utm_conversao1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2520,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "produtos",
+          "mode": "list",
+          "cachedResultName": "produtos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_produto",
+              "condition": "LIKE",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Produto Comprado\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "90fcb0cb-b5e5-442d-bdf6-3539f1060f5e",
+      "name": "pesquisa_produto",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3900,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "produtos",
+          "mode": "list",
+          "cachedResultName": "produtos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome_produto",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Produto Comprado\"] }}"
+            },
+            {
+              "column": "valor_produto",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor total da venda\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "806d7f8b-b047-4ff4-a1fd-29c8870bb442",
+      "name": "insert_data_produto",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3600,
+        1600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_produto\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "81c99645-8509-4492-8f94-177160d39d17",
+      "name": "nao_existe2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3740,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "124e0d81-73c9-4265-ae80-9f0fc1e13cbe",
+      "name": "pesquisa_lead1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3300,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "let dataEntradaLead = $node[\"pesquisa_lead1\"].json[\"data_de_entrada\"]; // Data de entrada da lead (no formato YYYY-MM-DD HH:mm:ss)\nlet dataCompra = new Date().toISOString().replace('T', ' ').substring(0, 19);\n\n\n// Converter as datas para objetos Date\nlet dataEntradaLeadObj = new Date(dataEntradaLead);\nlet dataCompraObj = new Date(dataCompra);\n\n// Calcular a diferença em milissegundos entre as datas\nlet diff = dataCompraObj - dataEntradaLeadObj;\n\n// Calcular o valor absoluto da diferença em dias\nlet diffEmDias = Math.abs(Math.floor(diff / (1000 * 60 * 60 * 24)));\n\nreturn [{ diffEmDias }];\n"
+      },
+      "id": "aaa66605-6a01-49f9-adf5-b13f02b0f055",
+      "name": "dias_para_conversao",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3140,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "edccffb7-db92-4bf2-baa2-9971c48f3ba7",
+      "name": "n_teve_entrada9",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2960,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "product_id",
+              "value": "={{ $node[\"insert_data_produto\"].runIndex >= 0 ? $node[\"insert_data_produto\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_produto\"].json[\"id_produto\"] }}"
+            },
+            {
+              "column": "value",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "installments",
+              "value": "={{ $node[\"formata_dados\"].json[\"parcelas\"].replace('À vista','1') }}"
+            },
+            {
+              "column": "currency",
+              "value": "=BRL"
+            },
+            {
+              "column": "payment_method",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Forma de Pagamento\"] }}"
+            },
+            {
+              "column": "trans_status",
+              "value": "=Compra Aprovada"
+            },
+            {
+              "column": "dias_para_conversao",
+              "value": "={{ $node[\"dias_para_conversao\"].json[\"diffEmDias\"] }}"
+            },
+            {
+              "column": "warranty_date",
+              "value": "={{new Date(new Date().setDate(new Date().getDate() + 7)).toISOString().split('T')[0]}}"
+            },
+            {
+              "column": "conversion_date",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "vendedor",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7f116cff-bd51-4518-a33d-7215615de1cf",
+      "name": "cria_conversao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2680,
+        1380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "forms-venda-preenchidos",
+        "options": {}
+      },
+      "id": "1262d948-6c2e-4abf-8912-f019de9666f9",
+      "name": "forms_preenchido",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -5320,
+        1800
+      ],
+      "webhookId": "88ba9327-1473-4cec-878c-4140e07ea2cc"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "340ee209-46e7-44e1-87de-34690630ac8a",
+      "name": "n_teve_entrada",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "8fc5d0e2-8685-4dd6-b3c4-6383500c9542",
+      "name": "n_foi_a_vista",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1500,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "0e4c7a59-41dd-4bfb-a500-28a38eae33d4",
+      "name": "insert_data_data_lake8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1120
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "d924c0cb-77c4-408c-b1d3-1c9b37bcf5b4",
+      "name": "n_teve_entrada1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        1640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "6954205a-905b-4909-b369-bfa5b7d5aa71",
+      "name": "n_foi_a_vista1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1500,
+        1500
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "94f633f8-128f-4199-94ed-b8098da3fe30",
+      "name": "insert_data_data_lake9",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "7952ea66-de28-4172-8b19-2f54e02a7d70",
+      "name": "n_teve_entrada2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1400,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "a2050567-a1a2-4459-9ef7-048e3ca40c4a",
+      "name": "n_foi_a_vista2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        1980
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] +  $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "331d9a51-e664-4e9e-b7de-7fed44eb7700",
+      "name": "update_data_data_lake14",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1240,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "7a1be969-4ff4-4583-b615-83896df5f65d",
+      "name": "n_teve_entrada3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "b12d7b87-0f90-4365-a1ef-802239dc77dd",
+      "name": "n_foi_a_vista3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "9d966a5d-d095-4b0e-8908-b9f20bcc2b4e",
+      "name": "update_data_data_lake15",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1240,
+        2580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "0a034af2-cc43-4fd2-af9d-73ae7f646806",
+      "name": "n_teve_entrada6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "42ba39e2-126b-433e-b753-c911e3a2ad59",
+      "name": "n_foi_a_vista6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "column": "={{ $node[\"formata_dados\"].json[\"produto\"].replace('Mentoria Modus Inovanti','qtd_vendas_modus').replace('Mentoria C-Level','qtd_vendas_clevel').replace('Mentoria Melhor Versão','qtd_vendas_melhor')  }}",
+              "value": "=1"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"entrada\"] }}"
+            },
+            {
+              "column": "closer",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "53488ba9-65ad-4bea-b1ee-e9e6a5f70e82",
+      "name": "insert_data_data_lake10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -160,
+        1620
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "4561406c-7dc7-46b4-b8e9-060edc63dda6",
+      "name": "n_teve_entrada7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        1860
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "5effd99c-e17b-4315-bb4c-4fd4239e57bb",
+      "name": "n_foi_a_vista7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        240,
+        1720
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a2801019-4d1f-43a2-9199-b1e94091bca0",
+      "name": "update_data_data_lake18",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        1920
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "c4a6c395-9f72-4497-ad8c-9110c0f6ea42",
+      "name": "n_teve_entrada8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        2260
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "eba8ebdd-515c-4d2b-b231-1f4ef00c3f4d",
+      "name": "n_foi_a_vista8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        240,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_clevel\"] + 1 }}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "d1e9af56-ccd0-4545-b429-68d7c2bdef5f",
+      "name": "update_data_data_lake19",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        2380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "2e55c697-598f-4b71-9c80-ca3b56c29aa0",
+      "name": "n_foi_a_vista9",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2840,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "product_id",
+              "value": "={{ $node[\"insert_data_produto\"].runIndex >= 0 ? $node[\"insert_data_produto\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_produto\"].json[\"id_produto\"] }}"
+            },
+            {
+              "column": "value",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "installments",
+              "value": "={{ $node[\"formata_dados\"].json[\"parcelas\"].replace('À vista','1') }}"
+            },
+            {
+              "column": "currency",
+              "value": "=BRL"
+            },
+            {
+              "column": "payment_method",
+              "value": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Forma de Pagamento\"] }}"
+            },
+            {
+              "column": "trans_status",
+              "value": "=Compra Aprovada"
+            },
+            {
+              "column": "dias_para_conversao",
+              "value": "={{ $node[\"dias_para_conversao\"].json[\"diffEmDias\"] }}"
+            },
+            {
+              "column": "warranty_date",
+              "value": "={{new Date(new Date().setDate(new Date().getDate() + 7)).toISOString().split('T')[0]}}"
+            },
+            {
+              "column": "conversion_date",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "vendedor",
+              "value": "={{ $node[\"insert_data_colaborador\"].runIndex >= 0 ? $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            },
+            {
+              "column": "entrada",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7b167e17-266c-4824-a485-121340475d0a",
+      "name": "cria_conversao1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2680,
+        1540
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "forms-diario-preenchido",
+        "options": {}
+      },
+      "id": "1f45abdd-caed-48a4-85aa-e688c4bbf3a7",
+      "name": "forms_preenchido1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -5320,
+        2600
+      ],
+      "webhookId": "88ba9327-1473-4cec-878c-4140e07ea2cc"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "forms-agendamentos-preenchido",
+        "options": {}
+      },
+      "id": "f696ae8d-6b32-4362-a1fc-c21a101cb738",
+      "name": "forms_preenchido2",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -5320,
+        3080
+      ],
+      "webhookId": "88ba9327-1473-4cec-878c-4140e07ea2cc"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fcfc487a-4e87-4225-bf04-88f1b9dbe2b3",
+      "name": "update_data_data_lake20",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        3100
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "8b6f142d-44c4-47d3-a5ab-3a1435a1a50f",
+      "name": "update_data_data_lake21",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        3540
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "8f68b2df-b4a2-48ad-a228-ce2049bf0443",
+      "name": "update_data_data_lake22",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        3280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "da34fa87-71bf-4d2b-a113-2f8418df57c1",
+      "name": "update_data_data_lake23",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        3700
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "7670a5f3-0af0-48f9-a8f8-368d2010c0b0",
+      "name": "n_teve_entrada10",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1400,
+        3320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "d376d4e8-8eda-4fe9-b19b-d3b276eb5264",
+      "name": "n_foi_a_vista10",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        3180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_modus",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_modus\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] +  $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "8a307d43-6d48-40a2-a41c-bab5335f016d",
+      "name": "update_data_data_lake24",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1240,
+        3400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "d754a96e-e707-40f0-85c4-a560c078d527",
+      "name": "n_teve_entrada11",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        3640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "69bccecb-be9f-48dc-ab45-42a28b62f1ec",
+      "name": "n_foi_a_vista11",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        3580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_clevel",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_clevel\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4f5c6c81-42e2-4bf1-8910-a4fcb0120f9b",
+      "name": "update_data_data_lake25",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1240,
+        3780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Modus Inovanti",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "6fdda21a-a246-4088-a743-72ef3f5b1fd9",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria C-Level",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "f3234604-2869-48b1-9718-f27e8898922d",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Melhor Versão",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "c77d593c-2ad8-45fb-8905-1be434fc7642",
+      "name": "produto",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        1980
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Modus Inovanti",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "6fdda21a-a246-4088-a743-72ef3f5b1fd9",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria C-Level",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "bbe98163-e210-47b1-8ef4-19db64447030",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Melhor Versão",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "c28ed566-e957-410f-876d-df150b9bdf42",
+      "name": "produto2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -1560,
+        3180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2b70cd38-2ac3-444f-8f7e-be970757d6b0",
+      "name": "update_data_data_lake26",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        3920
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7dcfdfcc-5a86-4ab9-955a-bb76aceea213",
+      "name": "update_data_data_lake27",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        4080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "74e8867d-2ae3-4d5c-8258-51beaf2e930f",
+      "name": "n_teve_entrada12",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        4020
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "f3539396-7520-499b-be21-d56a5968dc87",
+      "name": "n_foi_a_vista12",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        3960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "5f99f728-2be0-4811-801e-a2eaec0c4685",
+      "name": "update_data_data_lake28",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1240,
+        4160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "829cc6d0-8a20-4752-a8c8-7883c3944d82",
+      "name": "update_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1020,
+        2720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f04c51d8-6649-4550-aece-7b61ecf10e06",
+      "name": "update_data_data_lake8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1020,
+        2880
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "5247e7ee-5cbc-49c9-a130-26ab91f2dc96",
+      "name": "n_teve_entrada4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1400,
+        2820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "38678298-e61c-457c-b110-c365d9bab400",
+      "name": "n_foi_a_vista4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"faturamento\"] + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ $node[\"formata_faturamento\"].json[\"recebimento\"] + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f631443e-eaea-477a-91f2-2ea0b96f99fe",
+      "name": "update_data_data_lake16",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1220,
+        2960
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Modus Inovanti",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "6fdda21a-a246-4088-a743-72ef3f5b1fd9",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria C-Level",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "dca2260b-dac4-42ad-a330-7342cc0a0bd2",
+                    "leftValue": "={{ $node[\"formata_dados\"].json[\"produto\"] }}",
+                    "rightValue": "Mentoria Melhor Versão",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "960ebdb0-f5c7-43ae-a350-3c7dc92d4b10",
+      "name": "produto1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        -1580,
+        2180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_melhor\"] + 1}}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "27ae9671-dc59-4d0c-abfb-8925a68a9da2",
+      "name": "update_data_data_lake9",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        2480
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_melhor\"] + 1 }}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "62045b91-1d76-490e-a24f-34ef84244821",
+      "name": "update_data_data_lake17",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        2680
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"forms_preenchido\"].json[\"body\"][\"Valor de entrada\"] }}",
+              "value2": "Não teve entrada"
+            }
+          ]
+        }
+      },
+      "id": "02a5f3c2-3dd4-468f-a74e-5c72ca963eae",
+      "name": "n_teve_entrada13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        2720
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"formata_dados\"].json[\"parcelas\"] }}",
+              "operation": "notEqual",
+              "value2": "À vista"
+            }
+          ]
+        }
+      },
+      "id": "1c2132a4-594f-48ee-8a86-5dee0c8693a0",
+      "name": "n_foi_a_vista13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        240,
+        2580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_comercial",
+          "mode": "list",
+          "cachedResultName": "data_lake_comercial"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas_melhor",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_vendas_melhor\"] + 1 }}"
+            },
+            {
+              "column": "faturamento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"faturamento\"]) + $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "column": "recebimento",
+              "value": "={{ parseFloat($node[\"formata_faturamento1\"].json[\"recebimento\"]) + $node[\"formata_dados\"].json[\"entrada\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "709bfb00-4145-47e6-8eec-b8bd5ea85d8a",
+      "name": "update_data_data_lake29",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        2840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "forms_preenchido": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookfutureminds.automagicbots.com.br",
+            "user-agent": "Mozilla/5.0 (compatible; Google-Apps-Script; beanserver; +https://script.google.com; id: UAEmdDd816PJ1_Tz9SBJv00RsS8UftPFHmZI)",
+            "content-length": "333",
+            "accept-encoding": "gzip, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "107.178.193.101",
+            "x-forwarded-host": "n8nwebhookfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "2ad1f923905b",
+            "x-real-ip": "107.178.193.101"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Qual é o seu nome?": "Mateus Diniz",
+            "Nome do comprador ": "Mateus Diniz",
+            "E-mail do comprador ": "mateusdiniz@automagicbots.com.br",
+            "Telefone do comprador ": "62981196678",
+            "Produto Comprado": "Mentoria C-Level",
+            "Valor total da venda": "5000,00",
+            "Forma de Pagamento": "PIX Parcelado",
+            "Parcelas": "4",
+            "Valor de entrada": "Não teve entrada"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:a_cada_hora1": {
+      "recurrencyRules": []
+    },
+    "node:2 min antes dos horarios de call1": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 3,
+  "updatedAt": "2024-04-24T17:15:39.989Z",
+  "versionId": "d65af056-be52-44a0-b7b7-f55817ce12a2"
+}

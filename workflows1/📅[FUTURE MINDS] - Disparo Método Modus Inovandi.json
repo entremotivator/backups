@@ -1,0 +1,285 @@
+{
+  "active": false,
+  "connections": {
+    "le_planilha3": {
+      "main": [
+        [
+          {
+            "node": "É_UM_DIA_ANTES1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis2": {
+      "main": [
+        [
+          {
+            "node": "le_planilha3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "É_UM_DIA_ANTES1": {
+      "main": [
+        [
+          {
+            "node": "EnviaMensagemTexto1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não Faça Nada2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dispara_as_19h": {
+      "main": [
+        [
+          {
+            "node": "variaveis2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-18T18:22:49.038Z",
+  "id": "h6mFNGr8H2joSFa7",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "📅[FUTURE MINDS] - Disparo Método Modus Inovandi",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 1 DIA ANTES",
+        "height": 80,
+        "width": 219.44087242325202
+      },
+      "id": "b108413e-d34d-44b5-9173-17617b15b911",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1yjsWZ_IZkbA-A61uThYF3vZ-r0GubJ-xqptceHT5H-I",
+          "mode": "list",
+          "cachedResultName": "[Henry Santos] - Metrificação High Ticket",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1yjsWZ_IZkbA-A61uThYF3vZ-r0GubJ-xqptceHT5H-I/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 697484959,
+          "mode": "list",
+          "cachedResultName": "Números - SE",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1yjsWZ_IZkbA-A61uThYF3vZ-r0GubJ-xqptceHT5H-I/edit#gid=697484959"
+        },
+        "options": {}
+      },
+      "id": "52efd1a0-719b-467c-858c-e066b77f9d78",
+      "name": "le_planilha3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        220,
+        340
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br"
+            },
+            {
+              "name": "apikey",
+              "value": "yavuatfpzpeefq82zhfbs"
+            },
+            {
+              "name": "nome_da_instancia",
+              "value": "LilianCidreira"
+            },
+            {
+              "name": "id_grupo",
+              "value": "120363282736933977@g.us"
+            },
+            {
+              "name": "numero_adm",
+              "value": "5521994192523"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df7934ad-2fc7-455d-8745-13e52ebbeece",
+      "name": "variaveis2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        40,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis2\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis2\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis2\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"variaveis2\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $json[\"MENSAGEM\"] }}"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "97080429-84d1-4d41-810e-7f3d2f08d604",
+      "name": "EnviaMensagemTexto1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        640,
+        280
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {},
+      "id": "da99fd33-dcca-4cf2-a4d8-cf4f980c6923",
+      "name": "Não Faça Nada2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        640,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "0f8a5237-6bba-4c2c-b07e-2b371c21224b",
+              "leftValue": "={{ $json[\"TIPO LEMBRETE\"] }}",
+              "rightValue": "1 DIA ANTES",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "af00e7fe-49f7-4c58-adbc-649ccac757e0",
+      "name": "É_UM_DIA_ANTES1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        380,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19,
+              "triggerAtMinute": 1
+            }
+          ]
+        }
+      },
+      "id": "58a41358-e778-4b0e-9056-553a7bb8dbb3",
+      "name": "dispara_as_19h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        340
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-06-18T18:43:04.511Z",
+  "versionId": "85961201-3b25-482e-aca3-0e3f0f0152d6"
+}

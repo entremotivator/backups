@@ -1,0 +1,4360 @@
+{
+  "active": false,
+  "connections": {
+    "pesquisa_lead3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamento": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_closer2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_agendamento": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer": {
+      "main": [
+        [
+          {
+            "node": "nao_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe3": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_agendamento": {
+      "main": [
+        [
+          {
+            "node": "insert_utm_2_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia1": {
+      "main": [
+        [
+          {
+            "node": "nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada1": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia4": {
+      "main": [
+        [
+          {
+            "node": "nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake7": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_utm_2_agendamento": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe7": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia13": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake14",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake6": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake11": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake14": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake15": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_id_bd_botconversa": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_idleadac",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_motivo_do_cancelamento": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_id_bd_botconversa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe": {
+      "main": [
+        [
+          {
+            "node": "cria_deal1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "id_deal_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "insert_data_utm_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_utm_lead": {
+      "main": [
+        [
+          {
+            "node": "id_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido": {
+      "main": [
+        [
+          {
+            "node": "email_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido6": {
+      "main": [
+        [
+          {
+            "node": "email_igual8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual8": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual2": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email2_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido2": {
+      "main": [
+        [
+          {
+            "node": "email_igual2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_igual": {
+      "main": [
+        [
+          {
+            "node": "email_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_idleadac": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_id_bd_iddealac",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segundo_ou_mais_erro": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cadastrar_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia12": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake10": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_motivo_do_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email6": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email2": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone4": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email2_telefone1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email7": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_vazio": {
+      "main": [
+        [
+          {
+            "node": "telefone_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "telefone_vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "Não faça nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_contato": {
+      "main": [
+        [
+          {
+            "node": "add_tag_cancelou",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_deal1": {
+      "main": [
+        [
+          {
+            "node": "atualizar_campos_deal1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizar_campos_deal1": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_deal1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_deal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_deal_vazio": {
+      "main": [
+        [
+          {
+            "node": "cria_deal2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "busca_deal1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_deal2": {
+      "main": [
+        [
+          {
+            "node": "atualizar_campos_deal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_deal": {
+      "main": [
+        [
+          {
+            "node": "atualizar_campos_deal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_cancelou": {
+      "main": [
+        [
+          {
+            "node": "email_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_email_do_responsavel": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_contato1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_id_bd_iddealac": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_email_do_responsavel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_contato1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_campos_deal2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_campos_deal2": {
+      "main": [
+        [
+          {
+            "node": "fluxo_confirmacao_cancelamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Não faça nada": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_atualiza_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizar_campos_deal": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T02:54:40.542Z",
+  "id": "s03Qzw4iNmtkZGWz",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🏆⌚[FUTURE MINDS] - Calendly - Cancelamento",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "32799a8d-329a-4548-9ff4-040f17e6559a",
+      "name": "pesquisa_lead3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4740,
+        2320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "91a3013f-e3a1-46e7-b39a-02ffb8c780b7",
+      "name": "pesquisa_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4940,
+        2320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamento\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "82ce76b6-bfa8-4d68-8da1-3935ac92f94f",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5140,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status_evento",
+              "value": "=Cancelado"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7ffe7c8c-8c98-4330-9cb3-ba8aa9ec527c",
+      "name": "update_data_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6040,
+        2440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "dbd4290d-20bf-4978-ba0e-2543cace3cc7",
+      "name": "pesquisa_closer",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5340,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "dc87cd76-41be-4d4d-be97-d0bd6074e13b",
+      "name": "update_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5660,
+        2260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "4b6eeba6-2610-4495-aa32-55418bf20446",
+      "name": "nao_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5500,
+        2200
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Cancelado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Hora de Início\"] }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana do Evento\"] }}"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"].split(' ')[0] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "77fa017b-1727-4071-ba6b-57e5529a0399",
+      "name": "insert_data_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6160,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"].split(' ')[0] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "fcd9d717-ade3-4c16-91f1-f4e3e7cf9066",
+      "name": "pesquisa_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6540,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "9fe55cda-17a5-43e8-b76a-e91cabd5531b",
+      "name": "nao_encontrou_registro_dia_dia_data_lake",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6780,
+        2200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"].split(' ')[0] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "34a14ec8-1b9f-487c-b43a-d512bd37d124",
+      "name": "pesquisa_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6240,
+        2440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "5db3707d-ddda-4138-8918-4f97f2e42ea1",
+      "name": "nao_encontrou_registro_dia_dia_data_lake1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6440,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e6a3edaf-e0e2-43f5-8062-9ae64158e922",
+      "name": "lead_ja_existia1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6760,
+        2760
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "0d553b85-d798-447b-962e-9a2325072da2",
+      "name": "nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        6960,
+        2660
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "06f6c015-98b5-47a2-9c83-09029f9daf7f",
+      "name": "lead_ja_existia4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6740,
+        3040
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "5b0d807b-ec4d-45c9-8b82-78e62e56b0a9",
+      "name": "nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        6960,
+        2960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fccdc064-99c1-4e29-ab13-e6a6856dc28b",
+      "name": "update_data_data_lake7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6960,
+        3160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos_2_utms",
+          "mode": "list",
+          "cachedResultName": "agendamentos_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_agendamento",
+              "value": "={{ $node[\"insert_data_agendamento\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "79d17e4f-7506-428a-ba40-17273c5834a1",
+      "name": "insert_utm_2_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6360,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9af04450-891d-4ba2-b250-164158de67ab",
+      "name": "id_colaborador1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5860,
+        2260
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "dd050fac-6a37-4f66-b0d8-002fc8c339fc",
+      "name": "pesquisa_closer2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5340,
+        2520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b5857d53-0e3f-40e7-b814-f378a0235ebe",
+      "name": "insert_data_colaborador2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5680,
+        2440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer2\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "10c5f33a-f044-4d07-85d8-63f7ad7c50be",
+      "name": "update_data_colaborador2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5680,
+        2640
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "5e819192-9df3-4d43-8502-b1bf18d00fcf",
+      "name": "nao_existe7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5500,
+        2520
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador2\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4283cb84-a7db-4434-8673-ba81928ece7c",
+      "name": "id_colaborador2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5860,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer2\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8b07b3f3-03ab-4402-9497-29168e9a1c36",
+      "name": "id_colaborador3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5860,
+        2640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "61eaffc3-5be6-46ae-b7b6-b93ea9da82a1",
+      "name": "lead_ja_existia13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7040,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f7c21f81-1d74-442d-b039-7b974612da00",
+      "name": "insert_data_data_lake6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6960,
+        2800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "3afef60f-a8ee-49c5-8736-25f77729e239",
+      "name": "insert_data_data_lake11",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7240,
+        2200
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_agendamentos\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "727b2672-4238-46d0-8575-5905b6dce197",
+      "name": "update_data_data_lake14",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7200,
+        1880
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_agendamentos\"] + 1 }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "701463f4-b22c-4fb8-b72b-da4307805411",
+      "name": "update_data_data_lake15",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7240,
+        2580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/custom_fields/{{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_banco_de_dados_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3bed5f97-6909-45c3-b96e-bd7a1559ab15",
+      "name": "envia_campo_id_bd_botconversa",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        7860,
+        3120
+      ],
+      "retryOnFail": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{$node[\"cadastrar_contato\"].json[\"id\"]}}/send_flow/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"fluxo_de_confirmacao_de_cancelamento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dcae32e1-0070-47da-a4bc-d6c8c5abf00d",
+      "name": "fluxo_confirmacao_cancelamento",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        9100,
+        3120
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/custom_fields/{{ $node[\"entra_na_fila\"].json[\"content\"][\"id_do_campo_motivo_do_cancelamento_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d850b59-accb-4740-a592-bd52ba00d3bd",
+      "name": "envia_campo_motivo_do_cancelamento",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        7660,
+        3120
+      ],
+      "retryOnFail": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{$node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[1] ? $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ').slice(1).join(\" \") : \".\"}}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        660,
+        2620
+      ],
+      "id": "86f15dfa-ec49-4c60-aa17-4b52ca102201",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "bfe1b6e5-9b8c-41b9-b6ca-fe847f77722e",
+      "name": "nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "nivel_qualificacao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"].replace('lilian.cidreira@futureminds.com.br','Qualificado').replace('paula.diel@futureminds.com.br','Médio Qualificado').replace('gil.guerra@futureminds.com.br','Médio Qualificado').replace('juliana.ramos@futureminds.com.br','Médio Qualificado') }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"cria_deal1\"].json[\"deal\"][\"id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "3ebdf976-9789-4aa9-988d-4ba7d64623b0",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3920,
+        2320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "d8b31a5b-b0a6-41c0-ab6c-bed2b077b200",
+      "name": "id_lead1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        4320,
+        2320
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_2_utms",
+          "mode": "list",
+          "cachedResultName": "leads_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e5cf3b7a-401c-4bcb-9b7c-9a9cc7064f00",
+      "name": "insert_data_utm_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4120,
+        2320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "96837730-9dc5-43ff-ac7c-35f55bc4335d",
+      "name": "email_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4120,
+        2580
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "790ebb34-beab-44b3-9acf-f95367b0bcaf",
+      "name": "email_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3960,
+        2660
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7f0b15f6-e194-44f3-b363-f76ed5b6d1ab",
+      "name": "email_preenchido6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3940,
+        3140
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "f7f53781-b6af-4a4b-b720-daa23989e331",
+      "name": "email_igual8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4140,
+        3060
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "28a9f124-6e8c-47dd-b86f-9b01a8311e27",
+      "name": "atualiza_dados_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4320,
+        2660
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b7c6f863-582e-40f9-bb2b-f97a571f2369",
+      "name": "atualiza_dados_email6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4120,
+        2840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "814bc131-2447-44f7-9735-23ce775b5491",
+      "name": "atualiza_dados_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4340,
+        2980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "35a1c6f9-cc89-48ee-a62a-8c1e7118700d",
+      "name": "atualiza_dados_telefone2_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4340,
+        3160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c0d5df61-369d-4e6f-b49d-641124c21d50",
+      "name": "atualiza_dados_telefone2_email2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4140,
+        3280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "3f4e5bf2-3299-4acd-83a6-ad1656649da4",
+      "name": "email_igual2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3980,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "764b92fe-ec45-498c-9154-0e3b46edbb49",
+      "name": "email_preenchido2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3820,
+        3600
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "cd59505a-e9b1-422f-b1e0-a4eefea242eb",
+      "name": "atualiza_dados_email7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3980,
+        3760
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f230c427-2121-4593-9633-514fa869cf11",
+      "name": "atualiza_dados_telefone4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4180,
+        3440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b8de7438-276a-4a5e-880d-c20937d7fd28",
+      "name": "atualiza_dados_email2_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4180,
+        3600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"telefone\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "d7d55e8d-5ea1-4e23-97f2-ec800fb6f413",
+      "name": "telefone_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3780,
+        2760
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"telefone\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "2fc950a7-8925-4c34-8d93-cabbd7a9160e",
+      "name": "telefone_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3620,
+        2840
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "id_lead_activecampaign",
+              "value": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_deal_activecampaign",
+              "value": "={{ $node[\"atualiza_deal\"].runIndex >= 0 ? $node[\"atualiza_deal\"].json[\"deal\"][\"id\"] : ($node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : \"\" ) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2f739cda-ae30-4636-a2a1-a9a4ac0f4861",
+      "name": "atualiza_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4320,
+        2500
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/custom_fields/{{ $node[\"entra_na_fila\"].json[\"content\"][\"id_do_campo_idleadac_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_lead_activecampaign\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0e3a56ab-7acd-418d-9160-8b0609830b25",
+      "name": "envia_campo_idleadac",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        8080,
+        3120
+      ],
+      "retryOnFail": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/custom_fields/{{ $node[\"entra_na_fila\"].json[\"content\"][\"id_do_campo_iddealac_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_deal_activecampaign\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "48fff33c-cb94-4d75-871f-2e3eab5191f4",
+      "name": "envia_campo_id_bd_iddealac",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        8280,
+        3120
+      ],
+      "retryOnFail": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "afd187e2-10fb-40e3-af91-f1a5758c51e6",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        660,
+        2440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"fields\"][\"redelivered\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "b0af7b1e-622f-4021-b296-2cec6d57a441",
+      "name": "segundo_ou_mais_erro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        440,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "=Calendly - Cancelamentos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": true,
+          "parallelMessages": 3
+        }
+      },
+      "id": "f569e7d9-78c0-4fe4-ad34-93d1d3da691a",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        2620
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fc125245-1b70-4794-b6a2-15d42d71fd6f",
+      "name": "insert_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5660,
+        2080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8f8a7f42-9950-4f23-92cb-189a536b57af",
+      "name": "id_colaborador",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5860,
+        2080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "fe314e5c-620e-4c5f-aa23-4aa15a9b274c",
+      "name": "lead_ja_existia12",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7020,
+        2100
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "0d618f34-0cf3-4899-a9ea-c3d69294d531",
+      "name": "insert_data_data_lake10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7240,
+        2000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags?limit=1000&search={{ $node[\"Set\"].json[\"tag_procurada\"] }}",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        1740
+      ],
+      "id": "0f7aafa4-9097-4923-929f-9bb42792716a"
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n \nUtilize os Nodes Abaixo para consultar os IDs dos Campos e Tags no ActiveCampaign",
+        "height": 407.6377565498652,
+        "width": 704.6455567098876
+      },
+      "id": "124029f7-5e34-4aab-b38a-3d7adf77b853",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        900,
+        1740
+      ],
+      "id": "56307bb7-ab38-4158-b017-151767ffc675"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "tag_procurada",
+              "value": "cancelou"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "75ac5574-4786-4102-8d02-db1398c22bf9",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        700,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "84b854b8-dd8b-4f6f-b97e-1b326ed48d95",
+      "name": "id_lead4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        4600,
+        2700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "320b20f6-f27b-4b36-91dc-a8a429802752",
+      "name": "email_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "49a73d02-b996-44c0-8229-787a6bba40a2",
+      "name": "telefone_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        2460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "14785bb2-c4c8-4748-92f5-ee0ced0108d0",
+      "name": "telefone_vazio1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        2780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "271c1824-d06e-43d2-be23-8ad293bcf54c",
+      "name": "pesquisa_lead_telefone_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1820,
+        2880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "bd24021c-a0b4-48a2-9b41-c5c47ff9e0b9",
+      "name": "pesquisa_lead_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1820,
+        2700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "ecb6898f-7d20-470b-8200-6cd42ede6003",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        2360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "5845b1a3-988b-490f-adf7-5d864c2fe271",
+      "name": "pesquisa_lead_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1820,
+        2540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "edc93f08-5e62-4869-abb5-783b03e36e72",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        2160,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "email": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+        "updateIfExists": true,
+        "additionalFields": {
+          "fieldValues": {
+            "property": [
+              {
+                "field": "109",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+              },
+              {
+                "field": "59",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+              },
+              {
+                "field": "60",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+              },
+              {
+                "field": "61",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+              },
+              {
+                "field": "62",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[2] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[1] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[0] }}"
+              },
+              {
+                "field": "63",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}"
+              },
+              {
+                "field": "=205",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[2] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[1] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[0] }}"
+              },
+              {
+                "field": "64",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[2] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[1] }}-{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[0] }}"
+              },
+              {
+                "field": "65",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_e_hora_de_termino\"] }}"
+              },
+              {
+                "field": "68",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião\"] }}"
+              },
+              {
+                "field": "77",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+              },
+              {
+                "field": "78",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+              },
+              {
+                "field": "79",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+              },
+              {
+                "field": "80",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+              },
+              {
+                "field": "81",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+              },
+              {
+                "field": "69",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+              },
+              {
+                "field": "70",
+                "value": "=https://calendly.com/cancellations/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+              },
+              {
+                "field": "71",
+                "value": "=https://calendly.com/reschedulings/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+              },
+              {
+                "field": "107",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+              },
+              {
+                "field": "108",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+              },
+              {
+                "field": "=206",
+                "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+              }
+            ]
+          },
+          "firstName": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}",
+          "lastName": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}",
+          "phone": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+        }
+      },
+      "id": "46513b9a-0cf1-4ca4-9dcd-69a019d6de0a",
+      "name": "cria_atualiza_contato",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        2620
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "title": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "contact": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}",
+        "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"valor_produto_principal_em_centavos\"] }}",
+        "currency": "brl",
+        "group": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_pipeline_se_deal_crm\"] }}",
+        "stage": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_stage_no_show_deal_crm\"] }}",
+        "owner": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_sdr_deal_crm\"] }}",
+        "additionalFields": {}
+      },
+      "id": "75d2b689-9ea2-423a-893f-8acc0dd01324",
+      "name": "cria_deal1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        3560,
+        2320
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://{{ $node[\"entra_na_fila\"].json[\"content\"][\"url_api_activecampaign\"] }}.api-us1.com/api/3/deals/{{  $json[\"deal\"][\"id\"]  }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "activeCampaignApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"deal\": {\n\"fields\": [\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_de_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"https://calendly.com/cancellations/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_de_reagendamento_deal_crm\"] }},\n\"fieldValue\": \"https://calendly.com/reschedulings/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_do_cliente_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_dia_semana_agendamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana do Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_de_inicio_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[2].split(' ')[0] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_e_hora_de_inicio_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_e_hora_de_termino_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_e_hora_de_termino\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_de_termino_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[2].split(' ')[0] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_email_do_responsavel_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[2] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_da_reuniao_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_tipo_de_evento_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_do_evento_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_source_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_campaign_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_term_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_medium_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_content_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_motivo_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_fun_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_var_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}\"\n}\n]\n}\n}",
+        "options": {}
+      },
+      "id": "1c4a2545-9186-48dd-ad8d-d68ac62eba31",
+      "name": "atualizar_campos_deal1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3740,
+        2320
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "get",
+        "dealId": "={{ $node[\"pesquisa_lead\"].json[\"id_deal_activecampaign\"] }}"
+      },
+      "id": "95029009-3881-45f1-a036-c35060126902",
+      "name": "busca_deal1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2980,
+        2980
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_deal_activecampaign\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "c4f0de80-59c5-46f2-9d40-b190c5367ab2",
+      "name": "id_deal_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2800,
+        2840
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "title": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "contact": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}",
+        "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"valor_produto_principal_em_centavos\"] }}",
+        "currency": "brl",
+        "group": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_pipeline_se_deal_crm\"] }}",
+        "stage": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_stage_no_show_deal_crm\"] }}",
+        "owner": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_sdr_deal_crm\"] }}",
+        "additionalFields": {}
+      },
+      "id": "4f29d7be-cac2-41cd-b634-39cf344a5f3b",
+      "name": "cria_deal2",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        3080,
+        2740
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "update",
+        "dealId": "={{ $json.deal.id }}",
+        "updateFields": {
+          "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"valor_produto_principal_em_centavos\"] }}",
+          "group": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_pipeline_se_deal_crm\"] }}",
+          "stage": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_stage_no_show_deal_crm\"] }}",
+          "owner": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"id_sdr_deal_crm\"] }}"
+        }
+      },
+      "id": "0e3ae3f6-57bd-4df8-be3e-c74ae6c08161",
+      "name": "atualiza_deal",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        3160,
+        2980
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "tagId": "155",
+        "contactId": "={{ $node[\"cria_atualiza_contato\"].json[\"id\"] }}"
+      },
+      "id": "bb4d61a1-78fd-4b2f-83a0-7b0b8417e614",
+      "name": "add_tag_cancelou",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        2620
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/custom_fields/{{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_email_closer_do_responsavel\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"entra_na_fila\"].json.content[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "531ac3ba-9e2d-4642-b3db-621093bddf04",
+      "name": "envia_campo_email_do_responsavel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        8500,
+        3120
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "email": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+        "updateIfExists": true,
+        "additionalFields": {
+          "fieldValues": {
+            "property": [
+              {
+                "field": "106",
+                "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}"
+              },
+              {
+                "field": "43",
+                "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_botconversa\"] }}"
+              }
+            ]
+          },
+          "firstName": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}",
+          "lastName": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}",
+          "phone": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+        }
+      },
+      "id": "a596eace-85f9-430e-b0a1-e2ef03e439df",
+      "name": "cria_atualiza_contato1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        8740,
+        3120
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://{{ $node[\"entra_na_fila\"].json[\"content\"][\"url_api_activecampaign\"] }}.api-us1.com/api/3/deals/{{ $node[\"pesquisa_lead3\"].json[\"id_deal_activecampaign\"] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "activeCampaignApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"deal\": {\n\"fields\": [\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_banco_de_dados_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_bot_conversa_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"cadastrar_contato\"].json[\"id\"] }}\"\n}\n]\n}\n}",
+        "options": {}
+      },
+      "id": "2b1b7f4d-f35b-428d-9c26-21b7d43cfeef",
+      "name": "atualiza_campos_deal2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        8920,
+        3120
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "db85483d-ae67-4289-84f9-7eb986b3b453",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        2460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}",
+              "value2": "diana.proenca@futureminds.com.br"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "36c72e89-5d97-4af5-a192-847d37fdfa96",
+      "name": "Não faça nada",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        840,
+        2620
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://{{ $node[\"entra_na_fila\"].json[\"content\"][\"url_api_activecampaign\"] }}.api-us1.com/api/3/deals/{{ $node[\"cria_deal2\"].runIndex >= 0 ? $node[\"cria_deal2\"].json[\"deal\"][\"id\"] : ($node[\"busca_deal1\"].runIndex >= 0 ? $node[\"busca_deal1\"].json[\"deal\"][\"id\"] : \"\" ) }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "activeCampaignApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"deal\": {\n\"fields\": [\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_de_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"https://calendly.com/cancellations/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_de_reagendamento_deal_crm\"] }},\n\"fieldValue\": \"https://calendly.com/reschedulings/{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_do_cliente_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_dia_semana_agendamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana do Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_de_inicio_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[2].split(' ')[0] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_e_hora_de_inicio_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_e_hora_de_termino_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_e_hora_de_termino\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_de_termino_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[2].split(' ')[0] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"data_termino_ac\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_email_do_responsavel_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_data_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[2] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[1] }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"].split('-')[0] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_link_da_reuniao_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_tipo_de_evento_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_id_do_evento_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_source_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_campaign_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_term_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_medium_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_content_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_motivo_cancelamento_deal_crm\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_fun_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}\"\n},\n{\n\"customFieldId\": {{ $node[\"entra_na_fila\"].json[\"content\"][\"id_campo_utm_var_ac\"] }},\n\"fieldValue\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}\"\n}\n]\n}\n}",
+        "options": {}
+      },
+      "id": "03518f8b-df48-49a5-b01b-140e2f896464",
+      "name": "atualizar_campos_deal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3360,
+        2860
+      ],
+      "credentials": {
+        "activeCampaignApi": {
+          "id": "HWAA0v3JsWI6IbdK",
+          "name": "[ActiveCampaign] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "pinData": {
+    "entra_na_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-kfwvy1P9BBpy_cfFcIGYag",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Calendly - Cancelamentos"
+          },
+          "properties": {
+            "headers": {
+              "x-delivery-count": 2263
+            }
+          },
+          "content": {
+            "Nome do Cliente": "paula",
+            "E-mail do Cliente": "paula.diel@futureminds.com.br",
+            "Telefone do Cliente - Formato BC": "+5511976636949",
+            "Telefone do Cliente - Formato Z-API": "5511976636949",
+            "ID do Evento": "ecd7f0bc-afad-4791-84c3-f0beb2798fef",
+            "Data do Cancelamento": "2024-06-22",
+            "ID do Cliente": "90a47251-ad20-478b-923a-2433a417d019",
+            "API-KEY": "e9072792-f5ae-4bce-8b48-f3e70109c213",
+            "id_do_campo_id_do_agendamento_bot_conversa": "1139627",
+            "id_do_campo_inviteeid_bot_conversa": "1139629",
+            "id_do_campo_horario_agendado_bot_conversa": "1139625",
+            "id_do_campo_data_do_agendamento_bot_conversa": "1139612",
+            "id_do_campo_dia_da_semana_do_agendamento_bot_conversa": "1139616",
+            "fluxo_de_confirmacao_de_cancelamento": "2360305",
+            "id_do_campo_motivo_do_cancelamento_bot_conversa": "1139614",
+            "Motivo do Cancelamento": "teste",
+            "Data de Início": "2024-06-24",
+            "Hora de Início": "17:00:00",
+            "Link da Reunião": "https://calendly.com/events/ecd7f0bc-afad-4791-84c3-f0beb2798fef/google_meet",
+            "Tipo de Evento": "[Q] Sessão Sprint de Carreira",
+            "Dia da Semana do Evento": "Segunda",
+            "utm_source": null,
+            "utm_campaign": null,
+            "utm_term": null,
+            "utm_medium": null,
+            "utm_content": null,
+            "data_agendamento": "2024-06-22 08:34:49",
+            "id_campo_id_banco_de_dados_bot_conversa": "1333394",
+            "data_termino_ac": "2024-06-24",
+            "data_e_hora_de_termino": "24/06/2024 17:30",
+            "data_e_hora_de_inicio": "24/06/2024 17:00",
+            "funil": "sessao_estrategica",
+            "variacao_do_funil": "v1",
+            "E-mail do Responsável": "paula.diel@futureminds.com.br",
+            "Nome do Responsável": "Paula Diel",
+            "id_do_campo_idleadac_bot_conversa": "1343869",
+            "id_do_campo_iddealac_bot_conversa": "1343862",
+            "CAMPO BOT CONVERSA": "",
+            "url_api_activecampaign": "futureminds14016",
+            "Api-Token": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9",
+            "valor_produto_principal_em_centavos": "840000",
+            "id_pipeline_se_deal_crm": "16",
+            "id_stage_no_show_deal_crm": "83",
+            "id_sdr_deal_crm": "22",
+            "id_campo_id_banco_de_dados_deal_crm": "39",
+            "id_campo_link_de_cancelamento_deal_crm": "16",
+            "id_campo_link_de_reagendamento_deal_crm": "15",
+            "id_campo_id_do_cliente_deal_crm": "17",
+            "id_campo_dia_semana_agendamento_deal_crm": "7",
+            "id_campo_data_de_inicio_ac": "9",
+            "id_campo_data_e_hora_de_inicio_ac": "8",
+            "id_campo_data_e_hora_de_termino_ac": "18",
+            "id_campo_data_de_termino_ac": "12",
+            "id_campo_email_do_responsavel_ac": "11",
+            "id_campo_data_do_agendamento_ac": "10",
+            "id_campo_link_da_reuniao_ac": "13",
+            "id_campo_tipo_de_evento_ac": "14",
+            "id_campo_id_do_evento_ac": "6",
+            "id_campo_utm_source_ac": "77",
+            "id_campo_utm_campaign_ac": "76",
+            "id_campo_utm_term_ac": "80",
+            "id_campo_utm_medium_ac": "78",
+            "id_campo_utm_content_ac": "79",
+            "id_campo_utm_fun_ac": "40",
+            "id_campo_utm_var_ac": "41",
+            "id_task_reuniao_ac": "4",
+            "id_campo_motivo_cancelamento_deal_crm": "82",
+            "id_campo_data_cancelamento_deal_crm": "81",
+            "id_campo_id_bot_conversa_deal_crm": "71",
+            "propertyName": ""
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-04-24T02:37:32.447Z",
+      "updatedAt": "2024-04-24T02:37:32.447Z",
+      "id": "vyeFDAo2U21qEbMD",
+      "name": "[CALENDLY]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-19T16:45:48.134Z",
+  "versionId": "5c3c46de-c72b-410b-9b88-2edba20a26d9"
+}

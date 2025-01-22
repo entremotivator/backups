@@ -1,0 +1,1038 @@
+{
+  "active": true,
+  "connections": {
+    "todo_dia_7:30am": {
+      "main": [
+        [
+          {
+            "node": "infos_bot_conversa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_via_id": {
+      "main": [
+        [
+          {
+            "node": "inexistente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_bc_existe": {
+      "main": [
+        [
+          {
+            "node": "separa_mentoria",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cadastrar_contato1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera_3_segundos": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inexistente1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "id_bc_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "infos_bot_conversa1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_de_renovacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato1": {
+      "main": [
+        [
+          {
+            "node": "add_tag_de_compra",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_via_id",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_de_renovacao": {
+      "main": [
+        [
+          {
+            "node": "inexistente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_renovacao_c_level": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_modus_inovandi": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_modus_inovandi_start": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_mentoria": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_renovacao_c_level",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_modus_inovandi",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_modus_inovandi_start",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_renovacao_c_level1": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_modus_inovandi1": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_lembrete_modus_inovandi_start1": {
+      "main": [
+        [
+          {
+            "node": "espera_3_segundos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_mentoria1": {
+      "main": [
+        [
+          {
+            "node": "envia_lembrete_renovacao_c_level1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_modus_inovandi1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_lembrete_modus_inovandi_start1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_de_compra": {
+      "main": [
+        [
+          {
+            "node": "add_tag_processo_de_revovacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_processo_de_revovacao": {
+      "main": [
+        [
+          {
+            "node": "envia_campo_data_vencimento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_campo_data_vencimento": {
+      "main": [
+        [
+          {
+            "node": "separa_mentoria1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-04-24T14:36:57.695Z",
+  "id": "Wv1m30yKBaAUZPA4",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete \"Renovação da Mentoria\"",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "5108885e-e1fa-4087-804d-36d87cb6d1dc",
+      "name": "todo_dia_7:30am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2480,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"separa_em_linhas1\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "8daa3bf4-e444-4d89-9bb5-3dabbf173d3f",
+      "name": "pesquisa_lead_via_id",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1260,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a026b1dd-928e-4903-8adb-2b9f4d2dd6b8",
+      "name": "id_bc_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "seconds"
+      },
+      "id": "2f50e54f-effc-4117-82fc-0e3c04492efc",
+      "name": "espera_3_segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1720
+      ],
+      "webhookId": "9e7f450f-4c86-4cd7-9618-ef7f1cb3e152"
+    },
+    {
+      "parameters": {},
+      "id": "c597a46a-bfce-4d03-b969-b9ece7a5f4e7",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        1440
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ed1edf8b-3d4a-4fab-8101-2ec54210b038",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_data_de_renovacao\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "bdc1d6ee-6cab-47e6-a916-baf88b460a09",
+      "name": "inexistente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1880,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead_via_id\"].json[\"success\"] }}",
+              "operation": "contains",
+              "value2": "true"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "04c6d47c-602b-4571-a58c-02088d33e65b",
+      "name": "inexistente1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "96f452a9-62b1-45a8-bc63-9c5a3f424222",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -840,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "API-KEY",
+              "value": "1ce1633c-7f94-487a-ad21-62ed7b079427"
+            },
+            {
+              "name": "flow_de_lembrete_diario_se",
+              "value": "1869035"
+            },
+            {
+              "name": "flow_de_lembrete_renocacao_c_level",
+              "value": "2964642"
+            },
+            {
+              "name": "flow_de_lembrete_renocacao_modus_inovandi",
+              "value": "2964388"
+            },
+            {
+              "name": "flow_de_lembrete_renocacao_modus_inovandi_start",
+              "value": "2964623"
+            },
+            {
+              "name": "id_tag_processo_de_renovacao_bot_conversa",
+              "value": "6068908"
+            },
+            {
+              "name": "id_campo_data_vencimento_mentoria_bot_conversa",
+              "value": "1669925"
+            },
+            {
+              "name": "id_tag_compra_bot_conversa",
+              "value": "5267610"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6b4a10f7-4915-446f-bc75-6a4594abb835",
+      "name": "infos_bot_conversa1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -2300,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "=+{{ $node[\"pesquisa_lead_via_id\"].json[\"telefone\"].replace('+','') }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"nome\"] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"pesquisa_lead_via_id\"].json[\"sobrenome\"] }}."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        1420
+      ],
+      "id": "e7a74be7-c756-45cc-825d-d1170466ce29",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "34b16fac-dd39-4de5-8582-b491e578c996",
+      "name": "separa_em_linhas1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        -1460,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "historico_vendas",
+          "mode": "list",
+          "cachedResultName": "historico_vendas"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data_de_renovacao",
+              "value": "={{ $now.toFormat('dd/MM/yyyy').slice(6,10) }}-{{ $now.toFormat('dd/MM/yyyy').slice(3,5) }}-{{ $now.toFormat('dd/MM/yyyy').slice(0,2) }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "089e8176-46a8-489e-a877-e4b194dc7053",
+      "name": "pesquisa_data_de_renovacao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2100,
+        1280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_c_level\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_renovacao_c_level",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        920
+      ],
+      "id": "48dfae85-bb43-4fa1-b5f9-567e350731bf",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_modus_inovandi\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_modus_inovandi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        1080
+      ],
+      "id": "bf09b046-c710-49c6-b948-c5a024abb0a1",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"pesquisa_lead_via_id\"].json[\"id_botconversa\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_modus_inovandi_start\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_modus_inovandi_start",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        1240
+      ],
+      "id": "d144fc43-669d-4527-a82a-09103ee0ec9a",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $node[\"separa_em_linhas1\"].json[\"mentoria_vendida\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "Mentoria C-Level",
+              "outputKey": "0"
+            },
+            {
+              "value2": "Mentoria Modus Inovandi",
+              "outputKey": "1"
+            },
+            {
+              "value2": "Mentoria Modus Inovandi Start",
+              "outputKey": "2"
+            }
+          ]
+        }
+      },
+      "id": "59515b5f-15a5-483d-b00c-b350ca6c7cc2",
+      "name": "separa_mentoria",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [
+        180,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_c_level\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_renovacao_c_level1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        1400
+      ],
+      "id": "9259f3d4-7b41-42e1-bea2-39b33abbce6e",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_modus_inovandi\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_modus_inovandi1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        1560
+      ],
+      "id": "73342236-2aef-4a26-8de4-a1a6c02d3841",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"flow_de_lembrete_renocacao_modus_inovandi_start\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "envia_lembrete_modus_inovandi_start1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        1720
+      ],
+      "id": "e964ed25-ea96-4867-866f-0bb665f05e7e",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $node[\"separa_em_linhas1\"].json[\"mentoria_vendida\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "Mentoria C-Level",
+              "outputKey": "0"
+            },
+            {
+              "value2": "Mentoria Modus Inovandi",
+              "outputKey": "1"
+            },
+            {
+              "value2": "Mentoria Modus Inovandi Start",
+              "outputKey": "2"
+            }
+          ]
+        }
+      },
+      "id": "e5774be0-e60e-4b39-8f0c-551cdab0bd31",
+      "name": "separa_mentoria1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [
+        180,
+        1560
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/tags/{{ $node[\"infos_bot_conversa1\"].json[\"id_tag_compra_bot_conversa\"] }}/\n",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "[HV] - Comprou"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1693a179-bd6b-439e-9ab6-978d68c0c774",
+      "name": "add_tag_de_compra",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -360,
+        1560
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/tags/{{ $node[\"infos_bot_conversa1\"].json[\"id_tag_processo_de_renovacao_bot_conversa\"] }}/\n",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "ProcessoDeRenovação"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3ad9f022-1125-4fec-a9a4-6d31bcef3d4e",
+      "name": "add_tag_processo_de_revovacao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        1560
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato1\"].json[\"id\"] }}/custom_fields/{{ $node[\"infos_bot_conversa1\"].json[\"id_campo_data_vencimento_mentoria_bot_conversa\"] }}/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"infos_bot_conversa1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "string"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"separa_em_linhas1\"].json[\"data_de_vencimento\"].split('-')[2] }}-{{ $node[\"separa_em_linhas1\"].json[\"data_de_vencimento\"].split('-')[1] }}-{{ $node[\"separa_em_linhas1\"].json[\"data_de_vencimento\"].split('-')[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df0ea7af-f0da-4d59-b3fa-8caeb6ad3d73",
+      "name": "envia_campo_data_vencimento",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        0,
+        1560
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "continueOnFail": true
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:everyday_7am": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-30T14:59:33.773Z",
+  "versionId": "c85b286a-1a55-4781-8446-19e23370d1cd"
+}

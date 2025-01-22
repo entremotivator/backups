@@ -1,0 +1,1576 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_colaborador_existe": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador_da_vez",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador_da_vez": {
+      "main": [
+        [
+          {
+            "node": "vez_null1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador4": {
+      "main": [
+        [
+          {
+            "node": "colaborador_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_relacionamento": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_relacionamento": {
+      "main": [
+        [
+          {
+            "node": "relacionamento_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "relacionamento_existe": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_colaborador_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador5": {
+      "main": [
+        [
+          {
+            "node": "colaborador_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "vez_null1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador6": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez3": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez4": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "colaborador_existe1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez5": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador7": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador_da_vez1": {
+      "main": [
+        [
+          {
+            "node": "vez_null2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador8": {
+      "main": [
+        [
+          {
+            "node": "colaborador_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "vez_null2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador9": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez6": {
+      "main": [
+        [
+          {
+            "node": "atualiza_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez7": {
+      "main": [
+        [
+          {
+            "node": "atualiza_relacionamento1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "colaborador_existe2": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador10": {
+      "main": [
+        [
+          {
+            "node": "atualiza_vez8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "colaborador_existe3": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador_da_vez1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_vez8": {
+      "main": [
+        [
+          {
+            "node": "atualiza_relacionamento2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_relacionamento": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_relacionamento1": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_relacionamento2": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consulta_time": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-23T20:36:53.372Z",
+  "id": "jXdQkiSRjadsxa5k",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🔔⌚[FUTURE MINDS] - Lembrete \"Qualificado Não Agendou\" copy✅⌚[JU MARQUES] - ROTACIONAMENTO DE SDR's",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"email_colaborador\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d924741-9faa-4273-b6ce-b5d20847ecaa",
+      "name": "pesquisa_colaborador3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        2300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6b7e2434-ab0e-4e63-b61d-527079c2f64a",
+              "leftValue": "={{ $node[\"consulta_time\"].json[\"body\"][\"email_colaborador\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "97ccec92-9b9a-44be-8639-483718b64b54",
+      "name": "email_colaborador_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        320,
+        2400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "time",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "38241df7-ec88-460d-b3bb-4984f418bae2",
+      "name": "pesquisa_colaborador_da_vez",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        2480
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "ordem_fila",
+              "value": "={{ $node[\"pesquisa_colaborador_da_vez\"].json[\"vez\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dbef5113-7c0c-48fb-afb6-f4fe30c640ea",
+      "name": "pesquisa_colaborador4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        940,
+        2600
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"user\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{\n  $node[\"pesquisa_colaborador7\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador7\"].json[\"id\"] : $node[\"pesquisa_colaborador4\"].runIndex >= 0 \n    ? $node[\"pesquisa_colaborador4\"].json[\"id\"]\n    : $node[\"pesquisa_colaborador6\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador6\"].json[\"id\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador3\"].json[\"id\"] : null\n}}"
+            },
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d03e3098-12c8-4a61-ab41-392d22ef8b56",
+      "name": "insere_relacionamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1780,
+        2320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"user\"] }}"
+            },
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "65b10598-c14f-4376-87d0-3b115aecf764",
+      "name": "pesquisa_relacionamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -360,
+        2260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6b7e2434-ab0e-4e63-b61d-527079c2f64a",
+              "leftValue": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "832a3cb3-60db-4a61-a9a6-e708215f1207",
+      "name": "relacionamento_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -160,
+        2260
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_relacionamento\"].json[\"id_responsavel\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f6302398-13d8-4e4a-bb79-929554c367f9",
+      "name": "pesquisa_colaborador5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        120,
+        1800
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "f3f4f554-1c72-4dd9-87a5-74b0d01653f2",
+              "leftValue": "={{ $node[\"pesquisa_colaborador_da_vez\"].json[\"vez\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c7f11904-7567-4e04-8e1d-326349eb1ff5",
+      "name": "vez_null1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        740,
+        2480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "76bfd96e-00d7-4dea-9a98-cdab43bc3d53",
+      "name": "pesquisa_colaborador6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        940,
+        2420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez\"].json[\"id\"] || $node[\"pesquisa_colaborador6\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador6\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e934dd8b-6fa7-4ffe-b8be-a717a460100a",
+      "name": "atualiza_vez3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        2420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador4\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "42b4b57c-cf5d-4128-9c8f-5a75d4303fc8",
+      "name": "atualiza_vez4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1340,
+        2580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "1de9a6bc-5395-4840-b6ff-0ac3f9779921",
+              "leftValue": "={{ $node[\"pesquisa_colaborador4\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8cc51e4b-a648-4164-b61d-4a2013363580",
+      "name": "colaborador_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1140,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador7\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bc5ef179-5076-4589-92e2-196534edf126",
+      "name": "atualiza_vez5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1520,
+        2760
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d088f727-a155-4239-9bea-35add9215ec1",
+      "name": "pesquisa_colaborador7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1340,
+        2760
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "49bc1770-8197-483a-b0c5-501e42017fa6",
+              "name": "id_chatwoot",
+              "value": "={{   $node[\"pesquisa_colaborador7\"].runIndex >= 0        ? $node[\"pesquisa_colaborador7\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador10\"].runIndex >= 0      ? $node[\"pesquisa_colaborador10\"].json[\"id_chatwoot\"]     : $node[\"pesquisa_colaborador4\"].runIndex >= 0        ? $node[\"pesquisa_colaborador4\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador6\"].runIndex >= 0        ? $node[\"pesquisa_colaborador6\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador8\"].runIndex >= 0        ? $node[\"pesquisa_colaborador8\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador9\"].runIndex >= 0        ? $node[\"pesquisa_colaborador9\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"id_chatwoot\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "46ec6590-4b1e-4db3-869e-39878e2e5ec1",
+              "name": "id_crm",
+              "value": "={{   $node[\"pesquisa_colaborador7\"].runIndex >= 0        ? $node[\"pesquisa_colaborador7\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador10\"].runIndex >= 0      ? $node[\"pesquisa_colaborador10\"].json[\"id_crm\"]     : $node[\"pesquisa_colaborador4\"].runIndex >= 0        ? $node[\"pesquisa_colaborador4\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador6\"].runIndex >= 0        ? $node[\"pesquisa_colaborador6\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador8\"].runIndex >= 0        ? $node[\"pesquisa_colaborador8\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador9\"].runIndex >= 0        ? $node[\"pesquisa_colaborador9\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"id_crm\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "9233bde6-29d1-490f-b2b2-a87d883fdaca",
+              "name": "apikey_evolution",
+              "value": "={{   $node[\"pesquisa_colaborador7\"].runIndex >= 0        ? $node[\"pesquisa_colaborador7\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador10\"].runIndex >= 0      ? $node[\"pesquisa_colaborador10\"].json[\"apikey_evolution\"]     : $node[\"pesquisa_colaborador4\"].runIndex >= 0        ? $node[\"pesquisa_colaborador4\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador6\"].runIndex >= 0        ? $node[\"pesquisa_colaborador6\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador8\"].runIndex >= 0        ? $node[\"pesquisa_colaborador8\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador9\"].runIndex >= 0        ? $node[\"pesquisa_colaborador9\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"apikey_evolution\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"apikey_evolution\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "7af48129-02cd-403f-a276-bdfe0493bb3d",
+              "name": "instancia_evolution",
+              "value": "={{   $node[\"pesquisa_colaborador7\"].runIndex >= 0        ? $node[\"pesquisa_colaborador7\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador10\"].runIndex >= 0      ? $node[\"pesquisa_colaborador10\"].json[\"instancia_evolution\"]     : $node[\"pesquisa_colaborador4\"].runIndex >= 0        ? $node[\"pesquisa_colaborador4\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador6\"].runIndex >= 0        ? $node[\"pesquisa_colaborador6\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador8\"].runIndex >= 0        ? $node[\"pesquisa_colaborador8\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador9\"].runIndex >= 0        ? $node[\"pesquisa_colaborador9\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"instancia_evolution\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"instancia_evolution\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "31f724da-4288-49d0-9cce-d9d284cd1a97",
+              "name": "nome",
+              "value": "={{   $node[\"pesquisa_colaborador7\"].runIndex >= 0        ? $node[\"pesquisa_colaborador7\"].json[\"nome\"] : $node[\"pesquisa_colaborador10\"].runIndex >= 0      ? $node[\"pesquisa_colaborador10\"].json[\"nome\"]     : $node[\"pesquisa_colaborador4\"].runIndex >= 0        ? $node[\"pesquisa_colaborador4\"].json[\"nome\"] : $node[\"pesquisa_colaborador6\"].runIndex >= 0        ? $node[\"pesquisa_colaborador6\"].json[\"nome\"] : $node[\"pesquisa_colaborador8\"].runIndex >= 0        ? $node[\"pesquisa_colaborador8\"].json[\"nome\"] : $node[\"pesquisa_colaborador9\"].runIndex >= 0        ? $node[\"pesquisa_colaborador9\"].json[\"nome\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"nome\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"nome\"] : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "77168c64-cbf9-4a2e-9cd3-55f7a9a46819",
+      "name": "dados_colaborador",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1960,
+        2180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "time",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bc4f445a-bc72-404f-8f53-8b5e9a97a648",
+      "name": "pesquisa_colaborador_da_vez1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        460,
+        1880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "ordem_fila",
+              "value": "={{ $node[\"pesquisa_colaborador_da_vez1\"].json[\"vez\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "53fb7a88-43f5-4859-9d5c-21f48114d052",
+      "name": "pesquisa_colaborador8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        2000
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "f3f4f554-1c72-4dd9-87a5-74b0d01653f2",
+              "leftValue": "={{ $node[\"pesquisa_colaborador_da_vez1\"].json[\"vez\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "fc200837-4da3-459b-880c-de033afce16c",
+      "name": "vez_null2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        660,
+        1880
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "794d8447-4992-4158-b4d9-9acafa40cf89",
+      "name": "pesquisa_colaborador9",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        1820
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez1\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador9\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "13c43a11-45f2-48a4-b889-da84bbdec2a2",
+      "name": "atualiza_vez6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1020,
+        1820
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez1\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador8\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8b749c8e-5bb4-4af0-8293-5e630ce5feb3",
+      "name": "atualiza_vez7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1260,
+        2000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "1de9a6bc-5395-4840-b6ff-0ac3f9779921",
+              "leftValue": "={{ $node[\"pesquisa_colaborador8\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "23f79cdf-7c54-40d3-ad65-b7c2932b4d6b",
+      "name": "colaborador_existe2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores2",
+          "mode": "list",
+          "cachedResultName": "colaboradores2"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"consulta_time\"].json[\"body\"][\"time\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f26ec8da-87b3-4556-9d4d-27dfc2bd25df",
+      "name": "pesquisa_colaborador10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1260,
+        2180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "d6775303-e8d6-4066-8ded-9807106b76ac",
+              "leftValue": "={{ $node[\"pesquisa_colaborador5\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2e8c5936-9abe-48a2-b990-ebd36ae7e32d",
+      "name": "colaborador_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        300,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "fila_atendimento",
+          "mode": "list",
+          "cachedResultName": "fila_atendimento"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador_da_vez1\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "vez",
+              "value": "={{ $node[\"pesquisa_colaborador10\"].json[\"ordem_fila\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "67bfcbfe-918e-4572-8fd1-ab77054eca7c",
+      "name": "atualiza_vez8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1440,
+        2180
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_responsavel",
+              "value": "={{ $node[\"pesquisa_colaborador9\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd1c4a38-e371-4bc2-b943-188626e95b2b",
+      "name": "atualiza_relacionamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1220,
+        1820
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_responsavel",
+              "value": "={{ $node[\"pesquisa_colaborador8\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7c2f9d60-1d78-4d9a-b8c5-b27bb4469fa0",
+      "name": "atualiza_relacionamento1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1440,
+        2000
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_responsavel",
+              "value": "={{ $node[\"pesquisa_colaborador10\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d523effb-f0f5-421d-9b00-42f26dd5dce7",
+      "name": "atualiza_relacionamento2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1620,
+        2180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "consulta-colaborador",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "49a2bce2-125c-43ad-89d9-3498da4f99e0",
+      "name": "consulta_time",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -560,
+        2260
+      ],
+      "webhookId": "948676f6-d253-4323-a474-b478ad4a6aa4"
+    }
+  ],
+  "pinData": {
+    "consulta_time": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookjumarques.automagicbots.com.br",
+            "user-agent": "axios/1.6.7",
+            "content-length": "26",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8nwebhookjumarques.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8d715749cb3a",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "user": "19",
+            "time": "SDR"
+          },
+          "webhookUrl": "https://n8nwebhookjumarques.automagicbots.com.br/webhook/consulta-colaborador",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:todo_dia_7:30am": {
+      "recurrencyRules": []
+    },
+    "node:everyday_7am": {
+      "recurrencyRules": []
+    },
+    "node:23h59": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-04-24T13:55:49.881Z",
+      "updatedAt": "2024-04-24T13:55:49.881Z",
+      "id": "JlsVxNJW8oczbTDT",
+      "name": "[LEMBRETE]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-14T17:26:10.675Z",
+  "versionId": "945e23b3-a50e-49e9-b577-acbd4104436c"
+}

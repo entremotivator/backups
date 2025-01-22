@@ -1,0 +1,103 @@
+{
+  "active": false,
+  "connections": {
+    "Crypto": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Crypto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-25T19:53:48.556Z",
+  "id": "fQPm6ekWw2FUfBl0",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🧠[FUTURE MINDS] - Alimentar o pixel",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v19.0/2040607112959832/events",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "data",
+              "value": "=[ { \"event_name\": \"Purchase\", \"event_time\": 1709903439, \"user_data\": { \"em\": [ \"{{ $node[\"Crypto\"].json[\"em\"] }}\" ], \"ph\": [ \"254aa248acb47dd654ca3ea53f48c2c26d641d23d7e2e93a1ec56258df7674c4\", \"6f4fcb9deaeadc8f9746ae76d97ce1239e98b404efe5da3ee0b7149740f89ad6\" ], \"client_ip_address\": \"123.123.123.123\", \"client_user_agent\": \"$CLIENT_USER_AGENT\", \"fbc\": \"fb.1.1554763741205.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890\", \"fbp\": \"fb.1.1558571054389.1098115397\" }, \"custom_data\": { \"currency\": \"usd\", \"value\": 123.45, \"contents\": [ { \"id\": \"product123\", \"quantity\": 1, \"delivery_category\": \"home_delivery\" } ] }, \"event_source_url\": \"http://jaspers-market.com/product/123\", \"action_source\": \"website\" } ]"
+            },
+            {
+              "name": "access_token",
+              "value": "EAAFeaihsV3wBOZBULyH8K0jlCiVIVq7fBJS8LqDmU8cpF9QrZBbvCPCMdgJ9sSZB2ZBZAyzPTnV7vge6Oi6wYQxio0CYJURHZBLPAeytJPZAXswqXJyRHwzmG7C7Yi42maAFtOIK8b66bb8urdTK5VKLxDNMt4nGZC7VVZBNweRtZBJqwPhcAdF2jZBUf5jawq9aUOV"
+            },
+            {
+              "name": "test_event_code",
+              "value": "TEST25287"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1629f7e4-71c5-46af-b80b-60a5ff42fb72",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1860,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "type": "SHA256",
+        "value": "email do lead",
+        "dataPropertyName": "em"
+      },
+      "id": "524aa6d8-3aa3-464b-98d5-81c86f16c4cc",
+      "name": "Crypto",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "d87294da-97ec-407c-9fed-204fba2aff6f",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        120
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-07-04T20:29:19.774Z",
+  "versionId": "543dded4-b965-46f8-9155-9f7a305251ef"
+}

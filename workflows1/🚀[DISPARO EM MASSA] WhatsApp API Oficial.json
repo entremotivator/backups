@@ -1,0 +1,1502 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_lotes": {
+      "main": [
+        [],
+        [
+          {
+            "node": "API Oficial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica_data": {
+      "main": [
+        [
+          {
+            "node": "le_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe5": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "existe_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Não faz nada": {
+      "main": [
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API Oficial": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2s": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_telefone": {
+      "main": [
+        [],
+        [
+          {
+            "node": "separa_em_lotes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "Fim",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "le_planilha": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "08/01 - 10hrs": {
+      "main": [
+        [
+          {
+            "node": "verifica_data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica_data1": {
+      "main": [
+        [
+          {
+            "node": "le_planilha1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas1": {
+      "main": [
+        [
+          {
+            "node": "Fim1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "le_planilha1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud1": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "08/01 - 18hrs": {
+      "main": [
+        [
+          {
+            "node": "verifica_data1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica_data2": {
+      "main": [
+        [
+          {
+            "node": "le_planilha2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas2": {
+      "main": [
+        [
+          {
+            "node": "Fim2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "le_planilha2": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud2": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "09/01 - 10hrs": {
+      "main": [
+        [
+          {
+            "node": "verifica_data2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica_data3": {
+      "main": [
+        [
+          {
+            "node": "le_planilha3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas3": {
+      "main": [
+        [
+          {
+            "node": "Fim3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "le_planilha3": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud3": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "09/01 - 16hrs": {
+      "main": [
+        [
+          {
+            "node": "verifica_data3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verifica_data4": {
+      "main": [
+        [
+          {
+            "node": "le_planilha4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas4": {
+      "main": [
+        [
+          {
+            "node": "Fim4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "le_planilha4": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud4": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "09/01 - 19hrs": {
+      "main": [
+        [
+          {
+            "node": "verifica_data4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-21T14:35:39.856Z",
+  "id": "MqI9RmFD7bnZpI1C",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "🚀[DISPARO EM MASSA] WhatsApp API Oficial",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"separa_em_lotes\"].json[\"Email de contato principal\"]  || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"separa_em_lotes\"].json[\"Email de contato principal\"]  || '-----------------------'}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "8795b933-8960-4477-925a-2a2587c03512",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1500,
+        120
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "109d3baf-8ad0-45c9-8c2e-03f24391980c",
+      "name": "separa_em_lotes",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1080,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "709889b9-6fdf-4c56-b681-56beee3455d0",
+      "name": "pesquisa_lead1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1720,
+        120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f13d65cd-2222-49ad-aeca-7b7212865c6a",
+      "name": "Fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6e0dc768-c500-4f44-afeb-462ab225bf6a",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "08/01/2025",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c5ff572e-bc9c-43aa-999e-4796f7848ce7",
+      "name": "verifica_data",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        980,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead1\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "aac737e9-c5a6-4434-9288-0f73a4a81f0b",
+      "name": "nao_existe5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "90811a42-7087-4121-a01a-e86bb8bd4515",
+      "name": "Não faz nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2760,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "7ad169eb-2788-4009-9401-e3c67e2cad2a",
+      "name": "When clicking \"Test workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        160,
+        160
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4dce3c0a-92b7-4238-91ff-16df8238bf3f",
+      "name": "API Oficial",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "seconds"
+      },
+      "id": "36664ac2-ac2f-4dff-bf7a-19cc595679f3",
+      "name": "2s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2580,
+        100
+      ],
+      "webhookId": "a9b3d6c3-a701-42e4-bf46-3309a5174ef9"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "673f6d37-6e1b-4253-811e-4a6772f743a5",
+              "leftValue": "={{ $node[\"nao_existe5\"].json[\"telefone\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0e72f5ab-70ca-4d95-88f2-3a4d8d6faf15",
+      "name": "existe_telefone",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2120,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "deleteCommand": "delete",
+        "options": {}
+      },
+      "id": "1b74fa72-96d5-4557-b772-c76261af5e2f",
+      "name": "excluir_enviados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "f95ed8af-a10a-44a5-bd98-df308e3811b8",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1420,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtém os contatos do campo \"Contatos\"\nconst contatos = $node[\"separa_em_linhas\"].json[\"Número de telefone\"] ? $node[\"separa_em_linhas\"].json[\"Número de telefone\"] .toString() : \"\";\n\n// Divide o campo \"Contatos\" em partes com base no espaço entre o e-mail e o telefone\nconst partesContatos = contatos.split(\" \");\n\n// Encontra a última parte que será o telefone\nconst telefoneOriginal = partesContatos[partesContatos.length - 1];\n\n// Removendo caracteres não numéricos do telefone\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI e DDD padrão\nconst ddiPadrao = '55';\nconst dddPadrao = '48';\n\n// Verifica o comprimento do telefone e ajusta DDI e DDD se necessário\nlet telefoneFinal;\nif (telefoneLimpo.length === 8) {\n    // Telefone sem DDD e sem DDI, adiciona ambos\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 9) {\n    // Telefone sem DDD, adiciona apenas DDD\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 10) {\n    // Telefone com DDD, sem DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 11 && !telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone com DDD e sem DDI, adiciona o DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 12 && telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone já tem DDI e DDD\n    telefoneFinal = telefoneLimpo;\n} else {\n    // Caso o número não caia em nenhuma das categorias, retorna o telefone como está\n    telefoneFinal = telefoneLimpo;\n}\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "70a3b3f9-fbfa-45a8-9b2a-6f035dd2aa8a",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "returnAll": true,
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "2e69a2cb-db9a-4df8-9d58-f0d81bba4a6d",
+      "name": "puxa_lista",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1501333950,
+          "mode": "list",
+          "cachedResultName": "Convite Webinario",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls/edit#gid=1501333950"
+        },
+        "options": {}
+      },
+      "id": "71bd4d35-4290-46d0-a785-99d30900bb7d",
+      "name": "le_planilha",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1200,
+        860
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"telefonefinal\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"separa_em_linhas\"].json[\"Nome\"].split (\" \")[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1007769e-c96d-4c42-a329-a1d2e4848b39",
+      "name": "insere_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Code\"].json[\"telefonefinal\"] }}",
+        "template": "convite_08_01_10h|pt_BR"
+      },
+      "id": "c65eb356-a92c-4605-81ac-7b777fe1645d",
+      "name": "WhatsApp Business Cloud",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        940
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 11,
+              "triggerAtMinute": 20
+            }
+          ]
+        }
+      },
+      "id": "6e4e90fc-7b12-463e-b5fd-a4e5486d8019",
+      "name": "08/01 - 10hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        880
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c86fb60a-79bc-408e-be7b-d9c2efc5e898",
+      "name": "Fim1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6e0dc768-c500-4f44-afeb-462ab225bf6a",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "08/01/2025",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "32d5133c-8076-4b76-be2c-d234efc4fb36",
+      "name": "verifica_data1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "1bc3d0d1-cef8-421e-8eaf-034c7392b15e",
+      "name": "separa_em_linhas1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1400,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtém os contatos do campo \"Contatos\"\nconst contatos = $node[\"separa_em_linhas1\"].json[\"Número de telefone\"] ? $node[\"separa_em_linhas1\"].json[\"Número de telefone\"] .toString() : \"\";\n\n// Divide o campo \"Contatos\" em partes com base no espaço entre o e-mail e o telefone\nconst partesContatos = contatos.split(\" \");\n\n// Encontra a última parte que será o telefone\nconst telefoneOriginal = partesContatos[partesContatos.length - 1];\n\n// Removendo caracteres não numéricos do telefone\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI e DDD padrão\nconst ddiPadrao = '55';\nconst dddPadrao = '48';\n\n// Verifica o comprimento do telefone e ajusta DDI e DDD se necessário\nlet telefoneFinal;\nif (telefoneLimpo.length === 8) {\n    // Telefone sem DDD e sem DDI, adiciona ambos\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 9) {\n    // Telefone sem DDD, adiciona apenas DDD\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 10) {\n    // Telefone com DDD, sem DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 11 && !telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone com DDD e sem DDI, adiciona o DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 12 && telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone já tem DDI e DDD\n    telefoneFinal = telefoneLimpo;\n} else {\n    // Caso o número não caia em nenhuma das categorias, retorna o telefone como está\n    telefoneFinal = telefoneLimpo;\n}\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "0b2e32b5-d1dc-4c33-b8e8-f469f1e026cb",
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1640,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1501333950,
+          "mode": "list",
+          "cachedResultName": "Convite Webinario",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls/edit#gid=1501333950"
+        },
+        "options": {}
+      },
+      "id": "2ba5dea1-960b-4f11-9bb1-f19cd835f398",
+      "name": "le_planilha1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        1260
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Code1\"].json[\"telefonefinal\"] }}",
+        "template": "convite_08_01_18h|pt_BR"
+      },
+      "id": "23c7d2ea-657f-404d-8103-dd334a98346b",
+      "name": "WhatsApp Business Cloud1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        1340
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 18
+            }
+          ]
+        }
+      },
+      "id": "bf6b5c11-fdc1-43c6-9bd3-28bc0d65d6c3",
+      "name": "08/01 - 18hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        1280
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ab286369-6360-4868-9cc3-b17cb34ea308",
+      "name": "Fim2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6e0dc768-c500-4f44-afeb-462ab225bf6a",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "09/01/2025",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "271e043d-e7e6-4791-a538-714c4c1b1c33",
+      "name": "verifica_data2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        1720
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "e9dab8cd-f9e7-46cb-ae9a-b98563ac493b",
+      "name": "separa_em_linhas2",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1400,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtém os contatos do campo \"Contatos\"\nconst contatos = $node[\"separa_em_linhas2\"].json[\"Número de telefone\"] ? $node[\"separa_em_linhas2\"].json[\"Número de telefone\"] .toString() : \"\";\n\n// Divide o campo \"Contatos\" em partes com base no espaço entre o e-mail e o telefone\nconst partesContatos = contatos.split(\" \");\n\n// Encontra a última parte que será o telefone\nconst telefoneOriginal = partesContatos[partesContatos.length - 1];\n\n// Removendo caracteres não numéricos do telefone\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI e DDD padrão\nconst ddiPadrao = '55';\nconst dddPadrao = '48';\n\n// Verifica o comprimento do telefone e ajusta DDI e DDD se necessário\nlet telefoneFinal;\nif (telefoneLimpo.length === 8) {\n    // Telefone sem DDD e sem DDI, adiciona ambos\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 9) {\n    // Telefone sem DDD, adiciona apenas DDD\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 10) {\n    // Telefone com DDD, sem DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 11 && !telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone com DDD e sem DDI, adiciona o DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 12 && telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone já tem DDI e DDD\n    telefoneFinal = telefoneLimpo;\n} else {\n    // Caso o número não caia em nenhuma das categorias, retorna o telefone como está\n    telefoneFinal = telefoneLimpo;\n}\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "d14821cb-24d8-487b-98a6-cb975a6360a6",
+      "name": "Code2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1640,
+        1780
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1501333950,
+          "mode": "list",
+          "cachedResultName": "Convite Webinario",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls/edit#gid=1501333950"
+        },
+        "options": {}
+      },
+      "id": "ad0b7a65-e527-49be-a4a0-deddb2917d92",
+      "name": "le_planilha2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        1700
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Code2\"].json[\"telefonefinal\"] }}",
+        "template": "convite_09_01_10h|pt_BR"
+      },
+      "id": "dda7ba39-a604-4972-908f-56cd372136b7",
+      "name": "WhatsApp Business Cloud2",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        1780
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "id": "f263db50-5a7c-4cfa-bc1d-545760875541",
+      "name": "09/01 - 10hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        1720
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "31e5b5fe-a4e0-4760-9056-5fd33b930c1e",
+      "name": "Fim3",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        2040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6e0dc768-c500-4f44-afeb-462ab225bf6a",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "09/01/2025",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "79f069cf-9076-4ea7-9bde-f88aec8c7c5c",
+      "name": "verifica_data3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        2160
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "dcb950c4-2ff5-4f31-b266-554792e94041",
+      "name": "separa_em_linhas3",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1400,
+        2140
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtém os contatos do campo \"Contatos\"\nconst contatos = $node[\"separa_em_linhas3\"].json[\"Número de telefone\"] ? $node[\"separa_em_linhas3\"].json[\"Número de telefone\"] .toString() : \"\";\n\n// Divide o campo \"Contatos\" em partes com base no espaço entre o e-mail e o telefone\nconst partesContatos = contatos.split(\" \");\n\n// Encontra a última parte que será o telefone\nconst telefoneOriginal = partesContatos[partesContatos.length - 1];\n\n// Removendo caracteres não numéricos do telefone\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI e DDD padrão\nconst ddiPadrao = '55';\nconst dddPadrao = '48';\n\n// Verifica o comprimento do telefone e ajusta DDI e DDD se necessário\nlet telefoneFinal;\nif (telefoneLimpo.length === 8) {\n    // Telefone sem DDD e sem DDI, adiciona ambos\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 9) {\n    // Telefone sem DDD, adiciona apenas DDD\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 10) {\n    // Telefone com DDD, sem DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 11 && !telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone com DDD e sem DDI, adiciona o DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 12 && telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone já tem DDI e DDD\n    telefoneFinal = telefoneLimpo;\n} else {\n    // Caso o número não caia em nenhuma das categorias, retorna o telefone como está\n    telefoneFinal = telefoneLimpo;\n}\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "ec84d73f-93b2-458a-93d9-684ec892ebba",
+      "name": "Code3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1640,
+        2220
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1501333950,
+          "mode": "list",
+          "cachedResultName": "Convite Webinario",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls/edit#gid=1501333950"
+        },
+        "options": {}
+      },
+      "id": "97c3ae02-65a7-425b-b9a6-eddef7ef69c9",
+      "name": "le_planilha3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        2140
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Code3\"].json[\"telefonefinal\"] }}",
+        "template": "convite_09_01_16h|pt_BR"
+      },
+      "id": "0d6b1457-ddcd-4b71-807b-d7598a18d8f8",
+      "name": "WhatsApp Business Cloud3",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        2220
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 16
+            }
+          ]
+        }
+      },
+      "id": "a612ff9c-ec73-4a9b-9f51-510888611b11",
+      "name": "09/01 - 16hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        2160
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c7f1f302-a83b-40f9-9fef-8ac5bf53260e",
+      "name": "Fim4",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        2480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "6e0dc768-c500-4f44-afeb-462ab225bf6a",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "09/01/2025",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "af61fb86-4da6-4564-92c2-4804a0700660",
+      "name": "verifica_data4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "46fa8a55-5641-4ae5-8bdc-77eda5721d79",
+      "name": "separa_em_linhas4",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1400,
+        2580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obtém os contatos do campo \"Contatos\"\nconst contatos = $node[\"separa_em_linhas4\"].json[\"Número de telefone\"] ? $node[\"separa_em_linhas4\"].json[\"Número de telefone\"] .toString() : \"\";\n\n// Divide o campo \"Contatos\" em partes com base no espaço entre o e-mail e o telefone\nconst partesContatos = contatos.split(\" \");\n\n// Encontra a última parte que será o telefone\nconst telefoneOriginal = partesContatos[partesContatos.length - 1];\n\n// Removendo caracteres não numéricos do telefone\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI e DDD padrão\nconst ddiPadrao = '55';\nconst dddPadrao = '48';\n\n// Verifica o comprimento do telefone e ajusta DDI e DDD se necessário\nlet telefoneFinal;\nif (telefoneLimpo.length === 8) {\n    // Telefone sem DDD e sem DDI, adiciona ambos\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 9) {\n    // Telefone sem DDD, adiciona apenas DDD\n    telefoneFinal = ddiPadrao + dddPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 10) {\n    // Telefone com DDD, sem DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 11 && !telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone com DDD e sem DDI, adiciona o DDI\n    telefoneFinal = ddiPadrao + telefoneLimpo;\n} else if (telefoneLimpo.length === 12 && telefoneLimpo.startsWith(ddiPadrao)) {\n    // Telefone já tem DDI e DDD\n    telefoneFinal = telefoneLimpo;\n} else {\n    // Caso o número não caia em nenhuma das categorias, retorna o telefone como está\n    telefoneFinal = telefoneLimpo;\n}\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "a249b23d-c347-4f9b-88d8-e9dd0658f276",
+      "name": "Code4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1640,
+        2660
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1501333950,
+          "mode": "list",
+          "cachedResultName": "Convite Webinario",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16tYE9M6c_5LLd4ujP4Y-MtRCgDDbOGrxbzQ-g8DdPls/edit#gid=1501333950"
+        },
+        "options": {}
+      },
+      "id": "dc5c3263-d90f-4604-b388-74b5ad95d580",
+      "name": "le_planilha4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        2580
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "rYo7W2RpqP0vZrDP",
+          "name": "[Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Code4\"].json[\"telefonefinal\"] }}",
+        "template": "convite_09_01_19h|pt_BR"
+      },
+      "id": "8ee57537-95b6-484e-b4fe-4f958ce54e0a",
+      "name": "WhatsApp Business Cloud4",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        2660
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 19
+            }
+          ]
+        }
+      },
+      "id": "651b0772-85c0-4bc7-9cc2-b35557d9428e",
+      "name": "09/01 - 19hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        2600
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true
+  },
+  "staticData": {
+    "node:dispara as 17hs": {
+      "recurrencyRules": []
+    },
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    },
+    "node:08/01 - 10hrs": {
+      "recurrencyRules": []
+    },
+    "node:08/01 - 18hrs": {
+      "recurrencyRules": []
+    },
+    "node:09/01 - 10hrs": {
+      "recurrencyRules": []
+    },
+    "node:09/01 - 16hrs": {
+      "recurrencyRules": []
+    },
+    "node:09/01 - 19hrs": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 5,
+  "updatedAt": "2025-01-08T14:26:20.887Z",
+  "versionId": "f11a2ac1-c757-41cb-ab47-f796ad75dbcb"
+}
