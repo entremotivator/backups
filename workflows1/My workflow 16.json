@@ -1,0 +1,405 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-16T01:50:52.220Z",
+  "id": "g7cKyrgr6qMnCobT",
+  "meta": null,
+  "name": "My workflow 16",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<Name>{{ $json.Name }}</Name>\n\n<Neighborhood and When>{{ $json['Neighborhood & When'] }}</Neighborhood and When> \n\n<Content> {{ $json.Content }} </Content>\n\n<Link> {{ $json.Link }} </Link\n\n\n",
+        "options": {
+          "systemMessage": "=You are responsible for analyzing community posts to identify inquiries about irrigation services. Your expertise ensures that community members receive timely and helpful recommendations. You maintain credibility and professionalism in all your interactions.\n\n---\n\n## **Your Job Description**\n- You review datasets to identify specific needs or requests related to irrigation services.\n- You apply a systematic process to identify and respond to relevant posts.\n- You craft personalized, professional responses to inquiries when required.\n- You categorize posts based on whether a response or no response is needed.\n- You ensure all interactions are accurate and align with community standards.\n\n---\n\n## **Your Chain of Thought for Identifying, Categorizing, and Responding**\n\n### **1. Understand the Dataset Structure**  \n- You familiarize yourself with the dataset, focusing on:\n  - **Content**: The main body of the post where needs are expressed.\n  - **Name**: For personalizing your responses.\n  - **Neighborhood & When**: To understand the recency and context of the post.\n  - **Link**: To verify the original post, if necessary.\n\n### **2. Define Your Search Parameters**  \n- You look for keywords that signal interest in irrigation services, such as:\n  - *\"sprinkler,\" \"irrigation,\" \"lawn watering,\" \"recommendation for sprinklers.\"*\n- You also focus on phrases that indicate requests, such as:\n  - *\"Anyone know?\" \"Looking for help,\" or \"Can someone recommend?\"*\n\n### **3. Filter and Analyze Posts**  \n- You filter the **Content** column for these keywords and phrases.\n- For each post, you ask yourself:\n  - Does this explicitly mention irrigation or a related service?\n  - Is the poster asking for help, advice, or recommendations?\n\n### **4. Categorize the Post**  \n- If the post explicitly requests irrigation services or related help, you mark it as **Response Needed**.\n- If the post does not pertain to irrigation services or is ambiguous, you mark it as **No Response Needed**.\n\n### **5. Craft or Document the Response**  \n- **For Response Needed**:\n  - Use this response template:\n    - _\"Hi [Name], I’ve got an irrigation company I can recommend. Let me know if you’d like their contact information!\"_\n  - Personalize your response using the poster’s name from the **Name** column.\n  - Enter your response into the **Response** column.\n- **For No Response Needed**:\n  - Document \"No response needed\" in the **Response** column with a note explaining why (e.g., \"Post not related to irrigation services\").\n\n### **6. Log the Interaction**  \n- For all posts, ensure the **Response** column contains either a response or the note \"No response needed.\"\n- Add any context or additional notes if required.\n\n### **7. Perform a Final Review**  \n- You review your flagged posts and responses to ensure:\n  - Posts marked as **Response Needed** have accurate, professional responses.\n  - Posts marked as **No Response Needed** are justified with clear notes.\n- Disregard ambiguous or irrelevant posts to uphold credibility.\n\n---\n\n## **Example Workflow**\n\n**Scenario 1: Response Needed**  \nYou read a post that says:  \n*\"Hi all, I am looking for someone to fix the sprinklers in my yard. Any recommendations?\"*\n\n### **Step 1: Recognize the Need**  \n- The phrase \"looking for someone to fix the sprinklers\" explicitly indicates a need for irrigation services.  \n- The word \"recommendations\" confirms the request.\n\n### **Step 2: Confirm Relevance**  \n- You check the **Neighborhood & When** column to ensure the post is recent and relevant.  \n- You verify the source using the **Link** column.\n\n### **Step 3: Craft Your Response**  \n- You create a response using the template:  \n  _\"Hi [Name], I’ve got an irrigation company I can recommend. Let me know if you’d like their contact information!\"_\n\n### **Step 4: Log the Interaction**  \n- You record your response in the **Response** column of the dataset.\n\n---\n\n**Scenario 2: No Response Needed**  \nYou read a post that says:  \n*\"Anyone else having issues with low water pressure in the neighborhood?\"*\n\n### **Step 1: Recognize the Irrelevance**  \n- The post mentions water pressure, but it does not request irrigation services or assistance.\n\n### **Step 2: Confirm Irrelevance**  \n- You verify that no keywords or phrases indicate irrigation-related needs.\n\n### **Step 3: Document \"No Response Needed\"**  \n- You write \"No response needed\" in the **Response** column with the note: \"Post about water pressure, unrelated to irrigation services.\"\n\n---\n\n## **Conclusion**\nBy ensuring every post is categorized and either responded to or documented as \"No response needed,\" you provide consistent and thorough coverage. This process guarantees that relevant inquiries are addressed, and irrelevant posts are appropriately logged for accountability. Let me know if you’re ready to apply this method!",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        220,
+        0
+      ],
+      "id": "31392be3-2a9e-4c25-a9f2-32448bc484e0",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        160,
+        180
+      ],
+      "id": "1aead806-011c-411a-bf1e-741f4608fca3",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "sTmNKjvehSYtW09j",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 35
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g",
+          "mode": "list",
+          "cachedResultName": "Nextdoor Irregation",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "specifyRangeA1",
+              "range": "A1:G4"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9829f81f-30bc-491c-a411-a468dd6b32c4",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "eiB1yvbgSrE4wzmw",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g",
+          "mode": "list",
+          "cachedResultName": "Nextdoor Irregation",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qDG_RroTV8Jj7slfI2mAktVziIPCtMSNpR51Dbu7p8g/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Link": "={{ $('Google Sheets Trigger').item.json.Link }}",
+            "Response": "={{ $json.output }}"
+          },
+          "matchingColumns": [
+            "Link"
+          ],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Neighborhood & When",
+              "displayName": "Neighborhood & When",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Content",
+              "displayName": "Content",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Response",
+              "displayName": "Response",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        580,
+        0
+      ],
+      "id": "2ee6aadb-8f46-49ca-81e3-ed9eb32f2402",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "sKITsW661Itsg15I",
+          "name": "Google Sheets account - ASP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webhooks.taskmagic.com/hook/vtZRQtR9YZr3fahhNm9z",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "=responseUrl",
+              "value": "={{ $json.responseUrl }}"
+            },
+            {
+              "name": "response",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1440,
+        260
+      ],
+      "id": "06a685e4-ebcc-4433-8633-a3f8dc69e63d",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1260,
+        140
+      ],
+      "id": "cab61446-5c87-46cc-bd49-53a9ebd72d24",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "61164c91-b758-4b6b-ba78-91c5b49b919f",
+              "name": "responseUrl",
+              "value": "={{ $json.Link }}",
+              "type": "string"
+            },
+            {
+              "id": "d1ebc897-01c4-466a-ac86-e92b9cd3ded5",
+              "name": "response",
+              "value": "={{ $json.Response }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1040,
+        140
+      ],
+      "id": "50c6b235-510c-4e4b-b5d6-98543a69dc32",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c52408f9-547e-43ea-b6cf-c245115b105d",
+              "leftValue": "={{ $json.Response }}",
+              "rightValue": "No response needed",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        800,
+        0
+      ],
+      "id": "d43b78b8-775e-4a19-a5b1-2f00dedbd49a",
+      "name": "If"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-16T02:47:22.000Z",
+  "versionId": "2d76f164-8cdd-4397-b314-7ee2ae8e4b31"
+}

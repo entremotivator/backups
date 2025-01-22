@@ -1,0 +1,501 @@
+{
+  "active": false,
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Message": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Unread Messages": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Message Read": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Label": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get All Labels": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Label": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Draft": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Drafts": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Draft": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Message": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-08T17:54:46.584Z",
+  "id": "GwAaB5OYLCjfoHcv",
+  "meta": null,
+  "name": "Email Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ JSON.stringify($json.query) }}",
+        "options": {
+          "systemMessage": "=You are a helpful assistant capable of managing email communications using the provided tools. You have access to the following tools:\n\nGet Unread Messages: Use this tool to retrieve a list of unread email messages. Specify the 'Limit' parameter to control the number of messages retrieved (default is 10).\n\nGet Message: Use this tool to retrieve a specific email message by its 'MessageId'.\n\nSend Message: Use this tool to send an email to specified recipients. You'll need to provide 'SendTo' (recipient's email address), 'Subject', and 'Text' (body of the email).\n\nMark Message Read: Use this tool to mark a specific email message as read using its 'MessageId'.\n\nCreate Label: Use this tool to create a new label in the email account. Provide the 'Label' name.\n\nGet All Labels: Use this tool to retrieve all labels available in the email account.\n\nGet Label: Use this tool to retrieve details of a specific label by its 'LabelId'.\n\nCreate Draft: Use this tool to create a draft email message. Provide 'Subject' and 'Message'.\n\nGet Drafts: Use this tool to retrieve all draft messages.\n\nGet Draft: Use this tool to retrieve a specific draft message by its 'DraftId'.\n\nGuidelines:\n\nUnderstanding User Requests: Carefully analyze the user's input to determine the required action—whether it's sending an email, retrieving messages, managing drafts, or handling labels.\n\nParameter Extraction: Extract relevant details from the user's request, such as email addresses, subjects, message content, 'MessageId's, 'DraftId's, 'LabelId's, and label names.\n\nTool Invocation: Call the appropriate tool(s) with the correct parameters based on the user's request.\n\nCommunication Style: Provide clear and concise responses to the user, confirming the actions taken or informing them of any issues.\n\nPrivacy and Security: Ensure that sensitive information, such as email addresses and message content, is handled securely and communicated appropriately.\n\nExamples:\n\nSending an Email:\n\nUser Request: \"Send an email to jane.doe@example.com with the subject 'Meeting Reminder' and the message 'Don't forget about our meeting tomorrow at 10 AM.'\"\nAction: Use the Send Message tool with 'SendTo' as 'jane.doe@example.com', 'Subject' as 'Meeting Reminder', and 'Text' as the message content.\nRetrieving Unread Messages:\n\nUser Request: \"Show me my latest unread emails.\"\nAction: Use the Get Unread Messages tool, possibly specifying a 'Limit' if the user wants a certain number of messages.\nMarking an Email as Read:\n\nUser Request: \"Mark the email from john.smith@example.com as read.\"\nAction: Use the Get Unread Messages tool to find the 'MessageId' of the email from 'john.smith@example.com', then use the Mark Message Read tool with that 'MessageId'.\nCreating a Draft:\n\nUser Request: \"Create a draft email to mike.brown@example.com with the subject 'Project Update' and the message 'Here's the latest update on the project...'\"\nAction: Use the Create Draft tool with the specified 'Subject' and 'Message'.",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -260,
+        220
+      ],
+      "id": "58543cb5-2924-4e5f-a890-31537b484ce0",
+      "name": "AI Agent",
+      "alwaysOutputData": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        520
+      ],
+      "id": "b2a71e9b-9b3c-480a-940c-1c440633da70",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "sTmNKjvehSYtW09j",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dd5ba9a8-08eb-480e-b5a7-23ffbed06a2b",
+              "name": "response",
+              "value": "={{ JSON.stringify($json.output) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        60
+      ],
+      "id": "dd75ca09-b117-46e1-8712-493a9ab25e40",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dd5ba9a8-08eb-480e-b5a7-23ffbed06a2b",
+              "name": "response",
+              "value": "={{ JSON.stringify($json) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        240
+      ],
+      "id": "399a11ce-3c01-4eeb-9ebb-f3b54e0a7e4e",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        220
+      ],
+      "id": "42c0b810-3964-4a58-a7a2-bbe97cd18efb",
+      "name": "Execute Workflow Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "messageId": "={{ $fromAI(\"MessageId\") }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        520
+      ],
+      "id": "8ce13078-da7e-4632-aa44-35e095f6ad43",
+      "name": "Get Message",
+      "webhookId": "ab1a2726-dea7-478f-9bbb-57a193c12689",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 10,
+        "filters": {
+          "q": "={{ $fromAI(\"Search\") }}",
+          "readStatus": "unread",
+          "sender": "={{ $fromAI(\"Sender\") }}"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        340,
+        520
+      ],
+      "id": "1b6426ef-12ea-4c5b-becb-64887734dc5f",
+      "name": "Get Unread Messages",
+      "webhookId": "281045a5-369c-4bc6-886d-50d456ce1e05",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $fromAI(\"SendTo\") }}",
+        "subject": "={{ $fromAI(\"Subject\") }}",
+        "emailType": "text",
+        "message": "={{ $fromAI(\"Text\") }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        200,
+        520
+      ],
+      "id": "90bce914-eb25-4e11-9cb9-fd31b5d5d62c",
+      "name": "Send Message",
+      "webhookId": "aba2b4bb-3a0e-4f04-a8d9-f7b0affcf217",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $fromAI(\"MessageId\") }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        600,
+        520
+      ],
+      "id": "88b5f1b2-0d01-4714-a30a-4666324840ea",
+      "name": "Mark Message Read",
+      "webhookId": "d20ba29f-e1b6-4fab-94fd-ec8abc56ee45",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "operation": "create",
+        "name": "={{ $fromAI(\"Label\") }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -520,
+        520
+      ],
+      "id": "4fe45720-9b48-44a4-8bd3-4a44f3783a70",
+      "name": "Create Label",
+      "webhookId": "47b45272-1074-444e-9cdd-903d409d74de",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -400,
+        520
+      ],
+      "id": "e63bc962-2fcf-4733-b0dd-7001ca699bb8",
+      "name": "Get All Labels",
+      "webhookId": "a84513c8-66d1-498b-8f2b-42a9ebb4d4ee",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "operation": "get",
+        "labelId": "={{ $fromAI(\"LabelId\") }}"
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -280,
+        520
+      ],
+      "id": "28074605-12a4-4a4f-86b2-dfa94b1d33a7",
+      "name": "Get Label",
+      "webhookId": "68513797-a323-43c8-8c6b-560ae0fa217a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "get",
+        "messageId": "={{ $fromAI(\"DraftId\") }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -40,
+        520
+      ],
+      "id": "ca7bbb8b-9bde-4645-a932-cda8225550b5",
+      "name": "Get Draft",
+      "webhookId": "053da7dd-e038-4d81-a8f5-7988961da51d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "getAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        80,
+        520
+      ],
+      "id": "27dca723-73fb-4e4e-9dfb-2797295e43ff",
+      "name": "Get Drafts",
+      "webhookId": "56f19886-679c-4c44-b357-a64dbd183136",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "={{ $fromAI(\"Subject\") }}",
+        "message": "={{ $fromAI(\"Message\") }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -160,
+        520
+      ],
+      "id": "fb2b0d4e-d53e-4442-bb20-a659063def13",
+      "name": "Create Draft",
+      "webhookId": "fe7913fb-71b9-4413-a1c9-148bb5c641e7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "E777VIw7zyxrVJ7s",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-09T12:37:16.991Z",
+      "updatedAt": "2024-11-09T12:37:16.991Z",
+      "id": "0yhZAGhpC1N7u9OS",
+      "name": "Worker Agent"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-03T14:54:13.000Z",
+  "versionId": "d29ca4a3-a2f1-4cff-b1b7-47b50ec7d5ac"
+}

@@ -1,0 +1,231 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-24T15:26:56.885Z",
+  "id": "jtlO9dfMIJYBlA2y",
+  "meta": null,
+  "name": "My workflow 11",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ff144a03-0884-47ed-af39-c0dd5c84f7a3",
+      "name": "When chat message received",
+      "webhookId": "a8a4cfc5-700d-4500-8e9b-58b309a8ef72"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        220,
+        0
+      ],
+      "id": "5f0b0c06-7a5f-40e4-855f-6157e59dc325",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        20,
+        260
+      ],
+      "id": "e42133f1-b6d5-4178-9348-f98ee1196322",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "sTmNKjvehSYtW09j",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        200,
+        260
+      ],
+      "id": "39f5e068-cef6-445b-8010-16d343a1e6b7",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "toolDescription": "use this to create a post",
+        "method": "POST",
+        "url": "https://jsonplaceholder.typicode.com/posts",
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "JSON",
+              "valueProvider": "fieldValue",
+              "value": "={\"title\": \"{title}\",\"body\": \"{body}\",\"userId\": 1}"
+            }
+          ]
+        },
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "{title}",
+              "description": "title of the post",
+              "type": "string"
+            },
+            {
+              "name": "{body}",
+              "description": "the main content in the post",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        200
+      ],
+      "id": "a28b1835-d2be-4ec4-8245-42eb6024b60e",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Search perplexity using the given information",
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "JSON",
+              "valueProvider": "fieldValue",
+              "value": "={\n  \"model\": \"llama-3.1-sonar-small-128k-online\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a researcher. Finding information about the given topic\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Ai for small business\"\n    }\n  ]\n}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        380,
+        220
+      ],
+      "id": "bc1770fa-cdfa-4154-ad0e-66d977546e42",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "oOi2VPbJ3bojZazF",
+          "name": "Perplexity"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama-3.1-sonar-small-128k-online\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a researcher. Finding information about the given topic\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $('Get Topics').all()[0].json['Topics List'] }}\"\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "fa81e2f6-9959-4b47-97b2-7c89de5897ec",
+      "name": "Search Perplexity",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        -40
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-11-24T16:24:12.000Z",
+  "versionId": "c9119a04-c372-4831-8f3f-5327e75944dd"
+}

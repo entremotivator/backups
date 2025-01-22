@@ -1,0 +1,266 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Reddit Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "Reddit Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Reddit Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reddit Access Token": {
+      "ai_tool": [
+        [
+          {
+            "node": "Reddit Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post to Reddit": {
+      "ai_tool": [
+        [
+          {
+            "node": "Reddit Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-02T20:20:28.437Z",
+  "id": "HQO5r09bXLXucOJS",
+  "meta": null,
+  "name": "My workflow 15",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        140,
+        180
+      ],
+      "id": "655e462b-6bdf-4f50-8694-c2d175b752f0",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "sTmNKjvehSYtW09j",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        660,
+        340
+      ],
+      "id": "4ec695dc-f2dc-4e4e-93b6-b63c72b9a6d0",
+      "name": "SerpAPI",
+      "credentials": {
+        "serpApi": {
+          "id": "TrHqZUgKGIHkC3cl",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "daa95ffd-26b2-41bd-99bd-feccaf50ee12",
+      "name": "When chat message received",
+      "webhookId": "20b13c31-7b1c-4e33-9fb2-e1d595c0ad12"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this to get reddit authorization access token.",
+        "method": "POST",
+        "url": "https://www.reddit.com/api/v1/access_token",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "grant_type",
+              "valueProvider": "fieldValue",
+              "value": "password"
+            },
+            {
+              "name": "username",
+              "valueProvider": "fieldValue",
+              "value": "Rtl3wd"
+            },
+            {
+              "name": "password",
+              "valueProvider": "fieldValue",
+              "value": "##Reddit727.."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        320,
+        340
+      ],
+      "id": "56c589b7-aa3b-499b-be85-333b9489cc29",
+      "name": "Reddit Access Token",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "yU89jUlvsdnxI0sn",
+          "name": "Reddit credential"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to submit a post to reddit.",
+        "method": "POST",
+        "url": "https://oauth.reddit.com/api/submit",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization"
+            },
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "sr",
+              "valueProvider": "fieldValue",
+              "value": "{subreddit}"
+            },
+            {
+              "name": "title",
+              "valueProvider": "fieldValue",
+              "value": "{title}"
+            },
+            {
+              "name": "kind",
+              "valueProvider": "fieldValue",
+              "value": "self"
+            },
+            {
+              "name": "text",
+              "valueProvider": "fieldValue",
+              "value": "{content}"
+            }
+          ]
+        },
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "subreddit",
+              "description": "the title of the subreddit",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "description": "the title of the reddit post",
+              "type": "string"
+            },
+            {
+              "name": "content",
+              "description": "the post content of the reddit post"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        340
+      ],
+      "id": "5b682f7a-92ce-4f15-b426-5e1952c089b1",
+      "name": "Post to Reddit"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a helpful assistant who posts on Reddit. Before you make a post, you must first get an access token. Afterward, you then can make a post."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        220,
+        0
+      ],
+      "id": "74d555f2-c2d7-401f-9b86-43eb3083d508",
+      "name": "Reddit Agent"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-03T15:33:10.000Z",
+  "versionId": "0dd3dd96-91f9-4313-86f2-9d4aef53042e"
+}

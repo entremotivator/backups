@@ -1,0 +1,74 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-18T02:50:15.692Z",
+  "id": "AxlrdIawUGHAW8Rt",
+  "meta": null,
+  "name": "My workflow 8",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b07b434a-44e2-4be6-9664-f2dc68c186d7",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://browserless.aspworkplace.com/function",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "31a645e3-8903-4aae-8e9e-7854174259de"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "code",
+              "value": "=module.exports = async function ({ page }) {\n  // Navigate to LinkedIn\n  await page.goto('https://www.linkedin.com/');\n  await page.getByRole('link', { name: 'Sign in', exact: true }).click();\n\n  // Fill in login credentials\n  await page.getByLabel('Email or phone').fill('lordrobert92');\n  await page.getByLabel('Email or phone').press('Alt+6');\n  await page.getByLabel('Email or phone').press('Alt+4');\n  await page.getByLabel('Email or phone').fill('lordrobert92@gmail.com');\n  await page.getByLabel('Password').click();\n  await page.getByLabel('Password').fill('##Linkedin727..');\n  await page.getByLabel('Sign in', { exact: true }).click();\n\n  // Perform LinkedIn actions\n  await page.goto('https://www.linkedin.com/in/nicole-leverock-a43aa6124/');\n  await page.getByRole('link', { name: 'Contact info' }).click();\n  await page.getByText('Nicole’s Profile linkedin.com').click();\n  await page.getByText('Birthday September').click();\n  await page.getByLabel('Dismiss').click();\n  await page.getByRole('link', { name: 'Show all activity' }).click();\n  await page.goto('https://www.linkedin.com/in/ken-klosterman-98731344/');\n  await page.getByRole('button', { name: '…see more' }).click();\n  \n  // Extract the text content of the target element\n  const textContent = await page\n    .getByRole('main')\n    .locator('div')\n    .filter({ hasText: 'WANT TO EARN EXTRA MONEY???' })\n    .nth(3)\n    .textContent();\n\n  // Log the extracted text\n  console.log('Extracted Text:', textContent);\n\n  return textContent; // Optional: return the text if required\n};\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "fb257bab-3aaf-4d3e-a3af-72562fefdd13",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-11-18T02:50:15.692Z",
+  "versionId": "eeffb346-cc34-45d9-93ff-527547f4aa2a"
+}

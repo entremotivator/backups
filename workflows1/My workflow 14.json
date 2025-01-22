@@ -1,0 +1,114 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-29T14:59:28.481Z",
+  "id": "WqH74zlFJUwjwCAO",
+  "meta": null,
+  "name": "My workflow 14",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "fe68ef25-1c32-4f9e-a286-44dff09ae2ea",
+      "name": "When chat message received",
+      "webhookId": "e4348077-1b38-4884-a086-2e04580a932c"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are a helpful assistant. Your task is to prequalify potential clients by asking thoughtful and targeted questions to determine if they are prepared to take on the user's services. Start by asking the following:\n\n1. What is the primary challenge or goal you’re looking to address with automation or AI agents?\n\n2. Do you have an existing system or workflow that you’re trying to improve, or are you building something new?\n\n3. What tools, software, or platforms are you currently using (e.g., CRM, project management tools, cloud storage)?\n\n4. Do you have any technical constraints or specific requirements I should know about (e.g., integrations, budget, timeline)?\n\n5. Have you worked with automation or AI solutions before? If yes, what worked well or didn’t meet your expectations?\n\n6. What is the expected outcome or ROI you’d like to achieve from this project?\n\nGuide the client through these questions conversationally and provide clarifications if needed. Once you gather the answers, summarize their responses and confirm readiness to proceed."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        220,
+        0
+      ],
+      "id": "0f09829b-6ca8-4dcf-a74d-fd71db4bffe2",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        60,
+        220
+      ],
+      "id": "d18a3d43-f7df-4d9f-9fce-7f6c29e376d0",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "sTmNKjvehSYtW09j",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        240,
+        220
+      ],
+      "id": "5e520ad3-23b3-4745-a3c8-22481e5df467",
+      "name": "Window Buffer Memory"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-12-29T14:59:28.481Z",
+  "versionId": "384c780c-d516-4a38-bc7d-16eeddaeba43"
+}
