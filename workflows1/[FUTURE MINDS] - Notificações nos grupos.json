@@ -1,0 +1,147 @@
+{
+  "active": false,
+  "connections": {
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-13T19:55:43.429Z",
+  "id": "QtQXYvYraLh00BWa",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[FUTURE MINDS] - Notificações nos grupos",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "6c91df23-22b0-42b4-bb38-e6230c22d301",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Grupos:\n\nGrupo de Orientações e Estratégias\nhttps://chat.whatsapp.com/BdSv5agf59i3YUUtEawhQm\nID Evolution: 120363310726271571@g.us\n\nComunidade Modus Inovandi\nhttps://chat.whatsapp.com/IxJCmM3iBVzAkobKLI8IOD\nID Evolution: 120363050716646751@g.us\n\nMentoria C-level:\nhttps://chat.whatsapp.com/FUieGkgkEbI77FuNUQOSjc\nID Evolution: 120363029854442152@g.us",
+        "height": 318,
+        "width": 637
+      },
+      "id": "b0dbf0d6-914c-4fe2-83be-472b86c13123",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        620,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function validarSemana() {\n    // Obtendo a data atual\n    const dataAtual = new Date();\n\n    // Calculando a data limite (15 dias após a data atual)\n    const limite = new Date(dataAtual);\n    limite.setDate(dataAtual.getDate() + 15);\n\n    // Verificando se hoje é uma quinta-feira (getDay() retorna 4 para quinta-feira)\n    const ehQuintaFeira = dataAtual.getDay() === 4;\n\n    // Verificando as duas condições e retornando o resultado como um array de objetos\n    if (ehQuintaFeira && dataAtual <= limite) {\n        return [{ json: { semana: 'valida' } }];\n    } else {\n        return [{ json: { semana: 'invalida' } }];\n    }\n}\n\n// Chamada da função e retorno do resultado no formato esperado pelo n8n\nreturn validarSemana();\n"
+      },
+      "id": "3b428fa2-6871-427b-98a3-1dee9a6cce49",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2141237c-1d88-4ad8-8291-d1bbfec60320",
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br",
+              "type": "string"
+            },
+            {
+              "id": "43ca0438-376b-4a24-a670-29a652bf6058",
+              "name": "nome_da_instancia",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "49344ced-eaf6-4273-8c89-aa4528bd91fc",
+              "name": "apikey",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "86919fcd-f584-4077-b02a-712a252f1094",
+              "name": "id_grupo",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f930ed02-49a9-4652-83b4-2cca3877e4f2",
+              "name": "id_grupo",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "be705afa-ab6f-4993-8d26-4d2a8eca0b81",
+              "name": "id_grupo",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "648d2a80-fe2a-4d6c-ba75-b288e50a6717",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1120,
+        360
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-08-13T21:17:43.329Z",
+  "versionId": "decff529-b016-48f9-a719-5d3664054792"
+}

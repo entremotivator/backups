@@ -1,0 +1,216 @@
+{
+  "active": true,
+  "connections": {
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sendflow_event": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-14T19:03:24.159Z",
+  "id": "pgPFH9MvNF5KLC5l",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Entrou ou Saiu do Grupo - Parte 1",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "  const whatsappInput = $node[\"sendflow_event\"].json[\"body\"][\"data\"][\"number\"]  || \"\";\n  const groupId = $node[\"sendflow_event\"].json[\"body\"][\"data\"][\"groupName\"];\n  const event = $node[\"sendflow_event\"].json[\"body\"][\"event\"];\nconst result = {\n    whatsapp: whatsappInput,\n    groupId: groupId,\n    event: event\n};\n\n// Aqui estamos ajustando a estrutura do retorno para se adequar ao que o n8n espera\nreturn [{ json: result }];\n"
+      },
+      "id": "db2cd3ed-3804-4780-9012-592349911312",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados1\"].json[\"tag_do_lancamento\"] }} - Grupos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "3f252868-38bd-4a87-b6ea-4dec5a8fea0d",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        340
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "sendflow-events",
+        "options": {}
+      },
+      "id": "17e796c2-c6e9-408e-8e9b-be785cb8721f",
+      "name": "sendflow_event",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        600,
+        340
+      ],
+      "webhookId": "052c045e-02a9-4141-8901-55b03478d0d8"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4ee04f-7197-4842-93dc-e8b68b987b30",
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d6eb945b-ecf9-4ecb-90d8-9e138fc6fd5d",
+              "name": "grupo",
+              "value": "={{ $node[\"formata_dados1\"].json[\"groupId\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b99f336d-c68b-41d4-bd11-109a98a26ce5",
+              "name": "evento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"event\"].replace('group.updated.members.added','add').replace('group.updated.members.removed','remove') }}",
+              "type": "string"
+            },
+            {
+              "id": "08d0841f-1417-4878-9a7f-df01c97497c7",
+              "name": "nome_do_evento",
+              "value": "Webinario",
+              "type": "string"
+            },
+            {
+              "id": "1a228a86-d179-4e3f-aaac-4e721140fe16",
+              "name": "edicao_do_evento",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "id": "00117d93-efd6-453c-949e-c6a37b140a6c",
+              "name": "tag_do_lancamento",
+              "value": "WEB001",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "464a82d2-b3c8-4eb6-9039-13a0aac5cd3d",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        960,
+        340
+      ]
+    }
+  ],
+  "pinData": {
+    "sendflow_event": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "user-agent": "axios/0.27.2",
+            "content-length": "226",
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "sendtok": "571C01D4EA5C5985DB8B3F74A082C9379DC1EEE300",
+            "x-forwarded-for": "34.34.231.27",
+            "x-forwarded-host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "3fc641f1cb52",
+            "x-real-ip": "34.34.231.27",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "W0YlhLNzkyUNaaOCH7mt",
+            "event": "group.updated.members.added",
+            "data": {
+              "campaignId": "Webinario",
+              "createdAt": "2024-11-14T19:04:41.933Z",
+              "groupName": "#1  - Super Aula Gratuita: Lilian Cidreira",
+              "number": "5562981196678"
+            },
+            "version": "1.0.0"
+          },
+          "webhookUrl": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/sendflow-events",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-11-15T00:58:20.241Z",
+  "versionId": "93fc9792-d837-4977-80c8-2a4e7bc677a9"
+}

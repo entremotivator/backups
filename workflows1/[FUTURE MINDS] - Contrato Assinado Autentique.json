@@ -1,0 +1,572 @@
+{
+  "active": true,
+  "connections": {
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "lead_não_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_não_existe": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "todos_assinaram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user1": {
+      "main": [
+        [
+          {
+            "node": "user_não_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_não_existe": {
+      "main": [
+        [],
+        [
+          {
+            "node": "todos_assinaram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "todos_assinaram": {
+      "main": [
+        [
+          {
+            "node": "é_mentoria",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "createdAt": "2024-12-19T14:17:40.439Z",
+  "id": "9tKlLz9wPZ8sZUPm",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[FUTURE MINDS] - Contrato Assinado Autentique",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "08dd519a-60f4-4d1e-b240-a52a3ba26f61",
+              "leftValue": "={{ $node[\"Webhook\"].json[\"body\"][\"documento\"][\"pendente\"] }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "00d569ae-d3fc-476f-bd32-0901e6544d32",
+      "name": "todos_assinaram",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2060,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $json[\"body\"][\"partes\"][\"1\"][\"nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $json[\"body\"][\"partes\"][\"1\"][\"email\"] }}"
+            },
+            {
+              "name": "Contrato",
+              "value": "={{ $json[\"body\"][\"documento\"][\"nome\"] }}"
+            },
+            {
+              "name": "Celular do Cliente",
+              "value": "={{ $json[\"body\"][\"partes\"][\"1\"][\"celular\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "97f84abf-a805-4bac-8565-ebd4558da38b",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        780,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "89205b51-ed6f-41d8-a540-93c10cd48fad",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"E-mail do Cliente\"]  || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"dados\"].json[\"E-mail do Cliente\"] || '-----------------------'}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "47296d55-416a-4364-a1e6-9c26a85cdfad",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        940,
+        340
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "08b9ba4c-3b6e-4e6d-81e8-4bcd6291f5a9",
+              "leftValue": "={{ $node[\"pesquisa_lead\"].json[\"success\"] }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "583b88af-2c83-416a-a083-c201b397c4c6",
+      "name": "lead_não_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"E-mail do Cliente\"]  || '-----------------------'}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e4a1a636-edc5-4ffc-89d1-9eca3fd7c213",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1520,
+        240
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "c3d22d14-e22c-45af-ac5e-350c77070d4d",
+      "name": "pesquisa_user1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1700,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "08b9ba4c-3b6e-4e6d-81e8-4bcd6291f5a9",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"success\"] }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "4aa00da5-0873-489e-acfd-c7e69b02e00c",
+      "name": "user_não_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1880,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "contrato-assinado-autentique-hetzner",
+        "options": {}
+      },
+      "id": "25bf5525-497a-45e9-9ee5-92570c2e517f",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        620,
+        340
+      ],
+      "webhookId": "5a729aa7-c391-4c07-80b7-a339e1df8def"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "08dd519a-60f4-4d1e-b240-a52a3ba26f61",
+              "leftValue": "={{ $node[\"dados\"].json[\"body\"][\"documento\"][\"nome\"] }}",
+              "rightValue": "Mentoria",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "708ac219-ac26-4bef-92a7-4f093751609d",
+      "name": "é_mentoria",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2340,
+        360
+      ]
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "2402",
+            "content-type": "application/json",
+            "x-forwarded-for": "34.34.233.160",
+            "x-forwarded-host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "3fc641f1cb52",
+            "x-real-ip": "34.34.233.160",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "partes": [
+              {
+                "0": true,
+                "uuid": "6498fad7be2d11ef9d0342010a2b610d",
+                "nome": "Automagic Bots",
+                "email": "acessos@automagicbots.com.br",
+                "celular": null,
+                "cpf": "47022471827",
+                "nascimento": "2002-03-29",
+                "empresa": null,
+                "escavador": null,
+                "ordem": 0,
+                "posicao": [
+                  {
+                    "x": "40.6801007556675",
+                    "y": "55.98831548198636",
+                    "z": 8,
+                    "angle": 0,
+                    "element": "signature"
+                  }
+                ],
+                "assinatura": {
+                  "formato": "s",
+                  "imagem": ""
+                },
+                "funcao": "assinar",
+                "created": "2024-12-19 14:19:24",
+                "visualizado": {
+                  "created": "2024-12-19 14:19:24",
+                  "motivo": null,
+                  "ipv4": "179.216.21.112",
+                  "geotrack": {
+                    "country": "Brazil",
+                    "countryISO": "BR",
+                    "state": "Santa Catarina",
+                    "stateISO": "SC",
+                    "city": "Criciúma",
+                    "zipcode": null,
+                    "latitude": -28.6752,
+                    "longitude": -49.3686
+                  }
+                },
+                "assinado": {
+                  "created": "2024-12-19 14:19:33",
+                  "motivo": null,
+                  "ipv4": "179.216.21.112",
+                  "geotrack": {
+                    "country": "Brazil",
+                    "countryISO": "BR",
+                    "state": "Santa Catarina",
+                    "stateISO": "SC",
+                    "city": "Criciúma",
+                    "zipcode": null,
+                    "latitude": -28.6752,
+                    "longitude": -49.3686
+                  }
+                },
+                "rejeitado": {},
+                "mail": {
+                  "sent": null,
+                  "opened": null,
+                  "refused": null,
+                  "delivered": null,
+                  "reason": null
+                },
+                "anterior": null
+              },
+              {
+                "0": true,
+                "uuid": "649cd6b8be2d11ef9d0342010a2b610d",
+                "nome": null,
+                "email": "mateusdiniz@automagicbots.com.br",
+                "celular": null,
+                "cpf": null,
+                "nascimento": null,
+                "empresa": null,
+                "escavador": null,
+                "ordem": 1,
+                "posicao": [
+                  {
+                    "x": "41.687657430730475",
+                    "y": "46.640701071080784",
+                    "z": 8,
+                    "angle": 0,
+                    "element": "signature"
+                  }
+                ],
+                "assinatura": {
+                  "formato": "s",
+                  "imagem": ""
+                },
+                "funcao": "assinar",
+                "created": "2024-12-19 14:19:24",
+                "visualizado": {},
+                "assinado": {},
+                "rejeitado": {},
+                "mail": {
+                  "sent": "2024-12-19 14:19:24",
+                  "opened": null,
+                  "refused": null,
+                  "delivered": "2024-12-19 14:19:28",
+                  "reason": null
+                },
+                "anterior": null
+              }
+            ],
+            "documento": {
+              "uuid": "ba663f75c620a02606db871b60d260cfe62f2c2fce2ea7d46",
+              "nome": "2024_Contrato de Mentoria - Lilian Cidreira.docx",
+              "rejeitavel": false,
+              "ordenavel": false,
+              "created": "2024-12-19 14:19:24",
+              "updated": "2024-12-19 14:19:33",
+              "excluido": null,
+              "transacao": false,
+              "funcao": null,
+              "pendente": 1,
+              "assinatura": null,
+              "publicado": "2024-12-19 14:19:24",
+              "disponivel": true
+            },
+            "organizacao": true,
+            "remetente": {
+              "nome": "Automagic Bots",
+              "empresa": null,
+              "email": "acessos@automagicbots.com.br",
+              "cpf": "47022471827",
+              "nascimento": "2002-03-29"
+            },
+            "arquivo": {
+              "original": "https://storage.googleapis.com/d6e/58d93b9776e407db27ff4471df4b0c40/zBSZZItEBxEToGMDKk4tOhZfVRilIO2hvpOdw60K.original.pdf",
+              "assinado": "https://api.autentique.com.br/documentos/ba663f75c620a02606db871b60d260cfe62f2c2fce2ea7d46/assinado.pdf"
+            }
+          },
+          "webhookUrl": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/contrato-assinado-autentique-hetzner",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-06T16:56:25.370Z",
+  "versionId": "9377eebe-5fbc-43d1-a37e-4454f7f6fa8b"
+}

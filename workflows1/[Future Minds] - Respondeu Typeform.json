@@ -1,0 +1,2858 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_funil": {
+      "main": [
+        [
+          {
+            "node": "encontrou_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_funil": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "encontrou_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_user": {
+      "main": [
+        [
+          {
+            "node": "email_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_email_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_email_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_email": {
+      "main": [
+        [
+          {
+            "node": "encontrou_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_users": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_cadastro": {
+      "main": [
+        [
+          {
+            "node": "encontrou_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_pesquisa": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_cadastro": {
+      "main": [
+        [
+          {
+            "node": "insert_pesquisa",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_cadastro": {
+      "main": [
+        [
+          {
+            "node": "insert_pesquisa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_configs": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_chatwoot": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_activecampaign": {
+      "main": [
+        [
+          {
+            "node": "dados8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_msg_de_pesquisa_preenchida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila3": {
+      "main": [
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila4": {
+      "main": [
+        [
+          {
+            "node": "tem_msg_de_pesquisa_preenchida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_mensagem": {
+      "main": [
+        [
+          {
+            "node": "busca_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados": {
+      "main": [
+        [
+          {
+            "node": "usa_evolution",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_crm": {
+      "main": [
+        [
+          {
+            "node": "dados7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados7": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados5": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_manychat": {
+      "main": [
+        [
+          {
+            "node": "dados5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_msg_de_pesquisa_preenchida": {
+      "main": [
+        [
+          {
+            "node": "busca_mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila5": {
+      "main": [
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "tem_chatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados4": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "usa_evolution": {
+      "main": [
+        [
+          {
+            "node": "dados3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila1": {
+      "main": [
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila2": {
+      "main": [
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "typeform": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados8": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-25T17:27:47.758Z",
+  "id": "RsgMg5BqBHn3awMc",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Respondeu Typeform",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Função para capitalizar o nome\nfunction capitalizeName(fullName) {\n    if (!fullName) {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\n// Função para formatar email\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\n// Função para formatar Instagram\nfunction formatInstagram(instagram) {\n    return instagram ? instagram.toLowerCase().replace(/^@/, \"\") : \"\";\n}\n\n// Função para processar e formatar o telefone\nfunction processTelefone(telefoneOriginal) {\n    if (!telefoneOriginal) return \"\";\n    const telefoneLimpo = telefoneOriginal.replace(/\\D/g, \"\");\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        return telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28 && numero.length === 9 && numero.startsWith(\"9\")) {\n            numero = numero.slice(1);\n        } else if (DDD <= 28 && numero.length === 8) {\n            numero = `9${numero}`;\n        }\n    }\n\n    return DDI && DDD && numero ? `${DDI}${DDD}${numero}` : \"\";\n}\n\n// Capturar e processar os dados do input\nconst inputData = items[0].json.body.form_response;\nconst hidden = inputData.hidden || {};\nconst answers = inputData.answers || [];\n\n// Mapear perguntas em campos separados\nlet respostaCampos = {};\ninputData.definition.fields.forEach(field => {\n    const resposta = answers.find(answer => answer.field.id === field.id) || {};\n    let respostaTexto = '';\n\n    if (resposta.type === 'text') {\n        respostaTexto = resposta.text || '';\n    } else if (resposta.type === 'email') {\n        respostaTexto = resposta.email || '';\n    } else if (resposta.type === 'phone_number') {\n        respostaTexto = resposta.phone_number || '';\n    } else if (resposta.type === 'choice') {\n        respostaTexto = resposta.choice?.label || '';\n    } else if (resposta.type === 'multiple_choice') {\n        respostaTexto = resposta.choices?.labels?.join(', ') || resposta.choice?.label || '';\n    }\n\n    // Campo no formato camelCase com base no título\n    const campoNome = field.title.toLowerCase()\n        .replace(/[^a-z0-9\\s]/g, '')\n        .replace(/\\s+/g, '_')\n        .trim();\n\n    respostaCampos[campoNome] = respostaTexto || null; // Resposta nula se não foi respondida\n});\n\nconst fullNameAnswer = answers.find(answer => answer.field.ref === \"01H8HD3WP1JTDJD2AY10938JSB\")?.text || hidden.name || \"\";\nconst emailAnswer = answers.find(answer => answer.field.ref === \"baacab46-eec7-4f32-8e5e-0f8c887ad696\")?.email || hidden.email || \"\";\nconst telefoneClienteOriginal = answers.find(answer => answer.field.ref === \"40d2eeb9-e3cc-46a2-90c9-ee11983fedf6\")?.phone_number || \"\";\nconst instagramAnswer = hidden.instagram || \"\";\n\nconst telefoneFinal = processTelefone(telefoneClienteOriginal);\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\n\nconst utm_source = hidden.utm_source || \"\";\nconst utm_campaign = hidden.utm_campaign || \"\";\nconst utm_medium = hidden.utm_medium || \"\";\nconst utm_term = hidden.utm_term || \"\";\nconst utm_content = hidden.utm_content || \"\";\n\nconst linkPagina = inputData.outcome?.properties?.redirect_url || \"\";\nconst form_id = inputData.definition.id || \"\";\n\n// Montar o resultado final\nconst result = {\n    ...formattedNames, // Nome formatado\n    email: formattedEmail, // Email formatado\n    whatsapp: telefoneFinal, // Telefone formatado\n    instagram: formattedInstagram, // Instagram formatado\n    utm_source: utm_source,\n    utm_campaign: utm_campaign,\n    utm_term: utm_term,\n    utm_medium: utm_medium,\n    utm_content: utm_content,\n    form_id: form_id,\n    link_pagina: linkPagina,\n    form_name: \"Cadastro Webinário\", // Nome padrão do formulário\n    ...respostaCampos // Respostas organizadas como campos separados\n};\n\n// Retorna o resultado como esperado pelo n8n\nreturn [{ json: result }];\n"
+      },
+      "id": "22d032cc-451a-4777-844b-64116f33c269",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2380,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "funis",
+          "mode": "list",
+          "cachedResultName": "funis"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados\"].json[\"nome_do_evento\"] }}"
+            },
+            {
+              "column": "versao",
+              "value": "={{ $node[\"dados\"].json[\"edicao_do_evento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "da2fe001-e5f9-4231-a49c-48bd4445aea1",
+      "name": "pesquisa_funil",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2000,
+        960
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b37f06f0-a589-48d9-9cc7-101e0c639839",
+      "name": "encontrou_funil",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1820,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "d6b22e6d-fb05-4934-bffe-41ed2bd5f7f5",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        -1620,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] || \"---------\" }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "2e46b862-df01-4c11-9bbd-a83c2ecfb17c",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1620,
+        960
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "02df120e-771c-4d14-92dc-d6f372905268",
+      "name": "encontrou_user",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1440,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"email\"] }}",
+              "rightValue": "={{ $node[\"dados\"].json[\"email\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f9bbe98d-c2c9-40f7-a2fa-f44afeff7f5e",
+      "name": "email_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1120,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "094e56ff-578a-4b3c-81e7-25fa7143d5ba",
+      "name": "insere_email_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -880,
+        780
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "84e5c600-3792-4a1d-a60c-6fb6e7178260",
+      "name": "pesquisa_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1240,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_email\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5339de36-348b-488a-8cbf-5c10752e1247",
+      "name": "encontrou_email",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1060,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_email\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "e1cf9023-d862-4b8b-9a1d-826f34cd6673",
+      "name": "pesquisa_user1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -880,
+        1020
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_de_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fa2bfba5-4688-4c29-914f-7d4737871282",
+      "name": "insere_lead_na_tabela_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -880,
+        1220
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "4d0bbd5d-b08c-40b3-9a4e-ee6e8c48951e",
+      "name": "insere_lead_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -700,
+        1220
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "configuracoes",
+          "mode": "list",
+          "cachedResultName": "configuracoes"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "52886ade-851f-4463-b7b0-b893bbf95784",
+      "name": "pesquisa_configs",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        220,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n    ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n    : $node[\"pesquisa_email\"].runIndex >= 0 \n      ? $node[\"pesquisa_email\"].json[\"id_user\"] : $node[\"pesquisa_user\"].runIndex >= 0 \n      ? $node[\"pesquisa_user\"].json[\"id\"]\n              : null\n}}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "sort": {
+          "values": [
+            {
+              "column": "id"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "45ae75cf-ee64-40f5-9aad-4ae98744878d",
+      "name": "pesquisa_cadastro",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -440,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "pesquisas",
+          "mode": "list",
+          "cachedResultName": "pesquisas"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]     : $node[\"pesquisa_email\"].runIndex >= 0        ? $node[\"pesquisa_email\"].json[\"id_user\"] : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"id\"]               : null }}"
+            },
+            {
+              "column": "id_cadastro",
+              "value": "={{   $node[\"insert_cadastro\"].runIndex >= 0      ? $node[\"insert_cadastro\"].json[\"data\"][\"insertId\"]     : $node[\"pesquisa_cadastro\"].runIndex >= 0        ? $node[\"pesquisa_cadastro\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "pergunta1",
+              "value": "={{ $node[\"dados\"].json[\"pergunta1\"] }}"
+            },
+            {
+              "column": "pergunta2",
+              "value": "={{ $node[\"dados\"].json[\"pergunta2\"] }}"
+            },
+            {
+              "column": "pergunta3",
+              "value": "={{ $node[\"dados\"].json[\"pergunta3\"] }}"
+            },
+            {
+              "column": "pergunta4",
+              "value": "={{ $node[\"dados\"].json[\"pergunta4\"] }}"
+            },
+            {
+              "column": "pergunta5",
+              "value": "={{ $node[\"dados\"].json[\"pergunta5\"] }}"
+            },
+            {
+              "column": "data_pesquisa",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "qualificacao",
+              "value": "={{ $node[\"dados\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"dados\"].json[\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"dados\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"dados\"].json[\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"dados\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"dados\"].json[\"utm_content\"] }}"
+            },
+            {
+              "column": "nome_pesquisa",
+              "value": "={{ $node[\"dados\"].json[\"intuito\"] }}"
+            },
+            {
+              "column": "id_produto",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"produto\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fe4eeb74-7aee-4ab5-9396-b3208516ad47",
+      "name": "insert_pesquisa",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        60,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_cadastro\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2c7801ed-d999-40a1-9f00-9970adebc321",
+      "name": "encontrou_cadastro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -280,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]     : $node[\"pesquisa_email\"].runIndex >= 0        ? $node[\"pesquisa_email\"].json[\"id_user\"] : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"id\"]               : null }}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"nome\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"nome\"] : null }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"sobrenome\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : null }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"telefone\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"telefone\"] : null }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "pesquisa"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_name",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"formata_dados\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "512aab4e-f49e-4e15-9838-51cc0f8b4048",
+      "name": "insert_cadastro",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -100,
+        800
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_chatwoot\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "4c1f2611-7730-4bdd-a2c9-aab446bfccb3",
+      "name": "tem_chatwoot",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        540,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_activecampaign\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7119708e-06d7-4a93-8cf6-54e76f266f7c",
+      "name": "tem_activecampaign",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        900,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - Criação Manychat",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "a7e3d5d2-9f2c-4ddd-ad70-3ed26410c636",
+      "name": "entra_na_fila3",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        720
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - Criação ActiveCampaign",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "24180be2-5904-4bf9-9e8c-8e6212501c53",
+      "name": "entra_na_fila4",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        900
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "team": "3135484",
+        "space": "55168085",
+        "folder": "90132837125",
+        "list": "901305192449",
+        "returnAll": false,
+        "filters": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": "3bfe1f6e-fdb6-4c4c-9d20-4be849560124",
+                "value": "msg_pesquisa_preenchida"
+              },
+              {
+                "fieldId": "d24a2c17-8509-42d2-8dc9-329bb87d19b0",
+                "value": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "8fb326d5-92c8-4968-9cc2-fe2ab296d3fd",
+      "name": "busca_mensagem",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        1080
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "TQX2YNeqTbRwi9nN",
+          "name": "[ClickUp] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const respostas = $json[\"custom_fields\"] || [];\nlet arquivo = respostas.find(answer => answer.name === \"Base64 da Mídia\")?.value || \"\";\nlet tipo_msg = respostas.find(answer => answer.name === \"Tipo de Mensagem\")?.value || \"\";\nlet copy = $json[\"text_content\"] || \"\";\nlet valor_msg = tipo_msg.toString().replace(\"0\", \"Texto\").replace(\"1\",\"Áudio\").replace(\"2\",\"Vídeo\").replace(\"3\",\"Imagem\").replace(\"4\",\"Documento\")\n\nreturn {\n  arquivo,\n  tipo_msg,\n  copy,\n  valor_msg\n    }"
+      },
+      "id": "8ebca837-838b-4b3c-9969-f1bb96e16a2c",
+      "name": "busca_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"config_wpp_captura\"] }}",
+              "rightValue": "Evolution",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e15f2129-a775-401d-b877-48ce206db0bc",
+      "name": "usa_evolution",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+              "rightValue": "Não tem",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8964bcd2-b3d9-4021-afcc-2c53ce8fe14c",
+      "name": "tem_crm",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1260,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"fname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"formata_dados\"].json[\"lname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"dados1\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "7d6ae664-8ffd-4f6a-8524-26c932333601",
+              "name": "funil",
+              "value": "={{ $node[\"dados1\"].json[\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9380d1d3-eda6-4c21-905e-b748e572fb2c",
+              "name": "pergunta1",
+              "value": "={{ $node[\"dados\"].json[\"pergunta1\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "078f3e40-3b7c-4970-a786-0020c37be338",
+              "name": "pergunta2",
+              "value": "={{ $node[\"dados\"].json[\"pergunta2\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "7d2aac56-11d7-436d-84a6-8df8bb3d191d",
+              "name": "pergunta3",
+              "value": "={{ $node[\"dados\"].json[\"pergunta3\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "841c74c9-cb4a-40df-9c51-9a51f97e6b27",
+              "name": "pergunta4",
+              "value": "={{ $node[\"dados\"].json[\"pergunta4\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "78aaeda3-e5a1-4697-bfee-9d2e67457b33",
+              "name": "pergunta5",
+              "value": "={{ $node[\"dados\"].json[\"pergunta5\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a30f0c79-a75e-42f6-9f87-38bd8e063037",
+              "name": "pergunta6",
+              "value": "={{ $node[\"dados\"].json[\"pergunta6\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "73f0b8fc-e447-416d-8d0f-7d588d5249dc",
+              "name": "pergunta7",
+              "value": "={{ $node[\"dados\"].json[\"pergunta7\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8e91c10-fbfa-474c-8da8-8d148990dd92",
+      "name": "dados7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1460,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - CRM - {{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "1da35d97-f579-4726-a671-48564f3051bf",
+      "name": "entra_na_fila7",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        1320
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "42a82d42-c03d-4305-96fc-a68c51a270db",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        1500
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"dados1\"].json[\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"dados1\"].json[\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados1\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"dados1\"].json[\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"dados1\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "1ac9cf61-6fd0-4332-a542-123045b6dbea",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "b37e5519-e533-4f20-8216-4437acbe0211",
+              "name": "funil",
+              "value": "={{ $node[\"dados1\"].json[\"funil\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "84f5723b-0d64-421f-8c95-db597bcfa330",
+      "name": "dados5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        900,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_manychat\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "8c71cbc1-13ff-4d92-84ae-29e686718984",
+              "leftValue": "={{ $node[\"dados\"].json[\"utm_source\"] }}",
+              "rightValue": "manychat",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5137941a-d68c-4265-9397-4ed61775ffe4",
+      "name": "tem_manychat",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        700,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"estrategias_captacao\"] }}",
+              "rightValue": "Enviar comunicações quando o lead preencher a pesquisa",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "c5966954-167a-4f4c-9347-2439fb376694",
+      "name": "tem_msg_de_pesquisa_preenchida",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - Criação Chatwoot",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "ed82fc10-ac79-4ffe-b37b-b043ecb0a918",
+      "name": "entra_na_fila5",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        880,
+        480
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"nome\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"nome\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"sobrenome\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"telefone\"]     : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"telefone\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"pesquisa_cadastro\"].json[\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insert_cadastro\"].runIndex >= 0      ? $node[\"insert_cadastro\"].json[\"data\"][\"insertId\"]     : $node[\"pesquisa_cadastro\"].runIndex >= 0        ? $node[\"pesquisa_cadastro\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]     : $node[\"pesquisa_email\"].runIndex >= 0        ? $node[\"pesquisa_email\"].json[\"id_user\"] : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"id\"]               : null }}",
+              "type": "string"
+            },
+            {
+              "id": "f9cb1206-295d-4e5f-9753-ef4f2fe6c8fc",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "e5b5c1cc-c077-46b5-b38a-0e905b9886cc",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "772af3dd-f0dc-4e12-ba67-5a317cb74ef0",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        380,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5e5d2192-ae60-4067-b731-b3b5a6348502",
+              "name": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b8db369c-b50b-4d1b-859c-a4e766854733",
+              "name": "tag_do_lancamento",
+              "value": "WEB001",
+              "type": "string"
+            },
+            {
+              "id": "ec7e946c-8a54-485b-8c48-02c6e8cf5149",
+              "name": "nome_do_evento",
+              "value": "Webinario",
+              "type": "string"
+            },
+            {
+              "id": "3c379670-6df4-4429-86ab-2d0eafccb35f",
+              "name": "edicao_do_evento",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "id": "4d2c51bb-a172-4ee3-857f-3f3c9c749380",
+              "name": "pergunta1",
+              "value": "={{ $node[\"formata_dados\"].json[\"qual_o_seu_cargo_atual\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "1d84198c-59c6-4b9f-a099-8add712115d8",
+              "name": "pergunta2",
+              "value": "={{ $node[\"formata_dados\"].json[\"qual_a_sua_escolaridade_\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "fb29fcbb-6a75-457f-b7ae-216d692cbc11",
+              "name": "pergunta3",
+              "value": "={{ $node[\"formata_dados\"].json[\"quanto_voc_ganha_de_salrio\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "c32fe9a9-95da-433a-8e80-6689ecc0dbbc",
+              "name": "pergunta4",
+              "value": "={{ $node[\"formata_dados\"].json[\"voc_j_usou_o_linkedin_pra_conseguir_algum_emprego_ou_promoo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "cc0a8e06-06c0-4b36-8e7a-08abbbfbd0ed",
+              "name": "pergunta5",
+              "value": "={{ $node[\"formata_dados\"].json[\"quando_o_assunto_linkedin_qual_nvel_de_conhecimento_voc_est\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d58c5bc9-d82b-4269-a6e2-08353c3aa76b",
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados\"].json[\"body\"][\"qualificacao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ebe5b151-4963-4e16-8368-c10dd9e66ad3",
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b229c31b-d3c8-49ec-9eaa-4fa1f4ec8be4",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b310f450-584f-45db-8fe1-dcf0b3b5935b",
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5c22ebc3-c242-495f-8232-e1bc3fa8b5f9",
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "7148ed5d-6c3f-4003-a230-cbac13ad7217",
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "371e2c28-2801-493f-9c20-f026737523e2",
+              "name": "intuito",
+              "value": "=Pesquisa Preenchida - {{ $json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "6f256b3a-c742-4416-9310-8949f746daf1",
+              "name": "pergunta6",
+              "value": "={{ $node[\"formata_dados\"].json[\"se_voc_tivesse_1h_comigo_para_tirar_suas_dvidas_qual_a_principal_coisa_que_gostaria_que_eu_te_ajudasse\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "279a4a6b-26ab-44dc-99c2-ebb36382fa94",
+              "name": "pergunta7",
+              "value": "={{ $node[\"formata_dados\"].json[\"se_voc_respondeu_que_est_desempregado_qual_era_a_sua_ltima_remunerao\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b892207f-c5ab-4643-a47d-f50c26a52309",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -2180,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - Evolution",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "972ade8d-d46b-4dd6-8b33-17ddd38e60b7",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        980
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - API Oficial",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "0be8e5f1-a777-4ee7-a097-1d48cb9189e9",
+      "name": "entra_na_fila2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        1140
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"dados1\"].json[\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"dados1\"].json[\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados1\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"dados1\"].json[\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados1\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados1\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"dados1\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "901821e2-01ff-42b9-b3af-e2c9d3e08fc9",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "359607b3-67f5-45d8-aea5-51dc893a156f",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d44b3ea3-65dc-435d-968d-02022879259a",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "69d36851-596b-43c9-89e0-059cf57c3e5d",
+              "name": "funil",
+              "value": "={{ $node[\"dados1\"].json[\"funil\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de9acb95-2e3b-4698-bad8-49a47864475a",
+      "name": "dados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1820,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"dados1\"].json[\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"dados1\"].json[\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados1\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"dados1\"].json[\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados1\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados1\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"dados1\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "10e585ad-480d-472f-9d4a-fc6162ac9f0e",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4684a06a-cb16-424c-a61f-0b118e14b946",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d0ce6f66-a609-4a7c-83ce-26346d57a756",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4cbf3b8f-6834-4f11-94dc-ed7dcd3067be",
+              "name": "funil",
+              "value": "={{ $node[\"dados1\"].json[\"funil\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "46a2dc78-b316-4b12-89bc-beea9d375bbb",
+      "name": "dados4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1820,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "=respondeu_typeform",
+        "options": {}
+      },
+      "id": "01a15f92-f7a3-4b41-b47c-8d3a3d44c2a9",
+      "name": "typeform",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -2560,
+        960
+      ],
+      "webhookId": "ffe64f46-fed5-4986-bd45-888a8d38eeca"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"fname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"formata_dados\"].json[\"lname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"dados\"].json[\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"dados1\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "=Pesquisa Preenchida - {{ $node[\"formata_dados\"].json[\"form_id\"].replace ('IGRjFLTf','Frio').replace ('WVOJrm74','Quente') }}",
+              "type": "string"
+            },
+            {
+              "id": "7d6ae664-8ffd-4f6a-8524-26c932333601",
+              "name": "funil",
+              "value": "={{ $node[\"dados1\"].json[\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9380d1d3-eda6-4c21-905e-b748e572fb2c",
+              "name": "pergunta1",
+              "value": "={{ $node[\"dados\"].json[\"pergunta1\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "078f3e40-3b7c-4970-a786-0020c37be338",
+              "name": "pergunta2",
+              "value": "={{ $node[\"dados\"].json[\"pergunta2\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "7d2aac56-11d7-436d-84a6-8df8bb3d191d",
+              "name": "pergunta3",
+              "value": "={{ $node[\"dados\"].json[\"pergunta3\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "841c74c9-cb4a-40df-9c51-9a51f97e6b27",
+              "name": "pergunta4",
+              "value": "={{ $node[\"dados\"].json[\"pergunta4\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "78aaeda3-e5a1-4697-bfee-9d2e67457b33",
+              "name": "pergunta5",
+              "value": "={{ $node[\"dados\"].json[\"pergunta5\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a30f0c79-a75e-42f6-9f87-38bd8e063037",
+              "name": "pergunta6",
+              "value": "={{ $node[\"dados\"].json[\"pergunta6\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "73f0b8fc-e447-416d-8d0f-7d588d5249dc",
+              "name": "pergunta7",
+              "value": "={{ $node[\"dados\"].json[\"pergunta7\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "112602ff-579d-410b-82e2-990b546c8028",
+      "name": "dados8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1120,
+        900
+      ]
+    }
+  ],
+  "pinData": {
+    "typeform": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "7300",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-7f1fad582fce3128cc7950451e2570a3-137fee9b02133afa-01",
+            "x-forwarded-for": "34.230.177.131",
+            "x-forwarded-host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "3fc641f1cb52",
+            "x-real-ip": "34.230.177.131"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01JFZN1FPG3XJKDB42XH6KWS33",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "WVOJrm74",
+              "token": "7p1ka0ohyb8ounxeba97p1ks8eleeep4",
+              "landed_at": "2024-12-25T19:34:30Z",
+              "submitted_at": "2024-12-25T19:35:02Z",
+              "hidden": {
+                "email": "xxxxx",
+                "name": "xxxxx",
+                "utm_campaign": "xxxxx",
+                "utm_content": "xxxxx",
+                "utm_medium": "xxxxx",
+                "utm_source": "xxxxx",
+                "utm_term": "xxxxx"
+              },
+              "calculated": {
+                "score": 4
+              },
+              "variables": [
+                {
+                  "key": "counter_7a678620_1641_4448_8d3e_fcac75337683",
+                  "type": "number",
+                  "number": 0
+                },
+                {
+                  "key": "score",
+                  "type": "number",
+                  "number": 4
+                },
+                {
+                  "key": "winning_outcome_id",
+                  "type": "outcome_id",
+                  "outcome_id": "tyuRYuCM4O7v"
+                }
+              ],
+              "outcome": {
+                "id": "tyuRYuCM4O7v",
+                "title": "ATENÇÃO!"
+              },
+              "definition": {
+                "id": "WVOJrm74",
+                "title": "Webinário LinkedIn PQ",
+                "fields": [
+                  {
+                    "id": "wg2KpMb5EmmL",
+                    "ref": "01H8HD3WP1JTDJD2AY10938JSB",
+                    "type": "short_text",
+                    "title": "Seu nome:",
+                    "properties": {}
+                  },
+                  {
+                    "id": "c6eCI5GuzksU",
+                    "ref": "40d2eeb9-e3cc-46a2-90c9-ee11983fedf6",
+                    "type": "phone_number",
+                    "title": "Seu telefone com WhatsApp",
+                    "properties": {}
+                  },
+                  {
+                    "id": "TrKkIisy4ZIq",
+                    "ref": "baacab46-eec7-4f32-8e5e-0f8c887ad696",
+                    "type": "email",
+                    "title": "Qual e-mail você mais utiliza no seu dia a dia?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "XkqK66WqWHsR",
+                    "ref": "cca09df1-643d-41ca-b5e6-aef45d7d3f42",
+                    "type": "multiple_choice",
+                    "title": "Qual é o seu cargo atual?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "dARncrnuzLrd",
+                        "ref": "0b94a63e-1f1f-4cfc-83f7-e0a11aae82f7",
+                        "label": "Desempregado"
+                      },
+                      {
+                        "id": "nql9DpUtyC34",
+                        "ref": "d1dcabdb-afb8-4b33-9b60-bd15ed8773db",
+                        "label": "Estagiário"
+                      },
+                      {
+                        "id": "hSAY1Zd1DJhO",
+                        "ref": "f79fb147-4a98-4e99-be8e-f3c614c91a2e",
+                        "label": "Assistente / Auxiliar"
+                      },
+                      {
+                        "id": "X6m5uIIcIEaD",
+                        "ref": "942945a4-8108-46aa-b3b2-52ff05c7e5fe",
+                        "label": "Analista"
+                      },
+                      {
+                        "id": "N2wNXhjh7NIs",
+                        "ref": "fea56fa4-147c-4e88-a7db-8ba6c7578a38",
+                        "label": "Especialista"
+                      },
+                      {
+                        "id": "WuyWBd6rWcGt",
+                        "ref": "195982dc-fa3a-40e2-90dd-2b6b2706ca55",
+                        "label": "Coordenador"
+                      },
+                      {
+                        "id": "8xUaaaXAbnUl",
+                        "ref": "40a8cda2-7f4e-42d8-8e09-fb2b4dd1261b",
+                        "label": "Gerente"
+                      },
+                      {
+                        "id": "2ao8c8WCG9jx",
+                        "ref": "f27e1423-5770-4ca2-93da-100535202bca",
+                        "label": "Diretor"
+                      },
+                      {
+                        "id": "9YfQPvGScnTr",
+                        "ref": "00afd273-895e-4a5b-a7a6-7a9efce30fbd",
+                        "label": "Autônomo"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "yuaxHjCOGpnj",
+                    "ref": "396b0194-96fe-4041-ae90-f9307e876241",
+                    "type": "multiple_choice",
+                    "title": "Qual é a sua escolaridade?\n\n",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "SJ8STHZsxPfx",
+                        "ref": "a3dfac6c-154c-48a6-8a6a-a285db46f4ff",
+                        "label": "Ensino Médio"
+                      },
+                      {
+                        "id": "sMrdayhorVt3",
+                        "ref": "c2e9d139-9afb-4a87-a44f-8911ee03b792",
+                        "label": "Graduação"
+                      },
+                      {
+                        "id": "ZwJN22UL55lr",
+                        "ref": "35d6102b-a9c3-4c03-99d4-ebf5236936e8",
+                        "label": "Pós-graduação"
+                      },
+                      {
+                        "id": "9VOlqlKjMGfv",
+                        "ref": "cc791640-90e9-4a53-97f0-52bf345d2d57",
+                        "label": "Mestrado"
+                      },
+                      {
+                        "id": "OxchN5HFstd0",
+                        "ref": "e0eb975b-5f5f-4aab-bc09-4d442589de0d",
+                        "label": "Doutorado"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "RTuCCUSSnAIm",
+                    "ref": "2f10d945-b3b8-4756-9531-ab9653dee655",
+                    "type": "multiple_choice",
+                    "title": "Quanto você ganha de salário?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "bnPPX8DlGGe9",
+                        "ref": "8aea7a20-582c-4faf-8b51-e6da205c00d2",
+                        "label": "Até R$4.999"
+                      },
+                      {
+                        "id": "id3K0IS8p6Xk",
+                        "ref": "91052b93-238c-4315-916c-9ea5817b2ca7",
+                        "label": "Entre R$5.000 e R$5.999"
+                      },
+                      {
+                        "id": "1jovAMrHc9Hg",
+                        "ref": "3fa983f4-81c4-40b7-b847-e53936107ac7",
+                        "label": "Entre R$6.000 e R$7.499"
+                      },
+                      {
+                        "id": "u4gysywhFoFP",
+                        "ref": "0e800925-d3e4-437d-9299-56880ad92111",
+                        "label": "Entre R$7.500 e R$8.999"
+                      },
+                      {
+                        "id": "8mZvpBiqKNod",
+                        "ref": "c5550bb0-6bd9-4661-876f-08245683115a",
+                        "label": "Entre R$9.000 e R$10.999"
+                      },
+                      {
+                        "id": "iX8WYk2nwHYL",
+                        "ref": "6f9f74b5-839d-469a-bd74-649af5ccc475",
+                        "label": "Entre R$11.000 e R$14.999"
+                      },
+                      {
+                        "id": "zxP7JhGZs3jE",
+                        "ref": "15e32779-71a2-4576-b12d-d8efbe420cc3",
+                        "label": "Entre R$15.000 e R$19.999"
+                      },
+                      {
+                        "id": "9oDbwXkveIi3",
+                        "ref": "0e3c5e73-67b8-4600-a9b0-805c191d414d",
+                        "label": "Acima de R$20.000"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "AiMPZCxhgL2P",
+                    "ref": "a0f92f3a-77e4-4b1c-afa2-b32d092dfafe",
+                    "type": "multiple_choice",
+                    "title": "Você já usou o Linkedin pra conseguir algum emprego ou promoção?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "w46vP3a4p5up",
+                        "ref": "1b57fc52-1950-40bd-8c4c-36248fe95099",
+                        "label": "Sim, já usei mas não consegui"
+                      },
+                      {
+                        "id": "aP57Oowgbhgl",
+                        "ref": "e0390329-c904-40d1-a8e5-d5b15f3ee643",
+                        "label": "Sim, já usei e consegui"
+                      },
+                      {
+                        "id": "YCRR09EngQQM",
+                        "ref": "8a1b1a0d-a0bf-4b1a-89b0-d83c6097326c",
+                        "label": "Não usei"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "mQv0zN1kgXwC",
+                    "ref": "5bd6b3e1-2222-4576-a395-9309e4586bbf",
+                    "type": "multiple_choice",
+                    "title": "Quando o assunto é Linkedin, Qual nível de conhecimento você está?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "geNe2pGbCr4b",
+                        "ref": "60376fda-ec43-423d-8834-090d4b96b169",
+                        "label": "Nunca usei o Linkedin"
+                      },
+                      {
+                        "id": "40iaVJiQjXVS",
+                        "ref": "eb541d15-1ecf-4e0f-b1eb-88212338448f",
+                        "label": "Iniciante"
+                      },
+                      {
+                        "id": "alh445UgV0O5",
+                        "ref": "41a83786-162a-4754-b833-fc33ee73d906",
+                        "label": "Já sou ativo nessa rede social"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "sKzo9cmcPCgH",
+                    "ref": "31121036-bdf8-4cd7-bb63-11567464ee95",
+                    "type": "short_text",
+                    "title": "Se você tivesse 1h comigo para tirar suas dúvidas, qual a principal coisa que gostaria que eu te ajudasse?",
+                    "properties": {}
+                  }
+                ],
+                "outcome": {
+                  "variable": "winning_outcome_id",
+                  "choices": [
+                    {
+                      "id": "tyuRYuCM4O7v",
+                      "ref": "b85e1bb8-44a3-4dff-bc29-71512028eff9",
+                      "title": "ATENÇÃO!",
+                      "counter_variable": "counter_7a678620_1641_4448_8d3e_fcac75337683",
+                      "thankyou_screen_ref": "7aed75d3-c4ad-4d58-83e1-570729229053"
+                    }
+                  ]
+                },
+                "endings": [
+                  {
+                    "id": "mY2ezTKitaYG",
+                    "ref": "7aed75d3-c4ad-4d58-83e1-570729229053",
+                    "title": "ATENÇÃO!",
+                    "type": "thankyou_screen",
+                    "properties": {
+                      "description": "CLIQUE NO BOTÃO ABAIXO E *ENTRE NO GRUPO DE WHATSAPP ONDE A AULA SERÁ LIBERADA *⬇️⬇️",
+                      "button_text": "ENTRAR NO GRUPO",
+                      "show_button": true,
+                      "share_icons": false,
+                      "button_mode": "redirect",
+                      "redirect_url": "https://sendflow.pro/i/QuvI1FPdXSBclIv1JjDw"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Mateus diniz",
+                  "field": {
+                    "id": "wg2KpMb5EmmL",
+                    "type": "short_text",
+                    "ref": "01H8HD3WP1JTDJD2AY10938JSB"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5562981196678",
+                  "field": {
+                    "id": "c6eCI5GuzksU",
+                    "type": "phone_number",
+                    "ref": "40d2eeb9-e3cc-46a2-90c9-ee11983fedf6"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "mateusdiniz@automagicbots.com.br",
+                  "field": {
+                    "id": "TrKkIisy4ZIq",
+                    "type": "email",
+                    "ref": "baacab46-eec7-4f32-8e5e-0f8c887ad696"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "WuyWBd6rWcGt",
+                    "label": "Coordenador",
+                    "ref": "195982dc-fa3a-40e2-90dd-2b6b2706ca55"
+                  },
+                  "field": {
+                    "id": "XkqK66WqWHsR",
+                    "type": "multiple_choice",
+                    "ref": "cca09df1-643d-41ca-b5e6-aef45d7d3f42"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "sMrdayhorVt3",
+                    "label": "Graduação",
+                    "ref": "c2e9d139-9afb-4a87-a44f-8911ee03b792"
+                  },
+                  "field": {
+                    "id": "yuaxHjCOGpnj",
+                    "type": "multiple_choice",
+                    "ref": "396b0194-96fe-4041-ae90-f9307e876241"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "u4gysywhFoFP",
+                    "label": "Entre R$7.500 e R$8.999",
+                    "ref": "0e800925-d3e4-437d-9299-56880ad92111"
+                  },
+                  "field": {
+                    "id": "RTuCCUSSnAIm",
+                    "type": "multiple_choice",
+                    "ref": "2f10d945-b3b8-4756-9531-ab9653dee655"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "YCRR09EngQQM",
+                    "label": "Não usei",
+                    "ref": "8a1b1a0d-a0bf-4b1a-89b0-d83c6097326c"
+                  },
+                  "field": {
+                    "id": "AiMPZCxhgL2P",
+                    "type": "multiple_choice",
+                    "ref": "a0f92f3a-77e4-4b1c-afa2-b32d092dfafe"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "40iaVJiQjXVS",
+                    "label": "Iniciante",
+                    "ref": "eb541d15-1ecf-4e0f-b1eb-88212338448f"
+                  },
+                  "field": {
+                    "id": "mQv0zN1kgXwC",
+                    "type": "multiple_choice",
+                    "ref": "5bd6b3e1-2222-4576-a395-9309e4586bbf"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "teste",
+                  "field": {
+                    "id": "sKzo9cmcPCgH",
+                    "type": "short_text",
+                    "ref": "31121036-bdf8-4cd7-bb63-11567464ee95"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "mY2ezTKitaYG",
+                "ref": "7aed75d3-c4ad-4d58-83e1-570729229053"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/respondeu_typeform",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-09T17:47:11.839Z",
+  "versionId": "a10e23fd-0fac-4ec1-8f38-4d137935e15f"
+}

@@ -1,0 +1,1369 @@
+{
+  "active": true,
+  "connections": {
+    "Loop": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg": {
+      "main": [
+        [
+          {
+            "node": "1s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Terça - 18h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg1": {
+      "main": [
+        [
+          {
+            "node": "1s1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop1": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s1": {
+      "main": [
+        [
+          {
+            "node": "Loop1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads1": {
+      "main": [
+        [
+          {
+            "node": "Loop1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Terça - 22h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg2": {
+      "main": [
+        [
+          {
+            "node": "1s2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop2": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s2": {
+      "main": [
+        [
+          {
+            "node": "Loop2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads2": {
+      "main": [
+        [
+          {
+            "node": "Loop2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quarta - 10h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg3": {
+      "main": [
+        [
+          {
+            "node": "1s3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop3": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s3": {
+      "main": [
+        [
+          {
+            "node": "Loop3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads3": {
+      "main": [
+        [
+          {
+            "node": "Loop3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quarta - 18h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg4": {
+      "main": [
+        [
+          {
+            "node": "1s4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop4": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s4": {
+      "main": [
+        [
+          {
+            "node": "Loop4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads4": {
+      "main": [
+        [
+          {
+            "node": "Loop4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg5": {
+      "main": [
+        [
+          {
+            "node": "1s5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop5": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s5": {
+      "main": [
+        [
+          {
+            "node": "Loop5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads5": {
+      "main": [
+        [
+          {
+            "node": "Loop5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quinta- 10h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quinta - 16h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg6": {
+      "main": [
+        [
+          {
+            "node": "1s6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop6": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s6": {
+      "main": [
+        [
+          {
+            "node": "Loop6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_leads6": {
+      "main": [
+        [
+          {
+            "node": "Loop6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quinta- 19h": {
+      "main": [
+        [
+          {
+            "node": "puxa_leads6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-10T00:32:36.822Z",
+  "id": "MHsR3OEILaUlNBXv",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Disparo Convite - Webinário",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "f44da694-5d40-4620-a8ca-0836f5fa9600",
+      "name": "Não faz nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop\"].json[\"telefone\"] }}",
+        "template": "convite_webinario_terca_18h|pt_BR"
+      },
+      "id": "8777be87-2703-4e9b-883c-832addf84489",
+      "name": "envia_msg",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        360
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        240
+      ],
+      "id": "4419a454-f075-4137-8129-ab08359964ac",
+      "name": "Loop"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "e7934acc-87b8-436a-b7e7-cf6cc4b39dee",
+      "name": "1s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1480,
+        360
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                2
+              ],
+              "triggerAtHour": 18
+            }
+          ]
+        }
+      },
+      "id": "7d766a2e-172a-40b8-9e20-794cd2c5d059",
+      "name": "Terça - 18h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "terca-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "70e25739-f189-40ff-ac90-9e19843aae67",
+      "name": "puxa_leads",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        820,
+        240
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "5987150f-3155-4359-b6de-29ddd92a6502",
+      "name": "Não faz nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop1\"].json[\"telefone\"] }}",
+        "template": "convite_terca_22h|pt_BR"
+      },
+      "id": "7e833298-9af9-4e0c-8e4a-651f8401c1f0",
+      "name": "envia_msg1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        340
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2080,
+        220
+      ],
+      "id": "1ea3f255-1b1e-4422-90d2-9083e0dff353",
+      "name": "Loop1"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "b5acf6f0-6b1c-4cd8-b0f6-2eb1fe115c23",
+      "name": "1s1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2540,
+        340
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "terca-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4ef91412-67f5-40a7-9c82-3e9ca15db242",
+      "name": "puxa_leads1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1880,
+        220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                2
+              ],
+              "triggerAtHour": 22
+            }
+          ]
+        }
+      },
+      "id": "86146684-7775-453b-978c-03af9e6219bb",
+      "name": "Terça - 22h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1700,
+        220
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "1146c220-c685-4f44-ae0e-b50a8484e356",
+      "name": "Não faz nada2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop2\"].json[\"telefone\"] }}",
+        "template": "convite_quarta_10h|pt_BR"
+      },
+      "id": "db5abd79-1f44-4bf2-8e0b-371109ab7c5d",
+      "name": "envia_msg2",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        800
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        680
+      ],
+      "id": "45063771-b359-402f-a9f5-f8a7b324d728",
+      "name": "Loop2"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "3ae5195d-b49a-4193-9ab4-500607d58873",
+      "name": "1s2",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1480,
+        800
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "quarta-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "42b526e1-a7d5-4846-a750-6a4b05028cbd",
+      "name": "puxa_leads2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        820,
+        680
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                3
+              ],
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "id": "e8c097ef-4260-4992-809b-1aaa2821c30e",
+      "name": "Quarta - 10h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        680
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "411c966a-ef4e-453d-a764-b0c219ab6f95",
+      "name": "Não faz nada3",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop3\"].json[\"telefone\"] }}",
+        "template": "convite_quarta_18h|pt_BR"
+      },
+      "id": "45b2e28c-b95f-439e-9c30-d5ea62ac7c5f",
+      "name": "envia_msg3",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        800
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2080,
+        680
+      ],
+      "id": "cec9a091-b1a5-49c8-86ef-a94dc7bd2d9c",
+      "name": "Loop3"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "b852d2d1-6000-422c-8b95-874be9cc1c6b",
+      "name": "1s3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2540,
+        800
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "quarta-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "53b03a12-2a7c-45a1-94a7-689b97f6f08c",
+      "name": "puxa_leads3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1880,
+        680
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                3
+              ],
+              "triggerAtHour": 18
+            }
+          ]
+        }
+      },
+      "id": "fce502a8-3e0b-4fc3-bbce-e280925d46df",
+      "name": "Quarta - 18h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1700,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Terça-Feira\n\n",
+        "height": 440.79014893820886,
+        "width": 2152.698728214095
+      },
+      "id": "944e5ebc-dd1f-4c14-ac0a-a70ba0df0dc7",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        126.29909722090417
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Quarta-Feira\n\n",
+        "height": 440.79014893820886,
+        "width": 2152.698728214095,
+        "color": 4
+      },
+      "id": "3c03798a-cc02-4f5b-8822-47aa904f56aa",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4dff08e9-6802-4521-b331-7183a003bd96",
+      "name": "Não faz nada4",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop4\"].json[\"telefone\"] }}",
+        "template": "convite_quinta_10hrs|pt_BR"
+      },
+      "id": "1c0209f7-9a8d-4377-aa21-ad5053a7232c",
+      "name": "envia_msg4",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1280
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        1160
+      ],
+      "id": "98fc9740-38df-422a-b074-ae406286dddf",
+      "name": "Loop4"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "e9ca200c-c6c9-4e3c-a2e4-6c0050f4ff1c",
+      "name": "1s4",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1480,
+        1280
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "quinta-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "441886ae-1137-43de-899f-d2feaef7faaf",
+      "name": "puxa_leads4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        820,
+        1160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "d21f06e4-bc97-44a0-b91c-7b478d47d65c",
+      "name": "Não faz nada5",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop5\"].json[\"telefone\"] }}",
+        "template": "convite_quinta_16h|pt_BR"
+      },
+      "id": "018ef56e-0cee-4c05-89ac-7d4b6462de75",
+      "name": "envia_msg5",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        1280
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2080,
+        1160
+      ],
+      "id": "5fd16492-432e-4587-a94d-baa97259f362",
+      "name": "Loop5"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "6f41d302-caa4-46d7-93ea-103d76355e41",
+      "name": "1s5",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2540,
+        1280
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "quinta-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "375bb2aa-298a-4840-91e4-b1a97b851cae",
+      "name": "puxa_leads5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1880,
+        1160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Quinta-Feira\n\n",
+        "height": 811.3262720645639,
+        "width": 2152.698728214095,
+        "color": 6
+      },
+      "id": "12665141-a268-40cc-8c76-d4db275e77c9",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "id": "e358824b-772e-41d3-ad29-ddc979d6bddb",
+      "name": "Quinta- 10h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 16
+            }
+          ]
+        }
+      },
+      "id": "7a0929b6-970c-4786-9e72-45a3bbb2dd56",
+      "name": "Quinta - 16h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1700,
+        1160
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f818c045-24e2-40e6-b9b2-4f1c8291c804",
+      "name": "Não faz nada6",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop6\"].json[\"telefone\"] }}",
+        "template": "convite_quinta_19h|pt_BR"
+      },
+      "id": "e6b91d44-4886-4f75-877b-3b67fe75b73f",
+      "name": "envia_msg6",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        1680
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1540,
+        1560
+      ],
+      "id": "b64d8760-2eae-48f7-a6e3-734358b4e634",
+      "name": "Loop6"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "6a00bd2d-aa0a-42e9-87f9-b9561e469d0e",
+      "name": "1s6",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2000,
+        1680
+      ],
+      "webhookId": "924f7e11-0818-470e-b036-3770c6c9dbab"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "returnAll": true,
+        "where": {
+          "values": [
+            {
+              "column": "quinta-feira",
+              "value": "={{ $now.toFormat('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b93e7522-60f9-4e26-90a3-0c9011fd2265",
+      "name": "puxa_leads6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1340,
+        1560
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 19
+            }
+          ]
+        }
+      },
+      "id": "2dbc8533-006a-4ac1-bb82-8e4531dadb3e",
+      "name": "Quinta- 19h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1160,
+        1560
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:Quinta - 19:30": {
+      "recurrencyRules": []
+    },
+    "node:Quinta - 20hrs": {
+      "recurrencyRules": []
+    },
+    "node:Terça - 18h": {
+      "recurrencyRules": []
+    },
+    "node:Terça - 22h": {
+      "recurrencyRules": []
+    },
+    "node:Quarta - 10h": {
+      "recurrencyRules": []
+    },
+    "node:Quarta - 18h": {
+      "recurrencyRules": []
+    },
+    "node:Quinta- 10h": {
+      "recurrencyRules": []
+    },
+    "node:Quinta - 16h": {
+      "recurrencyRules": []
+    },
+    "node:Quinta- 19h": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 7,
+  "updatedAt": "2025-01-10T00:58:55.116Z",
+  "versionId": "4da14458-48d4-46f9-a003-5469866ae635"
+}

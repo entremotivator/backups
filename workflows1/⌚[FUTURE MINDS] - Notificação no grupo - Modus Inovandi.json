@@ -1,0 +1,473 @@
+{
+  "active": false,
+  "connections": {
+    "variaveis": {
+      "main": [
+        [
+          {
+            "node": "Não Faça Nada1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Não Faça Nada1": {
+      "main": [
+        [
+          {
+            "node": "é segunda-feira",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segunda_16:00h": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "terça_10:30h": {
+      "main": [
+        [
+          {
+            "node": "variaveis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é segunda-feira": {
+      "main": [
+        [
+          {
+            "node": "grupo_sala_secreta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis1": {
+      "main": [
+        [
+          {
+            "node": "Não Faça Nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Não Faça Nada": {
+      "main": [
+        [
+          {
+            "node": "é terça-feira",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é terça-feira": {
+      "main": [
+        [
+          {
+            "node": "grupo_sala_secreta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-19T13:15:57.101Z",
+  "id": "cmOsDfUTsuIhkAJ6",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[FUTURE MINDS] - Notificação no grupo - Modus Inovandi",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2141237c-1d88-4ad8-8291-d1bbfec60320",
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br",
+              "type": "string"
+            },
+            {
+              "id": "43ca0438-376b-4a24-a670-29a652bf6058",
+              "name": "nome_da_instancia",
+              "value": "LilianCidreira",
+              "type": "string"
+            },
+            {
+              "id": "49344ced-eaf6-4273-8c89-aa4528bd91fc",
+              "name": "apikey",
+              "value": "yavuatfpzpeefq82zhfbs",
+              "type": "string"
+            },
+            {
+              "id": "86919fcd-f584-4077-b02a-712a252f1094",
+              "name": "id_grupo_modus_inovandi",
+              "value": "120363310726271571@g.us",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c418175e-edff-4ead-ad8b-6a35bba896a5",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1320,
+        400
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "6a0ab9db-af87-4c92-b832-f85ce4e069ee",
+      "name": "Não Faça Nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $json[\"id_grupo_modus_inovandi\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=🟡 O DIÁRIO DO ESTRATEGISTA está para FECHAR!\n\nAtente-se ao prazo de envio da sua pergunta! Você pode encaminhar as dúvidas até\namanhã, às 11h30.\n\nAdicionamos exemplos de como fazer uma pergunta estratégica dentro do formulário para\nque você possa extrair o melhor da sessão através da elaboração de uma pergunta concisa\ne que traga os insumos necessários para a questão. Até breve!"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "85eb1663-e27f-4020-9a9f-48826949fa83",
+      "name": "grupo_sala_secreta",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1880,
+        360
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 2,
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 16
+            }
+          ]
+        }
+      },
+      "id": "6d174aba-95e5-4e89-87d4-bb1cfe42fce1",
+      "name": "segunda_16:00h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 2,
+              "triggerAtDay": [
+                2
+              ],
+              "triggerAtHour": 10,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "415ff222-f01e-499a-97be-4f526ac13fb1",
+      "name": "terça_10:30h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "eff23ca0-efd9-48b3-b713-fe0f20a37175",
+              "leftValue": "={{ $node[\"segunda_16:00h\"].json[\"Day of week\"] }}",
+              "rightValue": "Monday",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "26e2f9ce-6923-4379-9d7c-73697197d810",
+      "name": "é segunda-feira",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2141237c-1d88-4ad8-8291-d1bbfec60320",
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br",
+              "type": "string"
+            },
+            {
+              "id": "43ca0438-376b-4a24-a670-29a652bf6058",
+              "name": "nome_da_instancia",
+              "value": "LilianCidreira",
+              "type": "string"
+            },
+            {
+              "id": "49344ced-eaf6-4273-8c89-aa4528bd91fc",
+              "name": "apikey",
+              "value": "yavuatfpzpeefq82zhfbs",
+              "type": "string"
+            },
+            {
+              "id": "86919fcd-f584-4077-b02a-712a252f1094",
+              "name": "id_grupo_modus_inovandi",
+              "value": "120363310726271571@g.us",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6583bef2-a2c5-457f-a979-1af826d7c592",
+      "name": "variaveis1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1320,
+        740
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "54cb860f-ada0-436a-898d-d74ea25a970f",
+      "name": "Não Faça Nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis1\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis1\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis1\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $json[\"id_grupo_modus_inovandi\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=🔴 O DIÁRIO DO ESTRATEGISTA vai fechar EM MENOS DE 1H!\n\nÚltimos minutos para você registrar qual é a sua pergunta estratégica no Diário do\nEstrategista.\n\nObs.: Caso não possua dúvidas, você pode participar como ouvinte e registrar os seus\ninsights/aprendizados na comunidade de WhatsApp nos dias subsequentes."
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "b1839aa1-48dd-4cbc-b186-24f959cc8741",
+      "name": "grupo_sala_secreta1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1880,
+        700
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "eff23ca0-efd9-48b3-b713-fe0f20a37175",
+              "leftValue": "={{ $node[\"terça_10:30h\"].json[\"Day of week\"] }}",
+              "rightValue": "Tuesday",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5c308453-e8fa-4c4d-a253-5183eb165859",
+      "name": "é terça-feira",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        740
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:sabado_09:00h": {
+      "recurrencyRules": []
+    },
+    "node:sabado_10:00h": {
+      "recurrencyRules": []
+    },
+    "node:sabado_10:10h": {
+      "recurrencyRules": []
+    },
+    "node:segunda_16:00h": {
+      "recurrencyRules": [
+        35
+      ]
+    },
+    "node:terça_10:30h": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2024-08-26T19:13:39.968Z",
+  "versionId": "ac2241b4-ca2f-4ab5-9f2b-9a450429df3e"
+}

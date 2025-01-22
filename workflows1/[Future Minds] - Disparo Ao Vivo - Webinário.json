@@ -1,0 +1,466 @@
+{
+  "active": true,
+  "connections": {
+    "Quinta - 19:30": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg": {
+      "main": [
+        [
+          {
+            "node": "1s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s": {
+      "main": [
+        [
+          {
+            "node": "Loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "Loop1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop1": {
+      "main": [
+        [
+          {
+            "node": "Não faz nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "é_quente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1s1": {
+      "main": [
+        [
+          {
+            "node": "Loop1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quinta - 20hrs": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_quente": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_quente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "envia_msg_frio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_frio1": {
+      "main": [
+        [
+          {
+            "node": "1s1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_quente": {
+      "main": [
+        [
+          {
+            "node": "1s1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-09T14:27:13.508Z",
+  "id": "QBBXQYtibqZGplXc",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Disparo Ao Vivo - Webinário",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 19,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "713219c6-ff42-41c3-84b5-e4dc5c1b1076",
+      "name": "Quinta - 19:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        620,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT \n    c.id,\n    c.nome,\n    c.sobrenome,\n    c.email,\n    c.telefone,\n    c.data_cadastro,\n    c.form_name\nFROM \n    cadastros c\nINNER JOIN (\n    SELECT \n        email, -- Agrupando pelo e-mail (identificador único do cliente)\n        MAX(data_cadastro) AS max_data_cadastro, -- Data mais recente de cada cliente\n        MAX(CASE WHEN form_name IS NOT NULL THEN data_cadastro ELSE NULL END) AS prioritized_data_cadastro\n    FROM \n        cadastros\n    WHERE \n        data_cadastro >= CURDATE() - INTERVAL 6 DAY -- Últimos 6 dias\n    GROUP BY \n        email\n) m ON c.email = m.email \n   AND (c.data_cadastro = m.prioritized_data_cadastro OR c.data_cadastro = m.max_data_cadastro)\nWHERE \n    c.telefone IS NOT NULL AND c.telefone <> ''; -- Verifica se o telefone está preenchido\n",
+        "options": {}
+      },
+      "id": "a3ffd7b1-15c1-4a76-9cb2-4d3d14cd7a56",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        800,
+        240
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "189d3565-5b6c-4ac3-9dcb-8f13a9173222",
+      "name": "Não faz nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop\"].json[\"telefone\"] }}",
+        "template": "webinario_19_30hrs|pt_BR"
+      },
+      "id": "1e12c1e6-f180-492d-b1d5-be7e719d84af",
+      "name": "envia_msg",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        360
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        240
+      ],
+      "id": "8983d06c-bd00-4301-8ee1-41b695ef9ff7",
+      "name": "Loop"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "1f250a77-f71d-49fc-96a1-9510e1d19fb3",
+      "name": "1s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1480,
+        360
+      ],
+      "webhookId": "2f7e9139-1716-4094-9ca1-937786ab9808"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT \n    c.id,\n    c.nome,\n    c.sobrenome,\n    c.email,\n    c.telefone,\n    c.data_cadastro,\n    c.form_name\nFROM \n    cadastros c\nINNER JOIN (\n    SELECT \n        email, -- Agrupando pelo e-mail (identificador único do cliente)\n        MAX(data_cadastro) AS max_data_cadastro, -- Data mais recente de cada cliente\n        MAX(CASE WHEN form_name IS NOT NULL THEN data_cadastro ELSE NULL END) AS prioritized_data_cadastro\n    FROM \n        cadastros\n    WHERE \n        data_cadastro >= CURDATE() - INTERVAL 6 DAY -- Últimos 6 dias\n    GROUP BY \n        email\n) m ON c.email = m.email \n   AND (c.data_cadastro = m.prioritized_data_cadastro OR c.data_cadastro = m.max_data_cadastro)\nWHERE \n    c.telefone IS NOT NULL AND c.telefone <> ''; -- Verifica se o telefone está preenchido\n",
+        "options": {}
+      },
+      "id": "81b05cfe-b4e7-489b-8e62-e0274aba6d85",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        800,
+        620
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "b4e0f522-54ca-4213-b568-1343a032b777",
+      "name": "Não faz nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1020,
+        620
+      ],
+      "id": "42609c7a-45ea-4451-a5ed-f90eb9d07ee3",
+      "name": "Loop1"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "b16d8404-c80b-4d5e-8d01-b1db79a53a8d",
+      "name": "1s1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1760,
+        760
+      ],
+      "webhookId": "2f7e9139-1716-4094-9ca1-937786ab9808"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 20
+            }
+          ]
+        }
+      },
+      "id": "d0b1c10a-9845-4f83-b98c-f3f7762c7f5f",
+      "name": "Quinta - 20hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        620,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7224062a-fb9b-445f-aca5-7a001903eed3",
+              "leftValue": "={{ $json[\"form_name\"] }}",
+              "rightValue": "pq",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "ae75dca6-a43d-49f9-95f4-3bee4b8dc5fb",
+              "leftValue": "={{ $json[\"form_name\"] }}",
+              "rightValue": "Quente",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "9d385a65-0dfd-4d23-8250-2133d603cb01",
+      "name": "é_quente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1260,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop1\"].json[\"telefone\"] }}",
+        "template": "webinario_20h_quente|pt_BR"
+      },
+      "id": "d63f6dee-b1bf-4309-8e3d-687b92ceb506",
+      "name": "envia_msg_frio1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        760
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "=+{{ $node[\"Loop1\"].json[\"telefone\"] }}",
+        "template": "webinario_20h_quente|pt_BR"
+      },
+      "id": "1a66daf1-34bf-464d-90e4-1a72b4892733",
+      "name": "envia_msg_quente",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        580
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      },
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:Quinta - 19:30": {
+      "recurrencyRules": []
+    },
+    "node:Quinta - 20hrs": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2025-01-10T00:00:30.028Z",
+  "versionId": "92540d08-8ec2-4cb9-afa4-f610edefe49f"
+}

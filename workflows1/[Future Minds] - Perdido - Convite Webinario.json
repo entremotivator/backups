@@ -1,0 +1,601 @@
+{
+  "active": true,
+  "connections": {
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "telefone_vazio2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "nao_existe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead1": {
+      "main": [
+        [
+          {
+            "node": "Limit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "insere_convite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "insere_convite1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "insere_convite2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "perdido_clint": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-10T00:03:48.013Z",
+  "id": "X9Il4Hl9Bfyyc0Iu",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Perdido - Convite Webinario",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0cbdcad1-4920-4e7d-a6f9-437108ecded2",
+              "name": "nome",
+              "value": "={{$node[\"perdido_clint\"].json[\"body\"][\"contact_name\"].split (' ')[0] }}",
+              "type": "string"
+            },
+            {
+              "id": "05fd8409-f450-4cd2-88b0-9e201c4d8dc7",
+              "name": "sobrenome",
+              "value": "={{$node[\"perdido_clint\"].json[\"body\"][\"contact_name\"].split(' ')[1] ? $node[\"perdido_clint\"].json[\"body\"][\"contact_name\"].split(' ').slice(1).join(\" \") : \".\"}}",
+              "type": "string"
+            },
+            {
+              "id": "850bacff-b62b-484a-a48d-8a1832562e45",
+              "name": "email",
+              "value": "={{$node[\"perdido_clint\"].json[\"body\"][\"contact_email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2669a334-987d-4801-b9d6-a4fd4dcd4b1d",
+              "name": "telefone",
+              "value": "={{$node[\"perdido_clint\"].json[\"body\"][\"contact_phone\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a213a478-2158-479b-8abc-e2ba2def90c8",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        720,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"dados\"].json[\"telefone\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "d2d2230f-13e1-4152-96e5-d0cc370bb1df",
+      "name": "telefone_vazio2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        940,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "c68c3ea9-c2a6-46e4-b9c7-60fe88f07fa4",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_user\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "cfc7132d-66e7-4675-9dd7-24cf1693bae2",
+      "name": "nao_existe4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"dados\"].json[\"email\"] || '-----------------------'}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "22608320-ec65-43eb-827b-765a6fb85020",
+      "name": "pesquisa_lead1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1760,
+        40
+      ],
+      "retryOnFail": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] || '-----------------------'}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "50b1eff5-6d61-4d28-9440-8cb6ca64d20b",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1160,
+        140
+      ],
+      "retryOnFail": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "7d88b159-7002-4401-8a67-0096b5fafcd3",
+      "name": "Limit1",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Function to calculate the next occurrence of a specific weekday\nconst getNextWeekday = (weekday) => {\n    const today = new Date();\n    const currentDay = today.getDay(); // 0 (Sunday) to 6 (Saturday)\n    const daysUntilNext = (weekday + 7 - currentDay) % 7 || 7; // Calculate days to the next weekday\n    const nextDate = new Date(today);\n    nextDate.setDate(today.getDate() + daysUntilNext);\n    return nextDate;\n};\n\n// Function to format date as YYYY-MM-DD\nconst formatDate = (date) => {\n    const year = date.getFullYear();\n    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based\n    const day = String(date.getDate()).padStart(2, '0');\n    return `${year}-${month}-${day}`;\n};\n\n// Calculate the next dates\nconst nextTuesday = formatDate(getNextWeekday(2)); // 2 = Tuesday\nconst nextWednesday = formatDate(getNextWeekday(3)); // 3 = Wednesday\nconst nextThursday = formatDate(getNextWeekday(4)); // 4 = Thursday\n\n// Return a single object with the response fields\nreturn [\n    {\n        json: {\n            \"Terca-feira\": nextTuesday,\n            \"Quarta-feira\": nextWednesday,\n            \"Quinta-feira\": nextThursday\n        }\n    }\n];\n"
+      },
+      "id": "64ca5b9d-8b6b-4ef7-9127-0d63c834eb95",
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2080,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"pesquisa_lead1\"].json[\"nome\"] }} "
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"pesquisa_lead1\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "terca-feira",
+              "value": "={{ $node[\"Code1\"].json[\"Terca-feira\"] }}"
+            },
+            {
+              "column": "quarta-feira",
+              "value": "={{ $node[\"Code1\"].json[\"Quarta-feira\"] }}"
+            },
+            {
+              "column": "quinta-feira",
+              "value": "={{ $node[\"Code1\"].json[\"Quinta-feira\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1f756d17-9905-4e66-b67a-829bec721fbc",
+      "name": "insere_convite",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        2300,
+        40
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Function to calculate the next occurrence of a specific weekday\nconst getNextWeekday = (weekday) => {\n    const today = new Date();\n    const currentDay = today.getDay(); // 0 (Sunday) to 6 (Saturday)\n    const daysUntilNext = (weekday + 7 - currentDay) % 7 || 7; // Calculate days to the next weekday\n    const nextDate = new Date(today);\n    nextDate.setDate(today.getDate() + daysUntilNext);\n    return nextDate;\n};\n\n// Function to format date as YYYY-MM-DD\nconst formatDate = (date) => {\n    const year = date.getFullYear();\n    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based\n    const day = String(date.getDate()).padStart(2, '0');\n    return `${year}-${month}-${day}`;\n};\n\n// Calculate the next dates\nconst nextTuesday = formatDate(getNextWeekday(2)); // 2 = Tuesday\nconst nextWednesday = formatDate(getNextWeekday(3)); // 3 = Wednesday\nconst nextThursday = formatDate(getNextWeekday(4)); // 4 = Thursday\n\n// Return a single object with the response fields\nreturn [\n    {\n        json: {\n            \"Terca-feira\": nextTuesday,\n            \"Quarta-feira\": nextWednesday,\n            \"Quinta-feira\": nextThursday\n        }\n    }\n];\n"
+      },
+      "id": "d81164e0-2d02-4085-aed7-9696f8368563",
+      "name": "Code2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] }} "
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "terca-feira",
+              "value": "={{ $node[\"Code2\"].json[\"Terca-feira\"] }}"
+            },
+            {
+              "column": "quarta-feira",
+              "value": "={{ $node[\"Code2\"].json[\"Quarta-feira\"] }}"
+            },
+            {
+              "column": "quinta-feira",
+              "value": "={{ $node[\"Code2\"].json[\"Quinta-feira\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "01145580-60dd-4f07-a57e-2b02b6fef3c6",
+      "name": "insere_convite1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1980,
+        220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Function to calculate the next occurrence of a specific weekday\nconst getNextWeekday = (weekday) => {\n    const today = new Date();\n    const currentDay = today.getDay(); // 0 (Sunday) to 6 (Saturday)\n    const daysUntilNext = (weekday + 7 - currentDay) % 7 || 7; // Calculate days to the next weekday\n    const nextDate = new Date(today);\n    nextDate.setDate(today.getDate() + daysUntilNext);\n    return nextDate;\n};\n\n// Function to format date as YYYY-MM-DD\nconst formatDate = (date) => {\n    const year = date.getFullYear();\n    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based\n    const day = String(date.getDate()).padStart(2, '0');\n    return `${year}-${month}-${day}`;\n};\n\n// Calculate the next dates\nconst nextTuesday = formatDate(getNextWeekday(2)); // 2 = Tuesday\nconst nextWednesday = formatDate(getNextWeekday(3)); // 3 = Wednesday\nconst nextThursday = formatDate(getNextWeekday(4)); // 4 = Thursday\n\n// Return a single object with the response fields\nreturn [\n    {\n        json: {\n            \"Terca-feira\": nextTuesday,\n            \"Quarta-feira\": nextWednesday,\n            \"Quinta-feira\": nextThursday\n        }\n    }\n];\n"
+      },
+      "id": "f884d43b-c9f7-45ca-b359-ea8d12ef1276",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "convite_webinario",
+          "mode": "list",
+          "cachedResultName": "convite_webinario"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados\"].json[\"nome\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"dados\"].json[\"telefone\"].replace(/[\\s+]/g, \"\")  }}"
+            },
+            {
+              "column": "terca-feira",
+              "value": "={{ $node[\"Code\"].json[\"Terca-feira\"] }}"
+            },
+            {
+              "column": "quarta-feira",
+              "value": "={{ $node[\"Code\"].json[\"Quarta-feira\"] }}"
+            },
+            {
+              "column": "quinta-feira",
+              "value": "={{ $node[\"Code\"].json[\"Quinta-feira\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "97649f49-5ea2-47d4-97a6-fdba72c9246f",
+      "name": "insere_convite2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.3,
+      "position": [
+        1380,
+        340
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "=web001-convite-webinario",
+        "options": {}
+      },
+      "id": "c0d01ec2-57de-43a0-a564-7542fc4560f0",
+      "name": "perdido_clint",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        260
+      ],
+      "webhookId": "d6bd5cce-bd9c-4542-b37d-2246dec331f7"
+    }
+  ],
+  "pinData": {
+    "perdido_clint": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "user-agent": "axios/1.7.9",
+            "content-length": "181",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "traceparent": "00-6780642f0000000013d417b00bbf0840-21490baa63c72b3b-01",
+            "tracestate": "dd=t.tid:6780642f00000000;t.dm:-3;s:2;p:21490baa63c72b3b",
+            "x-datadog-parent-id": "2398461102997842747",
+            "x-datadog-sampling-priority": "2",
+            "x-datadog-tags": "_dd.p.tid=6780642f00000000,_dd.p.dm=-3",
+            "x-datadog-trace-id": "1428793026662041664",
+            "x-forwarded-for": "52.200.254.28",
+            "x-forwarded-host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "3fc641f1cb52",
+            "x-real-ip": "52.200.254.28"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "contact_name": "Gabriel",
+            "contact_email": "gabriel130103@gmail.com",
+            "contact_phone": "",
+            "deal_stage": "Base",
+            "deal_user": "",
+            "deal_status": "OPEN"
+          },
+          "webhookUrl": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/web001-convite-webinario",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr",
+    "saveExecutionProgress": true
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-10T00:32:20.104Z",
+  "versionId": "d1bf060e-5d85-4590-bdfd-50c516bb8945"
+}

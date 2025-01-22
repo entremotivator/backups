@@ -1,0 +1,1049 @@
+{
+  "active": true,
+  "connections": {
+    "15_em_15_min": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_leads_que_nao_entraram_no_grupo": {
+      "main": [
+        [
+          {
+            "node": "separa_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_linhas": {
+      "main": [
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_funil": {
+      "main": [
+        [
+          {
+            "node": "busca_leads_que_nao_entraram_no_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_configs": {
+      "main": [
+        [
+          {
+            "node": "tem_ura_nessa_etapa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_ura_nessa_etapa": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "separa_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "fim2": {
+      "main": [
+        [
+          {
+            "node": "separa_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_msg01": {
+      "main": [
+        [
+          {
+            "node": "é_publicoquente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2dias": {
+      "main": [
+        [
+          {
+            "node": "add_msg01",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1dia": {
+      "main": [
+        [
+          {
+            "node": "2dias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_msg": {
+      "main": [
+        [
+          {
+            "node": "msg_01",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "1dia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_mensagem_user": {
+      "main": [
+        [
+          {
+            "node": "encontrou_msg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "msg_01": {
+      "main": [
+        [
+          {
+            "node": "atualiza_mensagem_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "já_passou_30min",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "já_passou_30min": {
+      "main": [
+        [
+          {
+            "node": "procura_mensagem_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "separa_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_mensagem_user": {
+      "main": [
+        [
+          {
+            "node": "é_publicoquente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_publicoquente": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatsApp Business Cloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-14T22:45:05.567Z",
+  "id": "ab5WyAp82PHAwEoN",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Verifica leads que entrou no Grupo",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT c1.*\nFROM cadastros c1\nINNER JOIN (\n    SELECT MAX(c.id) AS last_cadastro_id\n    FROM cadastros c\n    LEFT JOIN users u ON c.id_user = u.id\n    LEFT JOIN telefones t ON u.id = t.id_user\n    WHERE c.id_funil = {{ $node[\"pesquisa_funil\"].json[\"id\"] }}\n    AND c.data_cadastro <= DATE_SUB(NOW(), INTERVAL 10 MINUTE)\n    AND c.id NOT IN (\n        SELECT c2.id\n        FROM cadastros c2\n        JOIN users u2 ON c2.id_user = u2.id\n        JOIN telefones t2 ON u2.id = t2.id_user\n        JOIN leads_nos_grupos lng ON t2.id = lng.id_telefone\n        JOIN grupos g ON lng.id_grupo = g.id AND g.funil = {{ $node[\"pesquisa_funil\"].json[\"id\"] }}\n    )\n    GROUP BY c.id_user\n) AS last_cadastros ON c1.id = last_cadastros.last_cadastro_id;\n",
+        "options": {}
+      },
+      "id": "6151be3e-b079-4e16-a051-a512a1caedfa",
+      "name": "busca_leads_que_nao_entraram_no_grupo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1880,
+        960
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "id": "7d645ad1-9e15-4f7b-9c00-c0ec55a35b2d",
+      "name": "15_em_15_min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -2380,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7c27d4e2-865d-4283-9dc6-62d819ba5c41",
+              "name": "api_key",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "683d8e2b-d1b0-41b3-af49-b074c0c4fdb5",
+              "name": "nome_da_instancia",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "06dfe5b2-0216-45fc-8478-ed46ed01dddd",
+              "name": "url_api_evolution",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "550ec9c8-b39d-4408-91ba-c23ae837abed",
+              "name": "nome_do_evento",
+              "value": "Webinario",
+              "type": "string"
+            },
+            {
+              "id": "6c86f4cd-b58d-4cac-88c2-9aeeccd50f29",
+              "name": "edicao_do_evento",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "id": "43a6140b-2991-4649-9cd6-614de91c863c",
+              "name": "tag_do_lancamento",
+              "value": "WEB001",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b7f2bc6a-8f4a-451b-b1c3-9c45831860dd",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -2220,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "de28813e-83f5-403a-8423-b455bcbb797d",
+      "name": "separa_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1660,
+        960
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "57139500-c6cb-446a-820b-ae9286d2f71e",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "funis",
+          "mode": "list",
+          "cachedResultName": "funis"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"variaveis\"].json[\"nome_do_evento\"] }}"
+            },
+            {
+              "column": "versao",
+              "value": "={{ $node[\"variaveis\"].json[\"edicao_do_evento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d08fc176-75f7-495f-97f8-2832a1da58f0",
+      "name": "pesquisa_funil",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2060,
+        960
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "configuracoes",
+          "mode": "list",
+          "cachedResultName": "configuracoes"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funil",
+              "value": "={{\n  $node[\"pesquisa_funil\"].runIndex >= 0 \n    ? $node[\"pesquisa_funil\"].json[\"id\"]\n    : $node[\"pesquisa_grupo\"].runIndex >= 0 \n      ? $node[\"pesquisa_grupo\"].json[\"funil\"]\n              : null\n}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1d2bf42b-415c-43ac-b627-01e40e312368",
+      "name": "pesquisa_configs",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"etapas_ura\"] }}",
+              "rightValue": "Repescar leads que NÃO entraram no grupo",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "0957bd8b-54a2-4a98-a450-8198f3187bce",
+      "name": "tem_ura_nessa_etapa",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        620,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"variaveis\"].json[\"tag_do_lancamento\"] }} - URA",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "97b36cb8-adbb-4945-adbb-08ffd40add5d",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        800
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"versao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "051ba64b-e578-4e1d-ba86-67afd8ae1433",
+              "name": "situacao",
+              "value": "Não entrou no Grupo 1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e6adbe6b-c8bd-49cf-b383-87acee89e503",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        820,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"telefone\"] }}",
+        "template": "grupo_webinario_msg2|pt_BR"
+      },
+      "id": "3d19cae8-a18f-4fc3-825d-50d6637e3341",
+      "name": "WhatsApp Business Cloud",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        240,
+        880
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "msg_captacao",
+          "mode": "list",
+          "cachedResultName": "msg_captacao"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_cadastro",
+              "value": "={{ $node[\"separa_linhas\"].json[\"id\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "nao_entrou_no_grupo"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "08e841ce-f3ee-46da-b310-651d4e854ec6",
+      "name": "procura_mensagem_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -980,
+        1040
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "aeed3732-94b1-458a-8fc0-f1cda7557ecf",
+      "name": "fim2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "msg_captacao",
+          "mode": "list",
+          "cachedResultName": "msg_captacao"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_cadastro",
+              "value": "={{ $node[\"separa_linhas\"].json[\"id\"] }}"
+            },
+            {
+              "column": "msg_01",
+              "value": "Y"
+            },
+            {
+              "column": "evento",
+              "value": "nao_entrou_no_grupo"
+            },
+            {
+              "column": "data_msg01",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "data_msg02",
+              "value": "={{ $node[\"1dia\"].json[\"1dia\"] }}"
+            },
+            {
+              "column": "data_msg03",
+              "value": "={{ $node[\"2dias\"].json[\"2dias\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4866b109-b987-486c-8ea4-c08dcec4e6f0",
+      "name": "add_msg01",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -200,
+        1280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addToDate",
+        "magnitude": "={{$now}}",
+        "duration": 2,
+        "outputFieldName": "2dias",
+        "options": {}
+      },
+      "id": "04123dfb-f5e5-4623-811b-98558b2d5424",
+      "name": "2dias",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -380,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addToDate",
+        "magnitude": "={{$now}}",
+        "duration": 1,
+        "outputFieldName": "1dia",
+        "options": {}
+      },
+      "id": "39f9e4f4-3bf8-4b87-9419-bc7f26dbed02",
+      "name": "1dia",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "msg_captacao",
+          "mode": "list",
+          "cachedResultName": "msg_captacao"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"procura_mensagem_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "msg_01",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d5757c95-1801-401a-a99e-912baafa4ef3",
+      "name": "atualiza_mensagem_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -360,
+        860
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"procura_mensagem_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2a7f14be-9ca9-4a6a-8e3e-8b685421be54",
+      "name": "encontrou_msg",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -780,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "b336b46b-039d-44c6-9a9d-07b1063e0e37",
+              "leftValue": "={{ $node[\"procura_mensagem_user\"].json[\"msg_01\"] }}",
+              "rightValue": "=N",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "403712cc-43e8-45d9-8483-13cdbfadd3bb",
+      "name": "msg_01",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Captura a data de cadastro do lead\nconst dataCadastroStr = $json[\"data_cadastro\"];\n\n// Converte a data de cadastro para um objeto de data\nconst dataCadastro = new Date(dataCadastroStr);\n\n// Captura a data e hora atual\nconst dataAtual = new Date();\n\n// Calcula a diferença em minutos entre a data de cadastro e a data atual\nconst diferencaMinutos = (dataAtual - dataCadastro) / (1000 * 60);\n\n// Verifica se já passou mais de 30 minutos\nconst mensagem = diferencaMinutos > 30 ? \"Já passou 30 min\" : \"Não passou 30 min\";\n\n// Retorna a mensagem como resultado\nreturn [{ resultado: mensagem }];\n"
+      },
+      "id": "d1c90426-3f2e-4deb-8337-fcdc83977a90",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1460,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "55970bdb-d0ae-4869-8112-098a81ad90da",
+              "leftValue": "={{ $json[\"resultado\"] }}",
+              "rightValue": "Já passou 30 min",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "65117fce-7944-4c6e-a060-ab5d5aaf34d4",
+      "name": "já_passou_30min",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1300,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "9537b9dc-1292-44e5-a87d-2f8571306509",
+              "leftValue": "={{ $node[\"separa_linhas\"].json[\"form_name\"] }}",
+              "rightValue": "Cadastro Webinário - https://links.liliancidreira.com.br/cap-webinar-pq",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ecf21d7e-e8fb-423c-8cb0-616be4232e7d",
+      "name": "é_publicoquente",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -20,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "439027139283658",
+        "recipientPhoneNumber": "={{ $node[\"busca_leads_que_nao_entraram_no_grupo\"].json[\"telefone\"] }}",
+        "template": "grupo_webinario_msg2pq|pt_BR"
+      },
+      "id": "074633fa-af50-4e11-b1c7-0c13cc92a286",
+      "name": "WhatsApp Business Cloud1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        240,
+        700
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7knKCf47LIvmRxue",
+          "name": "[WhatsApp] - Future Minds"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:15_em_15_min": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-11-22T17:59:53.167Z",
+  "versionId": "c0360d97-21f9-472f-892f-1980e99a555a"
+}

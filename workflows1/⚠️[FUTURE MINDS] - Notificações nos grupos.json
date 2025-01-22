@@ -1,0 +1,370 @@
+{
+  "active": true,
+  "connections": {
+    "verifica_semana_valida": {
+      "main": [
+        [
+          {
+            "node": "semana_valida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "semana_valida": {
+      "main": [
+        [
+          {
+            "node": "variaveis",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não Faça Nada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis": {
+      "main": [
+        [
+          {
+            "node": "Não Faça Nada1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Não Faça Nada1": {
+      "main": [
+        [
+          {
+            "node": "é data atual",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "quinta-feira_11:30h": {
+      "main": [
+        [
+          {
+            "node": "verifica_semana_valida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é data atual": {
+      "main": [
+        [
+          {
+            "node": "grupo_orientacoes_estrategias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-13T19:55:43.429Z",
+  "id": "QtQXYvYraLh00BWa",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⚠️[FUTURE MINDS] - Notificações nos grupos",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Grupos:\n\nGrupo de Orientações e Estratégias\nhttps://chat.whatsapp.com/BdSv5agf59i3YUUtEawhQm\nID Evolution: 120363310726271571@g.us\n\nComunidade Modus Inovandi\nhttps://chat.whatsapp.com/IxJCmM3iBVzAkobKLI8IOD\nID Evolution: 120363050716646751@g.us\n\nMentoria C-level:\nhttps://chat.whatsapp.com/FUieGkgkEbI77FuNUQOSjc\nID Evolution: 120363029854442152@g.us\n\nGrupo de Teste\nId Evolution:120363322854193853@g.us",
+        "height": 338.8510638297871,
+        "width": 637
+      },
+      "id": "b0dbf0d6-914c-4fe2-83be-472b86c13123",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2141237c-1d88-4ad8-8291-d1bbfec60320",
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br",
+              "type": "string"
+            },
+            {
+              "id": "43ca0438-376b-4a24-a670-29a652bf6058",
+              "name": "nome_da_instancia",
+              "value": "LilianCidreira",
+              "type": "string"
+            },
+            {
+              "id": "49344ced-eaf6-4273-8c89-aa4528bd91fc",
+              "name": "apikey",
+              "value": "yavuatfpzpeefq82zhfbs",
+              "type": "string"
+            },
+            {
+              "id": "86919fcd-f584-4077-b02a-712a252f1094",
+              "name": "id_grupo_orientacoes_estrategia",
+              "value": "120363310726271571@g.us",
+              "type": "string"
+            },
+            {
+              "id": "f930ed02-49a9-4652-83b4-2cca3877e4f2",
+              "name": "id_grupo_modus_inovandi",
+              "value": "120363050716646751@g.us",
+              "type": "string"
+            },
+            {
+              "id": "be705afa-ab6f-4993-8d26-4d2a8eca0b81",
+              "name": "id_grupo_c_level",
+              "value": "120363029854442152@g.us",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "648d2a80-fe2a-4d6c-ba75-b288e50a6717",
+      "name": "variaveis",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1220,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function validarSemana() {\n    // Obtendo a data atual\n    const dataAtual = new Date();\n\n    // Calculando a data limite (15 dias após a data atual)\n    const limite = new Date(dataAtual);\n    limite.setDate(dataAtual.getDate() + 15);\n\n    // Verificando se hoje é uma quinta-feira (getDay() retorna 4 para quinta-feira)\n    const ehQuintaFeira = dataAtual.getDay() === 4;\n\n    // Verificando as duas condições e retornando o resultado como um array de objetos\n    if (ehQuintaFeira && dataAtual <= limite) {\n        return [{ json: { semana: 'valida' } }];\n    } else {\n        return [{ json: { semana: 'invalida' } }];\n    }\n}\n\n// Chamada da função e retorno do resultado no formato esperado pelo n8n\nreturn validarSemana();\n"
+      },
+      "id": "06619681-e96e-41fa-9ea1-3dc872282009",
+      "name": "verifica_semana_valida",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function validarSemana() {\n    // Obtendo a data atual a partir do nó \"data_atual\"\n    const dataAtualInput = $node[\"data_atual\"].json[\"data_atual\"];\n    console.log('Data atual recebida:', dataAtualInput);\n\n    // Convertendo a data recebida no formato DD/MM/YYYY para um objeto Date\n    const [dia, mes, ano] = dataAtualInput.split('/');\n    const dataAtual = new Date(`${ano}-${mes}-${dia}`);\n\n    // Verificando se a dataAtual é uma data válida\n    if (isNaN(dataAtual.getTime())) {\n        throw new Error(`Data atual inválida: ${dataAtualInput}`);\n    }\n\n    // Data de início fixa: 15 de agosto de 2024\n    const dataInicio = new Date('2024-08-15');\n\n    // Calculando a diferença em dias entre a data atual e a data de início\n    const diffTime = Math.abs(dataAtual - dataInicio);\n    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));\n\n    // Calculando o número de ciclos de 15 dias desde a data de início\n    const ciclos = Math.floor(diffDays / 15);\n\n    // Calculando a quinta-feira válida mais próxima\n    const quintaValida = new Date(dataInicio);\n    quintaValida.setDate(dataInicio.getDate() + (ciclos * 15));\n\n    // Verificando se a data atual é uma quinta-feira (getDay() retorna 4 para quinta-feira)\n    const ehQuintaFeira = dataAtual.getDay() === 4;\n\n    // Verificando se a quinta-feira válida está dentro do ciclo atual\n    const quintaEhValida = ehQuintaFeira && dataAtual.toDateString() === quintaValida.toDateString();\n\n    // Formatação da data atual para o retorno\n    const dataFormatada = dataAtual.toISOString().split('T')[0];\n\n    // Retornando o resultado no formato esperado\n    if (quintaEhValida) {\n        return [{ json: { semana: 'valida', data: dataFormatada } }];\n    } else {\n        return [{ json: { semana: 'invalida', data: dataFormatada } }];\n    }\n}\n\n// Chamada da função e retorno do resultado no formato esperado pelo n8n\nreturn validarSemana();\n"
+      },
+      "id": "1ebfea3c-1e68-4dc4-8b81-048ddf6ea45b",
+      "name": "verifica_15_dias_incorreto",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "eff23ca0-efd9-48b3-b713-fe0f20a37175",
+              "leftValue": "={{ $node[\"verifica_semana_valida\"].json[\"semana\"] }}",
+              "rightValue": "valida",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "04f5478d-9966-4317-8f88-6026757f7306",
+      "name": "semana_valida",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        360
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "74315289-2913-49f3-a7fb-628870f64d70",
+      "name": "Não Faça Nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        520
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "1756366d-2e43-420a-b371-948aefa037a9",
+      "name": "Não Faça Nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                4
+              ],
+              "triggerAtHour": 11,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "6c91df23-22b0-42b4-bb38-e6230c22d301",
+      "name": "quinta-feira_11:30h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        600,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $json[\"id_grupo_orientacoes_estrategia\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=🟢 O DIÁRIO DO ESTRATEGISTA está ABERTO!\n\n⏱ Começa hoje o prazo para preenchimento do Diário do Estrategista.\n📤 Envio das respostas: entre hoje (quinta-feira), até terça-feira que vem.\n🗓 Marque agora mesmo na sua agenda um horário para não esquecer desse\ncompromisso!\n\n🔗 Link do formulário: https://form.typeform.com/to/OsZ3g1ch\n\n➡ Regras e condições:\n\n*O que é?*\n\nO Diário do Estrategista é um formulário de perguntas que tem como objetivo mapear,\nestruturar e alinhar as expectativas da próxima sessão de mentoria, garantindo a sua\nparticipação. Após o recebimento das perguntas, analisamos cada item para fazer a\ndevolutiva mais adequada ao seu caso.\n\n*Quem precisa preencher?*\n\nTodos que desejam sanar dúvidas baseadas na metodologia gravada e aplicação devem\npreencher, inclusive os novos entrantes que já iniciaram a sua jornada de conhecimentos na\nplataforma e aplicação das atividades.\n\nLembrando que a sessão de mentoria ocorre nas quartas-feiras a cada 15 dias, às 19h45. O\nlink de acesso da sessão está disponível na descrição do grupo da Comunidade Modus\nInovandi."
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "03656ddc-044f-4623-ba95-c6859b3e7c8f",
+      "name": "grupo_orientacoes_estrategias",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1800,
+        360
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "eff23ca0-efd9-48b3-b713-fe0f20a37175",
+              "leftValue": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "rightValue": "15/08/2024",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "aa1b466f-2ae6-4b78-932f-5905db828cea",
+      "name": "é data atual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        360
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": {
+    "node:quinta-feira_11:30h": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-15T14:29:12.218Z",
+  "versionId": "a332fbac-c51b-4ff0-a395-3c5f62233bf9"
+}

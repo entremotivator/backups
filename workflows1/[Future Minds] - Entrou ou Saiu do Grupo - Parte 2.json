@@ -1,0 +1,3126 @@
+{
+  "active": true,
+  "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "encontrou_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_user": {
+      "main": [
+        [
+          {
+            "node": "update_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_user": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_nos_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_users": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone1": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_nos_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_nos_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_nos_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_nos_grupos": {
+      "main": [
+        [
+          {
+            "node": "encontrou_lead_no_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_lead_no_grupo": {
+      "main": [
+        [
+          {
+            "node": "entrou_no_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "entrou_no_grupo1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entrou_no_grupo": {
+      "main": [
+        [
+          {
+            "node": "update_entrou_no_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_saiu_do_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entrou_no_grupo1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_leads_nos_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_leads_nos_grupos1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_grupo": {
+      "main": [
+        [
+          {
+            "node": "encontrou_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_grupo": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_configs": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_leads_nos_grupos": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_leads_nos_grupos1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_saiu_do_grupo": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_entrou_no_grupo": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_chatwoot": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_manychat": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "tem_chatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_activecampaign": {
+      "main": [
+        [
+          {
+            "node": "dados2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_msg_de_entrada_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados2": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_msg_de_entrada_grupo": {
+      "main": [
+        [
+          {
+            "node": "busca_mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_msg_de_saida_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_msg_de_saida_grupo": {
+      "main": [
+        [
+          {
+            "node": "busca_mensagem1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_ura_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila3": {
+      "main": [
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila4": {
+      "main": [
+        [
+          {
+            "node": "tem_msg_de_entrada_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila1": {
+      "main": [
+        [
+          {
+            "node": "tem_msg_de_saida_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila2": {
+      "main": [
+        [
+          {
+            "node": "tem_msg_de_saida_grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "usa_evolution": {
+      "main": [
+        [
+          {
+            "node": "dados3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados4": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados5": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados6": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "usa_evolution1": {
+      "main": [
+        [
+          {
+            "node": "dados5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "dados6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_crm": {
+      "main": [
+        [
+          {
+            "node": "dados7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila5": {
+      "main": [
+        [
+          {
+            "node": "tem_ura_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila6": {
+      "main": [
+        [
+          {
+            "node": "tem_ura_grupos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados7": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados8": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila8": {
+      "main": [
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_ura_grupos": {
+      "main": [
+        [
+          {
+            "node": "dados8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_mensagem": {
+      "main": [
+        [
+          {
+            "node": "busca_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados": {
+      "main": [
+        [
+          {
+            "node": "usa_evolution",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_mensagem1": {
+      "main": [
+        [
+          {
+            "node": "busca_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados1": {
+      "main": [
+        [
+          {
+            "node": "usa_evolution1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-14T19:17:14.063Z",
+  "id": "O2T8JsPFvx7OCRKz",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Entrou ou Saiu do Grupo - Parte 2",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "WEB001 - Grupos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "9582a85a-6c22-4f6f-886e-26447d25495a",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        540
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] === $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] ? $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] : \"---------\" }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "3f223f34-c563-4e63-890d-0221e21b773d",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -540,
+        540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1523c6b8-8b01-410f-bf51-bb3ee30811b0",
+      "name": "encontrou_user",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -380,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e9af7eb0-3db1-44f7-b0e5-5d0687f01afe",
+      "name": "pesquisa_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -200,
+        640
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1e58ed3d-6ac9-4506-b3a6-c661bf293852",
+      "name": "encontrou_telefone",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -20,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_telefone\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "480c6b3c-91d0-4ff3-8420-085845648354",
+      "name": "pesquisa_user2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        200,
+        540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_de_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4e2d51a5-44c4-4b7e-9475-0ef7a6b8dd8a",
+      "name": "insere_lead_na_tabela_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        200,
+        740
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_atualizacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "56147bba-82cb-4d53-9b34-8fa6d69ad14a",
+      "name": "update_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -220,
+        320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4fcf76f2-e157-45dc-a41d-c621476434c5",
+      "name": "pesquisa_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -60,
+        320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone1\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e737944f-cfdd-4a41-a57b-2fcd2f85df76",
+      "name": "encontrou_telefone1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        120,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "ee87259c-e437-4af2-b9f6-198b87512bfd",
+      "name": "insere_lead_na_tabela_telefones1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        740
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a31160dc-0b07-45b3-ba6f-0d244a89dc7e",
+      "name": "insere_lead_na_tabela_telefones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        320,
+        240
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_nos_grupos",
+          "mode": "list",
+          "cachedResultName": "leads_nos_grupos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_telefone",
+              "value": "={{   $node[\"insere_lead_na_tabela_telefones1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_telefones1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_telefones\"].runIndex >= 0        ? $node[\"insere_lead_na_tabela_telefones\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_telefone\"].runIndex >= 0 ? $node[\"pesquisa_telefone\"].json[\"id\"] : $node[\"pesquisa_telefone1\"].runIndex >= 0 ? $node[\"pesquisa_telefone1\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "id_grupo",
+              "value": "={{\n $node[\"pesquisa_grupo\"].runIndex >= 0 \n      ? $node[\"pesquisa_grupo\"].json[\"id\"]\n              : null\n}}"
+            },
+            {
+              "column": "data_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "status",
+              "value": "No Grupo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a2c75961-ecb1-4d8c-bfd0-3620aee00c0b",
+      "name": "insere_lead_na_tabela_leads_nos_grupos",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1180,
+        580
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads_nos_grupos",
+          "mode": "list",
+          "cachedResultName": "leads_nos_grupos"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id_telefone",
+              "value": "={{   $node[\"insere_lead_na_tabela_telefones1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_telefones1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_telefones\"].runIndex >= 0        ? $node[\"insere_lead_na_tabela_telefones\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_telefone\"].runIndex >= 0 ? $node[\"pesquisa_telefone\"].json[\"id\"] : $node[\"pesquisa_telefone1\"].runIndex >= 0 ? $node[\"pesquisa_telefone1\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "id_grupo",
+              "value": "={{\n $node[\"pesquisa_grupo\"].runIndex >= 0 \n      ? $node[\"pesquisa_grupo\"].json[\"id\"]\n              : null\n}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "227f22d3-5e96-4904-b2fe-368a26dbef09",
+      "name": "pesquisa_lead_nos_grupos",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        600,
+        540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_lead_nos_grupos\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1dabef76-0b01-4b02-82b8-e27da4d3036c",
+      "name": "encontrou_lead_no_grupo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        800,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "65b5bcdb-1d2b-4071-82e8-87166a50612b",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"] }}",
+              "rightValue": "=add",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "07e260fd-4e0d-4ec3-8bc9-8681078745e6",
+      "name": "entrou_no_grupo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads_nos_grupos",
+          "mode": "list",
+          "cachedResultName": "leads_nos_grupos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead_nos_grupos\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_saida",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "status",
+              "value": "Saiu do Grupo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bc3a392a-de4b-4ff1-89bd-8af20005fbde",
+      "name": "update_saiu_do_grupo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1180,
+        380
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads_nos_grupos",
+          "mode": "list",
+          "cachedResultName": "leads_nos_grupos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead_nos_grupos\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "status",
+              "value": "No Grupo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b4393299-5191-4a0b-94b3-7a9f01e279b6",
+      "name": "update_entrou_no_grupo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1180,
+        200
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "65b5bcdb-1d2b-4071-82e8-87166a50612b",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"] }}",
+              "rightValue": "=add",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "723b285a-1b9d-4680-bd3d-f88f9d973b7b",
+      "name": "entrou_no_grupo1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "grupos",
+          "mode": "list",
+          "cachedResultName": "grupos"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"grupo\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c42c7862-e6d5-4153-9524-0b6d857714bf",
+      "name": "pesquisa_grupo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1040,
+        540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_grupo\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "6e4e5a24-9b48-4170-a114-59a68e789293",
+      "name": "encontrou_grupo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -880,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_nos_grupos",
+          "mode": "list",
+          "cachedResultName": "leads_nos_grupos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_telefone",
+              "value": "={{   $node[\"insere_lead_na_tabela_telefones1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_telefones1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_telefones\"].runIndex >= 0        ? $node[\"insere_lead_na_tabela_telefones\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_telefone\"].runIndex >= 0 ? $node[\"pesquisa_telefone\"].json[\"id\"] : $node[\"pesquisa_telefone1\"].runIndex >= 0 ? $node[\"pesquisa_telefone1\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "id_grupo",
+              "value": "={{\n $node[\"pesquisa_grupo\"].runIndex >= 0 \n      ? $node[\"pesquisa_grupo\"].json[\"id\"]\n              : null\n}}"
+            },
+            {
+              "column": "data_saida",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "status",
+              "value": "Saiu do Grupo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd7f2179-cecf-41ca-b83e-f54dfc79205a",
+      "name": "insere_lead_na_tabela_leads_nos_grupos1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1180,
+        780
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "configuracoes",
+          "mode": "list",
+          "cachedResultName": "configuracoes"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funil",
+              "value": "={{\n$node[\"pesquisa_grupo\"].runIndex >= 0 \n      ? $node[\"pesquisa_grupo\"].json[\"funil\"]\n              : null\n}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "56de509e-f6bb-4ebd-9991-98b631f54ece",
+      "name": "pesquisa_configs",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1400,
+        500
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "7400299b-c4b9-4c40-9253-fcf7485a1fa1",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('add', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "091c88e8-a864-4c14-8b3a-9cf73fa58f90",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bf9a4496-7240-4176-90ef-d327d7e8d987",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1560,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_chatwoot\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "69804e13-1698-4009-bcff-b0e4518bccb6",
+      "name": "tem_chatwoot",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1740,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_manychat\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "8c71cbc1-13ff-4d92-84ae-29e686718984",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "rightValue": "manychat",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c7ccc027-90d1-4720-a133-08f49fc3787b",
+      "name": "tem_manychat",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1900,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_activecampaign\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "60a3fcbb-c094-46e5-8904-9c58ca31564a",
+      "name": "tem_activecampaign",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+              "rightValue": "Não tem",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5eda2972-77fa-4306-a198-b6c68986c536",
+      "name": "tem_crm",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2860,
+        1820
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação Chatwoot",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "cd6fe32f-dddb-435e-a24d-6026ad3213f1",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        360
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação Manychat",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "5ae2445a-cbdc-49fd-ba2b-baf9003534f0",
+      "name": "entra_na_fila3",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2260,
+        520
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "1ac9cf61-6fd0-4332-a542-123045b6dbea",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('add', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "b37e5519-e533-4f20-8216-4437acbe0211",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c0292bf2-3c96-4600-b1e3-2c8d97a12f61",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        2080,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('add', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "9a03b960-97c1-4826-bc2c-39929c40fbf8",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2615f36d-131c-44b1-b7a1-f28c6c57cc93",
+      "name": "dados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        2280,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação ActiveCampaign",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "3c4ce845-4511-4ea3-8419-01c2e37e0c17",
+      "name": "entra_na_fila4",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        700
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Evolution",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "a4b241f8-44da-46f8-8a0d-9dfbafd09dbf",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3220,
+        820
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - API Oficial",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "7c5de84a-2307-419b-b116-05d740de81d7",
+      "name": "entra_na_fila2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3220,
+        980
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"config_wpp_captura\"] }}",
+              "rightValue": "Evolution",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2fac5fe8-a5a5-4fb2-8a4d-332ee7bf90b5",
+      "name": "usa_evolution",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2820,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"estrategias_captacao\"] }}",
+              "rightValue": "Enviar comunicações quando o lead entra no grupo",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "2e7d2ef9-dd18-4349-9ea5-40a4e2249857",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"] }}",
+              "rightValue": "add",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b6ee03b8-1347-4802-b85e-4d4a82ce9a76",
+      "name": "tem_msg_de_entrada_grupo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2280,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"estrategias_captacao\"] }}",
+              "rightValue": "Enviar comunicações quando o lead sai do grupo",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "c608d3d8-5c4d-4a06-9f9e-17b001ecd9e3",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"] }}",
+              "rightValue": "remove",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "fe4eaf8b-606d-40d7-9cdd-fac9976a14d0",
+      "name": "tem_msg_de_saida_grupo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2420,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"config_wpp_captura\"] }}",
+              "rightValue": "Evolution",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "28e82b57-67d1-4f14-a03a-22ea9da13ab7",
+      "name": "usa_evolution1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        3000,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('remove', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "bbdc43b3-2464-4b39-ac65-76e1ac07ff8f",
+              "name": "msg_entrada",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "901821e2-01ff-42b9-b3af-e2c9d3e08fc9",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "359607b3-67f5-45d8-aea5-51dc893a156f",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d44b3ea3-65dc-435d-968d-02022879259a",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "69d36851-596b-43c9-89e0-059cf57c3e5d",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "63f75d05-2628-478a-a810-e5fd0a3da963",
+      "name": "dados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3040,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('remove', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "fcf6b06c-5172-43b7-badb-98e7a0817406",
+              "name": "msg_entrada",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "10e585ad-480d-472f-9d4a-fc6162ac9f0e",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4684a06a-cb16-424c-a61f-0b118e14b946",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d0ce6f66-a609-4a7c-83ce-26346d57a756",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4cbf3b8f-6834-4f11-94dc-ed7dcd3067be",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3c8ffce-228c-4fa3-9451-e0f6a0679d4e",
+      "name": "dados4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3040,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Evolution",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "b092e59d-59c9-4ce5-8e32-ebe4ff37ea8d",
+      "name": "entra_na_fila5",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        1140
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - API Oficial",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "5e1db6ce-7748-4ed7-9797-7c00388b7f3e",
+      "name": "entra_na_fila6",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        1300
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('remove', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "bbdc43b3-2464-4b39-ac65-76e1ac07ff8f",
+              "name": "msg_saida",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "9e667775-889d-4157-af71-d28c165b706f",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados1\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "51904672-63a3-4f95-abc3-864edba7df6d",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados1\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2cd897a8-43a4-4f97-a636-8c97aab9e19f",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados1\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "83c49280-64a6-4dfe-9db4-041c547e076d",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6815cd63-0319-40bb-8872-961c054338f1",
+      "name": "dados5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3200,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('remove', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "fcf6b06c-5172-43b7-badb-98e7a0817406",
+              "name": "msg_saida",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "1dd5c350-cbed-4bbe-81a7-642cc4fc58cb",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados1\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "7ae27806-c3da-4887-b7c4-cd3f71d6de09",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados1\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "418d6599-474a-4f34-82a6-8cbfd8df9fdb",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados1\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8c0e4b0d-9f05-49bc-baea-9fbe2db63b92",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ab23468b-3085-4d99-be59-a6b9a1f66d4e",
+      "name": "dados6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3200,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - CRM - {{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "75296cac-f38a-4cc3-a988-ed97e76021ed",
+      "name": "entra_na_fila7",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3240,
+        1780
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "c976f94b-caad-4514-a4f6-ef3c2a2cbd1a",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        3060,
+        1960
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"nome\"] === $node[\"pesquisa_user\"].json[\"nome\"] ? $node[\"pesquisa_user\"].json[\"nome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"sobrenome\"] === $node[\"pesquisa_user\"].json[\"sobrenome\"] ? $node[\"pesquisa_user\"].json[\"sobrenome\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"email\"] === $node[\"pesquisa_user\"].json[\"email\"] ? $node[\"pesquisa_user\"].json[\"email\"] : \"---------\" }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "32ca90fd-f0e8-4ceb-90e5-2fb2c2d0332a",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('add', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "7d6ae664-8ffd-4f6a-8524-26c932333601",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1fbe7a35-6317-4b21-8b3f-46e6bf096412",
+      "name": "dados7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3060,
+        1780
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - URA",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "07999c6c-ef69-462f-a627-76f6bd61cf1c",
+      "name": "entra_na_fila8",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3060,
+        1480
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] || $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "051ba64b-e578-4e1d-ba86-67afd8ae1433",
+              "name": "situacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('add', 'Entrou no Grupo').replace('remove', 'Saiu do Grupo') }}",
+              "type": "string"
+            },
+            {
+              "id": "bb618dc1-d16e-4be6-8fc6-555b038153f8",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_grupo\"].runIndex >= 0        ? $node[\"pesquisa_grupo\"].json[\"funil\"]               : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "915a7a85-b1d1-498c-a504-ad675c61b94a",
+      "name": "dados8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        2860,
+        1480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"etapas_ura\"] }}",
+              "rightValue": "Quando lead entrar no grupo",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "d7933fe5-9989-4515-8ba9-03bf65a42b13",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"etapas_ura\"] }}",
+              "rightValue": "Quando lead sair do grupo",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "d9988b5d-e310-416e-9280-e96099a0e756",
+      "name": "tem_ura_grupos",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        1560
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "dd67720f-420c-4515-95ba-df647b2d2408",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "team": "3135484",
+        "space": "55168085",
+        "folder": "90132837125",
+        "list": "901305192449",
+        "returnAll": false,
+        "filters": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": "3bfe1f6e-fdb6-4c4c-9d20-4be849560124",
+                "value": "msg_entrou_grupo"
+              }
+            ]
+          }
+        }
+      },
+      "id": "055ccaa3-61b0-4581-911b-dacf64ab89eb",
+      "name": "busca_mensagem",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        2480,
+        880
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "TQX2YNeqTbRwi9nN",
+          "name": "[ClickUp] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const respostas = $json[\"custom_fields\"] || [];\nlet arquivo = respostas.find(answer => answer.name === \"Base64 da Mídia\")?.value || \"\";\nlet tipo_msg = respostas.find(answer => answer.name === \"Tipo de Mensagem\")?.value || \"\";\nlet copy = $json[\"text_content\"] || \"\";\nlet valor_msg = tipo_msg.toString().replace(\"0\", \"Texto\").replace(\"1\",\"Áudio\").replace(\"2\",\"Vídeo\").replace(\"3\",\"Imagem\").replace(\"4\",\"Documento\")\n\nreturn {\n  arquivo,\n  tipo_msg,\n  copy,\n  valor_msg\n    }"
+      },
+      "id": "c28819ef-b9d7-48b4-a7bd-9ef5a7ccefaa",
+      "name": "busca_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "team": "3135484",
+        "space": "55168085",
+        "folder": "90132837125",
+        "list": "901305192449",
+        "returnAll": false,
+        "filters": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": "3bfe1f6e-fdb6-4c4c-9d20-4be849560124",
+                "value": "msg_saiu_grupo"
+              }
+            ]
+          }
+        }
+      },
+      "id": "1aed249c-ca46-48c3-9ee9-28ffddc7c522",
+      "name": "busca_mensagem1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        2640,
+        1180
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "TQX2YNeqTbRwi9nN",
+          "name": "[ClickUp] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const respostas = $json[\"custom_fields\"] || [];\nlet arquivo = respostas.find(answer => answer.name === \"Base64 da Mídia\")?.value || \"\";\nlet tipo_msg = respostas.find(answer => answer.name === \"Tipo de Mensagem\")?.value || \"\";\nlet copy = $json[\"text_content\"] || \"\";\nlet valor_msg = tipo_msg.toString().replace(\"0\", \"Texto\").replace(\"1\",\"Áudio\").replace(\"2\",\"Vídeo\").replace(\"3\",\"Imagem\").replace(\"4\",\"Documento\")\n\nreturn {\n  arquivo,\n  tipo_msg,\n  copy,\n  valor_msg\n    }"
+      },
+      "id": "b5331984-b981-466b-8cce-3df90a984177",
+      "name": "busca_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2800,
+        1180
+      ]
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-BomQl_6HWi_iuMSEi7Q9Hw",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "WEB001 - Grupos"
+          },
+          "properties": {
+            "headers": {}
+          },
+          "content": {
+            "telefone": "5562981196678",
+            "grupo": "#1 - Super Aula Gratuita: Lilian Cidreira",
+            "evento": "add",
+            "nome_do_evento": "Webinario",
+            "edicao_do_evento": "1",
+            "tag_do_lancamento": "WEB001"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-11-15T01:00:36.505Z",
+  "versionId": "476e4e1d-6054-41ff-8a85-a13f67e8eb5e"
+}

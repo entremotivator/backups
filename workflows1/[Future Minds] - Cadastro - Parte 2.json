@@ -1,0 +1,3582 @@
+{
+  "active": true,
+  "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "encontrou_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_user": {
+      "main": [
+        [
+          {
+            "node": "email_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_email_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_igual": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_telefone_na_tabela_telefones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_users": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_funil": {
+      "main": [
+        [
+          {
+            "node": "encontrou_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_funil": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_email": {
+      "main": [
+        [
+          {
+            "node": "encontrou_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_cadastros": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone1": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_cadastros2": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user2": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_emails1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_emails1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_telefone_na_tabela_telefones": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_email_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_cadastros4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_cadastros3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_cadastros1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_cadastros4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_configs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_configs": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "tem_chatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_chatwoot": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_manychat": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_activecampaign": {
+      "main": [
+        [
+          {
+            "node": "dados2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_msg_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_msg_cadastro": {
+      "main": [
+        [
+          {
+            "node": "busca_mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_ura_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "usa_evolution": {
+      "main": [
+        [
+          {
+            "node": "dados3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "tem_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila3": {
+      "main": [
+        [
+          {
+            "node": "tem_activecampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_ura_cadastro": {
+      "main": [
+        [
+          {
+            "node": "dados5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila4": {
+      "main": [
+        [
+          {
+            "node": "tem_msg_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila1": {
+      "main": [
+        [
+          {
+            "node": "tem_ura_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila2": {
+      "main": [
+        [
+          {
+            "node": "tem_ura_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila5": {
+      "main": [
+        [
+          {
+            "node": "tem_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados2": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados4": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados5": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados6": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_crm": {
+      "main": [
+        [
+          {
+            "node": "dados6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_mensagem": {
+      "main": [
+        [
+          {
+            "node": "busca_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_dados": {
+      "main": [
+        [
+          {
+            "node": "usa_evolution",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-14T18:02:20.688Z",
+  "id": "lAVD8bcE3Oy94jjN",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Cadastro - Parte 2",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "WEB001 - Captação - Parte 2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              },
+              {}
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "390fc4e6-0fe3-46a9-8d38-7bfa01737361",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3680,
+        120
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] === $node[\"chega_da_fila\"].json[\"content\"][\"email\"] ? $node[\"chega_da_fila\"].json[\"content\"][\"email\"] : \"---------\" }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] === $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] ? $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] : \"---------\" }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "fe06ea9a-9024-4b23-834b-59e3044009fc",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -3120,
+        120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "28391d8b-8013-46ed-8143-5d1b3a33847a",
+      "name": "encontrou_user",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2940,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"email\"] }}",
+              "rightValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d5090cd2-d112-49ff-a51a-9f4833e5f4da",
+      "name": "email_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2760,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "51adec27-e71a-4c1f-b516-1d8c6e144147",
+      "name": "insere_email_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2520,
+        -140
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] }}",
+              "rightValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "588e7d4e-6249-4838-b01d-d25821bc7859",
+      "name": "telefone_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2520,
+        -340
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "7317c53d-a0c4-4dac-9722-046b762633d3",
+      "name": "insere_telefone_na_tabela_telefones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2300,
+        -260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_de_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "ebe2cc4c-caee-42f3-8425-cdb1311abb44",
+      "name": "insere_lead_na_tabela_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1980,
+        440
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "funis",
+          "mode": "list",
+          "cachedResultName": "funis"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}"
+            },
+            {
+              "column": "versao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "ddd1c63b-0cda-41b3-aa54-9e10bc23a6f6",
+      "name": "pesquisa_funil",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -3500,
+        120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "118cfcd5-7f28-40b8-8f52-27a36b88eebb",
+      "name": "encontrou_funil",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -3320,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "bb4e81d2-b612-4cca-9fc1-8213c3a7754f",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        -3120,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n              : null\n}}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}"
+            },
+            {
+              "column": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c37ddd46-d6b7-4e57-ae93-00b898545b84",
+      "name": "insere_lead_na_tabela_cadastros",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1780,
+        440
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "3de27d88-3bcf-44c8-b07b-93aef1995cd1",
+      "name": "pesquisa_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2740,
+        280
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_email\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e43313ee-0303-43b2-8c13-c123fb858351",
+      "name": "encontrou_email",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2560,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_email\"].json[\"id_user\"] || '-----------------------'}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "597d63f3-ac88-49e4-82c0-e024bd6a041c",
+      "name": "pesquisa_user1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2380,
+        180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "554a54de-27d7-4f5a-bdf7-5d47101e3cb0",
+      "name": "pesquisa_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2380,
+        360
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "4a28f55f-c63e-49ce-acdd-6e51e7fc8ce5",
+      "name": "encontrou_telefone",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2180,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_telefone\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "bf73e8bb-c061-4f06-84b7-3d84afcc6ef8",
+      "name": "pesquisa_user2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1980,
+        260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "c2404f59-96db-4993-9227-f57bb8186caf",
+      "name": "insere_lead_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1560,
+        440
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0f914c5a-43f3-43f3-bc98-bed059178daa",
+      "name": "insere_lead_na_tabela_telefones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1360,
+        440
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8a25cbe5-66f2-4034-9b0c-83233e7dab77",
+      "name": "pesquisa_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2200,
+        180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone1\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e99ca549-aadf-4f83-8d98-90443cfa8119",
+      "name": "encontrou_telefone1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -2000,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n              : null\n}}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}"
+            },
+            {
+              "column": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b5c151c6-97c7-4e4b-a66a-7168790eb4c1",
+      "name": "insere_lead_na_tabela_cadastros1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1800,
+        -60
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user1\"].runIndex >= 0    ?    $node[\"pesquisa_user1\"].json[\"id\"]  :  $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}"
+            },
+            {
+              "column": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f319af0b-b7d6-4011-9d8e-e9b68124ac64",
+      "name": "insere_lead_na_tabela_cadastros2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1800,
+        100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n              : null\n}}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "0dfda50c-7ce8-4a41-baaa-65159dbfa3f5",
+      "name": "insere_lead_na_tabela_telefones1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1580,
+        100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n              : null\n}}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "8377eb9e-996a-453b-b3df-caf53a3888c6",
+      "name": "insere_lead_na_tabela_emails1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1780,
+        260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"]\n              : null\n}}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}"
+            },
+            {
+              "column": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "6e0c3827-3fcc-4d9c-a3f5-fc647367447e",
+      "name": "insere_lead_na_tabela_cadastros3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1580,
+        260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}"
+            },
+            {
+              "column": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a7f84b98-5fa7-4617-8cd1-4266913b63f7",
+      "name": "insere_lead_na_tabela_cadastros4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -2060,
+        -340
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação Chatwoot",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "13e4f891-9d5d-4fe4-bc65-4ba606b29b15",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        -120
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "configuracoes",
+          "mode": "list",
+          "cachedResultName": "configuracoes"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "83714445-cf44-4777-b3b1-bec590aacffc",
+      "name": "pesquisa_configs",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -1140,
+        20
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "JtvnOichfjUUmLAo",
+          "name": "[MySQL] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "f9cb1206-295d-4e5f-9753-ef4f2fe6c8fc",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "c37107f7-a5fd-4fad-851a-77528f7ce3a9",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2a50c510-64ca-4822-93a2-41783172c682",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -960,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_chatwoot\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c2b25996-8b87-4279-b5ec-6ed6167eae2f",
+      "name": "tem_chatwoot",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -780,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_manychat\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "8c71cbc1-13ff-4d92-84ae-29e686718984",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "rightValue": "manychat",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "eb56efdc-848c-4f84-82a9-0729bd4ff15b",
+      "name": "tem_manychat",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -620,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"tem_activecampaign\"] }}",
+              "rightValue": "=Y",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e61164fb-7c75-418c-b1b7-503aca83f2e6",
+      "name": "tem_activecampaign",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -420,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"estrategias_captacao\"] }}",
+              "rightValue": "Enviar comunicações ao lead se cadastrar",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a68568a2-c126-49cc-9828-ad591f7ba2b8",
+      "name": "tem_msg_cadastro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"config_wpp_captura\"] }}",
+              "rightValue": "Evolution",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3d618a12-ec01-45cd-a841-82336ac4d301",
+      "name": "usa_evolution",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        260,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Evolution",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "24f7aadd-4379-49bf-b316-687c05f3054a",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        620,
+        200
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - API Oficial",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "9a04b2e1-ed1a-40d5-89bf-7c26a05bffaa",
+      "name": "entra_na_fila2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        620,
+        380
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação Manychat",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "121bab40-9597-4849-a5df-d0aa158b442b",
+      "name": "entra_na_fila3",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        -20
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - Criação ActiveCampaign",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "037e260f-d671-4018-bf86-cd172d042732",
+      "name": "entra_na_fila4",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        160
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - URA",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "89ad3fd8-e72f-48a1-87b1-979d5b3c49f4",
+      "name": "entra_na_fila5",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        320,
+        540
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"etapas_ura\"] }}",
+              "rightValue": "Na hora do cadastro",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2dad7ab6-c947-4434-8d09-8f0df515c5ea",
+      "name": "tem_ura_cadastro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tag_do_lancamento\"] }} - CRM - {{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "6f60062e-17fc-46d0-ba6c-e08ce2b5630b",
+      "name": "entra_na_fila6",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        480,
+        800
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "e09a0321-0828-4dbd-b86d-3a06f56ce68a",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2026d3b0-30bb-4071-9f01-0828d082376d",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "014853c6-94a2-4da5-bc9a-4ffeda0f76a0",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -440,
+        -20
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "5c29136e-1149-4996-8836-9a268279e93d",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9e54e330-474d-41ad-84a7-bcb929438ea2",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b7180e9e-503a-4d9d-a16e-63b0a3e8a67a",
+      "name": "dados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -260,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "72151848-6004-4229-886d-6616189c6e57",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9742e5de-7eae-4aa5-b68b-50c3a3f1631c",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a67fbb5b-6416-40b7-a7b3-0b3bec71a49c",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "349ce38d-ff06-4993-9290-03d489cf223c",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f1b88de8-43b2-46fe-81eb-1ee3757d8a97",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d04471b6-7e7b-436f-b17e-03e1d05f3d16",
+      "name": "dados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        440,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "42d9ecb4-1ac1-4a82-8dbe-4f7cbbebbdf5",
+              "name": "arquivo",
+              "value": "={{ $node[\"busca_dados\"].json[\"arquivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "95ab23e3-6a03-40f7-a60e-c1147752e746",
+              "name": "copy",
+              "value": "={{ $node[\"busca_dados\"].json[\"copy\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ebecba86-102d-47a6-bcc3-490f89330aba",
+              "name": "valor_msg",
+              "value": "={{ $node[\"busca_dados\"].json[\"valor_msg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0f031c9e-cad2-46a8-928d-2e0ab3d72425",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "e46f323c-f4d0-487a-84c1-e4d178b44f96",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2e15145b-593b-46e9-a3e1-6258d292d45f",
+      "name": "dados4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        440,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "=email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "fbca9713-c93c-4089-9cea-2afce661a9d1",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d6bbccb7-84f2-42f5-8d07-fbc0c70493d8",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de7027c6-f23f-4436-8e0e-415153736f1b",
+      "name": "dados5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        120,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "14a9c5a1-2f3f-416c-a06d-3f8e331366d7",
+              "name": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "416c7356-388c-4592-87be-d9f29b670bad",
+              "name": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866136ed-0c9b-4e19-8a6f-1e716d408e4c",
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eed1579a-31b8-4dc0-8ad5-8919857b8516",
+              "name": "edicao_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"edicao_do_evento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "66f8191a-dd73-4773-b3f7-a63076f8686b",
+              "name": "form_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "bb839055-124b-4671-99e9-d13293daa8c7",
+              "name": "form_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"form_name\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "226a1058-30bb-4484-94e7-18d10e7c829c",
+              "name": "id_cadastro",
+              "value": "={{   $node[\"insere_lead_na_tabela_cadastros4\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros4\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros3\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros3\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros2\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros2\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros1\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros1\"].json[\"data\"][\"insertId\"] : $node[\"insere_lead_na_tabela_cadastros\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_cadastros\"].json[\"data\"][\"insertId\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "957ee3f2-d099-4bee-a2f1-df34d030e983",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0 ? $node[\"pesquisa_user1\"].json[\"id\"] : $node[\"pesquisa_user2\"].runIndex >= 0 ? $node[\"pesquisa_user2\"].json[\"id\"] : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 ? $node[\"pesquisa_user\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "36f1ba53-8c83-4258-aff3-23af53adc985",
+              "name": "funil",
+              "value": "={{ $node[\"pesquisa_funil\"].json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "7a9b19cf-ff64-4f4a-801b-8c8ee6dd1eb9",
+              "name": "instagram",
+              "value": "=https://www.instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}/",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a023bc85-2f85-49dc-a953-6376b6f97e1c",
+      "name": "dados6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        320,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "068f3a3a-71c7-41f2-adb8-194153ed9932",
+              "leftValue": "={{ $node[\"pesquisa_configs\"].json[\"crm\"] }}",
+              "rightValue": "Não tem",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "558875e9-957e-42a7-98fa-1c5530db0844",
+      "name": "tem_crm",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        100,
+        860
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ad90c02c-0285-4539-93fc-95effb3e14bc",
+      "name": "fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        320,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "team": "3135484",
+        "space": "55168085",
+        "folder": "90132837125",
+        "list": "901305192449",
+        "returnAll": false,
+        "filters": {
+          "customFieldsUi": {
+            "customFieldsValues": [
+              {
+                "fieldId": "3bfe1f6e-fdb6-4c4c-9d20-4be849560124",
+                "value": "msg_cadastro"
+              }
+            ]
+          }
+        }
+      },
+      "id": "d78941ef-0791-4f7f-a82b-964305e474ea",
+      "name": "busca_mensagem",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        340
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "TQX2YNeqTbRwi9nN",
+          "name": "[ClickUp] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const respostas = $json[\"custom_fields\"] || [];\nlet arquivo = respostas.find(answer => answer.name === \"Base64 da Mídia\")?.value || \"\";\nlet tipo_msg = respostas.find(answer => answer.name === \"Tipo de Mensagem\")?.value || \"\";\nlet copy = $json[\"text_content\"] || \"\";\nlet valor_msg = tipo_msg.toString().replace(\"0\", \"Texto\").replace(\"1\",\"Áudio\").replace(\"2\",\"Vídeo\").replace(\"3\",\"Imagem\").replace(\"4\",\"Documento\")\n\nreturn {\n  arquivo,\n  tipo_msg,\n  copy,\n  valor_msg\n    }"
+      },
+      "id": "5303518e-be63-4ae1-864a-de5baf92303a",
+      "name": "busca_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        100,
+        340
+      ]
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-onGOGXM-1_xx51PnMAPa-g",
+            "deliveryTag": 94,
+            "redelivered": true,
+            "exchange": "",
+            "routingKey": "WEB001 - Captação - Parte 2"
+          },
+          "properties": {
+            "headers": {
+              "x-delivery-count": 797018
+            }
+          },
+          "content": {
+            "nome": "Jéssica",
+            "sobrenome": "",
+            "email": "jessicagoncalvesrj@yahoo.com.br",
+            "telefone": "5521988416951",
+            "utm_source": "facebook",
+            "utm_campaign": "🍊[OG][CAPTAÇÃO+INTERNA][WEBNÁRIO]15/11/24",
+            "utm_term": "[OG]-[MIX+Envolvimento+-+30D]",
+            "utm_medium": "cpc",
+            "utm_content": "VG02+-+Webnário",
+            "utm_fun": null,
+            "utm_var": null,
+            "nome_do_evento": "Webinario",
+            "edicao_do_evento": "1",
+            "form_id": "1010271_1_1730910567672b99674ce20993256331",
+            "form_name": "Cadastro Webinário - https://links.liliancidreira.com.br/cap-webinar-pq/?utm_source=facebook&utm_medium=cpc&utm_campaign=%F0%9F%8D%8A%5BOG%5D%5BCAPTA%C3%87%C3%83O+INTERNA%5D%5BWEBN%C3%81RIO%5D15%2F11%2F24&utm_term=%5BOG%5D-%5BMIX+Envolvimento+-+30D%5D&utm_content=VG02+-+Webn%C3%A1rio&fbclid=IwZXh0bgNhZW0BMABhZGlkAasW4xCpL6gBHTwRX5niq576Gv_BbhLok2bNHDzV_ir07PbaPOEX9b_gtFm5eYBZ-pharg_aem_jvmBpkIw3SrFf3JoyMribQ&utm_id=120214460352830616_v2_s02",
+            "tag_do_lancamento": "WEB001"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr",
+    "saveExecutionProgress": true
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-09T21:14:18.305Z",
+  "versionId": "3e2e9e92-7cb7-49c4-8f6d-e9bd678ec674"
+}

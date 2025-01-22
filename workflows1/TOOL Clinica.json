@@ -1,0 +1,1709 @@
+{
+  "active": false,
+  "connections": {
+    "Query": {
+      "main": [
+        [
+          {
+            "node": "EWT 2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "EWT Fixed": {
+      "main": [
+        [
+          {
+            "node": "EWT 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contextual Compression Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Contextual Compression Retriever",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Question and Answer Chain": {
+      "main": [
+        [
+          {
+            "node": "Response1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Contextual Compression Retriever",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Qdant Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Qdant Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Retriever",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Availability Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Existing Appt Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cancel Appt Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Appt Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reschedule Appt Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Request to Tool?": {
+      "main": [
+        [
+          {
+            "node": "Switch Tool",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Agent": {
+      "main": [
+        [
+          {
+            "node": "Normalize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reset Memo": {
+      "main": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Check Chat Memory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize": {
+      "main": [
+        [
+          {
+            "node": "Reset Memo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EWT 2": {
+      "main": [
+        [
+          {
+            "node": "Request to Tool?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response In Development": {
+      "main": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Specialists Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Exams Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Tool": {
+      "main": [
+        [
+          {
+            "node": "Response In Development",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Memory 1": {
+      "ai_memory": [
+        [
+          {
+            "node": "Check Chat Memory",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Insert Data User",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Insert Data Bookings",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chat empty?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Insert Data User",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Chat Memory": {
+      "main": [
+        [
+          {
+            "node": "chat empty?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config to Find All Bookings": {
+      "main": [
+        [
+          {
+            "node": "wk bring bookings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "wk bring bookings": {
+      "main": [
+        [
+          {
+            "node": "Insert Data Bookings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat": {
+      "main": [
+        [
+          {
+            "node": "Query",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "EWT Fixed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "baseInfo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "baseInfo": {
+      "main": [
+        [
+          {
+            "node": "update user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EWT": {
+      "main": [
+        [
+          {
+            "node": "Request to Tool?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update user": {
+      "main": [
+        [
+          {
+            "node": "Response",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Delete User Account",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Data User": {
+      "main": [
+        [
+          {
+            "node": "Config to Find All Bookings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Appointment Scheduling Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Appointment Scheduling Agent": {
+      "main": [
+        [
+          {
+            "node": "Response2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-15T18:33:48.659Z",
+  "id": "JZY3GPC55leuxyHn",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "TOOL Clinica",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1123d8e-c791-4dda-bbd0-e24c5b1d35d2",
+              "name": "query",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "9ec9d580-43c2-4945-aaad-7f1f28b18556",
+      "name": "Query",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        520,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n    \"query\": \"\",\n    \"agent\": \"calendar\",\n    \"messageInfo\":\n    {\n        \"evo_api\": \"https://apiwp.wmst.com.br\",\n        \"instance\": \"ibox_cli_23\",\n        \"remoteJid\": \"5512982184879@s.whatsapp.net\",\n        \"pushName\": \"W.M. Soluções Tecnologicas\",\n        \"fromMe\": false,\n        \"unique_id\": \"william_5512982184879\",\n        \"debounce_time\": 5,\n        \"conversation\": \"tem para amanhã?\"\n    },\n    \"userAccount\":\n    {\n        \"id\": 3,\n        \"full_name\": \"William\",\n        \"birthday\": \"1994-05-05\",\n        \"cpf\": null,\n        \"rg\": null,\n        \"full_address\": null,\n        \"phone\": \"12982184879\",\n        \"phone_verified_at\": \"2024-12-18T15:20:56.000000Z\",\n        \"phone_is_whatsapp\": 1,\n        \"email\": \"williamkillerca@hotmail.com\",\n        \"email_verified_at\": null,\n        \"origin\": \"whatsapp\",\n        \"extra_fields\": null,\n        \"created_at\": \"2024-12-18T15:20:56.000000Z\"\n    }\n}",
+        "options": {}
+      },
+      "id": "be94c5e9-9db6-4c9d-8d3a-dec6a39dd78a",
+      "name": "EWT Fixed",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        520,
+        1080
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "80fcf8d3-0a4e-47b6-ac93-e701d21f1db6",
+      "name": "Contextual Compression Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverContextualCompression",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        440
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "topK": "={{ $json.slots }}"
+      },
+      "id": "cfcd75ea-4251-4628-88d9-396589171d7c",
+      "name": "Vector Store Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1960,
+        440
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemPromptTemplate": "Use the following pieces of context to answer the users question. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n----------------\n{context}"
+        }
+      },
+      "id": "93ba3023-aa4c-4b47-bb1f-7d21841045c0",
+      "name": "Question and Answer Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.3,
+      "position": [
+        1560,
+        240
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "model": "llama-3.2-90b-text-preview",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "55e590d8-f110-455f-9290-9597ba46e430",
+      "name": "Groq Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        440
+      ],
+      "credentials": {
+        "groqApi": {
+          "id": "Qc9IFal2C1clPmRn",
+          "name": "william"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "e099ff70-e0ca-42ef-9c3d-4cfb790973a5",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        2520,
+        440
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "dRR3EqW0FEAbSHgt",
+          "name": "william"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "qdrantCollection": {
+          "__rl": true,
+          "value": "notion_faro",
+          "mode": "list",
+          "cachedResultName": "notion_faro"
+        },
+        "options": {
+          "searchFilterJson": "={\n  \"should\": [\n    {\n      \"key\": \"metadata.type\",\n      \"match\": {\n        \"value\": \"{{ $('EWT').item.json.type ?? '' }}\"\n      }\n    }\n  ]\n}"
+        }
+      },
+      "id": "2899748b-af1e-4b24-ae12-1409240e7eb8",
+      "name": "Qdant Vector Store1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        440
+      ],
+      "credentials": {
+        "qdrantApi": {
+          "id": "ukGdBAa9ib5xqZKC",
+          "name": "william"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.tool }}",
+                    "rightValue": "rag",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "RAG"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "42639684-02d9-4a30-96b2-cf1cb1df7b74",
+                    "leftValue": "={{ $json.tool }}",
+                    "rightValue": "supabase",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "supabase"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6ce5f04b-155b-4f55-9972-ed22f2b8cc00",
+      "name": "Switch Tool",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1160,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "93b3a4ae-a50c-4b62-9872-f980bc19054c",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "84c653aa-55b7-408c-a70a-e65247e2ef30",
+      "name": "Response2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1980,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "name": "get_availability_tool",
+        "description": "Call this tool to get availability for appointments using event ID.\n\n## Inputs Required:\n- Event ID (number, required).\n- Start date and time in ISO format (string, required).\n- End date and time in ISO format (string, required).\n\n## Workflow:\n1. Use the event ID to check available slots.\n2. Return all available time slots for the specified event.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "availability"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"event_id\": {\n      \"type\": \"string\",\n      \"description\": \"Event ID of the professional for which you want to check availability\"\n    },\n    \"startTime\": {\n      \"type\": \"string\",\n      \"description\": \"Start date and time of the appointment in format (YYYY-MM-DDTHH:mm:ss)\"\n    },\n    \"endTime\": {\n      \"type\": \"string\",\n      \"description\": \"End date and time of the appointment. If not provided, the default will be 24 hours after 'startTime'. If provided, the end time must be within 3 days of the 'startTime'.\"\n    }\n  },\n  \"required\": [\n    \"event_id\",\n    \"startTime\",\n    \"endTime\"\n  ]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2320,
+        1580
+      ],
+      "id": "edc94a5f-7ab6-43d4-ba0e-9a341f9d256e",
+      "name": "Get Availability Tool"
+    },
+    {
+      "parameters": {
+        "name": "get_existing_appt_tool",
+        "description": "=Call this tool to retrieve details of an existing booking using a booking UID.\n\n## Inputs Required:\n- Booking UID (string, required).\n\n## Workflow:\n1. Provide the booking UID to locate the existing booking.\n2. Return the booking details or notify if not found.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "find booking"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"booking_uid\": {\n      \"type\": \"string\",\n      \"description\": \"Booking UID of the booking\"\n    }\n  },\n  \"required\": [\"booking_uid\"]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        3160,
+        1580
+      ],
+      "id": "7f237841-e763-4397-9870-b1c4777cde63",
+      "name": "Get Existing Appt Tool",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "name": "find_existing_appt_tool",
+        "description": "=Call this tool to find existing reservations using the user's email address.\n\n## Inputs Required:\n- User email (string, required).\n- Event ID (string, optional).\n- Status (string, optional, default: \"all\").\n\n## Workflow:\n1. Search for bookings matching the provided email.\n2. Return matching reservations or notify if not found.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "list bookings"
+            },
+            {
+              "name": "remoteJid",
+              "stringValue": "={{ $('Normalize').first().json.messageInfo.remoteJid.split('@')[0] }}"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\":\n    {\n        \"attendeeEmail\":\n        {\n            \"type\": \"string\",\n            \"description\": \"Email address of the user\"\n        },\n        \"event_id\":\n        {\n            \"type\": \"string\",\n            \"description\": \"Event ID to filter bookings\"\n        },\n        \"status\":\n        {\n            \"type\": \"string\",\n            \"description\": \"Status of the booking (e.g., upcoming, past, cancelled)\",\n            \"default\": \"all\"\n        }\n    },\n    \"required\":\n    [\n        \"email\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2760,
+        1580
+      ],
+      "id": "4dd86eb4-e62e-4eb1-aa78-07e5772bba38",
+      "name": "Find Existing Appt Tool"
+    },
+    {
+      "parameters": {
+        "name": "cancel_appt_tool",
+        "description": "=Call this tool to cancel an appointment using a booking ID.\n\n## Inputs Required:\n- Booking ID (string, required).\n- Reason for cancellation (string, required).\n\n## Workflow:\n1. Verify the booking ID before proceeding.\n2. Confirm with the user before cancelling.\n3. Cancel the appointment and notify the user.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "cancel booking"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\":\n    {\n        \"booking_id\":\n        {\n            \"type\": \"string\",\n            \"description\": \"Booking ID of the booking\"\n        },\n        \"cancellation_reason\":\n        {\n            \"type\": \"string\",\n            \"description\": \"Reason for cancellation\"\n        }\n    },\n    \"required\":\n    [\n        \"booking_id\",\n        \"cancellation_reason\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2620,
+        1580
+      ],
+      "id": "ac72bff6-f5b8-4597-bd79-d21574a4695c",
+      "name": "Cancel Appt Tool"
+    },
+    {
+      "parameters": {
+        "name": "schedule_appt_tool",
+        "description": "Call this tool to schedule a booking.\n\n## Inputs Required:\n- User email (string, required).\n- Full name (string, required).\n- Proposed start date and time in ISO format (string, required).\n- Cellphone (string, required).\n\n## Workflow:\n1. Ensure all inputs are valid before proceeding.\n2. If scheduling fails, log the issue and notify the user.\n3. Confirm the booking and notify the user of the booking ID.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "schedule booking"
+            },
+            {
+              "name": "query.pacient_id",
+              "type": "numberValue",
+              "numberValue": "={{ $json.userAccount.id }}"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"start\": {\n      \"type\": \"string\",\n      \"description\": \"Date and time of the start of the booking in format (YYYY-MM-DDTHH:mm:ss)\"\n    },\n    \"attendee\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"email\": {\n          \"type\": \"string\"\n        },\n        \"cellphone\": {\n          \"type\": \"string\",\n          \"description\": \"12982184877\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"email\",\n        \"cellphone\"\n      ]\n    },\n    \"event_id\": {\n      \"type\": \"string\",\n      \"description\": \"Event ID\"\n    },\n    \"bookingFieldsResponses\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"optional\"\n        },\n        \"description\": {\n          \"type\": \"string\",\n          \"description\": \"optional\"\n        },\n        \"method_payment\": {\n          \"type\": \"string\",\n          \"description\": \"optional\"\n        },\n        \"name_plan\": {\n          \"type\": \"string\",\n          \"description\": \"optional\"\n        }\n      }\n    }\n  },\n  \"required\": [\n    \"start\",\n    \"attendee\",\n    \"event_id\",\n    \"bookingFieldsResponses\"\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2160,
+        1580
+      ],
+      "id": "c56148c9-e174-4896-8c12-f6eff039ed39",
+      "name": "Schedule Appt Tool"
+    },
+    {
+      "parameters": {
+        "name": "reschedule_appt_tool",
+        "description": "=Call this tool to reschedule an appointment using a booking ID.\n\n## Required inputs:\n- Booking ID (string, required).\n- Proposed start date and time (string, required).\n- Reason for rescheduling (string, required).\n\n## Workflow:\n1. Verify the booking ID before proceeding.\n2. Confirm with the user before rescheduling.\n3. Reschedule the appointment and notify the user.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "action",
+              "stringValue": "reschedule booking"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\":\n    {\n        \"booking_id\":\n        {\n            \"type\": \"string\",\n            \"description\": \"the id of the booking\"\n        },\n        \"start\":\n        {\n            \"type\": \"string\",\n            \"description\": \"date and time of the start of the booking\"\n        },\n        \"reschedulingReason\":\n        {\n            \"type\": \"string\",\n            \"description\": \"rescheduling reason\"\n        }\n    },\n    \"required\":\n    [\n        \"booking_id\",\n        \"start\",\n        \"reschedulingReason\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2480,
+        1580
+      ],
+      "id": "0fb315e4-d637-4167-b8b0-cf776e9a551e",
+      "name": "Reschedule Appt Tool"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=memo_{{ $json.messageInfo.unique_id }}_clinica_calendar",
+        "sessionTTL": 300,
+        "contextWindowLength": 7
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.3,
+      "position": [
+        1720,
+        1480
+      ],
+      "id": "690c918f-448f-416a-b23a-d8b056fddc1c",
+      "name": "Chat Memory",
+      "credentials": {
+        "redis": {
+          "id": "ePjUcKkuSrLqo1Tt",
+          "name": "vps"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Function Cal",
+        "height": 240,
+        "width": 1031,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        1520
+      ],
+      "id": "f49b0c91-1cbb-45bf-85eb-c1c5e6d56ffc",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "id": "23b0e203-6fae-425e-8945-9bf9e5eb437c",
+      "name": "EWT 2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        740,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3d3f5973-0888-4a4a-9b95-74a7908fcf4c",
+              "leftValue": "={{ $json.agent }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "309a8f36-ceba-4d09-a0ff-97bba24c00d3",
+      "name": "Request to Tool?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        920,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.agent }}",
+                    "rightValue": "calendar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "calendar"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ca609f71-ebaf-427b-b5d4-c2adfd9472ab",
+      "name": "Switch Agent",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1120,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "=memo_{{ $json.messageInfo.unique_id }}_clinica_calendar"
+      },
+      "id": "8d9813e1-5af7-459b-966a-8489f332debb",
+      "name": "Reset Memo",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        1140
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "redis": {
+          "id": "ePjUcKkuSrLqo1Tt",
+          "name": "vps"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b49db797-0bdf-457d-8ba0-e7cf175881e5",
+              "name": "response",
+              "value": "={{ $json.response.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4f2d1555-c5dd-47d4-ac12-392d83dafbfa",
+      "name": "Response1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1880,
+        240
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b49db797-0bdf-457d-8ba0-e7cf175881e5",
+              "name": "response",
+              "value": "=in development",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "16a11653-c133-4f38-943a-06bf9e07de80",
+      "name": "Response In Development",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1400,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "53985a03-c355-4121-b058-0b87b0f8437d",
+              "name": "query",
+              "value": "={{ $json.query }}",
+              "type": "string"
+            },
+            {
+              "id": "b7ec07ee-1c3d-4b54-9be3-6c57b4ca0753",
+              "name": "messageInfo",
+              "value": "={{ $json.messageInfo }}",
+              "type": "object"
+            },
+            {
+              "id": "d488e141-67d9-47a1-a6f1-8387677abdeb",
+              "name": "userAccount",
+              "value": "={{ $json.userAccount }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1300,
+        1140
+      ],
+      "id": "91fb783d-aef6-4a47-b4a9-931c93b6c7c8",
+      "name": "Normalize"
+    },
+    {
+      "parameters": {
+        "content": "## Update User Data in Supabase\nName, email, date birth or address and\nreset cache to bring the new data.",
+        "height": 360,
+        "width": 684.2702280390939,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        660
+      ],
+      "id": "ccd0b762-cdbf-42b9-ae12-5243ec9f1516",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "name": "list_exams_tool",
+        "description": "Call this tool to obtain EVENT ID of exam to use on booking.\n\n## Workflow:\n1. Use the tool to retrieve the event ID.\n2. Return event ids as list.",
+        "workflowId": {
+          "__rl": true,
+          "value": "pliyk2HChCR880pK",
+          "mode": "list",
+          "cachedResultName": "Comp Clinica"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "tool",
+              "stringValue": "exams"
+            },
+            {
+              "name": "messageInfo",
+              "type": "objectValue",
+              "objectValue": "={{ $('Normalize').first().json.messageInfo }}"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n\"type\": \"object\",\n\"properties\": {\n    \"name\": {\n        \"type\": \"string\",\n        \"description\": \"name of exam (optional)\"\n        }\n    }\n}"
+      },
+      "id": "387571a8-baf3-4ee7-8aee-7d6954aeddd2",
+      "name": "Exams Tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1900,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "name": "specialists_tool",
+        "description": "Call this tool to obtain EVENT ID of specialist (doctor) to use on booking.\n\n## Workflow:\n1. Use the tool to retrieve the event ID.\n2. Return event ids as list.",
+        "workflowId": {
+          "__rl": true,
+          "value": "pliyk2HChCR880pK",
+          "mode": "list",
+          "cachedResultName": "Comp Clinica"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "tool",
+              "stringValue": "specialists"
+            },
+            {
+              "name": "messageInfo",
+              "type": "objectValue",
+              "objectValue": "={{ $('Normalize').first().json.messageInfo }}"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n\"type\": \"object\",\n\"properties\": {\n\t\"crm\": {\n        \"type\": \"number\",\n        \"description\": \"crm of medical (optional)\"\n    },\n    \"name\": {\n        \"type\": \"string\",\n        \"description\": \"name of medical (optional)\"\n    },\n\t\"specialist\": {\n\t\t\"type\": \"string\",\n\t\t\"description\": \"specialist of medical (optional)\"\n\t\t}\n\t}\n}"
+      },
+      "id": "95da37b0-79ca-416a-881d-315f23ff01ba",
+      "name": "Specialists Tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        2020,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "name": "eventId_by_calendarId_tool",
+        "description": "Call this tool to obtain and verify event id that wil be used to schedule a consult with doctors or exams.\n\n## Required inputs:\n- Calendar ID (number, required).\n\n## Workflow:\n1. Use the calendar ID to retrieve the event ID.\n2. Return all calendar's information to manage a booking.",
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "tool",
+              "stringValue": "calendar details"
+            },
+            {
+              "name": "messageInfo",
+              "type": "objectValue",
+              "objectValue": "={{ $('Normalize').first().json.messageInfo }}"
+            }
+          ]
+        },
+        "specifyInputSchema": true,
+        "schemaType": "manual",
+        "inputSchema": "{\n\"type\": \"object\",\n\"properties\": {\n\t\"calendar_id\": {\n\t\t\"type\": \"number\",\n\t\t\"description\": \"calendar's id\"\n\t\t}\n\t}\n}"
+      },
+      "id": "b3c38e6b-2b25-40ec-bb2a-d94c63416790",
+      "name": "Get Calendar Event Tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        3020,
+        1580
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "=memo_{{ $('Normalize').first().json.messageInfo.unique_id }}_clinica_calendar",
+        "sessionTTL": 600,
+        "contextWindowLength": 7
+      },
+      "id": "76ba98dd-67e1-404e-8760-08676c3e1261",
+      "name": "Chat Memory 1",
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1.3,
+      "position": [
+        2180,
+        1000
+      ],
+      "credentials": {
+        "redis": {
+          "id": "ePjUcKkuSrLqo1Tt",
+          "name": "vps"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "insertMode": "override",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "ai",
+              "message": "=User {{ $('Normalize').item.json.userAccount.id ? 'is' : 'is not yet' }} registered, their name is '{{ $('Normalize').item.json.userAccount.full_name ?? '' }}', email is '{{ $('Normalize').item.json.userAccount.email ?? '' }}', contact phone number is '{{ $('Normalize').item.json.userAccount.phone ?? $('Normalize').item.json.userAccount.remoteJid.split('@')[0] }}', and current address is '{{ $('Normalize').item.json.userAccount.full_address ?? '' }}'"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        2160,
+        1120
+      ],
+      "id": "d649f909-bfdb-466f-9e66-3703945ec87b",
+      "name": "Insert Data User",
+      "notes": "Email Address: `{{ $('Normalize').item.json.userAccount.email ? $('Normalize').item.json.userAccount.email : '' }}`\nCellphone number: `{{ $('Normalize').item.json.messageInfo.remoteJid.split('@')[0] }}`\nFull name: `{{ $('Normalize').item.json.userAccount.name ? $('Normalize').item.json.userAccount.name : $('Normalize').item.json.messageInfo.pushName }}`\nAddress: `{{ $('Normalize').item.json.userAccount.endereco ?? '' }}`"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9914c630-b523-42ae-a3a0-b224b821f6ca",
+              "leftValue": "={{ $json.messagesCount }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1980,
+        1140
+      ],
+      "id": "e7740283-2969-40e0-ac1e-6f6f9b617d39",
+      "name": "chat empty?"
+    },
+    {
+      "parameters": {
+        "options": {
+          "groupMessages": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        1660,
+        1140
+      ],
+      "id": "faeb7545-966a-41d4-afa9-5b3dbf86a540",
+      "name": "Check Chat Memory"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "19e9b408-9bdb-4535-b265-1f714a0dde0d",
+              "name": "action",
+              "value": "list bookings",
+              "type": "string"
+            },
+            {
+              "id": "d6788f61-2c2f-42c1-a263-62d052127dc0",
+              "name": "remoteJid",
+              "value": "={{ $('Normalize').item.json.userAccount.phone.toString().split('@')[0] }}",
+              "type": "string"
+            },
+            {
+              "id": "4b5c318d-4909-4140-8465-7bb6bf8f2116",
+              "name": "query",
+              "value": "={\n  \"email\": \"\",\n  \"event_id\": \"\",\n  \"status\": \"all\"\n}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e9d4dc54-fa2b-4eeb-aa75-897ab5e7dae8",
+      "name": "Config to Find All Bookings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2480,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "QTrKQkY4jxrACTpy",
+          "mode": "list",
+          "cachedResultName": "COMP AIClinic"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "89b9abcc-c4dc-49ac-a7f7-a2b15833e014",
+      "name": "wk bring bookings",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        2640,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "ai",
+              "message": "={{ $json.response.length ? `User has this bookings: ${$json.response}\n` : 'User does not have any booking at moment' }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        2800,
+        1120
+      ],
+      "id": "8959d707-9af1-4d9a-b2c4-c71acdeb60ab",
+      "name": "Insert Data Bookings"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "760374de-6e34-46ca-9918-905a36c32c1d",
+      "name": "Chat",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        320,
+        1000
+      ],
+      "webhookId": "9b335b26-b235-4e2a-85f2-e94e7742d93a"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.action }}",
+                    "rightValue": "update user",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "user account"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1440,
+        760
+      ],
+      "id": "82c3ff87-4990-48bb-96fd-e6987c840ac6",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9ed0f70f-a5ba-400c-9826-7d918845d89b",
+              "name": "url_api",
+              "value": "https://agendaclinic.com/api/v1",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9598567f-9f70-420e-b844-06b82eef34ae",
+      "name": "baseInfo",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1620,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "=user_account_{{ $('EWT').item.json.messageInfo.remoteJid.split('@')[0] }}"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        680
+      ],
+      "id": "12b31f46-a7da-4278-885c-6a214024bb61",
+      "name": "Delete User Account",
+      "credentials": {
+        "redis": {
+          "id": "ePjUcKkuSrLqo1Tt",
+          "name": "vps"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "031ea9fc-c53f-4a6f-88be-a070538aa4d6",
+      "name": "EWT",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        740,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8cb2031b-a2ee-4f48-8968-d3362cbb4ba6",
+              "name": "response",
+              "value": "={{ $json.message ?? 'done' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1940,
+        840
+      ],
+      "id": "e2fa2399-2e58-46a1-9c1e-6ab6921ee362",
+      "name": "Response"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.url_api }}/pacient/{{ $('EWT').item.json.user_id }}/update",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "={{ $('EWT').item.json.query.key }}",
+              "value": "={{ $('EWT').item.json.query.value }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "2c7482fc-c95b-4b87-9196-d922cfaeb78d",
+      "name": "update user",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1780,
+        760
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nmUmytqX7rLnklTQ",
+          "name": "AI Clinic Token"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini-2024-07-18",
+        "options": {
+          "temperature": 0,
+          "topP": 1
+        }
+      },
+      "id": "89b0aa63-2b3a-4119-adc5-6c1861baf9cf",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        1480
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "dRR3EqW0FEAbSHgt",
+          "name": "william"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "=You are a helpful assistant who schedules medical appointments and tests at a clinic.\n\n## Context:\nThe current date and time is `{{ $now.setLocale('en').weekdayLong }}, {{ $now.format('dd MMM yyyy HH:mm') }}`.\nAll dates should be in format `YYYY-MM-DDTHH:mm:ss`.\nDuration of consultations is 60 minutes.\nAlways display booking ID.\nDates should be displayed in d/M/Y format.\nUse a full-day range for availability checks.\n\n## Workflow Guidelines:\n1. **New Booking**:\n   - Collect Missing Information:\n      Explicitly inform the user about the information already available and only request what is missing: Email address, Full name, Cellphone number, Proposed date and preferred start time.\n\n   - Use `schedule_appt_tool` to book the appointment.\n   - Confirm the booking and provide the ID to the user.\n\n2. **Existing Bookings**:\n   - Ask for the email address or booking ID to locate the booking if not provided.\n   - If the email address is identified or mapped, use it to locate the booking automatically without asking for confirmation.\n   - Use `get_existing_appt_tool` or `find_existing_appt_tool` to retrieve details.\n\n3. **Rescheduling**:\n   - Ask for the booking ID.\n   - Use `reschedule_appt_tool` with the new date and time.\n   - Confirm with the user before rescheduling.\n\n4. **Cancellation**:\n  - Ask for the reservation ID and reason for cancellation.\n  - If the user doesn`t know the ID, use `find_existing_appt_tool` with his email and find the booking he is referring to.\n  - Use `cancel_appt_tool` to cancel the booking.\n  - Confirm with the user before proceeding.\n\n5. **Check Availability**\n  - Ask for professional or exam.\n  - Use `list_specialists_tool` to retrive event_id from professional.\n  - Use `list_exams_tool` to retrive event_id from exam.\n\n5. **Errors and Feedback**:\n   - Notify the user if inputs are missing or invalid.\n   - Suggest corrections or alternatives where applicable.\n",
+          "maxIterations": 7
+        }
+      },
+      "id": "4babc4bb-6c11-40f7-afb6-bfc121f313cd",
+      "name": "Appointment Scheduling Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        1660,
+        1320
+      ],
+      "retryOnFail": false
+    }
+  ],
+  "pinData": {
+    "EWT": [
+      {
+        "json": {
+          "query": "Verificar horários disponíveis da Dra. Rita de Cássia Marton Carneiro para consultas amanhã.",
+          "agent": "calendar",
+          "messageInfo": {
+            "evo_api": "https://apiwp.wmst.com.br",
+            "instance": "ibox_cli_23",
+            "remoteJid": "5512982184879@s.whatsapp.net",
+            "pushName": "W.M. Soluções Tecnologicas",
+            "fromMe": false,
+            "unique_id": "william_5512982184879",
+            "debounce_time": 5,
+            "conversation": "tem para amanhã?"
+          },
+          "userAccount": {
+            "id": 3,
+            "full_name": "William",
+            "birthday": "1994-05-05",
+            "cpf": null,
+            "rg": null,
+            "full_address": null,
+            "phone": "12982184879",
+            "phone_verified_at": "2024-12-18T15:20:56.000000Z",
+            "phone_is_whatsapp": 1,
+            "email": "williamkillerca@hotmail.com",
+            "email_verified_at": null,
+            "origin": "whatsapp",
+            "extra_fields": null,
+            "created_at": "2024-12-18T15:20:56.000000Z"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-09-27T14:34:01.317Z",
+      "updatedAt": "2024-09-27T14:34:01.317Z",
+      "id": "ZoTSEGR97fzorfDz",
+      "name": "AI"
+    },
+    {
+      "createdAt": "2024-09-27T17:42:17.034Z",
+      "updatedAt": "2024-09-27T17:42:17.034Z",
+      "id": "TsfCA8eZuTObjOfy",
+      "name": "Backup"
+    },
+    {
+      "createdAt": "2024-10-30T23:31:05.255Z",
+      "updatedAt": "2024-10-30T23:31:05.255Z",
+      "id": "IDsda42rHm8bi7eR",
+      "name": "Tool"
+    },
+    {
+      "createdAt": "2024-12-18T13:55:11.434Z",
+      "updatedAt": "2024-12-18T13:55:11.434Z",
+      "id": "02kkCHve480aFjG4",
+      "name": "Clinic"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-09T13:22:23.813Z",
+  "versionId": "be1481c9-7b31-4857-b68b-aaf7a5728444"
+}

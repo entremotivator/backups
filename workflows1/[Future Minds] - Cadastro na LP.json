@@ -1,0 +1,291 @@
+{
+  "active": true,
+  "connections": {
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastro_na_lp": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-11-14T17:17:34.432Z",
+  "id": "72K3dERCYhjma5wD",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Future Minds] - Cadastro na LP",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "={{ $node[\"dados\"].json[\"tag_do_lancamento\"] }} - Captação - Parte 2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "2a71403e-81f6-4c70-929a-d1ce57d872a5",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1.1,
+      "position": [
+        1060,
+        260
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "LuHAjLmTOXHZ3CMW",
+          "name": "[RabbitMQ] - Future Minds"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"name\"] || \"\";\nconst emailAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"Digite_seu_melhor_e_mail\"] || \"\";\nconst telefoneClienteOriginal = $node[\"cadastro_na_lp\"].json[\"body\"][\"DDD_Celular_Opcional\"] || \"\";\nconst instagramAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"Instagram\"] || \"\";\nconst linkPagina = $node[\"cadastro_na_lp\"].json[\"body\"][\"URL\"] || \"\";\n\n// Função para capitalizar o nome\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    // Ajuste para remover o espaço extra caso não haja sobrenome\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\n// Função para formatar email\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\n// Função para formatar Instagram\nfunction formatInstagram(instagram) {\n    // Remover \"@\" e transformar em letras minúsculas\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\n// Função para processar e formatar o telefone\nfunction processTelefone(telefoneOriginal) {\n    if (!telefoneOriginal) return \"\";\n    const telefoneLimpo = telefoneOriginal.replace(/\\D/g, \"\"); // Remove caracteres não numéricos\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        return telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28 && numero.length === 9 && numero.startsWith(\"9\")) {\n            numero = numero.slice(1);\n        } else if (DDD <= 28 && numero.length === 8) {\n            numero = `9${numero}`;\n        }\n    }\n\n    return DDI && DDD && numero ? `${DDI}${DDD}${numero}` : \"\";\n}\n\n// Função para extrair o form_name do link manualmente\nfunction extractFormName(link) {\n    if (!link) return \"\";\n    const queryStart = link.indexOf('?');\n    if (queryStart === -1) return \"\";\n\n    const queryParams = link.substring(queryStart + 1).split('&');\n    for (const param of queryParams) {\n        const [key, value] = param.split('=');\n        if (key === \"form_name\") {\n            return decodeURIComponent(value);\n        }\n    }\n    return \"\";\n}\n\nconst telefoneFinal = processTelefone(telefoneClienteOriginal);\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst utm_source = $node[\"cadastro_na_lp\"].json[\"body\"][\"UTM_SOURCE\"] || \"\";\nconst utm_campaign = $node[\"cadastro_na_lp\"].json[\"body\"][\"UTM_CAMPAIGN\"] || \"\";\nconst utm_medium = $node[\"cadastro_na_lp\"].json[\"body\"][\"UTM_MEDIUM\"] || \"\";\nconst utm_term = $node[\"cadastro_na_lp\"].json[\"body\"][\"UTM_TERM\"] || \"\";\nconst utm_content = $node[\"cadastro_na_lp\"].json[\"body\"][\"UTM_CONTENT\"] || \"\";\nconst form_id = $node[\"cadastro_na_lp\"].json[\"body\"][\"Id_do_formulario\"] || \"\";\n\n// Determinar o form_name\nlet form_name = extractFormName(linkPagina); // Tenta extrair do link\nif (!form_name) {\n    form_name = \"Cadastro Webinário\"; // Valor padrão\n}\n\n// Montar o resultado final\nconst result = {\n    ...formattedNames, // Nome formatado\n    email: formattedEmail, // Email formatado\n    whatsapp: telefoneFinal, // Telefone formatado\n    instagram: formattedInstagram, // Instagram formatado\n    utm_source: utm_source,\n    utm_campaign: utm_campaign,\n    utm_term: utm_term,\n    utm_medium: utm_medium,\n    utm_content: utm_content,\n    form_id: form_id,\n    link_pagina: linkPagina,\n    form_name: form_name // Inclui o form_name dinâmico ou padrão\n};\n\n// Retorna o resultado como esperado pelo n8n\nreturn [{ json: result }];\n"
+      },
+      "id": "af29964f-ef8a-434a-a213-b8c0432bd75d",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        700,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0cbdcad1-4920-4e7d-a6f9-437108ecded2",
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"fname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "05fd8409-f450-4cd2-88b0-9e201c4d8dc7",
+              "name": "sobrenome",
+              "value": "={{ $node[\"formata_dados\"].json[\"lname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "850bacff-b62b-484a-a48d-8a1832562e45",
+              "name": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2669a334-987d-4801-b9d6-a4fd4dcd4b1d",
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "51d3c9fc-4672-4a9b-8ce4-33c6d5512cd2",
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b9957f57-607a-43cf-8298-2afcb7bde489",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "645a7f52-1b16-4174-b43c-76c7a4e0efae",
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5ca4d777-4e3b-4c9f-805d-2d03f4a73f3e",
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6cd09c13-e31f-4f8d-9bf9-2e227499d366",
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "11026780-520c-4115-ac67-7d3ddb1c1234",
+              "name": "utm_fun",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_fun\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d167d246-fee0-4122-986d-882fd3a4a2ae",
+              "name": "utm_var",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_var\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2ec68456-3f2e-41f1-9164-67e381d536a6",
+              "name": "nome_do_evento",
+              "value": "Webinario",
+              "type": "string"
+            },
+            {
+              "id": "181210bf-6719-4a45-8cdd-9987e6a9f7f9",
+              "name": "edicao_do_evento",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "id": "e64100f6-9d54-44c5-8ef2-6cbab115ab35",
+              "name": "form_id",
+              "value": "={{ $node[\"formata_dados\"].json[\"form_id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d6775cb8-6322-4b46-b33e-ceb237ad1b2e",
+              "name": "form_name",
+              "value": "={{ $node[\"formata_dados\"].json[\"form_name\"] }} - {{ $node[\"formata_dados\"].json[\"link_pagina\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9f8c1e98-d212-478d-9e87-d6948151cd72",
+              "name": "tag_do_lancamento",
+              "value": "WEB001",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "adc4e84f-a664-4ebe-82c4-855b8dc3ceb7",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        880,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "=web001-cadastro-lp",
+        "options": {}
+      },
+      "id": "2c05e9f2-f2b3-4962-bc5b-0ab6c258a72c",
+      "name": "cadastro_na_lp",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        520,
+        260
+      ],
+      "webhookId": "29d86f24-72f3-467f-8364-b606251a4e23"
+    }
+  ],
+  "pinData": {
+    "cadastro_na_lp": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "content-length": "1276",
+            "accept-encoding": "gzip",
+            "cdn-loop": "cloudflare; subreqs=1",
+            "cf-connecting-ip": "2a06:98c0:3600::103",
+            "cf-ray": "8f2ec723e4c4eab4-DFW",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "greatsoftwares.workers.dev",
+            "content-type": "application/x-www-form-urlencoded",
+            "great-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncGFnZXMtcjItcGFnZXMtaW50ZWdyYXRpb25zIiwiYXVkIjoic2VydmljZSIsImlhdCI6MTczNDM1MzIwM30.fFNa40fHwtMY_uwFIIxY1tJRfspvDSl-OobdxvebOnI",
+            "great-server": "GreatApps",
+            "great-service": "gpages-r2-pages-integrations",
+            "x-forwarded-for": "172.71.170.157",
+            "x-forwarded-host": "n8nwebhookhetznerfutureminds.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "3fc641f1cb52",
+            "x-real-ip": "172.71.170.157"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "name": "Lívia Machado",
+            "Digite_seu_melhor_e_mail": "liviasmach@gmail.com",
+            "DDD_Celular_Opcional": "(21) 9984-13699",
+            "UTM_SOURCE": "facebook",
+            "UTM_MEDIUM": "cpc",
+            "UTM_CAMPAIGN": "🍊[OG][CAPTAÇÃO+EXTERNO][WEBNÁRIO]15/11/24",
+            "UTM_TERM": "🍊[OG][Estático][INTERESSES_+MIX_LINGUAS]",
+            "UTM_CONTENT": "CE01+-+Webnário",
+            "Referral_Source": "http://instagram.com/",
+            "Dispositivo": "Mobile",
+            "URL": "https://links.liliancidreira.com.br/cap-webinar/?utm_source=facebook&utm_medium=cpc&utm_campaign=%F0%9F%8D%8A%5BOG%5D%5BCAPTA%C3%87%C3%83O+EXTERNO%5D%5BWEBN%C3%81RIO%5D15%2F11%2F24&utm_term=%F0%9F%8D%8A%5BOG%5D%5BEst%C3%A1tico%5D%5BINTERESSES_+MIX_LINGUAS%5D&utm_content=CE01+-+Webn%C3%A1rio&utm_id=120214460352940616_v2_s04&fbclid=PAZXh0bgNhZW0BMABhZGlkAasXEINh9KgBprPJtncvl9MX_s_GKEd7jgo2e9Fwx2-u-EnJppFYRBHXXxLYq0hY3iURtA_aem_D8_5ZLlbaClIl_QWVFkRWw",
+            "IP_do_usuario": "2804:14d:5cd5:93d2:8dcb:980:c934:90b9",
+            "Data_da_conversao": "2024-12-16 12:46:39",
+            "Id_do_formulario": "990252_1_17303227486722a13c1c59e900907819",
+            "Pais_do_usuario": "BR",
+            "Regiao_do_usuario": "Rio de Janeiro",
+            "Cidade_do_usuario": "Rio de Janeiro",
+            "Id_da_pagina": "990252"
+          },
+          "webhookUrl": "https://n8nwebhookhetznerfutureminds.automagicbots.com.br/webhook/web001-cadastro-lp",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "zRPVyGjtTGhPaWFr",
+    "saveExecutionProgress": true
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-11-14T18:59:36.969Z",
+      "updatedAt": "2024-11-14T18:59:36.969Z",
+      "id": "5HB3AqYVP1IhO2Iu",
+      "name": "[WEB001]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-09T14:53:45.043Z",
+  "versionId": "4cc5171a-f41b-4d33-bd21-87af399863d6"
+}
