@@ -1,0 +1,356 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Ideas",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Outline",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Headline",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Article",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Ideas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ideas": {
+      "main": [
+        [
+          {
+            "node": "Outline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Outline": {
+      "main": [
+        [
+          {
+            "node": "Headline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Headline": {
+      "main": [
+        [
+          {
+            "node": "Article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Article": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T06:43:25.453Z",
+  "id": "m2S1Hvio46ZP9GA2",
+  "meta": null,
+  "name": "Llm chain seq blog",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        460,
+        160
+      ],
+      "id": "dd6cac9b-59cc-4568-bc67-b226961993c4",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        680,
+        160
+      ],
+      "id": "4397bdf9-6343-4d34-99ff-3a67aa36d83e",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        160
+      ],
+      "id": "a4f1bad1-465f-468a-8a1b-fce906b5cb25",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        160
+      ],
+      "id": "636cdb85-76ec-4663-89e3-93045fd2bea2",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e4b793f-101f-46c9-a220-86984350df79",
+              "name": "Topic",
+              "value": "={{ $('Edit Fields1').item.json.topic }}",
+              "type": "string"
+            },
+            {
+              "id": "2d131f39-94bc-436e-a0d3-a619e3925cf0",
+              "name": "response",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1820,
+        0
+      ],
+      "id": "7aa7232b-019f-44bd-836e-e6aeeb13fd36",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bc8f269e-d7e1-4066-a6b5-c0ab455a930b",
+              "name": "topic",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ],
+      "id": "069283c8-a3d1-4893-b2e0-e7fcd4c449b9",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We will be writing an article about: \n{{ $json.topic }}  \n\nCome up with 10 interesting ideas about this topic that we could write a thought-provoking 1000 word article. List the 10 ideas only and nothing else.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a helpful and intelligent research assistant."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        420,
+        -20
+      ],
+      "id": "be083704-b7ff-4462-a6cd-32276a2e1db9",
+      "name": "Ideas"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Select one idea listed below that our target audience would be most interested in knowing more about the following topic: \n{{ $('Edit Fields1').item.json.topic }}\n\nWrite an engaging, comprehensive and actionable outline for a 1000 word article. You must include counterarguments, criticisms and negative points against the topic and then re-affirm your argument. Output the idea you selected and the outline in JSON format and nothing else. \n\nUse the following JSON format:  \n{ \n\"Idea\": \"idea\", \n\"Outline\": {}, \n}  \n\nHere is the list of ideas: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You're a helpful and intelligent writing assistant."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        740,
+        0
+      ],
+      "id": "079be24c-a75e-4b87-b790-5358f2d9b0a7",
+      "name": "Outline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Using the intriguing headline examples list below, create one intriguing headline for the following topic content outline. The main goal of the headline is to entice the reader to continue reading the article. We will write an article based on this topic and the headline you output.\n\nIntriguing headline examples list: \n1. X Little Known [Something] That Could Be Causing Your [Problem] \n2. Is [Thing] A Scam? Here’s My Honest Review \n3. How To Get Rid Of [Something] Forever, Even If You’re Tried Everything \n4. A Step-By-Step Guide For Doing X \n5. The Secret To Achieving [Something Desirable] \n6. 9 Out Of Every 10 People [Make This Mistake]. Are You One Of Them? \n7. How To Survive Your First [Meaningful Experience] \n8. What [Someone Credible] Can Teach Us About [Topic] \n9. The Ultimate Guide To [Something] \n10. X Lessons Learned [From Doing Something] \n11. Why Something Happens (According To Science) \n12. X Things [This Detail] Say About You \n13. A Guaranteed Method For [Achieving Something / Avoiding Something] \n14. How To Achieve [Something] Without Needing To Give Up [Some other thing] \n15. How To [Achieve Something] In [A Short Amount Of Time] \n16. The X Things Most People Don’t Know About [Topic] \n17. The X Biggest Mistakes People Make When [Doing Something] \n18. X Tips For [Overcoming Some Obstacle] \n19. The Best Ways To Get [Something] Without Needing [Something] \n20. Want [Something]? Try [This]  \n\nHere is the topic content outline: \n{{ $json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a talented headline writer."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1140,
+        0
+      ],
+      "id": "ab1bb224-e87b-4479-ac9c-ea886db4f8dc",
+      "name": "Headline"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=The following is the headline and outline for an award-winning article regarding the following topic: \n{{ $('Edit Fields1').item.json.topic }}\n\nYour task is to write an approximately 1000 word article. Write content for each section in the outline that will collectively flow together as a complete and congruent article. The final article should perfectly answer or explain the headline and end with a compelling call to action. The content must be unique and not copied from any other sources. Make each section informative, engaging, and relevant. Where appropriate, use examples and practical tips to help the reader understand the subject better. Make sure the content is SEO optimized and flows logically. Ensure the pace and cadence of the article is easy to read. Write in the active voice to make the content more engaging, and double-check for plagiarism to ensure the originality of your work. Add bullet points sparingly where appropriate to make the content easier to read and digest. Use conversational and casual tone. Be concise. Minimize excess prose. Use less corporate and sales jargon. Don't use sales-speak; avoid words or phrases that are associated with sales people. Write the article in Markdown format. The reading level of your output should be at a grade 5 level. \n\nHeadline: \n{{ $json.text }}\n\nOutline: \n{{ $('Outline').item.json.text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a helpful and intelligent writing assistant."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1460,
+        0
+      ],
+      "id": "13c71cb0-4b84-4005-aadd-3a0f80cb1206",
+      "name": "Article"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a036632e-c877-4709-982a-e8684d980210",
+      "name": "When chat message received",
+      "webhookId": "0c9d895a-1ba3-449c-b3d4-b1a2baa39507"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-19T07:08:32.311Z",
+  "versionId": "d85ca3e5-cf8b-410d-acd0-63f3fefd2230"
+}
