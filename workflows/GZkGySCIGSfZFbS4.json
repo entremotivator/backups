@@ -1,0 +1,3192 @@
+{
+  "active": false,
+  "connections": {
+    "add label: tools": {
+      "main": [
+        [
+          {
+            "node": "Remove INBOX-rest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add label: receipts": {
+      "main": [
+        [
+          {
+            "node": "Remove INBOX-rest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add label: CL_link": {
+      "main": [
+        [
+          {
+            "node": "Remove INBOX-rest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add label: other": {
+      "main": [
+        [
+          {
+            "node": "Remove INBOX-rest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 1 secs": {
+      "main": [
+        [
+          {
+            "node": "Email info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email info": {
+      "main": [
+        [
+          {
+            "node": "Extract URLs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract URLs": {
+      "main": [
+        [
+          {
+            "node": "Not in DB",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "read api_param": {
+      "main": [
+        [
+          {
+            "node": "api_param",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "api_param": {
+      "main": [
+        [
+          {
+            "node": "Existing DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "read Listings": {
+      "main": [
+        [
+          {
+            "node": "Email IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email IDs": {
+      "main": [
+        [
+          {
+            "node": "email processed?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add \"Listing_urls\"": {
+      "main": [
+        [
+          {
+            "node": "Remove \"Inbox\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Existing_aux": {
+      "main": [
+        [
+          {
+            "node": "Not in DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Existing DB": {
+      "main": [
+        [
+          {
+            "node": "Existing_aux",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API Req1": {
+      "main": [
+        [
+          {
+            "node": "Response1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "API Req2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API Req3": {
+      "main": [
+        [
+          {
+            "node": "Response3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "API Req4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API Req4": {
+      "main": [
+        [
+          {
+            "node": "Response4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Errores",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "API Req": {
+      "main": [
+        [
+          {
+            "node": "Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "API Req1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sergios Gmail": {
+      "main": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "read Listings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sergios Gmail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "read api_param",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response": {
+      "main": [
+        [
+          {
+            "node": "Status Check ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "API Req2": {
+      "main": [
+        [
+          {
+            "node": "Response2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "API Req3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Inbox": {
+      "main": [
+        [
+          {
+            "node": "add Listing_urls",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark as Read": {
+      "main": [
+        [
+          {
+            "node": "Remove Inbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "\"Removed\"": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Not in DB": {
+      "main": [
+        [
+          {
+            "node": "API Req",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "\"OK\"": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "clean up noise": {
+      "main": [
+        [
+          {
+            "node": "mark \"delete\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "by City": {
+      "main": [
+        [
+          {
+            "node": "mark \"send\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email processed?": {
+      "main": [
+        [
+          {
+            "node": "add \"Listing_urls\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "Wait 1 secs",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add label: CTA_responses",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add label: CL_link",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add label: receipts",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add label: tools",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add label: other",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add label: CTA_responses": {
+      "main": [
+        [
+          {
+            "node": "Remove INBOX-rest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status Check ": {
+      "main": [
+        [
+          {
+            "node": "\"OK\"",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "\"Removed\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status Check 1": {
+      "main": [
+        [
+          {
+            "node": "\"OK\"",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "\"Removed\"",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Status Check 2": {
+      "main": [
+        [
+          {
+            "node": "\"OK\"",
+            "type": "main",
+            "index": 2
+          }
+        ],
+        [
+          {
+            "node": "\"Removed\"",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Status Check 3": {
+      "main": [
+        [
+          {
+            "node": "\"OK\"",
+            "type": "main",
+            "index": 3
+          }
+        ],
+        [
+          {
+            "node": "\"Removed\"",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Status Check 4": {
+      "main": [
+        [
+          {
+            "node": "\"OK\"",
+            "type": "main",
+            "index": 4
+          }
+        ],
+        [
+          {
+            "node": "\"Removed\"",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Response1": {
+      "main": [
+        [
+          {
+            "node": "Status Check 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response4": {
+      "main": [
+        [
+          {
+            "node": "Status Check 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response3": {
+      "main": [
+        [
+          {
+            "node": "Status Check 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response2": {
+      "main": [
+        [
+          {
+            "node": "Status Check 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove \"Inbox\"": {
+      "main": [
+        [
+          {
+            "node": "add \"Read\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Mark as Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "by City",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "clean up noise",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-18T03:52:04.292Z",
+  "id": "GZkGySCIGSfZFbS4",
+  "meta": null,
+  "name": "Cl tool",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "Label_2838653122171546890"
+        ]
+      },
+      "id": "53680cdb-6fce-43e0-b293-e1dd7f7cbe2f",
+      "name": "add label: tools",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        2260
+      ],
+      "retryOnFail": false,
+      "webhookId": "876a948b-22f6-4c3a-81e2-508097d0f44c"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "Label_8979304687782068158"
+        ]
+      },
+      "id": "4b02ef24-9db6-465d-82ef-d71621d08d70",
+      "name": "add label: receipts",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        2100
+      ],
+      "webhookId": "8d916657-6731-430d-bc69-da6574d97940"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "Label_6791890012993831639"
+        ]
+      },
+      "id": "76c61efc-dd8a-4ed0-b601-254e20f95321",
+      "name": "add label: CL_link",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        1940
+      ],
+      "webhookId": "dfd3e497-240f-4fec-b661-2c643a990f6c"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "INBOX"
+        ]
+      },
+      "id": "61181c7a-9154-4bba-a4c4-7f9cf9eab1aa",
+      "name": "Remove INBOX-rest",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3020,
+        2100
+      ],
+      "webhookId": "b7d00aa1-112c-4244-8c3f-11b550cab7e9"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini-2024-07-18",
+        "options": {
+          "responseFormat": "text"
+        }
+      },
+      "id": "7899f27a-3cb8-4583-aa85-5962869c38de",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -3860,
+        2020
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "Label_54595144828602402"
+        ]
+      },
+      "id": "ffa073f2-37b4-4c33-a1c4-c21acd255826",
+      "name": "add label: other",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        2420
+      ],
+      "webhookId": "d307a2f5-ddd5-4fb9-8e77-b2b449bfea7a"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "id": "d128e440-c332-4833-a587-a8e4b59ef3fa",
+      "name": "Wait 1 secs",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -3420,
+        1620
+      ],
+      "webhookId": "abf3d4eb-831d-440c-b13b-6bf94f2dbc3a"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c1ea671f-95b2-4722-9cba-c5af99bc1f78",
+              "name": "id_email",
+              "value": "={{ $('Text Classifier').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "15c3a38b-81f6-4405-98d3-541a8ab16453",
+              "name": "subject",
+              "value": "={{ $('Text Classifier').item.json.headers.subject }}",
+              "type": "string"
+            },
+            {
+              "id": "f4201308-4eab-4e83-8466-e809a55dd756",
+              "name": "body",
+              "value": "={{ $('Text Classifier').item.json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "3f3c796c-2719-4f84-a2dc-75d863dfcb08",
+              "name": "headers[\"x-received\"]",
+              "value": "={{ $json.headers.received }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b85c2162-4e1e-40b2-8c54-b8f70053d679",
+      "name": "Email info",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3220,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();  // Fetch the input from the previous node\n\n// Regex to extract URLs\nconst urlPattern = /https?:\\/\\/[^\\s\"<>]+/g;\n\n// Function to extract listing ID from URL\nconst extractListingId = (url) => {\n  const match = url.match(/\\/(\\d+)\\.html$/);\n  return match ? match[1] : null;\n}\n\n// Function to extract the city from the subject field\nconst extractCityFromSubject = (subject) => {\n  const cityPattern = /cars\\+trucks \\(([^)]+)\\)/;\n  const match = subject.match(cityPattern);\n  return match ? match[1] : null;\n}\n\n// Function to extract and format the date and time from the x-received field\nconst extractDateTimeFromXReceived = (xReceived) => {\n  const dateTimePattern = /(\\w{3}, \\d{2} \\w{3} \\d{4}) (\\d{2}:\\d{2}:\\d{2})/;\n  const match = xReceived.match(dateTimePattern);\n  \n  if (match) {\n    const originalDate = new Date(`${match[1]} ${match[2]} GMT-0700`); // Convert to PDT\n    \n    // Format the date as yyyy.mm.dd\n    const formattedDate = originalDate.getFullYear() + '.' + \n                          String(originalDate.getMonth() + 1).padStart(2, '0') + '.' + \n                          String(originalDate.getDate()).padStart(2, '0');\n    \n    // Extract and format the time and append \"PDT\"\n    const formattedTime = `${match[2]} PDT`;\n    \n    return `${formattedDate} || ${formattedTime}`;\n  }\n  return null;\n}\n\n// Function to filter and process the data\nconst processData = (items) => {\n  let output = [];\n\n  items.forEach(item => {\n    const { id_email, subject, body, headers } = item.json;\n\n    // Extract the city from the subject field\n    const city = extractCityFromSubject(subject);\n\n    // Extract URLs from the body\n    const urls = body.match(urlPattern) || [];\n\n    // Filter unwanted URLs and remove duplicates\n    const validUrls = Array.from(new Set(\n      urls.filter(url => \n        !url.includes(\"/search/\") &&\n        !url.includes(\"/savesearch\") &&\n        !url.includes(\"/store/apps\") &&\n        !url.includes(\"/us/app\")\n      )\n    ));\n\n    // Extract the date and time from x-received\n    const xReceived = headers[\"x-received\"];\n    const alert_email_received = extractDateTimeFromXReceived(xReceived);\n\n    // For each valid URL, create a new object with the additional data and listing ID\n    validUrls.forEach(url => {\n      const listing_id = extractListingId(url);  // Extract the listing ID\n      output.push({\n        id_email,\n        city,  // The city extracted from the subject\n        subject,\n        alert_email_received,  // Replaces x-received\n        listing_url: url,  // Renamed from extracted_url to listing_url\n        listing_id  // Add listing ID to the output\n      });\n    });\n  });\n\n  return output;\n}\n\n// Process the input data and return the result\nconst result = processData(items);\n\n// Return the result for the next node\nreturn result;\n"
+      },
+      "id": "f53272f7-a094-4daf-bef8-5d26eff18507",
+      "name": "Extract URLs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3020,
+        1620
+      ],
+      "executeOnce": false,
+      "retryOnFail": false,
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3008b87c-ebf9-4362-a537-5fbf4fe1198a",
+              "name": "delay",
+              "value": "={{ $json['delay (ms)'] }}",
+              "type": "number"
+            },
+            {
+              "id": "92038037-3e41-49ab-b00a-d3af61894948",
+              "name": "get_images",
+              "value": "={{ $json.get_images }}",
+              "type": "boolean"
+            },
+            {
+              "id": "7e308d21-1cce-4631-bf50-ef7dfde981af",
+              "name": "api_port",
+              "value": "={{ $json.api_port }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "611e5b39-d448-46d1-9f3e-51597e8901da",
+      "name": "api_param",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3860,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1155242503,
+          "mode": "list",
+          "cachedResultName": "Dashboard",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=1155242503"
+        },
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "specifyRangeA1",
+              "range": "B1:D2"
+            }
+          },
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          },
+          "returnFirstMatch": true
+        }
+      },
+      "id": "0631e31c-d935-41eb-a42f-1300f4e5602c",
+      "name": "read api_param",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -4080,
+        1120
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 330378290,
+          "mode": "list",
+          "cachedResultName": "Listings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=330378290"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "id_email",
+              "lookupValue": "="
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "id": "f7b72963-73dc-4079-bb86-2db70e65f7c6",
+      "name": "read Listings",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -4080,
+        1320
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "notesInFlow": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ba871235-f52f-4ac7-9c65-4872f86cb9a8",
+              "name": "id",
+              "value": "={{ $('Sergios Gmail').first().json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "90466d49-c1b3-4d7d-a9a5-a9d12a1cc91c",
+              "name": "threadId",
+              "value": "={{ $('Sergios Gmail').first().json.threadId }}",
+              "type": "string"
+            },
+            {
+              "id": "15745512-4234-432d-93e9-9e50770d53b4",
+              "name": "labelIds",
+              "value": "={{ $('Sergios Gmail').first().json.labelIds }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2eb79de8-e3ff-4336-866e-2f2c08bbd68f",
+      "name": "Email IDs",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3860,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Sergios Gmail').item.json.id }}",
+        "labelIds": [
+          "Label_6042366710233736031"
+        ]
+      },
+      "id": "1c6c50a7-69f1-47ce-8b9d-a948c51aa423",
+      "name": "add \"Listing_urls\"",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -4080,
+        1500
+      ],
+      "retryOnFail": true,
+      "webhookId": "75541cbc-98d1-4123-ab57-08dc560d156a",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $('Sergios Gmail').item.json.id }}"
+      },
+      "id": "4e9bd7e2-e1e6-4961-8735-db60d4067189",
+      "name": "add \"Read\"",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3640,
+        1500
+      ],
+      "webhookId": "9ef1c61f-44e5-4cdc-aaaa-4143b45b6d3f"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b77348e9-67c9-497e-af21-078037d982eb",
+              "name": "status",
+              "value": "={{ $json.status }}",
+              "type": "string"
+            },
+            {
+              "id": "b023bc65-799d-475c-9119-9b6438254be1",
+              "name": "city",
+              "value": "={{ $json.city }}",
+              "type": "string"
+            },
+            {
+              "id": "6f0d6d6f-6b54-4f58-9629-6feacd440780",
+              "name": "listing_id",
+              "value": "={{ $json.listing_id }}",
+              "type": "number"
+            },
+            {
+              "id": "9a85c52b-a94d-4cb6-b09b-ee5989d09087",
+              "name": "listing_url",
+              "value": "={{ $json.listing_url }}",
+              "type": "string"
+            },
+            {
+              "id": "54af7354-77f4-4175-89a8-90ba10b94590",
+              "name": "listing_url_extracted_on",
+              "value": "={{ $json.listing_url_extracted_on }}",
+              "type": "string"
+            },
+            {
+              "id": "b3ea8090-6040-4743-8c0c-0bb6e214d801",
+              "name": "SEND",
+              "value": "={{ $json.SEND }}",
+              "type": "string"
+            },
+            {
+              "id": "d73ed69a-3869-4028-8917-9e931521ae50",
+              "name": "seller_email",
+              "value": "={{ $json.seller_email }}",
+              "type": "string"
+            },
+            {
+              "id": "36008464-d950-4751-8528-126d96d93638",
+              "name": "seller_phone",
+              "value": "={{ $json.seller_phone }}",
+              "type": "string"
+            },
+            {
+              "id": "2d65bfcf-1f18-4afc-9898-84c3d2da601b",
+              "name": "seller_name",
+              "value": "={{ $json.seller_name }}",
+              "type": "string"
+            },
+            {
+              "id": "ca319fd3-3fc3-42f6-b756-ea4348db3594",
+              "name": "year",
+              "value": "={{ $json.year }}",
+              "type": "number"
+            },
+            {
+              "id": "c895bd28-de49-4be7-91b3-e571d58ad3e8",
+              "name": "make-model",
+              "value": "={{ $json['make-model'] }}",
+              "type": "string"
+            },
+            {
+              "id": "ea1236e3-7f2b-4419-bfd5-b0c7e1c4f5fb",
+              "name": "listing_description",
+              "value": "={{ $json.listing_description }}",
+              "type": "string"
+            },
+            {
+              "id": "9537365d-6dd3-4f3e-a71d-d1d2d522d166",
+              "name": "auto_vin",
+              "value": "={{ $json.auto_vin }}",
+              "type": "string"
+            },
+            {
+              "id": "3dc57eb9-0d4a-4cde-9912-89b64413f5ca",
+              "name": "price",
+              "value": "={{ $json.price }}",
+              "type": "number"
+            },
+            {
+              "id": "ebe11514-92b4-42db-b577-2d0dab3cbfba",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "9d8829cd-598e-4cf1-b559-f0a75f63a279",
+              "name": "mileage",
+              "value": "={{ $json.mileage }}",
+              "type": "number"
+            },
+            {
+              "id": "e41d2526-9640-4d24-9825-475f7ff8fc9f",
+              "name": "fuel_type",
+              "value": "={{ $json.fuel_type }}",
+              "type": "string"
+            },
+            {
+              "id": "f26e858f-f129-48b3-b02b-a2f2ded89500",
+              "name": "cylinders",
+              "value": "={{ $json.cylinders }}",
+              "type": "string"
+            },
+            {
+              "id": "00d78891-3d10-4b67-93fc-ff284adaf835",
+              "name": "drivetrain",
+              "value": "={{ $json.drivetrain }}",
+              "type": "string"
+            },
+            {
+              "id": "807f323b-7dae-4d7f-bc99-576c32b5c5ef",
+              "name": "paint",
+              "value": "={{ $json.paint }}",
+              "type": "string"
+            },
+            {
+              "id": "64e0807d-8933-4f4a-8329-9d0425b8e9ed",
+              "name": "transmission",
+              "value": "={{ $json.transmission }}",
+              "type": "string"
+            },
+            {
+              "id": "f7b76c3e-54e2-4dc6-937c-f96957fb2b47",
+              "name": "bodytype",
+              "value": "={{ $json.bodytype }}",
+              "type": "string"
+            },
+            {
+              "id": "ed0f316b-b438-4d4d-b6e4-cf9b76054009",
+              "name": "auto_images",
+              "value": "={{ $json.auto_images }}",
+              "type": "string"
+            },
+            {
+              "id": "2dabb1d8-9c2a-4099-ba44-ccef01d18ae1",
+              "name": "id_email",
+              "value": "={{ $json.id_email }}",
+              "type": "string"
+            },
+            {
+              "id": "35caf42a-b661-4a3c-bb09-c797b0f65c44",
+              "name": "search_alert_received",
+              "value": "={{ $json.search_alert_received }}",
+              "type": "string"
+            },
+            {
+              "id": "d5de5fb9-453d-44c2-a762-67413dcae67e",
+              "name": "search_alert_email_subject",
+              "value": "={{ $json.search_alert_email_subject }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "id": "9c338d19-4106-4a1c-b804-a5010278ecdc",
+      "name": "Existing_aux",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -3420,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 330378290,
+          "mode": "list",
+          "cachedResultName": "Listings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=330378290"
+        },
+        "options": {}
+      },
+      "id": "36bc242b-6013-4876-bb1c-147be93414ad",
+      "name": "Existing DB",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -3640,
+        1120
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "122f4a0e-3ab3-4046-81ea-d3ab33327f06",
+              "leftValue": "={{ $('Sergios Gmail').item.json.id }}",
+              "rightValue": "={{ $('read Listings').item.json.id_email }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "id": "9eec92ce-96ae-4609-a3ce-61e33776f8ec",
+      "name": "email processed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -3640,
+        1320
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "numberInputs": 5
+      },
+      "id": "b9391747-0e84-47a9-93b8-1a6b0b91c22a",
+      "name": "\"Removed\"",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -1780,
+        1800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ \"http://45.63.50.167:\" + $('api_param').first().json.api_port + \"/cl_listing\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"url\": \"{{ $json.listing_url }}\",\n  \"delay\": {{ \"10000\" }},\n  \"images\": {{ \"false\"}}\n}",
+        "options": {}
+      },
+      "id": "80eb1677-805a-49a8-b1c0-6455cfdf70a0",
+      "name": "API Req1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2620,
+        1360
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "waitBetweenTries": 3000,
+      "maxTries": 2,
+      "notesInFlow": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ \"http://45.63.50.167:\" + $('api_param').first().json.api_port + \"/cl_listing\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"url\": \"{{ $json.listing_url }}\",\n  \"delay\": {{ \"10000\" }},\n  \"images\": {{ \"false\"}}\n}",
+        "options": {}
+      },
+      "id": "99154f97-c614-425e-addb-4ead840965c5",
+      "name": "API Req3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2640,
+        1800
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "waitBetweenTries": 3000,
+      "maxTries": 2,
+      "notesInFlow": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ \"http://45.63.50.167:\" + $('api_param').first().json.api_port + \"/cl_listing\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"url\": \"{{ $json.listing_url }}\",\n  \"delay\": {{ \"10000\" }},\n  \"images\": {{ \"false\"}}\n}",
+        "options": {}
+      },
+      "id": "676609d0-d24d-4311-8c37-b4cb2dd3d5b0",
+      "name": "API Req4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2640,
+        2020
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "waitBetweenTries": 3000,
+      "maxTries": 2,
+      "notesInFlow": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ \"http://45.63.50.167:\" + $('api_param').first().json.api_port + \"/cl_listing\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"url\": \"{{ $json.listing_url }}\",\n  \"delay\": {{ \"10000\" }},\n  \"images\": {{ \"false\"}}\n}",
+        "options": {}
+      },
+      "id": "3e4eb4e9-374e-45c3-a5b2-b8bee8ab225b",
+      "name": "API Req",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2620,
+        1140
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "waitBetweenTries": 3000,
+      "maxTries": 2,
+      "notesInFlow": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 20,
+        "simple": false,
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ],
+          "readStatus": "both"
+        },
+        "options": {}
+      },
+      "id": "4e3d0974-7368-4319-8bd2-63fa9c4455af",
+      "name": "Sergios Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -4320,
+        1780
+      ],
+      "alwaysOutputData": true,
+      "webhookId": "3d92c3eb-295c-4730-bb64-b550d4c87140",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "id": "a612aa88-5858-4e8d-a779-6dba41373b73",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -4440,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"id_email\": \"{{ $('Not in DB').item.json.id_email }}\",\n  \"city\": \"{{ $('Not in DB').item.json.city }}\",\n  \"subject\": \"{{ $('Not in DB').item.json.subject }}\",\n  \"alert_email_received\": \"{{ $('Not in DB').item.json.alert_email_received }}\",\n  \"listing_url\": \"{{ $('Not in DB').item.json.listing_url }}\",\n  \"listing_id\": \"{{ $('Not in DB').item.json.listing_id }}\"\n}",
+        "includeOtherFields": true,
+        "options": {
+          "stripBinary": true
+        }
+      },
+      "id": "c6c3634f-ebdf-4897-b3fd-d1d6c53bee22",
+      "name": "Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        1120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "e6d24642-6ea9-4bdd-96d7-aaf5d3435164",
+      "name": "Errores",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -2160,
+        2220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "=POST",
+        "url": "={{ \"http://45.63.50.167:\" + $('api_param').first().json.api_port + \"/cl_listing\" }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"url\": \"{{ $json.listing_url }}\",\n  \"delay\": {{ \"10000\" }},\n  \"images\": {{ \"false\"}}\n}",
+        "options": {}
+      },
+      "id": "b62203fe-94a8-44db-83d5-ce4075b81719",
+      "name": "API Req2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2620,
+        1580
+      ],
+      "executeOnce": false,
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "waitBetweenTries": 3000,
+      "maxTries": 2,
+      "notesInFlow": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{ $('Remove Duplicates').item.json.id_email }}",
+        "labelIds": [
+          "INBOX"
+        ]
+      },
+      "id": "74b3f4db-1b08-461f-9794-cbe7ed216bb2",
+      "name": "Remove Inbox",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -1040,
+        1680
+      ],
+      "webhookId": "316be626-ca8b-4bf2-bb93-27239cf3dc25",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "markAsRead",
+        "messageId": "={{ $('Remove Duplicates').item.json.id_email }}"
+      },
+      "id": "661540e6-9c64-4d5e-94ed-3ae87b31ca2a",
+      "name": "Mark as Read",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -820,
+        1480
+      ],
+      "webhookId": "7112cbdf-746f-4042-9b69-3cf6709c6dbc",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Remove Duplicates').item.json.id_email }}",
+        "labelIds": [
+          "Label_6042366710233736031"
+        ]
+      },
+      "id": "bf09365d-33d4-4757-82fd-ad98bc5f4993",
+      "name": "add Listing_urls",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -820,
+        1680
+      ],
+      "retryOnFail": true,
+      "webhookId": "2faef706-5dd4-4605-b233-11bf5b90a373",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "advanced": true,
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "={{ $('Existing_aux').all()[0].json.listing_id }}",
+              "field2": "={{ $('Extract URLs').first().json.listing_id }}"
+            }
+          ]
+        },
+        "joinMode": "keepNonMatches",
+        "outputDataFrom": "input2",
+        "options": {
+          "fuzzyCompare": true
+        }
+      },
+      "id": "599d5000-8d79-4ac0-9c4c-d9227355e76c",
+      "name": "Not in DB",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -2860,
+        1140
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "numberInputs": 5
+      },
+      "id": "f9cb53f8-e857-4882-9d01-035e3403f1dd",
+      "name": "\"OK\"",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -1620,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bda7795f-d9b2-4d6b-9968-8b575f875f77",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "={{ \"ok\" }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "b60fa702-cc18-40d7-8893-f0311c2fae1a",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "={{ \"removed\" }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "dd01b820-cbe1-42d1-afd4-cb9dae90f400",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1460,
+        1420
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 330378290,
+          "mode": "list",
+          "cachedResultName": "Listings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=330378290"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_email": "={{ $json.id_email }}",
+            "search_alert_email_subject": "={{ $json.subject }}",
+            "search_alert_received": "={{ $json.alert_email_received }}",
+            "listing_id": "={{ $json.listing_id }}",
+            "listing_url": "={{ $json.listing_url }}",
+            "seller_email": "={{ $json.data.email }}",
+            "cylinders": "={{ $json.data.auto_cylinders }}",
+            "drivetrain": "={{ $json.data.auto_drivetrain }}",
+            "mileage": "={{ $json.data.auto_miles }}",
+            "title": "={{ $json.data.postingTitle }}",
+            "transmission": "={{ $json.data.auto_transmission }}",
+            "bodytype": "={{ $json.data.auto_bodytype }}",
+            "auto_images": "={{ $json.data.imageURLs }}",
+            "paint": "={{ $json.data.auto_paint }}",
+            "listing_description": "={{ $json.data.postingBody }}",
+            "listing_url_extracted_on": "={{ $now.format('yyyy.LL.dd || hh:mm:ss a')}}",
+            "fuel_type": "={{ $json.data.auto_fuel_type }}",
+            "auto_vin": "={{ $json.data.auto_vin }}",
+            "status": "={{ $json.status }}",
+            "city": "={{ $json.city }}",
+            "year": "={{ $json.data.auto_year }}",
+            "make-model": "={{ $json.data.auto_make_model }}",
+            "price": "={{ $json.data.auto_price }}",
+            "SEND": "={{\"send\"}}"
+          },
+          "matchingColumns": [
+            "listing_id"
+          ],
+          "schema": [
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "city",
+              "displayName": "city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_id",
+              "displayName": "listing_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_url",
+              "displayName": "listing_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "listing_url_extracted_on",
+              "displayName": "listing_url_extracted_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEND",
+              "displayName": "SEND",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "seller_email",
+              "displayName": "seller_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_phone",
+              "displayName": "seller_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_name",
+              "displayName": "seller_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "year",
+              "displayName": "year",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "make-model",
+              "displayName": "make-model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_description",
+              "displayName": "listing_description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_vin",
+              "displayName": "auto_vin",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "price",
+              "displayName": "price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mileage",
+              "displayName": "mileage",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fuel_type",
+              "displayName": "fuel_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cylinders",
+              "displayName": "cylinders",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "drivetrain",
+              "displayName": "drivetrain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "paint",
+              "displayName": "paint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "transmission",
+              "displayName": "transmission",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "bodytype",
+              "displayName": "bodytype",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_images",
+              "displayName": "auto_images",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "id_email",
+              "displayName": "id_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_received",
+              "displayName": "search_alert_received",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_email_subject",
+              "displayName": "search_alert_email_subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4343d6a8-5bf5-4af6-8c3e-dedd1733f259",
+      "name": "mark \"send\"",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -820,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 330378290,
+          "mode": "list",
+          "cachedResultName": "Listings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=330378290"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_email": "={{ $json.id_email }}",
+            "search_alert_email_subject": "={{ $json.subject }}",
+            "search_alert_received": "={{ $json.alert_email_received }}",
+            "listing_id": "={{ $json.listing_id }}",
+            "listing_url": "={{ $json.listing_url }}",
+            "seller_email": "={{ $json.data.email }}",
+            "cylinders": "={{ $json.data.auto_cylinders }}",
+            "drivetrain": "={{ $json.data.auto_drivetrain }}",
+            "mileage": "={{ $json.data.auto_miles }}",
+            "title": "={{ $json.data.postingTitle }}",
+            "transmission": "={{ $json.data.auto_transmission }}",
+            "bodytype": "={{ $json.data.auto_bodytype }}",
+            "auto_images": "={{ $json.data.imageURLs }}",
+            "paint": "={{ $json.data.auto_paint }}",
+            "listing_description": "={{ $json.data.postingBody }}",
+            "listing_url_extracted_on": "={{ $now.format('yyyy.LL.dd || hh:mm:ss a')}}",
+            "fuel_type": "={{ $json.data.auto_fuel_type }}",
+            "auto_vin": "={{ $json.data.auto_vin }}",
+            "status": "={{ $json.status }}",
+            "city": "={{ $json.city }}",
+            "year": "={{ $json.data.auto_year }}",
+            "make-model": "={{ $json.data.auto_make_model }}",
+            "price": "={{ $json.data.auto_price }}",
+            "SEND": "={{\"delete\"}}"
+          },
+          "matchingColumns": [
+            "listing_id"
+          ],
+          "schema": [
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "city",
+              "displayName": "city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_id",
+              "displayName": "listing_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_url",
+              "displayName": "listing_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "listing_url_extracted_on",
+              "displayName": "listing_url_extracted_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEND",
+              "displayName": "SEND",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "seller_email",
+              "displayName": "seller_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_phone",
+              "displayName": "seller_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_name",
+              "displayName": "seller_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "year",
+              "displayName": "year",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "make-model",
+              "displayName": "make-model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_description",
+              "displayName": "listing_description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_vin",
+              "displayName": "auto_vin",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "price",
+              "displayName": "price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mileage",
+              "displayName": "mileage",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fuel_type",
+              "displayName": "fuel_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cylinders",
+              "displayName": "cylinders",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "drivetrain",
+              "displayName": "drivetrain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "paint",
+              "displayName": "paint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "transmission",
+              "displayName": "transmission",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "bodytype",
+              "displayName": "bodytype",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_images",
+              "displayName": "auto_images",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "id_email",
+              "displayName": "id_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_received",
+              "displayName": "search_alert_received",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_email_subject",
+              "displayName": "search_alert_email_subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "10be7164-5640-4b5e-9d91-8dc41a45d684",
+      "name": "mark \"delete\"",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -820,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "559f0998-d4a3-45d5-9563-a64f37acb972",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "fd9f3765-1443-419e-baf2-49c9d02b160e",
+              "leftValue": "={{ $json.city }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "17b98295-8c1b-45d8-888d-93265020ce02",
+              "leftValue": "={{ $json.listing_id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "ad4927f5-6cc2-42df-97dd-0228d7b1a039",
+              "leftValue": "={{ $json.listing_url }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "52d120b8-7b4b-4b66-8c7f-10f0de604589",
+              "leftValue": "={{ $json.listing_url_extracted_on}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "44db41e6-fcc7-4425-9844-fd983818d8af",
+      "name": "clean up noise",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1040,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "{{ $json.city }}",
+                    "rightValue": "={{\"boston\"}}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Boston"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "c4230cad-8917-475a-8e8e-4a6163bc6c6a",
+      "name": "by City",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1040,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "inputText": "={{ $('Sergios Gmail').first().json.headers.subject }}{{ $json.headers.from }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "=CL_Listings",
+              "description": "=Email alerts containing (cars+trucks) in  {{ $('Sergios Gmail').first().json.headers.subject }} or containing \"CL Search Alerts\" <alerts@alerts.craigslist.org> in {{ $json.headers.from }}"
+            },
+            {
+              "category": "=CTA_responses",
+              "description": "=Email replies containing @reply.craigslist.org in {{ $json.headers.from }}"
+            },
+            {
+              "category": "CL_login_links ",
+              "description": "Emails that contain the phrase \"craigslist login link\" and does not contain \"cars+trucks\" in the {{ $('Sergios Gmail').first().json.headers.subject }}"
+            },
+            {
+              "category": "receipts",
+              "description": "=Emails containing invoices or receipts"
+            },
+            {
+              "category": "tools",
+              "description": "Email communications from platform tools like Google apps, chatgpt, Sendbird, Textline, n8n, twilio, puppeteer, pinecone, Baserow, Rag, Google Cloud, Azure, AWS, Neo4j or brightdata.com. Also, emails coming from sergio@sellyourcar.ai and any email that was not classified in other group. This is a catch all group."
+            },
+            {
+              "category": "other",
+              "description": "All other emails not previously categorized"
+            }
+          ]
+        },
+        "options": {
+          "systemPromptTemplate": "=Please classify the text provided by the user into one of the following categories: \n- cL_Listings, \n- cL_login_links,\n- sys_alerts,\n- receipts, \n- tools, \n- other \n\nDon't explain, and only output the json.",
+          "enableAutoFixing": "={{ true }}"
+        }
+      },
+      "id": "f5d380e7-c9a1-4755-b3f2-5dc7db13eaee",
+      "name": "Text Classifier",
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        -3860,
+        1760
+      ],
+      "alwaysOutputData": true,
+      "executeOnce": false,
+      "retryOnFail": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.id }}",
+        "labelIds": [
+          "Label_8391725397093456627"
+        ]
+      },
+      "id": "09be4caf-49fc-4435-bd9c-aee0f5abc26e",
+      "name": "add label: CTA_responses",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        1760
+      ],
+      "webhookId": "61fa3603-75e1-4164-b918-2c77db833a3d"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c4edc34f-181f-4bbc-ae89-d006c1ae2cb1",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"ok\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "OK"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c08bbc6d-5a43-4c97-9bcc-5bb99a64f322",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"Removed\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Removed"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "1abbebd0-32e0-4690-a95f-15b6c1ea4f1b",
+      "name": "Status Check ",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2160,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c4edc34f-181f-4bbc-ae89-d006c1ae2cb1",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"ok\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "oK"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c08bbc6d-5a43-4c97-9bcc-5bb99a64f322",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"Removed\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Removed"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "5e7e3c24-a8ad-4609-8511-73676d2e9ec4",
+      "name": "Status Check 1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2160,
+        1340
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c4edc34f-181f-4bbc-ae89-d006c1ae2cb1",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"ok\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "oK"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c08bbc6d-5a43-4c97-9bcc-5bb99a64f322",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"Removed\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Removed"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "b211ea60-4821-4b54-a3b4-6de328798eff",
+      "name": "Status Check 2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2160,
+        1560
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c4edc34f-181f-4bbc-ae89-d006c1ae2cb1",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"ok\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "oK"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c08bbc6d-5a43-4c97-9bcc-5bb99a64f322",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"Removed\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Removed"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "350147f0-03fe-48a4-a1ee-ab8f311077c3",
+      "name": "Status Check 3",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2160,
+        1780
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c4edc34f-181f-4bbc-ae89-d006c1ae2cb1",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"ok\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "oK"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c08bbc6d-5a43-4c97-9bcc-5bb99a64f322",
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "={{ \"Removed\" }}",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Removed"
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "8492f82d-707a-4dad-b780-d455ca772eb6",
+      "name": "Status Check 4",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -2160,
+        2000
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"id_email\": \"{{ $('Not in DB').item.json.id_email }}\",\n  \"city\": \"{{ $('Not in DB').item.json.city }}\",\n  \"subject\": \"{{ $('Not in DB').item.json.subject }}\",\n  \"alert_email_received\": \"{{ $('Not in DB').item.json.alert_email_received }}\",\n  \"listing_url\": \"{{ $('Not in DB').item.json.listing_url }}\",\n  \"listing_id\": \"{{ $('Not in DB').item.json.listing_id }}\"\n}",
+        "includeOtherFields": true,
+        "options": {
+          "stripBinary": true
+        }
+      },
+      "id": "ee34d578-584d-4fd1-95cc-01c8bdba5108",
+      "name": "Response1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        1340
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"id_email\": \"{{ $('Not in DB').item.json.id_email }}\",\n  \"city\": \"{{ $('Not in DB').item.json.city }}\",\n  \"subject\": \"{{ $('Not in DB').item.json.subject }}\",\n  \"alert_email_received\": \"{{ $('Not in DB').item.json.alert_email_received }}\",\n  \"listing_url\": \"{{ $('Not in DB').item.json.listing_url }}\",\n  \"listing_id\": \"{{ $('Not in DB').item.json.listing_id }}\"\n}",
+        "includeOtherFields": true,
+        "options": {
+          "stripBinary": true
+        }
+      },
+      "id": "c40e1198-56dd-4abb-af82-2e021b5a72cd",
+      "name": "Response2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        1560
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"id_email\": \"{{ $('Not in DB').item.json.id_email }}\",\n  \"city\": \"{{ $('Not in DB').item.json.city }}\",\n  \"subject\": \"{{ $('Not in DB').item.json.subject }}\",\n  \"alert_email_received\": \"{{ $('Not in DB').item.json.alert_email_received }}\",\n  \"listing_url\": \"{{ $('Not in DB').item.json.listing_url }}\",\n  \"listing_id\": \"{{ $('Not in DB').item.json.listing_id }}\"\n}",
+        "includeOtherFields": true,
+        "options": {
+          "stripBinary": true
+        }
+      },
+      "id": "f525310a-8341-4995-83a8-635a20147221",
+      "name": "Response3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        1780
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"id_email\": \"{{ $('Not in DB').item.json.id_email }}\",\n  \"city\": \"{{ $('Not in DB').item.json.city }}\",\n  \"subject\": \"{{ $('Not in DB').item.json.subject }}\",\n  \"alert_email_received\": \"{{ $('Not in DB').item.json.alert_email_received }}\",\n  \"listing_url\": \"{{ $('Not in DB').item.json.listing_url }}\",\n  \"listing_id\": \"{{ $('Not in DB').item.json.listing_id }}\"\n}",
+        "includeOtherFields": true,
+        "options": {
+          "stripBinary": true
+        }
+      },
+      "id": "73b67f11-ebd1-4780-a416-d8d96843f0bd",
+      "name": "Response4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        2000
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{ $('Sergios Gmail').item.json.id }}",
+        "labelIds": [
+          "INBOX"
+        ]
+      },
+      "id": "28f5c6ed-137b-455f-b7ba-aeac26d07898",
+      "name": "Remove \"Inbox\"",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -3860,
+        1500
+      ],
+      "webhookId": "92b4aa5f-bd69-4cff-899b-606844c4b693"
+    },
+    {
+      "parameters": {
+        "compare": "selectedFields",
+        "fieldsToCompare": "={{ $json.id_email }}",
+        "options": {}
+      },
+      "id": "fd92f1b4-bd63-4628-b277-807b3ec98c84",
+      "name": "Remove Duplicates",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 1.1,
+      "position": [
+        -1040,
+        1480
+      ],
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10",
+          "mode": "list",
+          "cachedResultName": "n8n Seller Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 330378290,
+          "mode": "list",
+          "cachedResultName": "Listings",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIesbzTICgrQRr2qB68U--LrsgAvz50ejDJ09-P1a10/edit#gid=330378290"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_email": "={{ $json.id_email }}",
+            "search_alert_email_subject": "={{ $json.subject }}",
+            "search_alert_received": "={{ $json.alert_email_received }}",
+            "listing_id": "={{ $json.listing_id }}",
+            "listing_url": "={{ $json.listing_url }}",
+            "seller_email": "={{ $json.data.email }}",
+            "cylinders": "={{ $json.data.auto_cylinders }}",
+            "drivetrain": "={{ $json.data.auto_drivetrain }}",
+            "mileage": "={{ $json.data.auto_miles }}",
+            "title": "={{ $json.data.postingTitle }}",
+            "transmission": "={{ $json.data.auto_transmission }}",
+            "bodytype": "={{ $json.data.auto_bodytype }}",
+            "auto_images": "={{ $json.data.imageURLs }}",
+            "paint": "={{ $json.data.auto_paint }}",
+            "listing_description": "={{ $json.data.postingBody }}",
+            "listing_url_extracted_on": "={{ $now.format('yyyy.LL.dd || hh:mm:ss a')}}",
+            "fuel_type": "={{ $json.data.auto_fuel_type }}",
+            "auto_vin": "={{ $json.data.auto_vin }}",
+            "status": "={{ $json.status }}",
+            "city": "={{ $json.city }}",
+            "year": "={{ $json.data.auto_year }}",
+            "make-model": "={{ $json.data.auto_make_model }}",
+            "price": "={{ $json.data.auto_price }}",
+            "SEND": "="
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "city",
+              "displayName": "city",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_id",
+              "displayName": "listing_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "listing_url",
+              "displayName": "listing_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "listing_url_extracted_on",
+              "displayName": "listing_url_extracted_on",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEND",
+              "displayName": "SEND",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "seller_email",
+              "displayName": "seller_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_phone",
+              "displayName": "seller_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "seller_name",
+              "displayName": "seller_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "year",
+              "displayName": "year",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "make-model",
+              "displayName": "make-model",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "listing_description",
+              "displayName": "listing_description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_vin",
+              "displayName": "auto_vin",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "price",
+              "displayName": "price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mileage",
+              "displayName": "mileage",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fuel_type",
+              "displayName": "fuel_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cylinders",
+              "displayName": "cylinders",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "drivetrain",
+              "displayName": "drivetrain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "paint",
+              "displayName": "paint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "transmission",
+              "displayName": "transmission",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "bodytype",
+              "displayName": "bodytype",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "auto_images",
+              "displayName": "auto_images",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "id_email",
+              "displayName": "id_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_received",
+              "displayName": "search_alert_received",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "search_alert_email_subject",
+              "displayName": "search_alert_email_subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4b1f164d-24e4-47d9-9f5f-a3fe49269c41",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -1280,
+        1280
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-01-18T03:53:15.748Z",
+      "updatedAt": "2025-01-18T03:53:15.748Z",
+      "id": "2ZyBELd1Epe3Wwmy",
+      "name": "SYC"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-18T03:53:58.922Z",
+  "versionId": "ef464660-e20f-4cf1-b766-8da6eea94bb8"
+}
