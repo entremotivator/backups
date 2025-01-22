@@ -1,0 +1,608 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Knowledge Base1",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Knowledge Base1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Knowledge Base1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contacts Data1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖Calendar_Agent1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖Research_Agent1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖Projects_Agent1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖___Email_Agent1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Personal Assistant1": {
+      "main": [
+        []
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Personal Assistant1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "Chat Trigger",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Personal Assistant1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-19T04:35:54.343Z",
+  "id": "XhdSIUXIItVHZX1o",
+  "meta": null,
+  "name": "THeAI MEGAMAN super",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "8b4fe330-47ec-47ed-92a0-cb26b9d8b986",
+      "name": "OpenAI Chat Model3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        1100
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "sample",
+          "mode": "list",
+          "cachedResultName": "sample"
+        },
+        "options": {
+          "pineconeNamespace": "demo"
+        }
+      },
+      "id": "2367a4d3-58d8-4235-a2ba-4d6d6823d57a",
+      "name": "Pinecone Vector Store1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        1360
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "dEdrOyWBOpOWLvU3",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "c20f81c8-d517-4f9a-bd12-1f4c9007ad9b",
+      "name": "OpenAI Chat Model4",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        1360
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "2cec1394-0fad-4ffd-a986-f403ea991b37",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        1540
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "upsqk4dqflb8SwXu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "Knowledge_Base",
+        "description": "Call this tool to get information about the company."
+      },
+      "id": "cd6d093d-d9c3-4aa3-91a5-d505cd30b416",
+      "name": "Knowledge Base1",
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Call this tool to get contact data like email address or phone number",
+        "documentId": {
+          "__rl": true,
+          "value": "19MEAwqL6LOhB9VNXW8TSDTBd1U8s0L77uWHpIhRieEA",
+          "mode": "list",
+          "cachedResultName": "Contact Database",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19MEAwqL6LOhB9VNXW8TSDTBd1U8s0L77uWHpIhRieEA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19MEAwqL6LOhB9VNXW8TSDTBd1U8s0L77uWHpIhRieEA/edit#gid=0"
+        },
+        "options": {}
+      },
+      "id": "e4a4325d-4f77-468a-8f36-f2b0524872c6",
+      "name": "Contacts Data1",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        120,
+        1080
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "cF46QZj1Dk7iZ2Nb",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "Calendar_Agent",
+        "description": "Call this tool to take actions within Calendar",
+        "workflowId": {
+          "__rl": true,
+          "value": "rqeQiVCOeJJMB9Lc",
+          "mode": "list",
+          "cachedResultName": "Calender Agent"
+        }
+      },
+      "id": "42cd6eeb-c835-4bdd-85f3-37aaf596a45a",
+      "name": "🤖Calendar_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        520,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Research_Agent",
+        "description": "Call this tool to search through Wikipedia, articles, or google to answer the user's question.",
+        "workflowId": {
+          "__rl": true,
+          "value": "HLF7QIIPEKcwUbNx",
+          "mode": "list",
+          "cachedResultName": "Research Agent"
+        }
+      },
+      "id": "4d8eb3a6-3c6b-46ea-9cde-0c8020ce5629",
+      "name": "🤖Research_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        680,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Projects_Agent",
+        "description": "Call this tool to take action on our projects.",
+        "workflowId": {
+          "__rl": true,
+          "value": "R9YBDF8v30iAgZ4w",
+          "mode": "list",
+          "cachedResultName": "Project Agent"
+        }
+      },
+      "id": "70c271c9-ae91-4713-b5f5-238b53eced84",
+      "name": "🤖Projects_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        840,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Email_Agent",
+        "description": "Call this tool to take any email actions and send and read emails",
+        "workflowId": {
+          "__rl": true,
+          "value": "b29LIBDbBqzNtlbd",
+          "mode": "list",
+          "cachedResultName": "Email Agent"
+        }
+      },
+      "id": "f07ddec4-5904-47d2-a519-0af77b7d7853",
+      "name": "🤖___Email_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        360,
+        1160
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a3ed3350-ddec-48b8-8963-18fc95d7785b",
+      "name": "Calculator1",
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}{{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "You are a personal assistant AI Agent designed to handle various tasks efficiently. Your primary role is to manage contacts, emails, and calendar events for the user. You have access to three tools to help you fulfill requests:\n\nContacts Data: Use this when you need to look up contact information like an email address. You need to use this tool BEFORE sending an email or BEFORE getting emails.\n\nEmail Agent: Use this for handling all email-related actions, like sending messages, setting up replies, or forwarding emails.\n\nCalendar Agent: Use this for scheduling, updating, or managing calendar events.\n\nSend Slack Message: Use this to send a message in Slack.\n\nProjects_Agent: Use this tool to access our projects. We can update our projects of get information on our projects.\n\nWhen a task requires using one or more of these tools, make sure to identify which tool is most appropriate, pass along the relevant details, and execute the actions needed to complete the task. Your goal is to be proactive, precise, and organized in managing these resources to provide a smooth experience for the user.\n\nHere is the current time/date: {{ $now.format('DD')}}"
+        }
+      },
+      "id": "f908e012-a063-4d5c-92ba-ef1becce8dc6",
+      "name": "Personal Assistant1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        360,
+        760
+      ],
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "public": true,
+        "options": {
+          "loadPreviousSession": "memory"
+        }
+      },
+      "id": "1d2ce2bc-8550-414c-a40a-22b16966db1d",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        920
+      ],
+      "webhookId": "9d880773-28b9-49da-9123-838b93208861"
+    },
+    {
+      "parameters": {
+        "sessionKey": "={{ $json.sessionId }}"
+      },
+      "id": "2af1f858-2c4a-4549-b352-b6c2f9496dee",
+      "name": "Window Buffer Memory1",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1,
+      "position": [
+        60,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Finance_Agent",
+        "description": "Call this tool to manage and analyze financial data or transactions.",
+        "workflowId": {
+          "__rl": true,
+          "value": "h5F7DgKCLoJmbNtX",
+          "mode": "list",
+          "cachedResultName": "Finance Agent"
+        }
+      },
+      "id": "a0f0b4fb-f3c5-424b-b355-d7970b3b05a6",
+      "name": "🤖Finance_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        420,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Task_Manager_Agent",
+        "description": "Call this tool to create, update, or delete tasks in a task management system.",
+        "workflowId": {
+          "__rl": true,
+          "value": "k8F4CiNPEJowNtLp",
+          "mode": "list",
+          "cachedResultName": "Task Manager Agent"
+        }
+      },
+      "id": "60b2ceef-f59b-4afb-aea8-e27872cf8c68",
+      "name": "🤖Task_Manager_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        580,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Customer_Service_Agent",
+        "description": "Call this tool to assist with customer service tasks and queries.",
+        "workflowId": {
+          "__rl": true,
+          "value": "p9U8FiKLOqJwtNyC",
+          "mode": "list",
+          "cachedResultName": "Customer Service Agent"
+        }
+      },
+      "id": "18818120-25cf-4b0b-a8fb-5ee6f8f5f753",
+      "name": "🤖Customer_Service_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        740,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Marketing_Agent",
+        "description": "Call this tool to plan, track, and execute marketing campaigns.",
+        "workflowId": {
+          "__rl": true,
+          "value": "o1J2UiLPOxJvwNtB",
+          "mode": "list",
+          "cachedResultName": "Marketing Agent"
+        }
+      },
+      "id": "4eb1e447-87c0-4bc3-ad7b-19c37c3d6907",
+      "name": "🤖Marketing_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        900,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Document_Management_Agent",
+        "description": "Call this tool to organize, store, and retrieve documents.",
+        "workflowId": {
+          "__rl": true,
+          "value": "q2K3FiLPOwKpxNtZ",
+          "mode": "list",
+          "cachedResultName": "Document Management Agent"
+        }
+      },
+      "id": "fae9499f-5a19-4402-b15e-3e38293cdeb6",
+      "name": "🤖Document_Management_Agent1",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1060,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Calendar_Agent",
+        "description": "Call this tool to take actions within Calendar",
+        "workflowId": {
+          "__rl": true,
+          "value": "rqeQiVCOeJJMB9Lc",
+          "mode": "list",
+          "cachedResultName": "Calendar Agent"
+        }
+      },
+      "id": "710066d2-9b36-47e7-8d74-d4ec9fa9f9f7",
+      "name": "🤖Calendar_Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        100,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Research_Agent",
+        "description": "Call this tool to search through Wikipedia, articles, or google to answer the user's question.",
+        "workflowId": {
+          "__rl": true,
+          "value": "HLF7QIIPEKcwUbNx",
+          "mode": "list",
+          "cachedResultName": "Research Agent"
+        }
+      },
+      "id": "e0f3b673-bbe1-4e2f-8167-07032e3a8280",
+      "name": "🤖Research_Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        1760
+      ]
+    },
+    {
+      "parameters": {
+        "name": "Email_Agent",
+        "description": "Call this tool to take any email actions and send and read emails",
+        "workflowId": {
+          "__rl": true,
+          "value": "b29LIBDbBqzNtlbd",
+          "mode": "list",
+          "cachedResultName": "Email Agent"
+        }
+      },
+      "id": "2860b050-1bcb-49ff-9783-4a34130a1d4c",
+      "name": "🤖___Email_Agent",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -60,
+        1760
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2025-01-19T07:03:21.159Z",
+  "versionId": "8eed1688-7bd4-4e8e-9d59-8bad627329f9"
+}
