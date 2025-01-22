@@ -1,0 +1,656 @@
+{
+  "active": false,
+  "connections": {
+    "Generate Video": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Get UploadURL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get UploadURL": {
+      "main": [
+        [
+          {
+            "node": "Download Video (again)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Video to Ayrshare": {
+      "main": [
+        [
+          {
+            "node": "Post to TikTok",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video (again)": {
+      "main": [
+        [
+          {
+            "node": "Upload Video to Ayrshare",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Recent News Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "Recent News Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Recent News Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Setup Info": {
+      "main": [
+        [
+          {
+            "node": "Recent News Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create New Post Record": {
+      "main": [
+        [
+          {
+            "node": "Generate Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily at 9am": {
+      "main": [
+        [
+          {
+            "node": "Get Setup Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual": {
+      "main": [
+        [
+          {
+            "node": "Get Setup Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recent News Agent": {
+      "main": [
+        [
+          {
+            "node": "Create New Post Record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-13T02:53:30.613Z",
+  "id": "7WXP0QN8Khmr6P6a",
+  "meta": null,
+  "name": "Ai Clone Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "amount": 8,
+        "unit": "minutes"
+      },
+      "id": "d26cd5e5-0a9e-4e7d-8e3a-2b223162d2ef",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        720
+      ],
+      "webhookId": "f18e8f74-effb-427d-9ef9-606ecb86f27b"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.heygen.com/v2/video/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $('Get Setup Info').item.json['HeyGen API Key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"video_inputs\": [\n    {\n      \"character\": {\n        \"type\": \"avatar\",\n        \"avatar_id\": \"{{ $('Get Setup Info').item.json['HG Avatar ID'] }}\",\n        \"avatar_style\": \"normal\"\n      },\n      \"voice\": {\n        \"type\": \"text\",\n        \"input_text\": \"{{ $('Recent News Agent').item.json.output.spoken_text }}\",\n        \"voice_id\": \"{{ $('Get Setup Info').item.json['HG Voice ID'] }}\"\n      }\n    }\n  ],\n  \"caption\": false,\n  \"dimension\": {\n    \"width\": 1920,\n    \"height\": 1080\n  }\n}",
+        "options": {}
+      },
+      "id": "ec860a0e-e6ba-43b9-a83f-6fe99b5c0c9a",
+      "name": "Generate Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        20,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.heygen.com/v1/video_status.get",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "video_id",
+              "value": "={{ $('Generate Video').item.json.data.video_id }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $('Get Setup Info').item.json['HeyGen API Key'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7d4c0562-a57b-4a03-9f9f-d7facfb89c95",
+      "name": "Get Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.data.video_url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "0b5264c4-caaf-4c8f-8549-da9dced3e85e",
+      "name": "Download Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        640,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "={{ $('Get UploadURL').item.json.uploadUrl }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('Get Setup Info').item.json['AyrShare API Key'] }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "={{ $('Get UploadURL').item.json.contentType }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "8957d972-a67f-4ade-bc97-719ea38fe2a1",
+      "name": "Upload Video to Ayrshare",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1220,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://app.ayrshare.com/api/media/uploadUrl",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "fileName",
+              "value": "={{ $binary.data.fileName }}"
+            },
+            {
+              "name": "contentType",
+              "value": "={{ $binary.data.mimeType }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('Get Setup Info').item.json['AyrShare API Key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "9a7c80cd-0101-47a7-942d-4b19936dc55b",
+      "name": "Get UploadURL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.ayrshare.com/api/post",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $('Get Setup Info').item.json['AyrShare API Key'] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": \"{{ $('Recent News Agent').item.json.output.caption }}\",\n  \"mediaUrls\": [\"{{ $('Get UploadURL').item.json.accessUrl }}\"],\n  \"platforms\": [\"tiktok\"]\n} ",
+        "options": {}
+      },
+      "id": "97afd012-fc2e-4a1b-b4aa-8c66cfc6c935",
+      "name": "Post to TikTok",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1420,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Get Video').item.json.data.video_url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "50e260f7-8aaa-4f4f-9a3e-a27ec3166e50",
+      "name": "Download Video (again)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1020,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "159ae240-901e-4f92-8ef2-5d97c999bcd1",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        420,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "hl": "en"
+        }
+      },
+      "id": "4902e253-0df7-42c3-8bfd-dbf238fa0096",
+      "name": "SerpAPI",
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        600,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ec41a26b-0837-425d-981f-b068c82c5440",
+      "name": "Auto-fixing Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        720,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"spoken_text\": \"the text that {{ $json.Persona }} will say\",\n  \"caption\": \"a caption for the social media post\"\n}"
+      },
+      "id": "c75e5550-658d-467d-84ea-8bd33cf529ed",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        820,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {}
+      },
+      "id": "419ad3d5-6991-400e-a18f-2573a3ace6e3",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        680,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appnx1gPR39hFpvgd",
+          "mode": "list",
+          "cachedResultName": "HeyGen - Social Post",
+          "cachedResultUrl": "https://airtable.com/appnx1gPR39hFpvgd"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbln4JU9AK8iwpgHy",
+          "mode": "list",
+          "cachedResultName": "Setup",
+          "cachedResultUrl": "https://airtable.com/appnx1gPR39hFpvgd/tbln4JU9AK8iwpgHy"
+        },
+        "filterByFormula": "{Persona} = 'Neil Stephenson'",
+        "returnAll": false,
+        "options": {}
+      },
+      "id": "a5898aec-9f98-4cd0-b7d8-8738650bf04d",
+      "name": "Get Setup Info",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        220,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appnx1gPR39hFpvgd",
+          "mode": "list",
+          "cachedResultName": "HeyGen - Social Post",
+          "cachedResultUrl": "https://airtable.com/appnx1gPR39hFpvgd"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblAaGKilwzsUE5BT",
+          "mode": "list",
+          "cachedResultName": "Posts",
+          "cachedResultUrl": "https://airtable.com/appnx1gPR39hFpvgd/tblAaGKilwzsUE5BT"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Spoken Text": "={{ $json.output.spoken_text }}",
+            "Caption": "={{ $json.output.caption }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "AT_ID",
+              "displayName": "AT_ID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Spoken Text",
+              "displayName": "Spoken Text",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Caption",
+              "displayName": "Caption",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Media",
+              "displayName": "Media",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Post ID",
+              "displayName": "Post ID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "809c534e-9274-4df8-b656-08da13a41de8",
+      "name": "Create New Post Record",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        780,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "id": "24e00ea2-918c-4649-8ed6-2be54cf79f87",
+      "name": "Daily at 9am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        140
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c944f432-0833-477b-9537-928f07ec5fe6",
+      "name": "Manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Your job is to research the latest {{ $json.Topic }} news over the last 24 hours, and then provide a summary for {{ $json.Persona }}, who is {{ $json.Description }}. He will be recording this as a monologue to camera to update his followers via social media. Ideally when spoken, this summary should last anywhere from 30 seconds to 1 minute 30.\n\nYou should start with a very brief intro along the lines of: \"Hey everyone this is {{ $json.Persona }}\", or \"Hi everyone, here's the latest from the AI world today\" - nothing longer than that. Then go straight into the news. End with a very short sign-off like \"That's all for today!\" or \"See you guys tomorrow for another update!\" - nothing longer than that.\n\nDo NOT include any line breaks or formatting of any kind. Just raw text in sentences that {{ $json.Persona }} will speak.\n\nTry to make some of the news slightly more accessible and spoken in plain English.\n\nUse the SerpAPI tool to get up to 5 of the most relevant and exciting news articles on AI, and summarise them all.\n\nRESPONSE FORMAT: Always respond in JSON format with this EXACT structure:\n{\n  \"output\": {\n    \"spoken_text\": \"the text that {{ $json.Persona }} will say\",\n  \"caption\": \"a caption for the social media post\"\n  }\n}",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "id": "676f4d7c-2a73-4537-be9a-607a337ca323",
+      "name": "Recent News Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        420,
+        140
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-13T02:56:52.465Z",
+  "versionId": "e45c7eaa-b646-43a4-9139-e88cc0d22526"
+}
